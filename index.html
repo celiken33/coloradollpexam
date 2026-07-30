@@ -186,6 +186,12 @@
   .qtag .subj{font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue-soft);background:#EAF1FA;padding:5px 12px;border-radius:999px}
   .qtag .qnum{font-size:.78rem;color:var(--muted);font-weight:600}
   .qtext{font-size:1.08rem;font-weight:600;line-height:1.5;margin-bottom:20px}
+  .qtimer{font-variant-numeric:tabular-nums;font-weight:800;color:var(--blue-soft)}
+  .qtimer.tgood{color:var(--green)}
+  .qtimer.tbad{color:var(--red)}
+  .etimer{display:inline-block;margin-left:12px;font-size:.85rem;font-weight:800;color:var(--blue-soft);font-variant-numeric:tabular-nums;vertical-align:middle}
+  .etimer.tgood{color:var(--green)}
+  .etimer.tbad{color:var(--red)}
   .opts{display:grid;gap:10px}
   .opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:var(--cream);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.98rem;font-family:'Inter',sans-serif;cursor:pointer;transition:border-color .12s, background .12s}
   .opt:hover{border-color:var(--blue-soft)}
@@ -439,7 +445,7 @@
       <span class="kicker">Free Sample — Straight From Our Library</span>
       <h2>Try 6 free sample questions — right now.</h2>
       <p class="sub">Straight from our library — every question and explanation written by a Colorado family law attorney with 23+ years in domestic relations practice. Get these six right, and the 93 in the guide will finish the job.</p>
-      <div class="score-pill">Score: <b id="score">0</b>&nbsp;/&nbsp;<span id="answered">0</span> answered</div>
+      <div class="score-pill">Score: <b id="score">0</b>&nbsp;/&nbsp;<span id="answered">0</span> answered&nbsp;·&nbsp;⏱ <b id="totaltime">0:00</b> total</div>
     </div>
     <div id="quiz-cards"></div>
     <div class="disc-band"><b>Original sample materials — and we stand by them.</b> Every question, answer, and explanation here and in the guide is original sample material written by our author to teach the tested concepts. These are not actual exam questions, and we are not affiliated with the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the exam. Verify citations against current law. Study aid — not legal advice. <b>We stand by every answer.</b></div>
@@ -783,12 +789,22 @@ var QUESTIONS = [
 ];
 
 var score=0, answered=0;
+var TIMERS=[], ETIMERS=[];
+function fmtT(s){ return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); }
+var qIO = ('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
+  es.forEach(function(en){
+    if(en.isIntersecting){ var t=en.target.__t; if(t && !t.fin) t.on=true; qIO.unobserve(en.target); }
+  });
+},{threshold:0.15}) : null;
 var host=document.getElementById('quiz-cards');
 QUESTIONS.forEach(function(item,qi){
   var card=document.createElement('div'); card.className='qcard';
   var head=document.createElement('div'); head.className='qtag';
-  head.innerHTML='<span class="subj">◆◆ '+item.subj+'</span><span class="qnum">Question '+(qi+1)+' of '+QUESTIONS.length+' · '+item.id+'</span>';
+  head.innerHTML='<span class="subj">◆◆ '+item.subj+'</span><span class="qnum">Question '+(qi+1)+' of '+QUESTIONS.length+' · '+item.id+' · <span class="qtimer">⏱ 0:00</span></span>';
   card.appendChild(head);
+  var TS={t:0,on:false,fin:false,el:head.querySelector('.qtimer')};
+  card.__t=TS; TIMERS.push(TS);
+  if(qIO) qIO.observe(card); else TS.on=true;
   var qt=document.createElement('div'); qt.className='qtext'; qt.textContent=item.q; card.appendChild(qt);
   if(!window.makeCalc) window.makeCalc=function(calcId,labelText){
     var ctog=document.createElement('button'); ctog.type='button'; ctog.className='calc-toggle';
@@ -870,6 +886,11 @@ QUESTIONS.forEach(function(item,qi){
       why.querySelector('.verdict').textContent = right ? '✓ Correct — '+letters[item.correct]+'.' : '✗ Not quite — the answer is '+letters[item.correct]+'.';
       why.querySelector('.verdict').className = 'verdict '+(right?'good':'bad');
       why.classList.add('show');
+      if(!TS.fin){
+        TS.fin=true;
+        TS.el.classList.add(TS.t<=90?'tgood':'tbad');
+        why.querySelector('.verdict').textContent += ' Time: '+fmtT(TS.t)+(TS.t<=90?' — on pace.':' — over the 90-second exam pace.');
+      }
       document.getElementById('score').textContent=score;
       document.getElementById('answered').textContent=answered;
     });
@@ -888,16 +909,35 @@ document.querySelectorAll('.essay-body').forEach(function(eb, ei){
   if(!btn || !window.makeCalc) return;
   var tc=window.makeCalc('ESSAY '+(ei+1), 'Math involved — open calculator');
   eb.insertBefore(tc[0], btn); eb.insertBefore(tc[1], btn);
+  var es=document.createElement('span'); es.className='etimer'; es.textContent='⏱ 0:00';
+  btn.parentNode.insertBefore(es, btn.nextSibling);
+  var ES={t:0,on:false,fin:false,el:es};
+  eb.__t=ES; ETIMERS.push(ES);
+  if(qIO) qIO.observe(eb); else ES.on=true;
 });
 
 /* ---------- essay reveals ---------- */
 document.querySelectorAll('.reveal-btn').forEach(function(btn){
   btn.addEventListener('click',function(){
+    var ES=btn.parentNode.__t;
+    if(ES && !ES.fin){
+      ES.fin=true;
+      ES.el.classList.add(ES.t<=1500?'tgood':'tbad');
+      ES.el.textContent='⏱ '+fmtT(ES.t)+(ES.t<=1500?' — within the 25-min outline pace':' — over the 25-min outline pace');
+    }
     var m=document.getElementById(btn.getAttribute('data-target'));
     var open=m.classList.toggle('show');
     btn.textContent = open ? 'Hide the model answer ▴' : 'Reveal the model answer ▾';
   });
 });
+
+/* ---------- timer engine ---------- */
+setInterval(function(){
+  var tot=0;
+  TIMERS.forEach(function(s){ if(s.on && !s.fin){ s.t++; s.el.textContent='⏱ '+fmtT(s.t); } tot+=s.t; });
+  ETIMERS.forEach(function(s){ if(s.on && !s.fin){ s.t++; s.el.textContent='⏱ '+fmtT(s.t); } });
+  var te=document.getElementById('totaltime'); if(te) te.textContent=fmtT(tot);
+},1000);
 </script>
 </body>
 </html>

@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colorado LLP Exam Prep — Free Practice Exam Bank for the Licensed Legal Paraprofessional Exam</title>
-<meta name="description" content="Prepare for Colorado's Licensed Legal Paraprofessional (LLP) exam. Try real practice questions free, then get the full 225-page practice exam bank — 405 questions + 6 essays with every answer explained.">
+<title>Colorado LLP Exam Prep — The Practice Exam Library for the Licensed Legal Paraprofessional Exam</title>
+<meta name="description" content="Attorney-authored prep for Colorado's Licensed Legal Paraprofessional (LLP) exam. Try the 6 hardest questions and 2 black-diamond essays free — then get the full 225-page, 405-question guide for $99.95.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --blue:#14355F; --ink:#0C1F3A; --blue-soft:#1E4A82;
-    --red:#C8102E; --gold:#F2B01E; --gold-soft:#FFF3D6;
-    --cream:#FAF7F1; --white:#FFFFFF; --line:#E6E0D4;
+    --blue:#14355F; --ink:#0C1F3A; --blue-soft:#1E4A82; --sky:#2A5B99;
+    --red:#B0532E; --gold:#F2B01E; --gold-soft:#FFF3D6;
+    --cream:#FAF7F1; --sand:#F1ECE1; --white:#FFFFFF; --line:#E6E0D4;
     --green:#1E7A46; --green-soft:#E7F4EC; --red-soft:#FBE9EC;
     --muted:#5B6B80; --radius:18px;
     --shadow:0 10px 30px rgba(12,31,58,.08);
@@ -26,12 +26,12 @@
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
   /* ===== header ===== */
-  header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
   .brand-name{font-weight:800;font-size:1.02rem;letter-spacing:-.01em}
-  .brand-name span{color:var(--red)}
-  .nav-links{display:flex;align-items:center;gap:22px}
+  .brand-name span{color:var(--gold)}
+  .nav-links{display:flex;align-items:center;gap:20px}
   .nav-links a{font-size:.92rem;font-weight:600;color:var(--ink);text-decoration:none;opacity:.75}
   .nav-links a:hover{opacity:1}
   .btn{display:inline-block;font-weight:700;text-decoration:none;border-radius:999px;transition:transform .12s ease, box-shadow .12s ease;cursor:pointer;border:none}
@@ -40,68 +40,81 @@
   .btn-gold:hover{box-shadow:0 8px 22px rgba(242,176,30,.5)}
   .btn-line{border:2px solid var(--blue);color:var(--blue);padding:10px 22px;font-size:.95rem;background:transparent}
   .btn-line:hover{background:var(--blue);color:#fff}
-  @media(max-width:640px){.nav-links a:not(.btn){display:none}}
+  @media(max-width:760px){.nav-links a:not(.btn){display:none}}
+
+  /* ===== mountain dividers ===== */
+  .mtn-div{display:block;width:100%;height:90px}
+  .mtn-div.flip{transform:scaleY(-1)}
+  @media(max-width:640px){.mtn-div{height:56px}}
 
   /* ===== hero ===== */
-  .hero{position:relative;background:linear-gradient(178deg,var(--ink) 0%,var(--blue) 62%,#2A5B99 100%);color:#fff;overflow:hidden}
-  .hero .wrap{position:relative;z-index:2;padding-top:84px;padding-bottom:150px;text-align:center}
+  .hero{position:relative;background:linear-gradient(178deg,#081527 0%,var(--ink) 30%,var(--blue) 66%,var(--sky) 100%);color:#fff;overflow:hidden}
+  .hero .wrap{position:relative;z-index:3;padding-top:80px;padding-bottom:210px;text-align:center}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(242,176,30,.45);padding:7px 16px;border-radius:999px;background:rgba(242,176,30,.08)}
-  .hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:900;line-height:1.06;letter-spacing:-.02em;margin:26px auto 18px;max-width:820px}
-  .hero h1 em{font-style:normal;color:var(--gold);position:relative;white-space:nowrap}
-  .hero p.lede{font-size:clamp(1.02rem,2vw,1.22rem);color:#C9D6E8;max-width:640px;margin:0 auto 34px}
-  .hero-cred{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:.85rem;font-weight:700;letter-spacing:.04em;color:#EBD9A8;margin:-14px auto 30px;max-width:720px}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:900;line-height:1.06;letter-spacing:-.02em;margin:26px auto 18px;max-width:840px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p.lede{font-size:clamp(1.02rem,2vw,1.2rem);color:#C9D6E8;max-width:680px;margin:0 auto 22px}
+  .hero-cred{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:.85rem;font-weight:700;letter-spacing:.04em;color:#EBD9A8;margin:0 auto 30px;max-width:720px}
   .hero-cred .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex:0 0 5px}
-  .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+  .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:42px}
   .hero .btn-line{border-color:rgba(255,255,255,.65);color:#fff}
   .hero .btn-line:hover{background:#fff;color:var(--blue)}
   .count-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .chip{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 22px;text-align:center;min-width:150px}
   .chip .num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:800;color:var(--gold);line-height:1.1}
   .chip .lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#B9C9DE;font-weight:600}
-  .mtns{position:absolute;bottom:-2px;left:0;right:0;z-index:1}
+  .hero-sun{position:absolute;top:70px;right:12%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#F2B01E 0%,rgba(242,176,30,.35) 55%,transparent 72%);z-index:1}
+  .range{position:absolute;bottom:-2px;left:0;right:0;z-index:2}
 
   /* ===== stats band ===== */
   .stats{background:var(--white);border-bottom:1px solid var(--line)}
   .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:30px 24px}
   .stat{text-align:center;padding:8px}
-  .stat .n{font-family:'Fraunces',serif;font-size:2rem;font-weight:800;color:var(--red)}
+  .stat .n{font-family:'Fraunces',serif;font-size:2rem;font-weight:800;color:var(--blue)}
   .stat .t{font-size:.85rem;color:var(--muted);font-weight:600}
   @media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
 
   /* ===== author band ===== */
-  .author-band{background:var(--white);border-bottom:1px solid var(--line);padding:26px 0}
+  .author-band{background:var(--white);padding:26px 0 30px}
   .author-band .wrap{display:flex;align-items:center;justify-content:center;gap:16px;text-align:center;flex-wrap:wrap}
   .author-band .scales{flex:0 0 44px;height:44px;border-radius:50%;background:var(--gold-soft);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center}
   .author-band p{font-family:'Fraunces',serif;font-size:clamp(1rem,2vw,1.18rem);font-weight:600;color:var(--blue);max-width:760px}
-  .author-band p b{color:var(--red)}
+  .author-band p b{color:var(--blue-soft)}
   .author-band .cred-sub{display:block;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
   /* ===== sections ===== */
-  section{padding:78px 0}
-  .kicker{display:inline-block;font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+  section{padding:72px 0}
+  .kicker{display:inline-block;font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-soft);margin-bottom:12px}
+  .peak-mark{display:flex;align-items:flex-end;gap:3px;margin-bottom:14px}
+  .peak-mark i{display:block;width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:14px solid var(--gold)}
+  .peak-mark i:nth-child(2){border-bottom-color:var(--blue);border-bottom-width:20px;border-left-width:12px;border-right-width:12px}
+  .peak-mark i:nth-child(3){border-bottom-color:var(--sky);border-bottom-width:11px;border-left-width:7px;border-right-width:7px}
   h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:800;letter-spacing:-.015em;line-height:1.15;margin-bottom:14px}
-  .sub{color:var(--muted);max-width:640px;font-size:1.03rem}
+  .sub{color:var(--muted);max-width:660px;font-size:1.03rem}
 
   /* dates */
+  #dates{background:var(--cream);padding-top:56px}
   .dates-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
   .date-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);position:relative}
-  .date-card.hot{border-top:4px solid var(--red)}
+  .date-card.hot{border-top:4px solid var(--blue)}
   .date-card.gold-top{border-top:4px solid var(--gold)}
   .date-card .d{font-family:'Fraunces',serif;font-weight:800;font-size:1.25rem;margin-bottom:4px}
   .date-card .l{font-size:.86rem;color:var(--muted)}
-  .date-card .flag{position:absolute;top:14px;right:14px;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--red-soft);color:var(--red);padding:4px 9px;border-radius:999px}
+  .date-card .flag{position:absolute;top:14px;right:14px;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-soft);color:#8A6410;padding:4px 9px;border-radius:999px}
   .src-note{font-size:.8rem;color:var(--muted);margin-top:16px}
-  .src-note a{color:var(--blue-soft)}
   @media(max-width:840px){.dates-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:480px){.dates-grid{grid-template-columns:1fr}}
 
   /* ===== quiz ===== */
-  #quiz{background:linear-gradient(180deg,var(--cream) 0%,#F1ECE1 100%)}
+  #quiz{background:var(--sand);padding-top:60px}
   .quiz-head{text-align:center;margin-bottom:8px}
+  .quiz-head .kicker{color:var(--blue-soft)}
   .quiz-head .sub{margin:0 auto}
+  .diamond{display:inline-block;color:var(--ink);font-size:1rem;letter-spacing:2px}
   .score-pill{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-weight:700;font-size:.92rem;color:var(--blue)}
   .score-pill b{color:var(--red)}
-  .qcard{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px;margin-top:26px;max-width:820px;margin-left:auto;margin-right:auto}
+  .qcard{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px;margin-top:26px;max-width:820px;margin-left:auto;margin-right:auto;position:relative;overflow:hidden}
+  .qcard::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue) 0%,var(--gold) 50%,var(--sky) 100%)}
   .qtag{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;flex-wrap:wrap}
   .qtag .subj{font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--blue-soft);background:#EAF1FA;padding:5px 12px;border-radius:999px}
   .qtag .qnum{font-size:.78rem;color:var(--muted);font-weight:600}
@@ -124,47 +137,78 @@
   .why .auth{display:block;margin-top:10px;font-size:.8rem;color:var(--muted);font-style:italic}
   @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .quiz-cta{text-align:center;margin-top:40px}
-  .quiz-cta .note{font-size:.92rem;color:var(--muted);margin-bottom:16px}
+  .quiz-cta .note{font-size:.95rem;color:var(--muted);margin-bottom:16px}
 
-  /* ===== booklet ===== */
-  .book-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;margin-top:20px}
-  .book-visual{background:var(--blue);border-radius:24px;padding:40px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
-  .book-visual::after{content:"";position:absolute;inset:auto -40px -60px auto;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(242,176,30,.35),transparent 65%)}
-  .book-visual .bk-title{font-family:'Fraunces',serif;font-weight:800;font-size:1.5rem;line-height:1.25;margin-bottom:6px}
-  .book-visual .bk-sub{color:#C9D6E8;font-size:.92rem;margin-bottom:24px}
-  .book-visual ul{list-style:none;display:grid;gap:12px;position:relative;z-index:1}
-  .book-visual li{display:flex;gap:10px;align-items:flex-start;font-size:.94rem}
-  .book-visual li .tick{flex:0 0 20px;height:20px;border-radius:50%;background:var(--gold);color:var(--ink);font-weight:900;font-size:.7rem;display:flex;align-items:center;justify-content:center;margin-top:2px}
-  .feat-list{display:grid;gap:18px}
-  .feat{display:flex;gap:16px}
-  .feat .ico{flex:0 0 46px;height:46px;border-radius:14px;background:var(--white);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
-  .feat h3{font-size:1.06rem;margin-bottom:3px}
-  .feat p{font-size:.92rem;color:var(--muted)}
-  @media(max-width:840px){.book-grid{grid-template-columns:1fr}}
+  /* ===== essays ===== */
+  #essays{background:var(--cream);padding-top:60px}
+  .essay-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin-top:26px;max-width:880px;margin-left:auto;margin-right:auto;overflow:hidden}
+  .essay-head{background:var(--ink);color:#fff;padding:22px 28px;position:relative;overflow:hidden}
+  .essay-head::after{content:"";position:absolute;right:-10px;bottom:-24px;width:220px;height:90px;background:
+    linear-gradient(135deg,transparent 49%,rgba(255,255,255,.06) 50%),
+    linear-gradient(225deg,transparent 49%,rgba(255,255,255,.08) 50%);
+  }
+  .essay-head .lvl{font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  .essay-head h3{font-size:1.25rem;font-weight:800}
+  .essay-body{padding:26px 28px}
+  .prompt-label{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-soft);margin-bottom:8px}
+  .essay-body p.prompt{font-size:.98rem;line-height:1.65;margin-bottom:12px}
+  .reveal-btn{margin-top:10px;background:var(--blue);color:#fff;border:none;border-radius:999px;padding:11px 24px;font-weight:700;font-size:.92rem;cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s}
+  .reveal-btn:hover{background:var(--blue-soft)}
+  .model{display:none;margin-top:20px;border-top:2px dashed var(--line);padding-top:20px}
+  .model.show{display:block;animation:fadeUp .4s ease}
+  .model h4{font-family:'Inter',sans-serif;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin:16px 0 6px}
+  .model h4:first-child{margin-top:0}
+  .model p{font-size:.93rem;line-height:1.65;margin-bottom:10px}
+  .model .auth{font-size:.8rem;color:var(--muted);font-style:italic;border-left:3px solid var(--gold);padding-left:12px;margin-top:14px}
+  .grader{background:var(--gold-soft);border-radius:12px;padding:16px 18px;margin-top:16px}
+  .grader h5{font-family:'Inter',sans-serif;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+  .grader p{font-size:.9rem;margin:0}
 
-  /* ===== get (form) ===== */
-  #get{background:var(--blue);color:#fff}
+  /* ===== pricing ===== */
+  #pricing{background:linear-gradient(180deg,var(--ink) 0%,var(--blue) 100%);color:#fff;position:relative;overflow:hidden;padding-top:60px;padding-bottom:96px}
+  #pricing .kicker{color:var(--gold)}
+  #pricing h2{color:#fff}
+  #pricing .sub{color:#C9D6E8}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch;margin-top:36px;position:relative;z-index:2}
+  .price-card{background:var(--white);color:var(--ink);border-radius:24px;box-shadow:0 30px 70px rgba(0,0,0,.35);padding:36px;position:relative;overflow:hidden}
+  .price-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--blue),var(--gold),var(--sky))}
+  .price-tag{display:flex;align-items:baseline;gap:10px;margin:6px 0 4px}
+  .price-tag .amt{font-family:'Fraunces',serif;font-weight:900;font-size:3.4rem;color:var(--blue);line-height:1}
+  .price-tag .per{font-size:.9rem;color:var(--muted);font-weight:600}
+  .price-note{font-size:.88rem;color:var(--muted);margin-bottom:18px}
+  .price-card ul{list-style:none;display:grid;gap:11px;margin:18px 0 24px}
+  .price-card li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem}
+  .price-card li .tick{flex:0 0 20px;height:20px;border-radius:50%;background:var(--gold);color:var(--ink);font-weight:900;font-size:.7rem;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .buy-btn{display:block;text-align:center;background:var(--gold);color:var(--ink);font-weight:800;font-size:1.05rem;border-radius:14px;padding:16px 20px;text-decoration:none;box-shadow:0 8px 20px rgba(242,176,30,.45);transition:transform .12s}
+  .buy-btn:hover{transform:translateY(-2px)}
+  .buy-fine{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px}
+  .summit-col{display:flex;flex-direction:column;justify-content:center;gap:18px}
+  .summit-item{display:flex;gap:14px;align-items:flex-start}
+  .summit-item .pk{flex:0 0 40px;height:40px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .summit-item h3{font-size:1.02rem;color:#fff;margin-bottom:2px}
+  .summit-item p{font-size:.9rem;color:#B9C9DE}
+  #pricing .range-bottom{position:absolute;bottom:-2px;left:0;right:0;z-index:1;opacity:.5}
+  @media(max-width:880px){.price-grid{grid-template-columns:1fr}}
+
+  /* ===== reserve (form) ===== */
+  #reserve{background:var(--sand);padding-top:60px}
   .get-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
-  #get .kicker{color:var(--gold)}
-  #get .sub{color:#C9D6E8}
-  #get h2{color:#fff}
-  .free-tag{display:inline-block;font-family:'Fraunces',serif;font-weight:900;font-size:2.6rem;color:var(--gold);line-height:1;margin-bottom:10px}
-  .form-shell{background:var(--white);border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.28);padding:14px;color:var(--ink)}
+  .form-shell{background:var(--white);border-radius:20px;box-shadow:var(--shadow);padding:14px}
   .form-shell iframe{width:100%;height:560px;border:none;border-radius:12px}
-  .tiny{font-size:.78rem;color:#9FB3CC;margin-top:14px}
+  .tiny{font-size:.78rem;color:var(--muted);margin-top:14px}
   @media(max-width:900px){.get-grid{grid-template-columns:1fr}}
 
-  /* ===== about / faq ===== */
+  /* ===== faq ===== */
+  #faq{padding-top:60px}
   .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
   .faq{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
   .faq h3{font-size:1.02rem;margin-bottom:8px}
   .faq p{font-size:.92rem;color:var(--muted)}
-  .faq a{font-weight:600}
   @media(max-width:760px){.faq-grid{grid-template-columns:1fr}}
 
   /* ===== footer ===== */
-  footer{background:var(--ink);color:#8FA3BC;padding:46px 0 40px;font-size:.84rem}
-  footer .wrap{display:grid;gap:18px}
+  footer{background:var(--ink);color:#8FA3BC;padding:0 0 40px;font-size:.84rem}
+  footer .wrap{display:grid;gap:18px;padding-top:34px}
   .foot-top{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
   .foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800}
   footer a{color:#C9D6E8}
@@ -179,33 +223,36 @@
     <a class="brand" href="#top" aria-label="Colorado LLP Exam Prep home">
       <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
         <rect width="34" height="34" rx="8" fill="#14355F"/>
-        <path d="M23.5 12.2a7.6 7.6 0 1 0 0 9.6" stroke="#C8102E" stroke-width="4.4" fill="none" stroke-linecap="round"/>
-        <circle cx="17.2" cy="17" r="3.4" fill="#F2B01E"/>
+        <path d="M3 26 L11 14 L16 21 L21 11 L31 26 Z" fill="#1E4A82"/>
+        <path d="M21 11 L24.5 16.5 L21 16 L18.5 14.8 Z" fill="#FFFFFF" opacity=".85"/>
+        <circle cx="9" cy="8" r="3.2" fill="#F2B01E"/>
       </svg>
       <span class="brand-name">Colorado<span>LLP</span>Exam</span>
     </a>
     <nav class="nav-links">
       <a href="#dates">2026 Dates</a>
-      <a href="#quiz">Free Questions</a>
-      <a href="#booklet">The Booklet</a>
-      <a class="btn btn-gold" href="#get">Get Our Study Exam Guide</a>
+      <a href="#quiz">Hardest Questions</a>
+      <a href="#essays">Essays</a>
+      <a class="btn btn-gold" href="#pricing">Get the Guide — $99.95</a>
     </nav>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
 <div class="hero" id="top">
+  <div class="hero-sun" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow">★ Attorney-Built · For the Nov 10, 2026 Colorado LLP Exam</span>
-    <h1>Walk into the LLP exam <em>already sure</em> you'll pass.</h1>
-    <p class="lede">The practice question bank for Colorado's Licensed Legal Paraprofessional licensure exam — 405 exam-style questions and 6 essays covering domestic relations law and LLP ethics, with every single answer explained.</p>
+    <h1>The summit is the LLP exam.<br><em>This is your route map.</em></h1>
+    <p class="lede">Attorney-authored practice for Colorado's Licensed Legal Paraprofessional exam — 405 exam-style questions and 6 essays with every answer explained. Try the <strong>6 hardest questions</strong> and <strong>2 black-diamond essays</strong> free below.</p>
     <div class="hero-cred">
       <span>Created by a Colorado family law attorney — 23+ years in practice</span><span class="dot"></span>
-      <span>District Court-appointed Child &amp; Family Investigator (CFI)</span>
+      <span>Colorado District Court-appointed Child &amp; Family Investigator (CFI)</span><span class="dot"></span>
+      <span>Former Government Investigator — Denver Human Services</span>
     </div>
     <div class="hero-ctas">
-      <a class="btn btn-gold" href="#quiz">Try 6 real questions →</a>
-      <a class="btn btn-line" href="#get">Get the full bank — free</a>
+      <a class="btn btn-gold" href="#quiz">Try the 6 hardest questions →</a>
+      <a class="btn btn-line" href="#pricing">Get the Guide — $99.95</a>
     </div>
     <div class="count-row">
       <div class="chip"><div class="num" id="cd-exam">—</div><div class="lbl">Days to the exam</div></div>
@@ -213,10 +260,12 @@
       <div class="chip"><div class="num">3×</div><div class="lbl">Full-length practice exams</div></div>
     </div>
   </div>
-  <svg class="mtns" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 150 L0 96 L180 40 L310 92 L430 24 L560 88 L700 10 L840 84 L980 34 L1120 96 L1260 52 L1440 104 L1440 150 Z" fill="rgba(250,247,241,.22)"/>
-    <path d="M0 150 L0 118 L200 72 L340 112 L470 58 L610 110 L740 42 L880 106 L1030 66 L1180 116 L1320 84 L1440 122 L1440 150 Z" fill="rgba(250,247,241,.45)"/>
-    <path d="M0 150 L0 132 L220 100 L370 128 L520 92 L670 128 L820 78 L970 126 L1120 98 L1270 130 L1440 108 L1440 150 Z" fill="#FAF7F1"/>
+  <svg class="range" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 190 L0 110 L140 48 L215 86 L300 22 L370 68 L455 30 L540 92 L640 8 L742 88 L830 40 L930 98 L1030 34 L1130 96 L1240 56 L1340 100 L1440 70 L1440 190 Z" fill="rgba(250,247,241,.14)"/>
+    <path d="M295 26 L300 22 L305 26 L300 31 Z M635 13 L640 8 L646 14 L640 19 Z M1025 39 L1030 34 L1036 40 L1030 44 Z" fill="#fff" opacity=".9"/>
+    <path d="M0 190 L0 132 L170 78 L260 116 L360 58 L470 112 L570 44 L690 108 L800 62 L910 116 L1020 72 L1140 118 L1260 86 L1380 122 L1440 100 L1440 190 Z" fill="rgba(250,247,241,.32)"/>
+    <path d="M0 190 L0 152 L200 108 L340 138 L470 96 L620 136 L760 84 L900 132 L1040 100 L1180 136 L1320 110 L1440 132 L1440 190 Z" fill="rgba(250,247,241,.6)"/>
+    <path d="M0 190 L0 166 L230 130 L390 156 L540 120 L700 152 L850 112 L1000 150 L1160 126 L1320 154 L1440 136 L1440 190 Z" fill="#FAF7F1"/>
   </svg>
 </div>
 
@@ -224,9 +273,9 @@
 <div class="stats">
   <div class="wrap">
     <div class="stat"><div class="n">405</div><div class="t">Multiple-choice questions</div></div>
-    <div class="stat"><div class="n">6</div><div class="t">Essay prompts with model answers</div></div>
+    <div class="stat"><div class="n">6</div><div class="t">Essays with model answers</div></div>
     <div class="stat"><div class="n">225</div><div class="t">Pages, incl. full explanations</div></div>
-    <div class="stat"><div class="n">100%</div><div class="t">Answers keyed to authority</div></div>
+    <div class="stat"><div class="n">$99.95</div><div class="t">One price. The whole library.</div></div>
   </div>
 </div>
 
@@ -237,111 +286,220 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14355F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 21h8"/><path d="M4 7h16"/><path d="M6 7l-3 6a3.5 3.5 0 0 0 6 0z"/><path d="M18 7l-3 6a3.5 3.5 0 0 0 6 0z"/></svg>
     </div>
     <p>Created and developed by a <b>Colorado family law attorney with 23+ years in practice</b> — 30+ years in the legal profession, spanning Pennsylvania to Colorado.
-      <span class="cred-sub">District Court-Appointed Child &amp; Family Investigator (CFI)</span>
+      <span class="cred-sub">Colorado District Court-Appointed Child &amp; Family Investigator (CFI) · Former Government Investigator, Denver Human Services — Denver, Colorado</span>
     </p>
   </div>
 </div>
 
+<svg class="mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)">
+  <path d="M0 90 L0 60 L180 22 L310 58 L450 14 L590 54 L730 8 L880 52 L1020 18 L1170 56 L1310 30 L1440 58 L1440 90 Z" fill="#fff" opacity=".55"/>
+  <path d="M0 90 L0 76 L200 44 L360 70 L520 36 L690 68 L850 30 L1010 64 L1170 44 L1330 72 L1440 52 L1440 90 Z" fill="#fff"/>
+</svg>
+
 <!-- ================= DATES ================= -->
 <section id="dates">
   <div class="wrap">
-    <span class="kicker">The 2026 Cycle</span>
+    <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+    <span class="kicker">The 2026 Cycle · Base Camp Calendar</span>
     <h2>One exam this year. Know the dates cold.</h2>
-    <p class="sub">In 2026 the Colorado Supreme Court is offering the Licensed Legal Paraprofessional exam <strong>only once — November 10</strong>. There is no April sitting.</p>
+    <p class="sub">In 2026 the Colorado Supreme Court is offering the Licensed Legal Paraprofessional exam <strong>only once — November 10</strong>. There is no April sitting. Miss the window, wait a year.</p>
     <div class="dates-grid">
       <div class="date-card"><div class="d">Jul 1, 2026</div><div class="l">Application window opened</div></div>
       <div class="date-card gold-top"><div class="d">Aug 7, 2026</div><div class="l">Regular filing deadline</div><span class="flag">Closing soon</span></div>
       <div class="date-card hot"><div class="d">Sep 4, 2026</div><div class="l">Late filing deadline (final)</div></div>
-      <div class="date-card"><div class="d">Nov 10, 2026</div><div class="l">Exam day — Ralph L. Carr Judicial Center, Denver</div></div>
+      <div class="date-card"><div class="d">Nov 10, 2026</div><div class="l">Summit day — Ralph L. Carr Judicial Center, Denver</div></div>
     </div>
     <p class="src-note">Dates per the <a href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener">Office of Attorney Regulation Counsel</a> — always confirm against the official site before filing.</p>
   </div>
 </section>
 
+<svg class="mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)">
+  <path d="M0 90 L0 58 L160 26 L300 60 L440 18 L600 56 L760 12 L920 54 L1080 24 L1240 58 L1380 36 L1440 52 L1440 90 Z" fill="#F1ECE1" opacity=".6"/>
+  <path d="M0 90 L0 74 L190 46 L350 70 L510 40 L680 68 L840 34 L1000 64 L1160 46 L1320 72 L1440 56 L1440 90 Z" fill="#F1ECE1"/>
+</svg>
+
 <!-- ================= QUIZ ================= -->
 <section id="quiz">
   <div class="wrap">
     <div class="quiz-head">
-      <span class="kicker">Free Sample — Straight From the Bank</span>
-      <h2>Try 6 real questions.</h2>
-      <p class="sub">Pulled directly from the practice exam bank — same style, same subjects, same authority-backed explanations as the real thing. Every question and explanation was written by a Colorado family law attorney with 23+ years in domestic relations practice. Tap an answer to see how you did.</p>
+      <span class="diamond" aria-hidden="true">◆◆</span>
+      <div class="peak-mark" style="justify-content:center;display:flex" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span class="kicker">Free Sample — Straight From Our Library</span>
+      <h2>The 6 hardest questions in our library.</h2>
+      <p class="sub">Not the warm-ups — these are the six questions our test-takers miss most. Every question and explanation was written by a Colorado family law attorney with 23+ years in domestic relations practice. If you can hang with these, the other 399 will feel like a green run.</p>
       <div class="score-pill">Score: <b id="score">0</b>&nbsp;/&nbsp;<span id="answered">0</span> answered</div>
     </div>
     <div id="quiz-cards"></div>
     <div class="quiz-cta">
-      <p class="note">That's 6 down — <strong>399 questions and 6 essays to go.</strong></p>
-      <a class="btn btn-gold" href="#get">Send me the full booklet — free →</a>
+      <p class="note">That's the free sample — <strong>399 more questions, all explained, in the full guide.</strong></p>
+      <a class="btn btn-gold" href="#pricing">Get the Guide — $99.95 →</a>
     </div>
   </div>
 </section>
 
-<!-- ================= BOOKLET ================= -->
-<section id="booklet">
+<svg class="mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sand)">
+  <path d="M0 90 L0 56 L170 24 L320 58 L470 16 L620 54 L790 10 L950 52 L1110 22 L1270 56 L1440 34 L1440 90 Z" fill="#FAF7F1" opacity=".6"/>
+  <path d="M0 90 L0 72 L200 44 L360 68 L530 38 L700 66 L860 32 L1030 62 L1200 44 L1360 70 L1440 54 L1440 90 Z" fill="#FAF7F1"/>
+</svg>
+
+<!-- ================= ESSAYS ================= -->
+<section id="essays">
   <div class="wrap">
-    <span class="kicker">The Free Booklet</span>
-    <h2>Three full exams' worth of practice. Zero dollars.</h2>
-    <p class="sub">The real exam is 90 family-law questions, 45 ethics questions, and 2 essays. The bank gives you <strong>triple that</strong> — organized by subject so you can drill your weak spots.</p>
-    <div class="book-grid">
-      <div class="book-visual">
-        <div class="bk-title">Colorado LLP Practice Exam Question Bank</div>
-        <div class="bk-sub">2026 Edition · 225 pages · PDF, sent to your inbox · Written by a 23+ year Colorado family law attorney</div>
-        <ul>
-          <li><span class="tick">✓</span> Part I — 270 family-law multiple choice, tagged by subject (jurisdiction, APR, child support, maintenance, property, protection orders, UCCJEA & more)</li>
-          <li><span class="tick">✓</span> Part II — 135 LLP ethics multiple choice keyed to the Colo. LLP Rules of Professional Conduct</li>
-          <li><span class="tick">✓</span> Part III — 6 essay prompts with model answers and grading notes</li>
-          <li><span class="tick">✓</span> Appendix A — every question re-printed with ✓/✗ marked and a "why," with controlling authority</li>
-          <li><span class="tick">✓</span> Appendix B — master law-reference table mapping every question to its statute or rule</li>
-          <li><span class="tick">✓</span> Exhibits — scope &amp; carve-out cheat sheet, child-support worksheet walkthrough, maintenance quick-reference, high-yield numbers</li>
-        </ul>
+    <div class="quiz-head">
+      <span class="diamond" aria-hidden="true">◆◆</span>
+      <div class="peak-mark" style="justify-content:center;display:flex" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span class="kicker">Free Sample · The Two Toughest Climbs</span>
+      <h2>Two black-diamond essays, with model answers.</h2>
+      <p class="sub">The real exam includes essays. These are the two hardest in our library — read the prompt, outline your answer, then reveal the graded model answer and see exactly what earns points.</p>
+    </div>
+
+    <!-- ESSAY 1 -->
+    <div class="essay-card">
+      <div class="essay-head">
+        <div class="lvl"><span>◆◆ Ascent 1</span></div>
+        <h3>Dissolution with Carve-Outs — Scope, Child Support, Property</h3>
       </div>
-      <div class="feat-list">
-        <div class="feat">
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <div><h3>Built like the real exam</h3><p>Same subjects, same weighting logic, same "one clearly right answer" discipline — so exam day feels like another practice set.</p></div>
-        </div>
-        <div class="feat">
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14355F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-          <div><h3>Every answer explained</h3><p>No answer-key guessing. Each question gets a "why the right answer is right, why each wrong answer is wrong" breakdown with the controlling Colorado authority.</p></div>
-        </div>
-        <div class="feat">
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2B01E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <div><h3>Colorado-specific, LLP-specific</h3><p>Not recycled bar-exam material. Written around C.R.C.P. 207.1 scope limits, LLP courtroom rules, and the Colo. LLP RPC — the things only this exam tests.</p></div>
-        </div>
-        <div class="feat">
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E7A46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
-          <div><h3>23+ years of family law behind it</h3><p>Authored by a Colorado family law attorney with 23+ years in domestic relations practice — 30+ in the legal profession, Pennsylvania to Colorado — and a District Court-appointed Child &amp; Family Investigator (CFI).</p></div>
+      <div class="essay-body">
+        <div class="prompt-label">The Prompt</div>
+        <p class="prompt">Dana retains you, a Licensed Legal Paraprofessional, to handle her dissolution of marriage. Dana and her husband, Mark, have one child, age 6. Dana earns $4,500/month gross; Mark earns $7,500/month gross and recently quit a $9,000/month job, saying he wants "time to think." The parties own a marital home with equity, Mark has a 401(k) accumulated during the marriage, and Dana inherited $60,000 during the marriage that has grown to $75,000 in a separate account. Mark insists a prenuptial agreement he asked Dana to sign the night before the wedding controls the property division; Dana wants to challenge it. The parties will share parenting roughly equally.</p>
+        <p class="prompt"><strong>Identify the issues, the applicable Colorado law, what you can and cannot do as an LLP, and how each issue should likely be resolved.</strong></p>
+        <button class="reveal-btn" data-target="model1">Reveal the model answer ▾</button>
+        <div class="model" id="model1">
+          <h4>Scope issues first</h4>
+          <p>Two matters are carve-outs outside an LLP's authorized scope under C.R.C.P. 207.1: (1) the dispute over the prenuptial (marital) agreement, and (2) preparation of a QDRO to divide Mark's 401(k). Advise Dana to consult an attorney for the prenup challenge and the QDRO, while continuing on the in-scope portions under C.R.C.P. 207.1(i) — and advise her of the limits of the LLP license (LLP RPC 1.2, the duty to disclose scope limits).</p>
+          <h4>Jurisdiction / commencement</h4>
+          <p>Confirm the 91-day Colorado domicile and the 91-day waiting period before a decree may enter (C.R.S. 14-10-106). Ensure Rule 16.2 mandatory financial disclosures are exchanged (Sworn Financial Statement), noting the continuing duty and the 5-year reallocation remedy for nondisclosure (C.R.C.P. 16.2(e)).</p>
+          <h4>Property</h4>
+          <p>Colorado is an equitable-distribution state (C.R.S. 14-10-113). The marital home equity and the marital portion of the 401(k) are marital. Dana's $60,000 inheritance is separate, but the <strong>$15,000 appreciation during the marriage is marital</strong> (C.R.S. 14-10-113(4)). The prenup's enforceability is outside scope; refer it out. In scope: the agreement dividing the home and ordinary accounts — but not the QDRO.</p>
+          <h4>Child support</h4>
+          <p>Because the parties share roughly equal time, determine whether each has at least 93 overnights (Worksheet B) or not (Worksheet A). Mark quit a $9,000 job; if he is voluntarily underemployed without an exception, <strong>impute potential income</strong> based on employment potential and probable earnings (C.R.S. 14-10-115(5)(b)). Add adjustments for child care and the child's health insurance.</p>
+          <h4>Maintenance</h4>
+          <p>If requested, run the advisory guideline; it is advisory and the court must make findings (C.R.S. 14-10-114). Compute maintenance first and adjust incomes before the child support worksheet.</p>
+          <h4>Conclusion</h4>
+          <p>Proceed in scope on dissolution mechanics, parenting, child support, maintenance, and the ordinary property division; refer the prenup dispute and the QDRO to an attorney; document the scope advice to Dana.</p>
+          <div class="grader">
+            <h5>Why this answer scores</h5>
+            <p>Graders look for: spotting BOTH carve-outs (prenup + QDRO) and the duty to advise of scope limits; correct property characterization — especially that appreciation of separate property is marital; the imputation analysis tied to Mark quitting a higher-paying job; the 93-overnight Worksheet A/B question; and the advisory maintenance formula with the maintenance-before-child-support order of operations. A strong answer continues on in-scope work rather than withdrawing entirely.</p>
+          </div>
+          <p class="auth">Authority: C.R.C.P. 207.1; C.R.S. 14-10-106; C.R.C.P. 16.2; C.R.S. 14-10-113; C.R.S. 14-10-115; C.R.S. 14-10-114</p>
         </div>
       </div>
+    </div>
+
+    <!-- ESSAY 2 -->
+    <div class="essay-card">
+      <div class="essay-head">
+        <div class="lvl"><span>◆◆ Ascent 2</span></div>
+        <h3>Maintenance, Property Characterization &amp; Disclosure</h3>
+      </div>
+      <div class="essay-body">
+        <div class="prompt-label">The Prompt</div>
+        <p class="prompt">Lee and Jordan are divorcing after a 15-year marriage. Lee earns $10,000/month; Jordan stayed home raising children and now earns $2,500/month part-time. Combined income is under $240,000/year. The marital estate includes a home, retirement accounts, and a brokerage account Lee opened before the marriage worth $50,000 at marriage and $200,000 now (funded partly with marital earnings during the marriage). Jordan suspects Lee has not disclosed a year-end bonus.</p>
+        <p class="prompt"><strong>Analyze maintenance, the characterization of the brokerage account, and Jordan's disclosure concerns.</strong></p>
+        <button class="reveal-btn" data-target="model2">Reveal the model answer ▾</button>
+        <div class="model" id="model2">
+          <h4>Maintenance</h4>
+          <p>Combined income is under $240,000, so the advisory guideline applies (C.R.S. 14-10-114): 40% of the higher earner's monthly adjusted gross income minus 50% of the lower earner's = (0.40 × $10,000) − (0.50 × $2,500) = $4,000 − $1,250 = <strong>$2,750/month advisory</strong>. For a 15-year marriage, the guideline term is a percentage of the 180 months married under the statutory schedule. The guideline is advisory — the court must make findings on the statutory factors: the 15-year duration, Jordan's homemaker role, the marital lifestyle, Jordan's lower earning capacity and retraining needs, and the property awarded. A long marriage with a large income disparity supports a substantial award.</p>
+          <h4>The brokerage account</h4>
+          <p>The $50,000 Lee brought into the marriage is separate property, but two categories are marital: the <strong>appreciation during the marriage on the separate portion</strong> (C.R.S. 14-10-113(4)) AND any <strong>growth attributable to marital funds</strong> contributed during the marriage. Tracing separates the premarital corpus from the marital appreciation and contributions; the marital component of the $200,000 is divided equitably. Lee bears the burden of tracing the separate portion.</p>
+          <h4>Disclosure</h4>
+          <p>Rule 16.2(e) imposes an affirmative, continuing duty of full and honest financial disclosure. The bonus is income and an asset that must be disclosed via the Sworn Financial Statement and supplements. If Lee conceals it, the court may impose sanctions, may <strong>reallocate the omitted asset on a motion within 5 years of the decree</strong> (C.R.C.P. 16.2(e)(10)), and may draw adverse credibility findings. Request documentation — pay records and employer statements — to confirm the bonus.</p>
+          <h4>Conclusion</h4>
+          <p>Expect meaningful maintenance given the marriage length and disparity; divide the marital portion of the brokerage account after tracing; pursue full disclosure of the bonus. All issues here are within LLP scope.</p>
+          <div class="grader">
+            <h5>Why this answer scores</h5>
+            <p>Graders reward: correct application of the 40%/50% formula AND recognition that it is advisory with required findings, plus the duration tied to a 15-year marriage; precise property analysis — premarital corpus separate, but in-marriage appreciation and marital-funded growth are marital, with Lee bearing the tracing burden; the Rule 16.2 affirmative, continuing disclosure duty and the 5-year reallocation remedy for the hidden bonus; and naming the homemaker-contribution and lifestyle factors.</p>
+          </div>
+          <p class="auth">Authority: C.R.S. 14-10-114; C.R.S. 14-10-113(4); C.R.C.P. 16.2(e); C.R.C.P. 16.2(e)(10)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-cta">
+      <p class="note">Four more essays — relocation &amp; conflicts, contempt, APR &amp; domestic violence, parentage &amp; scope — <strong>with model answers and grading notes, inside the guide.</strong></p>
+      <a class="btn btn-gold" href="#pricing">Get all 6 essays — $99.95 →</a>
     </div>
   </div>
 </section>
 
-<!-- ================= GET (FORM) ================= -->
-<section id="get">
+<svg class="mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)">
+  <path d="M0 90 L0 52 L160 20 L310 54 L460 12 L620 50 L780 6 L940 48 L1100 16 L1260 52 L1440 28 L1440 90 Z" fill="#14355F" opacity=".25"/>
+  <path d="M0 90 L0 68 L190 38 L350 64 L520 32 L690 62 L860 26 L1030 58 L1200 38 L1370 66 L1440 50 L1440 90 Z" fill="#0C1F3A"/>
+</svg>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="kicker">The Full Guide</span>
+      <h2>Everything between you and the summit.</h2>
+      <p class="sub" style="margin:0 auto">Three full exams' worth of attorney-authored practice — organized by subject so you can drill weak spots, with every single answer explained and mapped to its controlling authority.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div style="font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-soft)">Colorado LLP Exam Prep Guide · 2026 Edition</div>
+        <div class="price-tag"><span class="amt">$99.95</span><span class="per">one-time · instant PDF</span></div>
+        <div class="price-note">Less than 20 minutes of a family-law attorney's time — for three exams' worth of their work.</div>
+        <ul>
+          <li><span class="tick">✓</span> <span><strong>270 family-law multiple choice</strong>, tagged by subject — jurisdiction, APR, child support, maintenance, property, protection orders, UCCJEA/UIFSA &amp; more</span></li>
+          <li><span class="tick">✓</span> <span><strong>135 LLP ethics multiple choice</strong> keyed to the Colo. LLP Rules of Professional Conduct</span></li>
+          <li><span class="tick">✓</span> <span><strong>All 6 essays</strong> with model answers and "why this scores" grading notes</span></li>
+          <li><span class="tick">✓</span> <span><strong>Appendix A</strong> — every question re-printed with ✓/✗ marked and a full "why," with controlling authority</span></li>
+          <li><span class="tick">✓</span> <span><strong>Appendix B</strong> — master law-reference table mapping every question to its statute or rule</span></li>
+          <li><span class="tick">✓</span> <span><strong>Exhibits</strong> — scope &amp; carve-out cheat sheet, child-support worksheet walkthrough, maintenance quick-reference, high-yield numbers</span></li>
+        </ul>
+        <a class="buy-btn" href="#reserve">Reserve your copy — $99.95</a>
+        <div class="buy-fine">Secure checkout is coming online now. Reserve below and we'll email your payment link the moment it's live — price locked at $99.95 for the November 2026 cohort.</div>
+      </div>
+      <div class="summit-col">
+        <div class="summit-item"><div class="pk">⛰️</div><div><h3>Built like the real exam</h3><p>The real exam is 90 family-law MC, 45 ethics MC, and essays. The guide gives you triple that volume, in the same style — one clearly right answer, distractors that teach.</p></div></div>
+        <div class="summit-item"><div class="pk">🧗</div><div><h3>Every answer explained</h3><p>No answer-key guessing. Each question gets a "why the right answer is right, why each wrong one is wrong" breakdown with the controlling Colorado authority.</p></div></div>
+        <div class="summit-item"><div class="pk">🏔️</div><div><h3>Colorado-specific, LLP-specific</h3><p>Written around C.R.C.P. 207.1 scope limits, LLP courtroom rules, and the Colo. LLP RPC — the things only this exam tests. Not recycled bar-prep material.</p></div></div>
+        <div class="summit-item"><div class="pk">⚖️</div><div><h3>23+ years of family law behind it</h3><p>Authored by a Colorado family law attorney — 23+ years in domestic relations practice, 30+ in the legal profession, Pennsylvania to Colorado — a Colorado District Court-appointed Child &amp; Family Investigator (CFI), and a former government investigator for Denver Human Services.</p></div></div>
+      </div>
+    </div>
+  </div>
+  <svg class="range-bottom mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 90 L0 60 L200 26 L360 62 L520 20 L700 58 L860 14 L1030 54 L1200 24 L1370 58 L1440 40 L1440 90 Z" fill="rgba(255,255,255,.06)"/>
+  </svg>
+</section>
+
+<svg class="mtn-div flip" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sand)">
+  <path d="M0 90 L0 62 L180 30 L340 64 L500 22 L670 58 L840 16 L1010 54 L1180 28 L1350 60 L1440 44 L1440 90 Z" fill="#14355F"/>
+</svg>
+
+<!-- ================= RESERVE ================= -->
+<section id="reserve">
   <div class="wrap get-grid">
     <div>
-      <span class="kicker">No Catch, No Card</span>
-      <div class="free-tag">$0</div>
-      <h2>Get the full 225-page bank in your inbox.</h2>
-      <p class="sub">Drop your <strong>superhero name</strong> and a good email, and we'll send the complete attorney-authored Colorado LLP Practice Exam Question Bank — all 405 questions, 6 essays, explanations, reference tables, and exhibits. Free for the November 2026 cohort. Capes optional.</p>
-      <p class="tiny">We'll only use your email to send the booklet and occasional LLP exam-prep updates. Unsubscribe anytime. We never sell or share your address.</p>
+      <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span class="kicker">Reserve · Launch-Price Lock</span>
+      <h2>Suit up. Reserve your copy.</h2>
+      <p class="sub">Drop your <strong>superhero name</strong> and a good email. The moment secure checkout goes live you'll get your payment link — price locked at <strong>$99.95</strong> for the November 2026 cohort. Capes optional.</p>
+      <p class="tiny">We'll only use your email for your reservation and delivering the guide. Unsubscribe anytime. We never sell or share your address.</p>
     </div>
     <div class="form-shell">
-      <iframe src="https://form.jotform.com/262100283102034" title="Get the Free Colorado LLP Practice Exam Bank"></iframe>
+      <iframe src="https://form.jotform.com/262100283102034" title="Reserve the Colorado LLP Exam Prep Guide"></iframe>
     </div>
   </div>
 </section>
+
+<svg class="mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sand)">
+  <path d="M0 90 L0 64 L190 34 L350 66 L520 28 L690 62 L860 22 L1030 58 L1200 34 L1370 64 L1440 48 L1440 90 Z" fill="#FAF7F1"/>
+</svg>
 
 <!-- ================= FAQ ================= -->
 <section id="faq">
   <div class="wrap">
+    <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
     <span class="kicker">Quick Answers</span>
     <h2>The LLP license, in brief.</h2>
     <div class="faq-grid">
       <div class="faq"><h3>What is a Licensed Legal Paraprofessional?</h3><p>A new license created by the Colorado Supreme Court allowing qualified paraprofessionals to represent clients in less-complex domestic relations matters — dissolution, parentage, and allocation of parental responsibilities — within the scope defined by C.R.C.P. 207.1.</p></div>
-      <div class="faq"><h3>What's actually on the exam?</h3><p>Two multiple-choice sections (family law and LLP ethics) plus essays, testing the published LLP Core Competencies. The practice bank mirrors that structure at 3× volume: 270 family-law MC, 135 ethics MC, and 6 essays.</p></div>
+      <div class="faq"><h3>What's actually on the exam?</h3><p>Two multiple-choice sections (family law and LLP ethics) plus essays, testing the published LLP Core Competencies. Our library mirrors that structure at 3× volume: 270 family-law MC, 135 ethics MC, and 6 essays.</p></div>
+      <div class="faq"><h3>What does the guide cost, and what's free?</h3><p>The 6 hardest questions and 2 hardest essays on this page are free, forever. The complete 225-page guide — 405 questions, all 6 essays, full explanations, reference tables, and exhibits — is a one-time $99.95, delivered as a PDF.</p></div>
       <div class="faq"><h3>Am I eligible to sit in November?</h3><p>Eligibility runs through the Office of Attorney Regulation Counsel — education plus documented paralegal experience pathways. Check the official <a href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener">application instructions</a> and file by the deadline.</p></div>
-      <div class="faq"><h3>Who created these materials?</h3><p>A Colorado family law attorney with 23+ years in domestic relations practice and 30+ years in the legal profession, spanning Pennsylvania to Colorado — also a District Court-appointed Child &amp; Family Investigator (CFI). The bank was written specifically for Colorado's LLP exam, not adapted from generic bar-prep material.</p></div>
+      <div class="faq"><h3>Who created these materials?</h3><p>A Colorado family law attorney with 23+ years in domestic relations practice and 30+ years in the legal profession, spanning Pennsylvania to Colorado — also a Colorado District Court-appointed Child &amp; Family Investigator (CFI) and a former government investigator for Denver Human Services in Denver, Colorado. The guide was written specifically for Colorado's LLP exam, not adapted from generic bar-prep material.</p></div>
       <div class="faq"><h3>Is this site affiliated with the Court?</h3><p>No. ColoradoLLPExam.com is an independent study resource. We're not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the Colorado Judicial Branch.</p></div>
     </div>
   </div>
@@ -349,16 +507,19 @@
 
 <!-- ================= FOOTER ================= -->
 <footer>
+  <svg class="mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)">
+    <path d="M0 90 L0 58 L170 26 L330 60 L490 18 L660 56 L830 12 L1000 52 L1170 24 L1340 58 L1440 40 L1440 90 Z" fill="#0C1F3A"/>
+  </svg>
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="#1E4A82"/><path d="M23.5 12.2a7.6 7.6 0 1 0 0 9.6" stroke="#C8102E" stroke-width="4.4" fill="none" stroke-linecap="round"/><circle cx="17.2" cy="17" r="3.4" fill="#F2B01E"/></svg>
+        <svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="#1E4A82"/><path d="M3 26 L11 14 L16 21 L21 11 L31 26 Z" fill="#14355F"/><path d="M21 11 L24.5 16.5 L21 16 L18.5 14.8 Z" fill="#FFFFFF" opacity=".85"/><circle cx="9" cy="8" r="3.2" fill="#F2B01E"/></svg>
         ColoradoLLPExam.com
       </div>
-      <div><a href="#quiz">Free questions</a> · <a href="#get">Get the booklet</a> · <a href="https://www.coloradolegalregulation.com/future%20lawyers/llpgeneraloverview/" target="_blank" rel="noopener">Official LLP program info</a></div>
+      <div><a href="#quiz">Hardest questions</a> · <a href="#essays">Essays</a> · <a href="#pricing">Get the guide</a> · <a href="https://www.coloradolegalregulation.com/future%20lawyers/llpgeneraloverview/" target="_blank" rel="noopener">Official LLP program info</a></div>
     </div>
     <div class="disclaimer">
-      © 2026 ColoradoLLPExam.com. All rights reserved. The Colorado LLP Practice Exam Question Bank was created and developed by a Colorado family law attorney with more than 23 years in domestic relations practice and over 30 years in the legal profession, spanning Pennsylvania to Colorado — and a District Court-appointed Child &amp; Family Investigator (CFI). This website and the Colorado LLP Practice Exam Question Bank are independent study aids for exam preparation only. They are <strong>not legal advice</strong>, and nothing here creates an attorney-client or LLP-client relationship. This site is not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, the Colorado Judicial Branch, or any bar authority. Exam dates and requirements change — always verify against official sources before relying on them. Citations in study materials should be confirmed against current Colorado law.
+      © 2026 ColoradoLLPExam.com. All rights reserved. The Colorado LLP Exam Prep Guide was created and developed by a Colorado family law attorney with more than 23 years in domestic relations practice and over 30 years in the legal profession, spanning Pennsylvania to Colorado — a Colorado District Court-appointed Child &amp; Family Investigator (CFI), and a former government investigator for Denver Human Services in Denver, Colorado. This website and the Colorado LLP Exam Prep Guide are independent study aids for exam preparation only. They are <strong>not legal advice</strong>, and nothing here creates an attorney-client or LLP-client relationship. This site is not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, the Colorado Judicial Branch, or any bar authority. Exam dates and requirements change — always verify against official sources before relying on them. Citations in study materials should be confirmed against current Colorado law.
     </div>
   </div>
 </footer>
@@ -368,71 +529,68 @@
 (function(){
   var now = new Date();
   function days(t){ return Math.max(0, Math.ceil((t - now)/(1000*60*60*24))); }
-  var exam = new Date(2026,10,10);   // Nov 10, 2026
-  var late = new Date(2026,8,4);     // Sep 4, 2026
-  document.getElementById('cd-exam').textContent = days(exam);
-  document.getElementById('cd-late').textContent = days(late);
+  document.getElementById('cd-exam').textContent = days(new Date(2026,10,10));
+  document.getElementById('cd-late').textContent = days(new Date(2026,8,4));
 })();
 
-/* ---------- quiz ---------- */
+/* ---------- hardest-6 quiz ---------- */
 var QUESTIONS = [
   {
-    id:"FL-001", subj:"Family Law · Jurisdiction — Grounds",
-    q:"In Colorado, what is the sole legal ground a petitioner must establish to obtain a decree of dissolution of marriage?",
-    opts:["Adultery or other marital fault","That the marriage is irretrievably broken","One year of continuous separation","Mutual written consent of both spouses"],
-    correct:1,
-    why:"Colorado is a pure no-fault state. The only ground for dissolution is that the marriage is irretrievably broken; fault such as adultery is irrelevant to whether the decree enters. A single spouse's testimony that the marriage is irretrievably broken is sufficient.",
-    auth:"Authority: C.R.S. 14-10-106; C.R.S. 14-10-110"
-  },
-  {
-    id:"FL-002", subj:"Family Law · Jurisdiction — Residency",
-    q:"How long must a party be domiciled in Colorado before the court may enter a decree of dissolution?",
-    opts:["30 days","60 days","91 days","182 days"],
+    id:"FL-004", subj:"Jurisdiction · Divisible Divorce",
+    q:"A wife files for dissolution in Colorado. The husband lives out of state, was never married in Colorado, and has no contacts here. The court most clearly has jurisdiction to:",
+    opts:["Divide the husband's out-of-state pension","Order the husband to pay maintenance","Dissolve the marital status","Enter a money judgment against the husband for marital debt"],
     correct:2,
-    why:"A party must be domiciled in Colorado for at least 91 days before entry of a decree of dissolution or legal separation. Domicile requires physical presence plus intent to remain — and this durational requirement is distinct from the separate 91-day waiting period that runs from service.",
-    auth:"Authority: C.R.S. 14-10-106(1)(a)(I)"
+    why:"A court may dissolve the marriage (a status determination) based on the petitioner's domicile alone. However, dividing property, ordering support, or entering a money judgment against the respondent requires personal jurisdiction over him — minimum contacts or a long-arm basis. Status (divisible divorce) and in personam remedies are analyzed separately.",
+    auth:"Authority: C.R.S. 14-10-106; C.R.S. 13-1-124 (long-arm)"
   },
   {
-    id:"FL-003", subj:"Family Law · Jurisdiction — Waiting Period",
-    q:"A petition is served on the respondent on March 1. What is the earliest the court may enter a dissolution decree, assuming all other requirements are met?",
-    opts:["Immediately upon the respondent's default","After 91 days from service","After 30 days from service","After 6 months from filing"],
+    id:"FL-167", subj:"Property · Gifts Between Spouses",
+    q:"A gift from one spouse to the other during the marriage is generally:",
+    opts:["Separate property of the recipient","Marital property subject to division","Returned to the donor","Void"],
     correct:1,
-    why:"No decree may enter until at least 91 days after the later of service on the respondent or the respondent's appearance (or the filing of a co-petition). This waiting period cannot be waived even by agreement.",
-    auth:"Authority: C.R.S. 14-10-106(1)(a)(III)"
+    why:"Interspousal gifts during the marriage are generally treated as marital property subject to equitable division — not the recipient's separate property. This differs from gifts received from third parties, which are separate. Most test-takers pick A; the third-party/spouse distinction is the trap.",
+    auth:"Authority: C.R.S. 14-10-113(2)"
   },
   {
-    id:"FL-005", subj:"Family Law · UCCJEA — Home State",
-    q:"Under the UCCJEA, the 'home state' of a 4-year-old child is generally where the child:",
-    opts:["Was born","Has lived with a parent for at least 6 consecutive months before the case began","Currently attends preschool","Has the most extended family"],
+    id:"FL-169", subj:"Property · Post-Decree Omitted Assets",
+    q:"If an asset was not divided and was not disclosed, the remedy may include:",
+    opts:["Nothing","Reopening to divide the omitted asset, including under Rule 16.2(e) within 5 years for nondisclosure","Automatic 50/50 of all assets","Criminal restitution only"],
     correct:1,
-    why:"The UCCJEA defines home state as the state where the child lived with a parent (or person acting as a parent) for at least 6 consecutive months immediately before commencement of the proceeding. Home-state jurisdiction is the primary basis for initial child-custody (APR) jurisdiction.",
-    auth:"Authority: C.R.S. 14-13-102(7); C.R.S. 14-13-201"
+    why:"An omitted asset may be divided in a later proceeding; where the omission resulted from a party's failure to disclose, Rule 16.2(e) allows reallocation on a motion within 5 years of the decree. Honest mistakes may also be addressed under post-judgment relief rules. The 5-year Colorado-specific reallocation window is heavily tested.",
+    auth:"Authority: C.R.C.P. 16.2(e)(10)"
   },
   {
-    id:"FL-226", subj:"LLP Practice · LLPs in Court",
-    q:"In a hearing within their scope, a Licensed Legal Paraprofessional may:",
-    opts:["Only sit silently","Examine witnesses, make objections and offers of proof, and argue to the court","Only file documents","Only speak if the judge asks"],
+    id:"FL-170", subj:"Property · Separate Property Income",
+    q:"Income generated by separate property during the marriage (e.g., rent, interest) is:",
+    opts:["Always separate","Often treated as marital, like appreciation, depending on the circumstances","The donor's property","Exempt"],
     correct:1,
-    why:"Within their authorized scope, LLPs are real courtroom advocates — they may question witnesses, lodge objections and offers of proof, and present argument to the court. Knowing exactly where that scope ends is one of the most heavily tested ideas on the exam.",
-    auth:"Authority: C.R.C.P. 207.1 (LLP scope of practice)"
+    why:"Income produced by separate property during the marriage is generally treated as marital, similar to the appreciation rule, because it accrues during the marriage. The analysis can be fact-specific, but the default leans toward marital treatment of in-marriage income — the opposite of most people's instinct.",
+    auth:"Authority: C.R.S. 14-10-113(4)"
   },
   {
-    id:"ETH-005", subj:"LLP Ethics · Scope & Limits",
-    q:"A defining ethical duty unique to LLPs is to:",
-    opts:["Conceal their license type","Advise clients of the limitations on the LLP's license and authorized practice","Practice in all areas of law","Avoid court"],
+    id:"FL-173", subj:"Property · Marital Portion of Separate Asset",
+    q:"For a home one spouse owned before marriage but paid down with marital funds, the court may recognize:",
+    opts:["No marital interest","A marital interest in the appreciation and in equity built with marital funds during the marriage","Full marital ownership of the home","Only the down payment"],
     correct:1,
-    why:"Unlike attorneys, LLPs practice under a defined scope — so the Colo. LLP Rules of Professional Conduct require them to make sure clients understand what an LLP is and is not permitted to do, and to advise clients to seek an attorney when a matter falls outside that scope.",
-    auth:"Authority: Colo. LLP RPC (scope and disclosure duties)"
+    why:"The home's premarital equity remains separate, but the appreciation during the marriage and the equity built with marital funds create a marital interest subject to division. Tracing and valuation determine the separate versus marital shares — a two-layer analysis that trips up test-takers who reach for all-or-nothing answers.",
+    auth:"Authority: C.R.S. 14-10-113(4)"
+  },
+  {
+    id:"FL-182", subj:"Protection Orders · Mutual Orders",
+    q:"Mutual protection orders (against both parties):",
+    opts:["Are favored","Are disfavored absent separate petitions and independent findings against each party","Are automatic","Are required in every case"],
+    correct:1,
+    why:"Courts disfavor mutual protection orders unless each party has filed a separate petition and the court makes independent findings that each committed the requisite acts. This prevents reflexive cross-orders that obscure who is the predominant aggressor — a policy point many candidates have never seen.",
+    auth:"Authority: C.R.S. 13-14-104.5"
   }
 ];
 
 var score=0, answered=0;
 var host=document.getElementById('quiz-cards');
-
 QUESTIONS.forEach(function(item,qi){
   var card=document.createElement('div'); card.className='qcard';
   var head=document.createElement('div'); head.className='qtag';
-  head.innerHTML='<span class="subj">'+item.subj+'</span><span class="qnum">Question '+(qi+1)+' of '+QUESTIONS.length+' · '+item.id+'</span>';
+  head.innerHTML='<span class="subj">◆◆ '+item.subj+'</span><span class="qnum">Hardest '+(qi+1)+' of '+QUESTIONS.length+' · '+item.id+'</span>';
   card.appendChild(head);
   var qt=document.createElement('div'); qt.className='qtext'; qt.textContent=item.q; card.appendChild(qt);
   var opts=document.createElement('div'); opts.className='opts';
@@ -445,14 +603,13 @@ QUESTIONS.forEach(function(item,qi){
       if(done) return; done=true; answered++;
       var right = oi===item.correct;
       if(right) score++;
-      var all=opts.querySelectorAll('.opt');
-      all.forEach(function(btn,bi){
+      opts.querySelectorAll('.opt').forEach(function(btn,bi){
         btn.disabled=true;
         if(bi===item.correct) btn.classList.add('correct');
         else if(bi===oi && !right) btn.classList.add('wrong');
       });
       var why=card.querySelector('.why');
-      why.querySelector('.verdict').textContent = right ? '✓ Correct — '+letters[item.correct] : '✗ Not quite — the answer is '+letters[item.correct];
+      why.querySelector('.verdict').textContent = right ? '✓ Correct — '+letters[item.correct]+'. Summit form.' : '✗ Not quite — the answer is '+letters[item.correct]+'. This one takes climbers down.';
       why.querySelector('.verdict').className = 'verdict '+(right?'good':'bad');
       why.classList.add('show');
       document.getElementById('score').textContent=score;
@@ -465,6 +622,15 @@ QUESTIONS.forEach(function(item,qi){
   why.innerHTML='<div class="verdict"></div><div>'+item.why+'</div><span class="auth">'+item.auth+'</span>';
   card.appendChild(why);
   host.appendChild(card);
+});
+
+/* ---------- essay reveals ---------- */
+document.querySelectorAll('.reveal-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var m=document.getElementById(btn.getAttribute('data-target'));
+    var open=m.classList.toggle('show');
+    btn.textContent = open ? 'Hide the model answer ▴' : 'Reveal the model answer ▾';
+  });
 });
 </script>
 </body>

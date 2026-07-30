@@ -217,7 +217,6 @@
   .calc-grid button.op{background:#4A7FBF}
   .calc-grid button.eq{background:#FFD100;color:#14355F;grid-column:span 2}
   .calc-grid button.cl{background:#B0532E}
-  .calc-note{color:#CFE0F2;font-size:.68rem;margin-top:8px;text-align:center}
   @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .quiz-cta{text-align:center;margin-top:40px}
   .quiz-cta .note{font-size:.95rem;color:var(--muted);margin-bottom:16px}
@@ -825,7 +824,6 @@ QUESTIONS.forEach(function(item,qi){
       });
       cgrid.appendChild(kb);
     });
-    var cnote=document.createElement('div'); cnote.className='calc-note'; cnote.textContent='% divides by 100 — e.g. 25 % × 400 = 100';
     var chead=document.createElement('div'); chead.className='calc-head';
     chead.addEventListener('pointerdown',function(ev){
       if(ev.target.classList.contains('calc-x')) return;
@@ -844,7 +842,7 @@ QUESTIONS.forEach(function(item,qi){
     var cx=document.createElement('button'); cx.type='button'; cx.className='calc-x'; cx.textContent='✕';
     cx.addEventListener('click',function(){ cpanel.classList.remove('open'); });
     chead.appendChild(clabel); chead.appendChild(cx);
-    cpanel.appendChild(chead); cpanel.appendChild(cdisp); cpanel.appendChild(cgrid); cpanel.appendChild(cnote);
+    cpanel.appendChild(chead); cpanel.appendChild(cdisp); cpanel.appendChild(cgrid);
     ctog.addEventListener('click',function(){
       var wasOpen=cpanel.classList.contains('open');
       document.querySelectorAll('.calc.open').forEach(function(p){ p.classList.remove('open'); });

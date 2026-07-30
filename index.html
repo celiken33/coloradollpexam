@@ -204,8 +204,12 @@
   .why .auth{display:block;margin-top:10px;font-size:.8rem;color:var(--muted);font-style:italic}
   .calc-toggle{display:inline-flex;align-items:center;gap:7px;background:var(--gold-soft);color:var(--blue-soft);border:1.5px solid var(--gold);border-radius:999px;padding:7px 14px;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:800;letter-spacing:.03em;cursor:pointer;margin-bottom:12px;transition:background .12s}
   .calc-toggle:hover{background:#DDEAF8}
-  .calc{display:none;background:var(--ink);border-radius:14px;padding:14px;max-width:250px;margin:0 0 16px;box-shadow:var(--shadow)}
+  .calc{display:none;position:fixed;right:96px;top:50%;transform:translateY(-50%);z-index:120;width:252px;background:var(--ink);border-radius:14px;padding:14px;box-shadow:0 18px 50px rgba(12,31,58,.5)}
   .calc.open{display:block}
+  .calc-head{display:flex;justify-content:space-between;align-items:center;color:#CFE0F2;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;cursor:move;user-select:none;touch-action:none}
+  .calc-x{background:none;border:none;color:#CFE0F2;font-size:1rem;cursor:pointer;line-height:1;padding:2px 4px}
+  .calc-x:hover{color:#fff}
+  @media(max-width:640px){.calc{right:12px}}
   .calc-display{background:#0A1830;color:#fff;border-radius:9px;padding:10px 12px;font-family:'Inter',monospace;font-size:1.05rem;text-align:right;min-height:42px;margin-bottom:10px;overflow-x:auto;white-space:nowrap}
   .calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
   .calc-grid button{background:#1E4A82;color:#fff;border:none;border-radius:8px;padding:10px 0;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif}
@@ -268,6 +272,8 @@
   .trust{display:flex;gap:7px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:.75rem;font-weight:600;color:var(--muted);margin-top:14px;text-align:center}
   .trust svg{flex:0 0 13px}
   .hero-trust{display:flex;gap:8px;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;color:#A9C8E8;margin:-28px auto 34px}
+  .zap{display:inline-flex;align-items:center;gap:6px;background:#FFD100;color:#14355F;font-weight:900;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+  .zap-line{text-align:center;margin:14px auto 0}
   .buy-fine{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px}
   .summit-col{display:flex;flex-direction:column;justify-content:center;gap:18px}
   .summit-item{display:flex;gap:14px;align-items:flex-start}
@@ -331,7 +337,7 @@
       <a href="#dates">Deadlines</a>
       <a href="#quiz">Quick Quiz</a>
       <a href="#resources">Free Resources</a>
-      <a class="btn btn-gold" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy the Prep Guide — $99.95</a>
+      <a class="btn btn-gold" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy the Prep Guide NOW — $99.95</a>
     </nav>
   </div>
 </header>
@@ -350,11 +356,11 @@
     </div>
     <div class="hero-ctas">
       <a class="btn btn-gold" href="#quiz">Try 6 free sample questions RIGHT NOW →</a>
-      <a class="btn btn-line" href="#pricing">Buy the Prep Guide — $99.95</a>
+      <a class="btn btn-line" href="#pricing">Buy the Prep Guide NOW — $99.95</a>
     </div>
     <div class="hero-trust">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A9C8E8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      <span>Safe, encrypted transactions — checkout handled by Stripe</span>
+      <span>Safe, encrypted transactions — checkout handled by Stripe · <strong style="color:#FFD100">⚡ Instant download — PDF by email</strong></span>
     </div>
     <div class="timer" aria-label="Countdown to the November 10, 2026 exam">
       <div class="t-cell"><div class="t-num" id="t-d">—</div><div class="t-lbl">days</div></div>
@@ -382,7 +388,7 @@
     <div class="stat"><div class="n">93</div><div class="t">Sample questions, hand-picked from 405</div></div>
     <div class="stat"><div class="n">6</div><div class="t">Full essays with model answers</div></div>
     <div class="stat"><div class="n">100%</div><div class="t">Answers explained, keyed to authority</div></div>
-    <div class="stat"><div class="n">$99.95</div><div class="t">One price. The whole guide.</div></div>
+    <div class="stat"><div class="n">$99.95</div><div class="t">One price. Instant download.</div></div>
   </div>
 </div>
 
@@ -440,7 +446,8 @@
     <div class="disc-band"><b>Original sample materials — and we stand by them.</b> Every question, answer, and explanation here and in the guide is original sample material written by our author to teach the tested concepts. These are not actual exam questions, and we are not affiliated with the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the exam. Verify citations against current law. Study aid — not legal advice. <b>We stand by every answer.</b></div>
     <div class="quiz-cta">
       <p class="note">That's the free sample — <strong>93 hand-picked questions, every one explained, in the full guide.</strong></p>
-      <a class="btn btn-gold" href="#pricing">Buy the Prep Guide — $99.95 →</a>
+      <a class="btn btn-gold" href="#pricing">Buy the Prep Guide NOW — $99.95 →</a>
+      <div class="zap-line"><span class="zap">⚡ Instant Download · PDF by Email</span></div>
     </div>
   </div>
 </section>
@@ -557,11 +564,12 @@
           <li><span class="tick">✓</span> <span><strong>Law-reference table</strong> mapping every question to its statute or rule</span></li>
           <li><span class="tick">✓</span> <span><strong>Exhibits</strong> — scope &amp; carve-out cheat sheet, child-support worksheet walkthrough, maintenance quick-reference, high-yield numbers</span></li>
         </ul>
-        <a class="buy-btn" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy THE 93 Exam Prep Guide — $99.95</a>
+        <a class="buy-btn" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy THE 93 Exam Prep Guide NOW — $99.95</a>
+        <div class="zap-line"><span class="zap">⚡ Instant Download · PDF by Email</span></div>
         <div class="upgrade">
           <span class="up-tag">Or go all in · Best value</span>
           <p><strong>THE FULL 405 — Complete Library.</strong> Every sample question we've written — all 405, every answer explained — plus all 6 sample essays. Everything in THE 93, and the other 312. <strong>Just $25 more.</strong></p>
-          <a class="upgrade-btn" href="https://buy.stripe.com/fZu7sL5Jb1S4gAX7am5J601" target="_blank" rel="noopener">Buy THE FULL 405 — $124.95</a>
+          <a class="upgrade-btn" href="https://buy.stripe.com/fZu7sL5Jb1S4gAX7am5J601" target="_blank" rel="noopener">Buy THE FULL 405 NOW — $124.95 · Instant Download</a>
         </div>
         <div class="trust">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1E7A46" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -818,8 +826,30 @@ QUESTIONS.forEach(function(item,qi){
       cgrid.appendChild(kb);
     });
     var cnote=document.createElement('div'); cnote.className='calc-note'; cnote.textContent='% divides by 100 — e.g. 25 % × 400 = 100';
-    cpanel.appendChild(cdisp); cpanel.appendChild(cgrid); cpanel.appendChild(cnote);
-    ctog.addEventListener('click',function(){ cpanel.classList.toggle('open'); });
+    var chead=document.createElement('div'); chead.className='calc-head';
+    chead.addEventListener('pointerdown',function(ev){
+      if(ev.target.classList.contains('calc-x')) return;
+      ev.preventDefault();
+      var r=cpanel.getBoundingClientRect(), sx=ev.clientX, sy=ev.clientY, ox=r.left, oy=r.top;
+      cpanel.style.left=ox+'px'; cpanel.style.top=oy+'px'; cpanel.style.right='auto'; cpanel.style.transform='none';
+      function mv(e){
+        var nx=Math.min(Math.max(8, ox+e.clientX-sx), window.innerWidth-r.width-8);
+        var ny=Math.min(Math.max(8, oy+e.clientY-sy), window.innerHeight-r.height-8);
+        cpanel.style.left=nx+'px'; cpanel.style.top=ny+'px';
+      }
+      function up(){ document.removeEventListener('pointermove',mv); document.removeEventListener('pointerup',up); }
+      document.addEventListener('pointermove',mv); document.addEventListener('pointerup',up);
+    });
+    var clabel=document.createElement('span'); clabel.textContent='⠿ Calculator · '+item.id;
+    var cx=document.createElement('button'); cx.type='button'; cx.className='calc-x'; cx.textContent='✕';
+    cx.addEventListener('click',function(){ cpanel.classList.remove('open'); });
+    chead.appendChild(clabel); chead.appendChild(cx);
+    cpanel.appendChild(chead); cpanel.appendChild(cdisp); cpanel.appendChild(cgrid); cpanel.appendChild(cnote);
+    ctog.addEventListener('click',function(){
+      var wasOpen=cpanel.classList.contains('open');
+      document.querySelectorAll('.calc.open').forEach(function(p){ p.classList.remove('open'); });
+      if(!wasOpen) cpanel.classList.add('open');
+    });
     card.appendChild(ctog); card.appendChild(cpanel);
   }
   var opts=document.createElement('div'); opts.className='opts';

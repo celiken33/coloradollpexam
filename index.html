@@ -56,8 +56,9 @@
   .hero{position:relative;background:linear-gradient(178deg,#081527 0%,var(--ink) 30%,var(--blue) 66%,var(--sky) 100%);color:#fff;overflow:hidden}
   .hero .wrap{position:relative;z-index:3;padding-top:80px;padding-bottom:210px;text-align:center}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#CFE0F2;border:1px solid rgba(255,255,255,.35);padding:7px 16px;border-radius:999px;background:rgba(255,255,255,.06)}
-  .hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:900;line-height:1.06;letter-spacing:-.02em;margin:26px auto 18px;max-width:840px}
-  .hero h1 em{font-style:normal;color:#FFD100}
+  .hero h1{font-size:clamp(2.6rem,6.2vw,4.4rem);font-weight:900;line-height:1.05;letter-spacing:-.02em;margin:26px auto 18px;max-width:900px}
+  .hero h1 .h1-top{display:block;font-family:'Inter',sans-serif;font-size:clamp(1.05rem,2.2vw,1.45rem);font-weight:700;letter-spacing:.02em;color:#DCEAF8;margin-bottom:16px}
+  .hero h1 em{font-style:normal;color:#FFD100;display:block}
   .hero p.lede{font-size:clamp(1.02rem,2vw,1.2rem);color:#C9D6E8;max-width:680px;margin:0 auto 22px}
   .hero-cred{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:.85rem;font-weight:700;letter-spacing:.04em;color:#A9C4E4;margin:0 auto 30px;max-width:720px}
   .hero-cred .dot{width:5px;height:5px;border-radius:50%;background:#A9C4E4;flex:0 0 5px}
@@ -199,6 +200,14 @@
   .price-card li .tick{flex:0 0 20px;height:20px;border-radius:50%;background:var(--gold);color:#fff;font-weight:900;font-size:.7rem;display:flex;align-items:center;justify-content:center;margin-top:2px}
   .buy-btn{display:block;text-align:center;background:var(--blue);color:#fff;font-weight:800;font-size:1.05rem;border-radius:14px;padding:16px 20px;text-decoration:none;box-shadow:0 8px 20px rgba(20,53,95,.4);transition:transform .12s}
   .buy-btn:hover{transform:translateY(-2px)}
+  .upgrade{margin-top:20px;border-top:2px dashed var(--line);padding-top:16px}
+  .upgrade .up-tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:#FFF6D6;color:#8A6410;border:1px solid #F0DE9C;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+  .upgrade p{font-size:.92rem;color:var(--ink);margin-bottom:10px}
+  .upgrade-btn{display:block;text-align:center;background:var(--gold);color:#fff;font-weight:800;font-size:.98rem;border-radius:14px;padding:14px 18px;text-decoration:none;box-shadow:0 6px 16px rgba(74,127,191,.35);transition:transform .12s}
+  .upgrade-btn:hover{transform:translateY(-2px)}
+  .trust{display:flex;gap:7px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:.75rem;font-weight:600;color:var(--muted);margin-top:14px;text-align:center}
+  .trust svg{flex:0 0 13px}
+  .hero-trust{display:flex;gap:8px;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;color:#A9C8E8;margin:-28px auto 34px}
   .buy-fine{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px}
   .summit-col{display:flex;flex-direction:column;justify-content:center;gap:18px}
   .summit-item{display:flex;gap:14px;align-items:flex-start}
@@ -262,7 +271,7 @@
       <a href="#dates">Deadlines</a>
       <a href="#quiz">Free Questions</a>
       <a href="#resources">Free Resources</a>
-      <a class="btn btn-gold" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy Now — $99.95</a>
+      <a class="btn btn-gold" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy the Prep Guide — $99.95</a>
     </nav>
   </div>
 </header>
@@ -272,7 +281,7 @@
   <div class="hero-sun" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow">★ Attorney-Built · For the Nov 10, 2026 Colorado LLP Exam</span>
-    <h1>Your LLP exam prep starts here.<br><em>Be ready on November 10.</em></h1>
+    <h1><span class="h1-top">Your LLP exam prep starts here.</span><em>Be ready on November 10.</em></h1>
     <p class="lede">Attorney-authored practice for Colorado's Licensed Legal Paraprofessional exam — <strong>93 hand-picked sample questions</strong> from our 405-question library, plus all 6 sample essays, every answer explained. Try 6 of them and <strong>2 full sample essays</strong> free below.</p>
     <div class="hero-cred">
       <span>Created by a Colorado family law attorney — 23+ years in practice</span><span class="dot"></span>
@@ -281,7 +290,11 @@
     </div>
     <div class="hero-ctas">
       <a class="btn btn-gold" href="#quiz">Try 6 free questions →</a>
-      <a class="btn btn-line" href="#pricing">Buy Now — $99.95</a>
+      <a class="btn btn-line" href="#pricing">Buy the Prep Guide — $99.95</a>
+    </div>
+    <div class="hero-trust">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A9C8E8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span>Safe, encrypted transactions — checkout handled by Stripe</span>
     </div>
     <div class="timer" aria-label="Countdown to the November 10, 2026 exam">
       <div class="t-cell"><div class="t-num" id="t-d">—</div><div class="t-lbl">days</div></div>
@@ -367,7 +380,7 @@
     <div class="disc-band"><b>Original sample materials — and we stand by them.</b> Every question, answer, and explanation here and in the guide is original sample material written by our author to teach the tested concepts. These are not actual exam questions, and we are not affiliated with the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the exam. Verify citations against current law. Study aid — not legal advice. <b>We stand by every answer.</b></div>
     <div class="quiz-cta">
       <p class="note">That's the free sample — <strong>87 more, all explained, in the full guide.</strong></p>
-      <a class="btn btn-gold" href="#pricing">Buy Now — $99.95 →</a>
+      <a class="btn btn-gold" href="#pricing">Buy the Prep Guide — $99.95 →</a>
     </div>
   </div>
 </section>
@@ -452,7 +465,7 @@
 
     <div class="quiz-cta">
       <p class="note">Four more sample essays — relocation &amp; conflicts, contempt, APR &amp; domestic violence, parentage &amp; scope — <strong>with model answers and grading notes, inside the guide.</strong></p>
-      <a class="btn btn-gold" href="#pricing">Buy Now — all 6 sample essays included →</a>
+      <a class="btn btn-gold" href="#pricing">Buy the Prep Guide — all 6 sample essays included →</a>
       <div class="disc-band" style="text-align:left"><b>Original sample materials.</b> These essays and model answers are original study materials — not actual exam prompts. Not affiliated with the Colorado Supreme Court or OARC. <b>We stand by our work.</b></div>
     </div>
   </div>
@@ -484,8 +497,17 @@
           <li><span class="tick">✓</span> <span><strong>Law-reference table</strong> mapping every question to its statute or rule</span></li>
           <li><span class="tick">✓</span> <span><strong>Exhibits</strong> — scope &amp; carve-out cheat sheet, child-support worksheet walkthrough, maintenance quick-reference, high-yield numbers</span></li>
         </ul>
-        <a class="buy-btn" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy Now — $99.95</a>
-        <div class="buy-fine">Secure checkout by Stripe — card, Apple Pay, Klarna, Cash App Pay, or Amazon Pay. Your PDF is delivered by email right after payment.</div>
+        <a class="buy-btn" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy THE 93 Exam Prep Guide — $99.95</a>
+        <div class="upgrade">
+          <span class="up-tag">Or go all in · Best value</span>
+          <p><strong>THE FULL 405 — Complete Library.</strong> Every sample question we've written — all 405, every answer explained — plus all 6 sample essays. Everything in THE 93, and the other 312. <strong>Just $25 more.</strong></p>
+          <a class="upgrade-btn" href="https://buy.stripe.com/fZu7sL5Jb1S4gAX7am5J601" target="_blank" rel="noopener">Buy THE FULL 405 — $124.95</a>
+        </div>
+        <div class="trust">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1E7A46" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Encrypted SSL/TLS checkout · Powered by <strong>Stripe</strong> · Card, Apple Pay, Klarna, Cash App Pay &amp; Amazon Pay · Your card details go to Stripe — never to us</span>
+        </div>
+        <div class="buy-fine">Instant confirmation on Stripe's secure page — your PDF is delivered by email right after payment.</div>
       </div>
       <div class="summit-col">
         <div class="summit-item"><div class="pk">⛰️</div><div><h3>Built like the real exam</h3><p>Same style as exam day — one clearly right answer, distractors that teach. These are the 93 we'd drill first: the computations, the interplays, the carve-out traps.</p></div></div>
@@ -569,7 +591,7 @@
       <div class="faq-grid">
       <div class="faq"><h3>What is a Licensed Legal Paraprofessional?</h3><p>A new license created by the Colorado Supreme Court allowing qualified paraprofessionals to represent clients in less-complex domestic relations matters — dissolution, parentage, and allocation of parental responsibilities — within the scope defined by C.R.C.P. 207.1.</p></div>
       <div class="faq"><h3>What's actually on the exam?</h3><p>Two multiple-choice sections (family law and LLP ethics) plus essays, testing the published LLP Core Competencies. Our library spans 405 questions across every tested subject; the guide distills it to 93 hand-picked questions, plus all 6 sample essays.</p></div>
-      <div class="faq"><h3>What does the guide cost, and what's free?</h3><p>The 6 sample questions and 2 full essays on this page are free, forever — and so is everything in the resource hub above. The guide — 93 hand-picked sample questions, all 6 sample essays, complete explanations, the law-reference table, and exhibits — is a one-time $99.95, delivered as a PDF. All original sample materials — and we stand by them.</p></div>
+      <div class="faq"><h3>What does it cost, and what's free?</h3><p>The 6 sample questions and 2 full essays on this page are free, forever — and so is everything in the resource hub above. THE 93 Exam Prep Guide is a one-time $99.95 PDF. Want everything? THE FULL 405 — our complete library, all 405 sample questions plus all 6 sample essays — is $124.95, just $25 more. Checkout is encrypted and handled by Stripe; your card details never touch our servers.</p></div>
       <div class="faq"><h3>Am I eligible to sit in November?</h3><p>Eligibility runs through the Office of Attorney Regulation Counsel — education plus documented paralegal experience pathways. Check the official <a href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener">application instructions</a> and file by the deadline.</p></div>
       <div class="faq"><h3>Who created these materials?</h3><p>A Colorado family law attorney with 23+ years in domestic relations practice and 30+ years in the legal profession, spanning Pennsylvania to Colorado — also a Colorado District Court-appointed Child &amp; Family Investigator (CFI) and a former government investigator for Denver Human Services in Denver, Colorado. The guide was written specifically for Colorado's LLP exam, not adapted from generic bar-prep material.</p></div>
       <div class="faq"><h3>Is this site affiliated with the Court?</h3><p>No. ColoradoLLPExam.com is an independent study resource. We're not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the Colorado Judicial Branch.</p></div>
@@ -616,7 +638,7 @@
       <div><a href="#quiz">Free questions</a> · <a href="#essays">Essays</a> · <a href="#pricing">Get the guide</a> · <a href="https://www.coloradolegalregulation.com/future%20lawyers/llpgeneraloverview/" target="_blank" rel="noopener">Official LLP program info</a></div>
     </div>
     <div class="disclaimer">
-      © 2026 ColoradoLLPExam.com. All rights reserved. The Colorado LLP Exam Prep Guide was created and developed by a Colorado family law attorney with more than 23 years in domestic relations practice and over 30 years in the legal profession, spanning Pennsylvania to Colorado — a Colorado District Court-appointed Child &amp; Family Investigator (CFI), and a former government investigator for Denver Human Services in Denver, Colorado. This website and the Colorado LLP Exam Prep Guide are independent study aids for exam preparation only. They are <strong>not legal advice</strong>, and nothing here creates an attorney-client or LLP-client relationship. This site is not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, the Colorado Judicial Branch, or any bar authority. All questions and essays are original sample materials — not actual exam content. Exam dates and requirements change — always verify against official sources before relying on them. Citations in study materials should be confirmed against current Colorado law. We stand by our work.
+      © 2026 ColoradoLLPExam.com. All rights reserved. The Colorado LLP Exam Prep Guide was created and developed by a Colorado family law attorney with more than 23 years in domestic relations practice and over 30 years in the legal profession, spanning Pennsylvania to Colorado — a Colorado District Court-appointed Child &amp; Family Investigator (CFI), and a former government investigator for Denver Human Services in Denver, Colorado. This website and the Colorado LLP Exam Prep Guide are independent study aids for exam preparation only. They are <strong>not legal advice</strong>, and nothing here creates an attorney-client or LLP-client relationship. This site is not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, the Colorado Judicial Branch, or any bar authority. All questions and essays are original sample materials — not actual exam content. Exam dates and requirements change — always verify against official sources before relying on them. Citations in study materials should be confirmed against current Colorado law. We stand by our work. Payments are processed by Stripe over encrypted SSL/TLS connections; we never see or store your card details. This site is served over HTTPS.
     </div>
   </div>
 </footer>

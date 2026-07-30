@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colorado LLP Exam Prep — The Practice Exam Library for the Licensed Legal Paraprofessional Exam</title>
-<meta name="description" content="Attorney-authored prep for Colorado's Licensed Legal Paraprofessional (LLP) exam. Try 6 sample questions and 2 full essays free — then get the 93 most-missed questions + all 6 essays, every answer explained, for $99.95.">
+<meta name="description" content="Attorney-authored prep for Colorado's Licensed Legal Paraprofessional (LLP) exam. Try 6 sample questions and 2 full essays free — then get 93 hand-picked sample questions + all 6 sample essays, every answer explained, for $99.95.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -68,6 +68,13 @@
   .chip{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 22px;text-align:center;min-width:150px}
   .chip .num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:800;color:#FFD100;line-height:1.1}
   .chip .lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#B9C9DE;font-weight:600}
+  .timer{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+  .t-cell{background:rgba(169,210,245,.12);border:1px solid rgba(169,210,245,.4);border-radius:16px;padding:14px 20px;min-width:88px;text-align:center;box-shadow:0 0 24px rgba(169,210,245,.15)}
+  .t-num{font-family:'Fraunces',serif;font-size:2.1rem;font-weight:800;color:#CFE7FF;line-height:1;font-variant-numeric:tabular-nums}
+  .t-lbl{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#A9C8E8;font-weight:700;margin-top:5px}
+  .t-sep{color:#A9D2F5;font-size:1.7rem;font-weight:800;opacity:.6}
+  .timer-cap{margin-top:14px;font-size:.88rem;color:#B9D5F0;text-align:center}
+  @media(max-width:560px){.t-cell{min-width:70px;padding:10px 12px}.t-num{font-size:1.5rem}}
   .hero-sun{position:absolute;top:70px;right:12%;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,#FFD100 0%,rgba(255,209,0,.45) 52%,transparent 72%);z-index:1}
   .range{position:absolute;bottom:-2px;left:0;right:0;z-index:2}
 
@@ -252,7 +259,7 @@
       <span class="brand-name">Colorado<span>LLP</span>Exam</span>
     </a>
     <nav class="nav-links">
-      <a href="#dates">2026 Dates</a>
+      <a href="#dates">Deadlines</a>
       <a href="#quiz">Free Questions</a>
       <a href="#resources">Free Resources</a>
       <a class="btn btn-gold" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy Now — $99.95</a>
@@ -266,7 +273,7 @@
   <div class="wrap">
     <span class="eyebrow">★ Attorney-Built · For the Nov 10, 2026 Colorado LLP Exam</span>
     <h1>Your LLP exam prep starts here.<br><em>Be ready on November 10.</em></h1>
-    <p class="lede">Attorney-authored practice for Colorado's Licensed Legal Paraprofessional exam — the <strong>93 most-missed sample questions</strong> from our 405-question library, plus all 6 sample essays, every answer explained. Try 6 of them and <strong>2 full sample essays</strong> free below.</p>
+    <p class="lede">Attorney-authored practice for Colorado's Licensed Legal Paraprofessional exam — <strong>93 hand-picked sample questions</strong> from our 405-question library, plus all 6 sample essays, every answer explained. Try 6 of them and <strong>2 full sample essays</strong> free below.</p>
     <div class="hero-cred">
       <span>Created by a Colorado family law attorney — 23+ years in practice</span><span class="dot"></span>
       <span>Colorado District Court-appointed Child &amp; Family Investigator (CFI)</span><span class="dot"></span>
@@ -276,11 +283,16 @@
       <a class="btn btn-gold" href="#quiz">Try 6 free questions →</a>
       <a class="btn btn-line" href="#pricing">Buy Now — $99.95</a>
     </div>
-    <div class="count-row">
-      <div class="chip"><div class="num" id="cd-exam">—</div><div class="lbl">Days to the exam</div></div>
-      <div class="chip"><div class="num" id="cd-late">—</div><div class="lbl">Days to late filing deadline</div></div>
-      <div class="chip"><div class="num">3×</div><div class="lbl">Full-length practice exams</div></div>
+    <div class="timer" aria-label="Countdown to the November 10, 2026 exam">
+      <div class="t-cell"><div class="t-num" id="t-d">—</div><div class="t-lbl">days</div></div>
+      <span class="t-sep">:</span>
+      <div class="t-cell"><div class="t-num" id="t-h">—</div><div class="t-lbl">hours</div></div>
+      <span class="t-sep">:</span>
+      <div class="t-cell"><div class="t-num" id="t-m">—</div><div class="t-lbl">minutes</div></div>
+      <span class="t-sep">:</span>
+      <div class="t-cell"><div class="t-num" id="t-s">—</div><div class="t-lbl">seconds</div></div>
     </div>
+    <div class="timer-cap">until exam day, November 10, 2026 — plenty of time if you start today. (Late filing closes September 4.)</div>
   </div>
   <svg class="range" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 190 L0 110 L140 48 L215 86 L300 22 L370 68 L455 30 L540 92 L640 8 L742 88 L830 40 L930 98 L1030 34 L1130 96 L1240 56 L1340 100 L1440 70 L1440 190 Z" fill="rgba(250,247,241,.14)"/>
@@ -294,7 +306,7 @@
 <!-- ================= STATS ================= -->
 <div class="stats">
   <div class="wrap">
-    <div class="stat"><div class="n">93</div><div class="t">Most-missed questions, picked from 405</div></div>
+    <div class="stat"><div class="n">93</div><div class="t">Sample questions, hand-picked from 405</div></div>
     <div class="stat"><div class="n">6</div><div class="t">Full essays with model answers</div></div>
     <div class="stat"><div class="n">100%</div><div class="t">Answers explained, keyed to authority</div></div>
     <div class="stat"><div class="n">$99.95</div><div class="t">One price. The whole guide.</div></div>
@@ -322,8 +334,8 @@
 <section id="dates">
   <div class="wrap">
     <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
-    <span class="kicker">The 2026 Cycle · Base Camp Calendar</span>
-    <h2>One exam this year. Know the dates cold.</h2>
+    <span class="kicker">The 2026 Cycle</span>
+    <h2>Important deadlines.</h2>
     <p class="sub">In 2026 the Colorado Supreme Court is offering the Licensed Legal Paraprofessional exam <strong>only once — November 10</strong>. There is no April sitting. Miss the window, wait a year.</p>
     <div class="dates-grid">
       <div class="date-card"><div class="d">Jul 1, 2026</div><div class="l">Application window opened</div></div>
@@ -347,8 +359,8 @@
       <span class="diamond" aria-hidden="true">◆◆</span>
       <div class="peak-mark" style="justify-content:center;display:flex" aria-hidden="true"><i></i><i></i><i></i></div>
       <span class="kicker">Free Sample — Straight From Our Library</span>
-      <h2>The 6 questions candidates miss most.</h2>
-      <p class="sub">Not the warm-ups — these are the questions that separate passing from close-but-not-quite. Every question and explanation was written by a Colorado family law attorney with 23+ years in domestic relations practice. Get these, and the other 87 in the guide will finish the job.</p>
+      <h2>Try 6 free sample questions.</h2>
+      <p class="sub">Straight from our library — every question and explanation written by a Colorado family law attorney with 23+ years in domestic relations practice. Get these right, and the other 87 in the guide will finish the job.</p>
       <div class="score-pill">Score: <b id="score">0</b>&nbsp;/&nbsp;<span id="answered">0</span> answered</div>
     </div>
     <div id="quiz-cards"></div>
@@ -457,7 +469,7 @@
     <div style="text-align:center">
       <span class="kicker">The Full Guide</span>
       <h2>Get the complete guide in 2 minutes.</h2>
-      <p class="sub" style="margin:0 auto">Everything between you and the summit — the 93 questions that decide who passes, hand-picked from our 405-question library by the attorney who wrote them, organized by subject, every answer explained and mapped to its controlling authority. Pay, download, start drilling.</p>
+      <p class="sub" style="margin:0 auto">Everything between you and the summit — 93 sample questions hand-picked from our 405-question library by the attorney who wrote them, organized by subject, every answer explained and mapped to its controlling authority. Pay, download, start drilling.</p>
     </div>
     <div class="price-grid">
       <div class="price-card">
@@ -465,7 +477,7 @@
         <div class="price-tag"><span class="amt">$99.95</span><span class="per">one-time · instant PDF</span></div>
         <div class="price-note">Why 93? In Colorado family law, 93 is the number that decides everything. Less than 20 minutes of a family-law attorney's time — for the questions that decide whether you pass.</div>
         <ul>
-          <li><span class="tick">✓</span> <span><strong>The 93 most-missed sample questions</strong> from our 405-question library — family law and LLP ethics, hand-picked by the attorney who wrote all of them</span></li>
+          <li><span class="tick">✓</span> <span><strong>93 hand-picked sample questions</strong> from our 405-question library — family law and LLP ethics, chosen by the attorney who wrote all of them</span></li>
           <li><span class="tick">✓</span> <span><strong>Tagged by subject</strong> — jurisdiction, APR, child support, maintenance, property, protection orders, UCCJEA/UIFSA, scope &amp; ethics</span></li>
           <li><span class="tick">✓</span> <span><strong>All 6 sample essays</strong> with model answers and "why this scores" grading notes</span></li>
           <li><span class="tick">✓</span> <span><strong>Every question explained</strong> — re-printed with ✓/✗ marked and a full "why," with controlling authority</span></li>
@@ -476,7 +488,7 @@
         <div class="buy-fine">Secure checkout by Stripe — card, Apple Pay, Klarna, Cash App Pay, or Amazon Pay. Your PDF is delivered by email right after payment.</div>
       </div>
       <div class="summit-col">
-        <div class="summit-item"><div class="pk">⛰️</div><div><h3>Built like the real exam</h3><p>Same style as exam day — one clearly right answer, distractors that teach. But these are the 93 the average candidate gets wrong: the computations, the interplays, the carve-out traps.</p></div></div>
+        <div class="summit-item"><div class="pk">⛰️</div><div><h3>Built like the real exam</h3><p>Same style as exam day — one clearly right answer, distractors that teach. These are the 93 we'd drill first: the computations, the interplays, the carve-out traps.</p></div></div>
         <div class="summit-item"><div class="pk">🧗</div><div><h3>Every answer explained</h3><p>No answer-key guessing. Each question gets a "why the right answer is right, why each wrong one is wrong" breakdown with the controlling Colorado authority.</p></div></div>
         <div class="summit-item"><div class="pk">🏔️</div><div><h3>Colorado-specific, LLP-specific</h3><p>Written around C.R.C.P. 207.1 scope limits, LLP courtroom rules, and the Colo. LLP RPC — the things only this exam tests. Not recycled bar-prep material.</p></div></div>
         <div class="summit-item"><div class="pk">⚖️</div><div><h3>23+ years of family law behind it</h3><p>Authored by a Colorado family law attorney — 23+ years in domestic relations practice, 30+ in the legal profession, Pennsylvania to Colorado — a Colorado District Court-appointed Child &amp; Family Investigator (CFI), and a former government investigator for Denver Human Services.</p></div></div>
@@ -497,9 +509,9 @@
 <section id="resources">
   <div class="wrap">
     <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
-    <span class="kicker">Free Official Resources · No Email, No Catch</span>
-    <h2>Straight from the source.</h2>
-    <p class="sub">The official Colorado Supreme Court and Office of Attorney Regulation Counsel materials every LLP candidate should read — free and public. Our guide teaches to these sources; start here, then drill with us.</p>
+    <span class="kicker">Resources &amp; FAQ · No Email, No Catch</span>
+    <h2>Everything in one place.</h2>
+    <p class="sub">The official Colorado Supreme Court and Office of Attorney Regulation Counsel materials — the rules, the exam page, the application, the forms — plus our quick answers. Start with the official sources; they control. Then drill with us.</p>
     <div class="res-grid">
       <a class="res-card" href="https://www.coloradolegalregulation.com/future%20lawyers/llpgeneraloverview/" target="_blank" rel="noopener">
         <div class="rc-tag">Official · Program</div>
@@ -537,8 +549,32 @@
         <p>The Office of Attorney Regulation Counsel's hub — LLP Rules of Professional Conduct, licensing, registration, and announcements that affect the 2026 cycle.</p>
         <span class="go">Visit the regulator →</span>
       </a>
+      <a class="res-card" href="https://www.coloradolegalregulation.com/future%20lawyers/llpgeneraloverview/" target="_blank" rel="noopener">
+        <div class="rc-tag">Official · The Governing Rules</div>
+        <h3>C.R.C.P. 207.1, 207.8 &amp; the LLP RPC</h3>
+        <p>The Supreme Court rules that define the license: Rule 207.1 (what an LLP may and may not do), Rule 207.8 (admission requirements), and the LLP Rules of Professional Conduct — all reachable from the program overview.</p>
+        <span class="go">Find the rules →</span>
+      </a>
+      <a class="res-card" href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener">
+        <div class="rc-tag">Official · What's Tested</div>
+        <h3>LLP Core Competencies</h3>
+        <p>The Court publishes the competencies the exam tests — family law subjects and professional-conduct duties. Our 405-question library is organized around them; the official list is on the examination page.</p>
+        <span class="go">See what's tested →</span>
+      </a>
     </div>
     <div class="disc-band"><b>These links belong to the Colorado Supreme Court / OARC — not to us.</b> We're an independent study resource; the official pages control if anything conflicts. No email, no signup, no catch — go read them.</div>
+    <div style="margin-top:56px">
+      <span class="kicker">Quick FAQ</span>
+      <h2>The LLP license, in brief.</h2>
+      <div class="faq-grid">
+      <div class="faq"><h3>What is a Licensed Legal Paraprofessional?</h3><p>A new license created by the Colorado Supreme Court allowing qualified paraprofessionals to represent clients in less-complex domestic relations matters — dissolution, parentage, and allocation of parental responsibilities — within the scope defined by C.R.C.P. 207.1.</p></div>
+      <div class="faq"><h3>What's actually on the exam?</h3><p>Two multiple-choice sections (family law and LLP ethics) plus essays, testing the published LLP Core Competencies. Our library spans 405 questions across every tested subject; the guide distills it to 93 hand-picked questions, plus all 6 sample essays.</p></div>
+      <div class="faq"><h3>What does the guide cost, and what's free?</h3><p>The 6 sample questions and 2 full essays on this page are free, forever — and so is everything in the resource hub above. The guide — 93 hand-picked sample questions, all 6 sample essays, complete explanations, the law-reference table, and exhibits — is a one-time $99.95, delivered as a PDF. All original sample materials — and we stand by them.</p></div>
+      <div class="faq"><h3>Am I eligible to sit in November?</h3><p>Eligibility runs through the Office of Attorney Regulation Counsel — education plus documented paralegal experience pathways. Check the official <a href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener">application instructions</a> and file by the deadline.</p></div>
+      <div class="faq"><h3>Who created these materials?</h3><p>A Colorado family law attorney with 23+ years in domestic relations practice and 30+ years in the legal profession, spanning Pennsylvania to Colorado — also a Colorado District Court-appointed Child &amp; Family Investigator (CFI) and a former government investigator for Denver Human Services in Denver, Colorado. The guide was written specifically for Colorado's LLP exam, not adapted from generic bar-prep material.</p></div>
+      <div class="faq"><h3>Is this site affiliated with the Court?</h3><p>No. ColoradoLLPExam.com is an independent study resource. We're not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the Colorado Judicial Branch.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -566,23 +602,6 @@
   <path d="M0 90 L0 64 L190 34 L350 66 L520 28 L690 62 L860 22 L1030 58 L1200 34 L1370 64 L1440 48 L1440 90 Z" fill="#FAF7F1"/>
 </svg>
 
-<!-- ================= FAQ ================= -->
-<section id="faq">
-  <div class="wrap">
-    <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
-    <span class="kicker">Quick Answers</span>
-    <h2>The LLP license, in brief.</h2>
-    <div class="faq-grid">
-      <div class="faq"><h3>What is a Licensed Legal Paraprofessional?</h3><p>A new license created by the Colorado Supreme Court allowing qualified paraprofessionals to represent clients in less-complex domestic relations matters — dissolution, parentage, and allocation of parental responsibilities — within the scope defined by C.R.C.P. 207.1.</p></div>
-      <div class="faq"><h3>What's actually on the exam?</h3><p>Two multiple-choice sections (family law and LLP ethics) plus essays, testing the published LLP Core Competencies. Our library spans 405 questions across every tested subject; the guide distills it to the 93 most-missed, plus all 6 essays.</p></div>
-      <div class="faq"><h3>What does the guide cost, and what's free?</h3><p>The 6 sample questions and 2 full essays on this page are free, forever. The guide — the 93 most-missed sample questions, all 6 sample essays, complete explanations, the law-reference table, and exhibits — is a one-time $99.95, delivered as a PDF. All original sample materials — and we stand by them.</p></div>
-      <div class="faq"><h3>Am I eligible to sit in November?</h3><p>Eligibility runs through the Office of Attorney Regulation Counsel — education plus documented paralegal experience pathways. Check the official <a href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener">application instructions</a> and file by the deadline.</p></div>
-      <div class="faq"><h3>Who created these materials?</h3><p>A Colorado family law attorney with 23+ years in domestic relations practice and 30+ years in the legal profession, spanning Pennsylvania to Colorado — also a Colorado District Court-appointed Child &amp; Family Investigator (CFI) and a former government investigator for Denver Human Services in Denver, Colorado. The guide was written specifically for Colorado's LLP exam, not adapted from generic bar-prep material.</p></div>
-      <div class="faq"><h3>Is this site affiliated with the Court?</h3><p>No. ColoradoLLPExam.com is an independent study resource. We're not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the Colorado Judicial Branch.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= FOOTER ================= -->
 <footer>
   <svg class="mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)">
@@ -603,12 +622,23 @@
 </footer>
 
 <script>
-/* ---------- countdowns ---------- */
+/* ---------- friendly countdown timer ---------- */
 (function(){
-  var now = new Date();
-  function days(t){ return Math.max(0, Math.ceil((t - now)/(1000*60*60*24))); }
-  document.getElementById('cd-exam').textContent = days(new Date(2026,10,10));
-  document.getElementById('cd-late').textContent = days(new Date(2026,8,4));
+  var target = new Date(2026,10,10,8,0,0); // Nov 10, 2026, 8:00 AM
+  var el = {d:document.getElementById('t-d'),h:document.getElementById('t-h'),m:document.getElementById('t-m'),s:document.getElementById('t-s')};
+  function pad(n){ return (n<10?'0':'')+n; }
+  function tick(){
+    var ms = Math.max(0, target - new Date());
+    var d = Math.floor(ms/86400000);
+    var h = Math.floor(ms%86400000/3600000);
+    var m = Math.floor(ms%3600000/60000);
+    var s = Math.floor(ms%60000/1000);
+    el.d.textContent = d;
+    el.h.textContent = pad(h);
+    el.m.textContent = pad(m);
+    el.s.textContent = pad(s);
+  }
+  tick(); setInterval(tick, 1000);
 })();
 
 /* ---------- hardest-6 quiz ---------- */

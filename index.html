@@ -817,7 +817,7 @@ QUESTIONS.forEach(function(item,qi){
       });
       cgrid.appendChild(kb);
     });
-    var cnote=document.createElement('div'); cnote.className='calc-note'; cnote.textContent='% divides by 100 — e.g. 40 % × 8000 = 3200';
+    var cnote=document.createElement('div'); cnote.className='calc-note'; cnote.textContent='% divides by 100 — e.g. 25 % × 400 = 100';
     cpanel.appendChild(cdisp); cpanel.appendChild(cgrid); cpanel.appendChild(cnote);
     ctog.addEventListener('click',function(){ cpanel.classList.toggle('open'); });
     card.appendChild(ctog); card.appendChild(cpanel);

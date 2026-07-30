@@ -11,7 +11,7 @@
 <style>
   :root{
     --blue:#14355F; --ink:#0C1F3A; --blue-soft:#1E4A82; --sky:#2A5B99;
-    --red:#B0532E; --gold:#F2B01E; --gold-soft:#FFF3D6;
+    --red:#B0532E; --gold:#4A7FBF; --gold-soft:#EAF1FA;
     --cream:#FAF7F1; --sand:#F1ECE1; --white:#FFFFFF; --line:#E6E0D4;
     --green:#1E7A46; --green-soft:#E7F4EC; --red-soft:#FBE9EC;
     --muted:#5B6B80; --radius:18px;
@@ -36,8 +36,9 @@
   .nav-links a:hover{opacity:1}
   .btn{display:inline-block;font-weight:700;text-decoration:none;border-radius:999px;transition:transform .12s ease, box-shadow .12s ease;cursor:pointer;border:none}
   .btn:active{transform:scale(.98)}
-  .btn-gold{background:var(--gold);color:var(--ink);padding:11px 22px;font-size:.95rem;box-shadow:0 6px 16px rgba(242,176,30,.35)}
-  .btn-gold:hover{box-shadow:0 8px 22px rgba(242,176,30,.5)}
+  .btn-gold{background:var(--blue);color:#fff;padding:11px 22px;font-size:.95rem;box-shadow:0 6px 16px rgba(20,53,95,.3)}
+  .btn-gold:hover{box-shadow:0 8px 22px rgba(20,53,95,.45)}
+  .hero .btn-gold{background:#fff;color:var(--blue);box-shadow:0 6px 18px rgba(0,0,0,.3)}
   .btn-line{border:2px solid var(--blue);color:var(--blue);padding:10px 22px;font-size:.95rem;background:transparent}
   .btn-line:hover{background:var(--blue);color:#fff}
   @media(max-width:760px){.nav-links a:not(.btn){display:none}}
@@ -50,20 +51,20 @@
   /* ===== hero ===== */
   .hero{position:relative;background:linear-gradient(178deg,#081527 0%,var(--ink) 30%,var(--blue) 66%,var(--sky) 100%);color:#fff;overflow:hidden}
   .hero .wrap{position:relative;z-index:3;padding-top:80px;padding-bottom:210px;text-align:center}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(242,176,30,.45);padding:7px 16px;border-radius:999px;background:rgba(242,176,30,.08)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#CFE0F2;border:1px solid rgba(255,255,255,.35);padding:7px 16px;border-radius:999px;background:rgba(255,255,255,.06)}
   .hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:900;line-height:1.06;letter-spacing:-.02em;margin:26px auto 18px;max-width:840px}
-  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero h1 em{font-style:normal;color:#9FC2E8}
   .hero p.lede{font-size:clamp(1.02rem,2vw,1.2rem);color:#C9D6E8;max-width:680px;margin:0 auto 22px}
-  .hero-cred{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:.85rem;font-weight:700;letter-spacing:.04em;color:#EBD9A8;margin:0 auto 30px;max-width:720px}
-  .hero-cred .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex:0 0 5px}
+  .hero-cred{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:.85rem;font-weight:700;letter-spacing:.04em;color:#A9C4E4;margin:0 auto 30px;max-width:720px}
+  .hero-cred .dot{width:5px;height:5px;border-radius:50%;background:#A9C4E4;flex:0 0 5px}
   .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:42px}
   .hero .btn-line{border-color:rgba(255,255,255,.65);color:#fff}
   .hero .btn-line:hover{background:#fff;color:var(--blue)}
   .count-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .chip{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 22px;text-align:center;min-width:150px}
-  .chip .num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:800;color:var(--gold);line-height:1.1}
+  .chip .num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:800;color:#CFE0F2;line-height:1.1}
   .chip .lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#B9C9DE;font-weight:600}
-  .hero-sun{position:absolute;top:70px;right:12%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#F2B01E 0%,rgba(242,176,30,.35) 55%,transparent 72%);z-index:1}
+  .hero-sun{position:absolute;top:70px;right:12%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.9) 0%,rgba(255,255,255,.25) 55%,transparent 72%);z-index:1}
   .range{position:absolute;bottom:-2px;left:0;right:0;z-index:2}
 
   /* ===== stats band ===== */
@@ -100,7 +101,7 @@
   .date-card.gold-top{border-top:4px solid var(--gold)}
   .date-card .d{font-family:'Fraunces',serif;font-weight:800;font-size:1.25rem;margin-bottom:4px}
   .date-card .l{font-size:.86rem;color:var(--muted)}
-  .date-card .flag{position:absolute;top:14px;right:14px;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-soft);color:#8A6410;padding:4px 9px;border-radius:999px}
+  .date-card .flag{position:absolute;top:14px;right:14px;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-soft);color:#35618F;padding:4px 9px;border-radius:999px}
   .src-note{font-size:.8rem;color:var(--muted);margin-top:16px}
   @media(max-width:840px){.dates-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:480px){.dates-grid{grid-template-columns:1fr}}
@@ -147,7 +148,7 @@
     linear-gradient(135deg,transparent 49%,rgba(255,255,255,.06) 50%),
     linear-gradient(225deg,transparent 49%,rgba(255,255,255,.08) 50%);
   }
-  .essay-head .lvl{font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  .essay-head .lvl{font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#CFE0F2;margin-bottom:6px;display:flex;align-items:center;gap:8px}
   .essay-head h3{font-size:1.25rem;font-weight:800}
   .essay-body{padding:26px 28px}
   .prompt-label{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-soft);margin-bottom:8px}
@@ -166,7 +167,7 @@
 
   /* ===== pricing ===== */
   #pricing{background:linear-gradient(180deg,var(--ink) 0%,var(--blue) 100%);color:#fff;position:relative;overflow:hidden;padding-top:60px;padding-bottom:96px}
-  #pricing .kicker{color:var(--gold)}
+  #pricing .kicker{color:#CFE0F2}
   #pricing h2{color:#fff}
   #pricing .sub{color:#C9D6E8}
   .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch;margin-top:36px;position:relative;z-index:2}
@@ -178,8 +179,8 @@
   .price-note{font-size:.88rem;color:var(--muted);margin-bottom:18px}
   .price-card ul{list-style:none;display:grid;gap:11px;margin:18px 0 24px}
   .price-card li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem}
-  .price-card li .tick{flex:0 0 20px;height:20px;border-radius:50%;background:var(--gold);color:var(--ink);font-weight:900;font-size:.7rem;display:flex;align-items:center;justify-content:center;margin-top:2px}
-  .buy-btn{display:block;text-align:center;background:var(--gold);color:var(--ink);font-weight:800;font-size:1.05rem;border-radius:14px;padding:16px 20px;text-decoration:none;box-shadow:0 8px 20px rgba(242,176,30,.45);transition:transform .12s}
+  .price-card li .tick{flex:0 0 20px;height:20px;border-radius:50%;background:var(--gold);color:#fff;font-weight:900;font-size:.7rem;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .buy-btn{display:block;text-align:center;background:var(--blue);color:#fff;font-weight:800;font-size:1.05rem;border-radius:14px;padding:16px 20px;text-decoration:none;box-shadow:0 8px 20px rgba(20,53,95,.4);transition:transform .12s}
   .buy-btn:hover{transform:translateY(-2px)}
   .buy-fine{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px}
   .summit-col{display:flex;flex-direction:column;justify-content:center;gap:18px}
@@ -225,7 +226,7 @@
         <rect width="34" height="34" rx="8" fill="#14355F"/>
         <path d="M3 26 L11 14 L16 21 L21 11 L31 26 Z" fill="#1E4A82"/>
         <path d="M21 11 L24.5 16.5 L21 16 L18.5 14.8 Z" fill="#FFFFFF" opacity=".85"/>
-        <circle cx="9" cy="8" r="3.2" fill="#F2B01E"/>
+        <circle cx="9" cy="8" r="3.2" fill="#CFE0F2"/>
       </svg>
       <span class="brand-name">Colorado<span>LLP</span>Exam</span>
     </a>
@@ -513,7 +514,7 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="#1E4A82"/><path d="M3 26 L11 14 L16 21 L21 11 L31 26 Z" fill="#14355F"/><path d="M21 11 L24.5 16.5 L21 16 L18.5 14.8 Z" fill="#FFFFFF" opacity=".85"/><circle cx="9" cy="8" r="3.2" fill="#F2B01E"/></svg>
+        <svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="#1E4A82"/><path d="M3 26 L11 14 L16 21 L21 11 L31 26 Z" fill="#14355F"/><path d="M21 11 L24.5 16.5 L21 16 L18.5 14.8 Z" fill="#FFFFFF" opacity=".85"/><circle cx="9" cy="8" r="3.2" fill="#CFE0F2"/></svg>
         ColoradoLLPExam.com
       </div>
       <div><a href="#quiz">Hardest questions</a> · <a href="#essays">Essays</a> · <a href="#pricing">Get the guide</a> · <a href="https://www.coloradolegalregulation.com/future%20lawyers/llpgeneraloverview/" target="_blank" rel="noopener">Official LLP program info</a></div>

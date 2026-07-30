@@ -120,6 +120,10 @@
   .date-card .d{font-family:'Fraunces',serif;font-weight:800;font-size:1.25rem;margin-bottom:4px}
   .date-card .l{font-size:.86rem;color:var(--muted)}
   .date-card .flag{position:absolute;top:14px;right:14px;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-soft);color:#35618F;padding:4px 9px;border-radius:999px}
+  a.date-card{display:block;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+  a.date-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(20,53,95,.16)}
+  .date-card .dgo{display:block;margin-top:10px;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:var(--blue-soft)}
+  a.date-card:hover .dgo{text-decoration:underline}
   .src-note{font-size:.8rem;color:var(--muted);margin-top:16px}
   @media(max-width:840px){.dates-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:480px){.dates-grid{grid-template-columns:1fr}}
@@ -305,7 +309,7 @@
       <span class="t-sep">:</span>
       <div class="t-cell"><div class="t-num" id="t-s">—</div><div class="t-lbl">seconds</div></div>
     </div>
-    <div class="timer-cap">until exam day, November 10, 2026 — plenty of time if you start today. (Late filing closes September 4.)</div>
+    <div class="timer-cap">until exam day, November 10, 2026 — plenty of time if you start today. (<a href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Late filing closes September 4.</a>)</div>
   </div>
   <svg class="range" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 190 L0 110 L140 48 L215 86 L300 22 L370 68 L455 30 L540 92 L640 8 L742 88 L830 40 L930 98 L1030 34 L1130 96 L1240 56 L1340 100 L1440 70 L1440 190 Z" fill="rgba(250,247,241,.14)"/>
@@ -351,10 +355,10 @@
     <h2>Important deadlines.</h2>
     <p class="sub">In 2026 the Colorado Supreme Court is offering the Licensed Legal Paraprofessional exam <strong>only once — November 10</strong>. There is no April sitting. Miss the window, wait a year.</p>
     <div class="dates-grid">
-      <div class="date-card"><div class="d">Jul 1, 2026</div><div class="l">Application window opened</div></div>
-      <div class="date-card gold-top"><div class="d">Aug 7, 2026</div><div class="l">Regular filing deadline</div><span class="flag">Closing soon</span></div>
-      <div class="date-card hot"><div class="d">Sep 4, 2026</div><div class="l">Late filing deadline (final)</div></div>
-      <div class="date-card"><div class="d">Nov 10, 2026</div><div class="l">Summit day — Ralph L. Carr Judicial Center, Denver</div></div>
+      <a class="date-card" href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener"><div class="d">Jul 1, 2026</div><div class="l">Application window opened</div><span class="dgo">How to apply — official instructions →</span></a>
+      <a class="date-card gold-top" href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener"><div class="d">Aug 7, 2026</div><div class="l">Regular filing deadline</div><span class="flag">Closing soon</span><span class="dgo">File now — official instructions →</span></a>
+      <a class="date-card hot" href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener"><div class="d">Sep 4, 2026</div><div class="l">Late filing deadline (final)</div><span class="dgo">Deadlines &amp; fees — official exam page →</span></a>
+      <a class="date-card" href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener"><div class="d">Nov 10, 2026</div><div class="l">Exam day — Ralph L. Carr Judicial Center, Denver</div><span class="dgo">Exam details — official exam page →</span></a>
     </div>
     <p class="src-note">Dates per the <a href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener">Office of Attorney Regulation Counsel</a> — always confirm against the official site before filing.</p>
   </div>
@@ -373,13 +377,13 @@
       <div class="peak-mark" style="justify-content:center;display:flex" aria-hidden="true"><i></i><i></i><i></i></div>
       <span class="kicker">Free Sample — Straight From Our Library</span>
       <h2>Try 6 free sample questions.</h2>
-      <p class="sub">Straight from our library — every question and explanation written by a Colorado family law attorney with 23+ years in domestic relations practice. Get these right, and the other 87 in the guide will finish the job.</p>
+      <p class="sub">Straight from our library — every question and explanation written by a Colorado family law attorney with 23+ years in domestic relations practice. Get these six right, and the 93 in the guide will finish the job.</p>
       <div class="score-pill">Score: <b id="score">0</b>&nbsp;/&nbsp;<span id="answered">0</span> answered</div>
     </div>
     <div id="quiz-cards"></div>
     <div class="disc-band"><b>Original sample materials — and we stand by them.</b> Every question, answer, and explanation here and in the guide is original sample material written by our author to teach the tested concepts. These are not actual exam questions, and we are not affiliated with the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the exam. Verify citations against current law. Study aid — not legal advice. <b>We stand by every answer.</b></div>
     <div class="quiz-cta">
-      <p class="note">That's the free sample — <strong>87 more, all explained, in the full guide.</strong></p>
+      <p class="note">That's the free sample — <strong>93 hand-picked questions, every one explained, in the full guide.</strong></p>
       <a class="btn btn-gold" href="#pricing">Buy the Prep Guide — $99.95 →</a>
     </div>
   </div>
@@ -666,52 +670,52 @@
 /* ---------- sample-6 quiz ---------- */
 var QUESTIONS = [
   {
-    id:"FL-004", subj:"Jurisdiction · Divisible Divorce",
-    q:"A wife files for dissolution in Colorado. The husband lives out of state, was never married in Colorado, and has no contacts here. The court most clearly has jurisdiction to:",
-    opts:["Divide the husband's out-of-state pension","Order the husband to pay maintenance","Dissolve the marital status","Enter a money judgment against the husband for marital debt"],
+    id:"FL-146", subj:"Maintenance · Run the Formula",
+    q:"Higher earner: $8,000/month AGI. Lower earner: $3,000/month AGI. Combined income under the cap. The advisory maintenance amount is:",
+    opts:["$1,700/month","$2,000/month","$5,000/month","$0"],
+    correct:0,
+    why:"Run the formula: (40% × $8,000) − (50% × $3,000) = $3,200 − $1,500 = $1,700 per month, advisory. The court then weighs the statutory factors and the guideline term before entering an award. Candidates who memorize the formula but never run it lose these points on arithmetic alone.",
+    auth:"Authority: C.R.S. 14-10-114(3)(a)(I)(A)"
+  },
+  {
+    id:"FL-147", subj:"Maintenance · The Zero Floor",
+    q:"If both spouses earn $6,000/month AGI, the advisory maintenance amount is:",
+    opts:["$2,400/month","$0 (the formula yields a negative number, floored at zero)","$3,000/month","$600/month"],
+    correct:1,
+    why:"(40% × $6,000) − (50% × $6,000) = $2,400 − $3,000 = −$600 — and a negative result is floored at $0. Roughly equal incomes typically produce no guideline maintenance, reflecting comparable abilities to meet needs. The zero floor is the detail formula-memorizers miss.",
+    auth:"Authority: C.R.S. 14-10-114(3)(a)"
+  },
+  {
+    id:"FL-257", subj:"Property · Do the Math",
+    q:"A spouse's inheritance grows from $40,000 to $55,000 during the marriage. The marital portion is:",
+    opts:["$55,000","$15,000 (the appreciation)","$40,000","$0"],
+    correct:1,
+    why:"The inherited corpus ($40,000) stays separate, but the $15,000 of appreciation during the marriage is marital and subject to division. Corpus separate, growth marital — the separate-property-appreciation rule in its simplest form.",
+    auth:"Authority: C.R.S. 14-10-113(4)"
+  },
+  {
+    id:"FL-270", subj:"Scope · Putting It Together",
+    q:"A 12-year marriage, two minor children, combined income $150,000, a marital home, the husband's pension, and a disputed inheritance. Which issue is OUTSIDE an LLP's scope?",
+    opts:["Calculating child support","Dividing the marital home","Preparing the QDRO for the pension","Drafting the parenting plan"],
     correct:2,
-    why:"A court may dissolve the marriage (a status determination) based on the petitioner's domicile alone. However, dividing property, ordering support, or entering a money judgment against the respondent requires personal jurisdiction over him — minimum contacts or a long-arm basis. Status (divisible divorce) and in personam remedies are analyzed separately.",
-    auth:"Authority: C.R.S. 14-10-106; C.R.S. 13-1-124 (long-arm)"
+    why:"Child support, the home division, and the parenting plan are all in scope. Preparing the QDRO that divides the pension is a collateral-issue carve-out — it must go to an attorney or QDRO specialist, even though the LLP can handle the agreement to divide the asset. In scope, in scope, in scope… then the carve-out. Spotting the odd one out is the exam's signature move.",
+    auth:"Authority: C.R.C.P. 207.1; C.R.S. 14-10-113"
   },
   {
-    id:"FL-167", subj:"Property · Gifts Between Spouses",
-    q:"A gift from one spouse to the other during the marriage is generally:",
-    opts:["Separate property of the recipient","Marital property subject to division","Returned to the donor","Void"],
+    id:"FL-268", subj:"UCCJEA vs. UIFSA · The Classic Mix-Up",
+    q:"Which pairing is correct?",
+    opts:["UCCJEA = support; UIFSA = custody","UCCJEA = custody/APR jurisdiction; UIFSA = support jurisdiction","Both govern property","Both govern adoption"],
     correct:1,
-    why:"Interspousal gifts during the marriage are generally treated as marital property subject to equitable division — not the recipient's separate property. This differs from gifts received from third parties, which are separate. Most test-takers pick A; the third-party/spouse distinction is the trap.",
-    auth:"Authority: C.R.S. 14-10-113(2)"
+    why:"The UCCJEA governs jurisdiction over child-custody/APR determinations; UIFSA governs jurisdiction over support. Mixing them up is a common error — and registration of a foreign order under either one is a carve-out outside an LLP's scope.",
+    auth:"Authority: C.R.S. 14-13-101; C.R.S. 14-5-101"
   },
   {
-    id:"FL-169", subj:"Property · Post-Decree Omitted Assets",
-    q:"If an asset was not divided and was not disclosed, the remedy may include:",
-    opts:["Nothing","Reopening to divide the omitted asset, including under Rule 16.2(e) within 5 years for nondisclosure","Automatic 50/50 of all assets","Criminal restitution only"],
+    id:"FL-241", subj:"Evidence · The CFI Report",
+    q:"In an APR hearing, a CFI's report:",
+    opts:["Binds the court","Is evidence the court considers but does not have to follow","Cannot be challenged","Replaces the hearing"],
     correct:1,
-    why:"An omitted asset may be divided in a later proceeding; where the omission resulted from a party's failure to disclose, Rule 16.2(e) allows reallocation on a motion within 5 years of the decree. Honest mistakes may also be addressed under post-judgment relief rules. The 5-year Colorado-specific reallocation window is heavily tested.",
-    auth:"Authority: C.R.C.P. 16.2(e)(10)"
-  },
-  {
-    id:"FL-170", subj:"Property · Separate Property Income",
-    q:"Income generated by separate property during the marriage (e.g., rent, interest) is:",
-    opts:["Always separate","Often treated as marital, like appreciation, depending on the circumstances","The donor's property","Exempt"],
-    correct:1,
-    why:"Income produced by separate property during the marriage is generally treated as marital, similar to the appreciation rule, because it accrues during the marriage. The analysis can be fact-specific, but the default leans toward marital treatment of in-marriage income — the opposite of most people's instinct.",
-    auth:"Authority: C.R.S. 14-10-113(4)"
-  },
-  {
-    id:"FL-173", subj:"Property · Marital Portion of Separate Asset",
-    q:"For a home one spouse owned before marriage but paid down with marital funds, the court may recognize:",
-    opts:["No marital interest","A marital interest in the appreciation and in equity built with marital funds during the marriage","Full marital ownership of the home","Only the down payment"],
-    correct:1,
-    why:"The home's premarital equity remains separate, but the appreciation during the marriage and the equity built with marital funds create a marital interest subject to division. Tracing and valuation determine the separate versus marital shares — a two-layer analysis that trips up test-takers who reach for all-or-nothing answers.",
-    auth:"Authority: C.R.S. 14-10-113(4)"
-  },
-  {
-    id:"FL-182", subj:"Protection Orders · Mutual Orders",
-    q:"Mutual protection orders (against both parties):",
-    opts:["Are favored","Are disfavored absent separate petitions and independent findings against each party","Are automatic","Are required in every case"],
-    correct:1,
-    why:"Courts disfavor mutual protection orders unless each party has filed a separate petition and the court makes independent findings that each committed the requisite acts. This prevents reflexive cross-orders that obscure who is the predominant aggressor — a policy point many candidates have never seen.",
-    auth:"Authority: C.R.S. 13-14-104.5"
+    why:"A CFI or PRE report informs the court but does not bind it; the parties may cross-examine the investigator and present contrary evidence. The court independently determines best interests on the whole record. Persuasive, not binding — the distinction the exam loves.",
+    auth:"Authority: C.R.S. 14-10-116.5"
   }
 ];
 
@@ -739,7 +743,7 @@ QUESTIONS.forEach(function(item,qi){
         else if(bi===oi && !right) btn.classList.add('wrong');
       });
       var why=card.querySelector('.why');
-      why.querySelector('.verdict').textContent = right ? '✓ Correct — '+letters[item.correct]+'. Summit form.' : '✗ Not quite — the answer is '+letters[item.correct]+'. This one takes climbers down.';
+      why.querySelector('.verdict').textContent = right ? '✓ Correct — '+letters[item.correct]+'.' : '✗ Not quite — the answer is '+letters[item.correct]+'.';
       why.querySelector('.verdict').className = 'verdict '+(right?'good':'bad');
       why.classList.add('show');
       document.getElementById('score').textContent=score;

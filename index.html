@@ -791,9 +791,9 @@ QUESTIONS.forEach(function(item,qi){
   head.innerHTML='<span class="subj">◆◆ '+item.subj+'</span><span class="qnum">Question '+(qi+1)+' of '+QUESTIONS.length+' · '+item.id+'</span>';
   card.appendChild(head);
   var qt=document.createElement('div'); qt.className='qtext'; qt.textContent=item.q; card.appendChild(qt);
-  if(item.calc){
+  if(!window.makeCalc) window.makeCalc=function(calcId,labelText){
     var ctog=document.createElement('button'); ctog.type='button'; ctog.className='calc-toggle';
-    ctog.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="12" x2="8" y2="12.01"/><line x1="12" y1="12" x2="12" y2="12.01"/><line x1="16" y1="12" x2="16" y2="12.01"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="12" y1="16" x2="12" y2="16.01"/><line x1="16" y1="16" x2="16" y2="16.01"/></svg> Math question — open calculator';
+    ctog.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="12" x2="8" y2="12.01"/><line x1="12" y1="12" x2="12" y2="12.01"/><line x1="16" y1="12" x2="16" y2="12.01"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="12" y1="16" x2="12" y2="16.01"/><line x1="16" y1="16" x2="16" y2="16.01"/></svg> '+labelText;
     var cpanel=document.createElement('div'); cpanel.className='calc';
     var cdisp=document.createElement('div'); cdisp.className='calc-display'; cdisp.textContent='0';
     var cgrid=document.createElement('div'); cgrid.className='calc-grid';
@@ -840,7 +840,7 @@ QUESTIONS.forEach(function(item,qi){
       function up(){ document.removeEventListener('pointermove',mv); document.removeEventListener('pointerup',up); }
       document.addEventListener('pointermove',mv); document.addEventListener('pointerup',up);
     });
-    var clabel=document.createElement('span'); clabel.textContent='⠿ Calculator · '+item.id;
+    var clabel=document.createElement('span'); clabel.textContent='⠿ Calculator · '+calcId;
     var cx=document.createElement('button'); cx.type='button'; cx.className='calc-x'; cx.textContent='✕';
     cx.addEventListener('click',function(){ cpanel.classList.remove('open'); });
     chead.appendChild(clabel); chead.appendChild(cx);
@@ -850,8 +850,9 @@ QUESTIONS.forEach(function(item,qi){
       document.querySelectorAll('.calc.open').forEach(function(p){ p.classList.remove('open'); });
       if(!wasOpen) cpanel.classList.add('open');
     });
-    card.appendChild(ctog); card.appendChild(cpanel);
-  }
+    return [ctog,cpanel];
+  };
+  if(item.calc){ var tc=window.makeCalc(item.id,'Math question — open calculator'); card.appendChild(tc[0]); card.appendChild(tc[1]); }
   var opts=document.createElement('div'); opts.className='opts';
   var letters=['A','B','C','D'];
   var done=false;
@@ -881,6 +882,14 @@ QUESTIONS.forEach(function(item,qi){
   why.innerHTML='<div class="verdict"></div><div>'+item.why+'</div><span class="auth">'+item.auth+'</span>';
   card.appendChild(why);
   host.appendChild(card);
+});
+
+/* ---------- essay calculators ---------- */
+document.querySelectorAll('.essay-body').forEach(function(eb, ei){
+  var btn=eb.querySelector('.reveal-btn');
+  if(!btn || !window.makeCalc) return;
+  var tc=window.makeCalc('ESSAY '+(ei+1), 'Math involved — open calculator');
+  eb.insertBefore(tc[0], btn); eb.insertBefore(tc[1], btn);
 });
 
 /* ---------- essay reveals ---------- */

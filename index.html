@@ -129,6 +129,8 @@
   .stat{text-align:center;padding:8px}
   .stat .n{font-family:'Fraunces',serif;font-size:2rem;font-weight:800;color:var(--blue)}
   .stat .t{font-size:.85rem;color:var(--muted);font-weight:600}
+  .stat.alt{border-top:1px dashed var(--line);margin-top:8px;padding-top:16px}
+  .stat.alt .n{color:var(--gold)}
   @media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
 
   /* ===== disclaimer band ===== */
@@ -279,6 +281,18 @@
   .hero-trust{display:flex;gap:8px;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;color:#A9C8E8;margin:-28px auto 34px}
   .zap{display:inline-flex;align-items:center;gap:6px;background:#FFD100;color:#14355F;font-weight:900;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
   .zap-line{text-align:center;margin:14px auto 0}
+  .lib-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+  .lib-group{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 24px 12px}
+  .lib-group>h3{font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--blue-soft);font-family:'Inter',sans-serif;font-weight:800;margin-bottom:2px}
+  .lib-group>.lg-sub{font-size:.82rem;color:var(--muted);margin-bottom:10px}
+  a.doc{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--line);text-decoration:none;transition:transform .12s ease}
+  .lib-group a.doc:first-of-type{border-top:none}
+  a.doc:hover{transform:translateX(4px)}
+  .doc .no{flex:0 0 30px;height:30px;border-radius:9px;background:var(--gold-soft);color:var(--blue-soft);font-weight:900;font-size:.72rem;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .doc .b strong{display:block;color:var(--ink);font-size:.93rem;line-height:1.35}
+  .doc .b span{display:block;font-size:.8rem;color:var(--muted);line-height:1.45;margin-top:2px}
+  .doc .b em{font-style:normal;font-size:.64rem;font-weight:900;letter-spacing:.05em;background:#FFD100;color:#14355F;border-radius:5px;padding:1.5px 6px;margin-left:7px;vertical-align:1px}
+  @media(max-width:840px){.lib-grid{grid-template-columns:1fr}}
   .buy-fine{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px}
   .summit-col{display:flex;flex-direction:column;justify-content:center;gap:18px}
   .summit-item{display:flex;gap:14px;align-items:flex-start}
@@ -394,6 +408,10 @@
     <div class="stat"><div class="n">6</div><div class="t">Full essays with model answers</div></div>
     <div class="stat"><div class="n">100%</div><div class="t">Answers explained, keyed to authority</div></div>
     <div class="stat"><div class="n">$99.95</div><div class="t">One price. Instant download.</div></div>
+    <div class="stat alt"><div class="n">405</div><div class="t">Every sample question we've written — THE FULL 405</div></div>
+    <div class="stat alt"><div class="n">+312</div><div class="t">More questions than THE 93 — the rest of the library</div></div>
+    <div class="stat alt"><div class="n">3</div><div class="t">Full timed practice exams' worth</div></div>
+    <div class="stat alt"><div class="n">$124.95</div><div class="t">The whole library. Just $25 more.</div></div>
   </div>
 </div>
 
@@ -604,58 +622,44 @@
 <section id="resources">
   <div class="wrap">
     <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
-    <span class="kicker">Resources &amp; FAQ · No Email, No Catch</span>
-    <h2>Everything in one place.</h2>
-    <p class="sub">The official Colorado Supreme Court and Office of Attorney Regulation Counsel materials — the rules, the exam page, the application, the forms — plus our quick answers. Start with the official sources; they control. Then drill with us.</p>
-    <div class="res-grid">
-      <a class="res-card" href="https://www.coloradolegalregulation.com/future%20lawyers/llpgeneraloverview/" target="_blank" rel="noopener">
-        <div class="rc-tag">Official · Program</div>
-        <h3>LLP Program Overview</h3>
-        <p>What the Licensed Legal Paraprofessional license is, why the Colorado Supreme Court created it, and where the rules live — C.R.C.P. 207.1 (scope) and 207.8 (admissions).</p>
-        <span class="go">Read at coloradolegalregulation.com →</span>
-      </a>
-      <a class="res-card" href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener">
-        <div class="rc-tag">Official · The Exam</div>
-        <h3>2026 LLP Examination Page</h3>
-        <p>The one exam of 2026 — November 10 at the Ralph L. Carr Judicial Center — with filing deadlines (regular Aug 7, late Sep 4), exam-day details, and the tested LLP Core Competencies.</p>
-        <span class="go">Check dates &amp; requirements →</span>
-      </a>
-      <a class="res-card" href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener">
-        <div class="rc-tag">Official · Apply</div>
-        <h3>Application Instructions</h3>
-        <p>Eligibility pathways — education plus documented paralegal experience — and step-by-step instructions for filing your application with the Office of Attorney Regulation Counsel.</p>
-        <span class="go">Start your application →</span>
-      </a>
-      <a class="res-card" href="https://www.coloradolegalregulation.com/future-lawyers/llpsampleqa/" target="_blank" rel="noopener">
-        <div class="rc-tag">Official · Essays</div>
-        <h3>The Court's Own Sample Essay Q&amp;A</h3>
-        <p>The official sample essay questions with summary answers, published by the regulator itself. Read theirs, then compare with our six full sample essays and model answers.</p>
-        <span class="go">Read the official samples →</span>
-      </a>
-      <a class="res-card" href="https://www.courts.state.co.us/Forms/" target="_blank" rel="noopener">
-        <div class="rc-tag">Official · Forms</div>
-        <h3>Colorado Judicial Branch Forms (JDF)</h3>
-        <p>The real forms behind the questions — the Sworn Financial Statement, petitions, parenting plans, and child support worksheets you'll use in practice and see referenced on the exam.</p>
-        <span class="go">Browse the JDF forms →</span>
-      </a>
-      <a class="res-card" href="https://www.coloradolegalregulation.com/" target="_blank" rel="noopener">
-        <div class="rc-tag">Official · Rules &amp; Regulation</div>
-        <h3>Colorado Legal Regulation Home</h3>
-        <p>The Office of Attorney Regulation Counsel's hub — LLP Rules of Professional Conduct, licensing, registration, and announcements that affect the 2026 cycle.</p>
-        <span class="go">Visit the regulator →</span>
-      </a>
-      <a class="res-card" href="https://www.coloradolegalregulation.com/future%20lawyers/llpgeneraloverview/" target="_blank" rel="noopener">
-        <div class="rc-tag">Official · The Governing Rules</div>
-        <h3>C.R.C.P. 207.1, 207.8 &amp; the LLP RPC</h3>
-        <p>The Supreme Court rules that define the license: Rule 207.1 (what an LLP may and may not do), Rule 207.8 (admission requirements), and the LLP Rules of Professional Conduct — all reachable from the program overview.</p>
-        <span class="go">Find the rules →</span>
-      </a>
-      <a class="res-card" href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener">
-        <div class="rc-tag">Official · What's Tested</div>
-        <h3>LLP Core Competencies</h3>
-        <p>The Court publishes the competencies the exam tests — family law subjects and professional-conduct duties. Our 405-question library is organized around them; the official list is on the examination page.</p>
-        <span class="go">See what's tested →</span>
-      </a>
+    <span class="kicker">The Official Library · Straight From the Court &amp; OARC</span>
+    <h2>Every official LLP document. One shelf.</h2>
+    <p class="sub">Eighteen official documents and pages from the Colorado Supreme Court and the Office of Attorney Regulation Counsel — organized by where you are in the journey, linked straight to the source, verified July 30, 2026. No email, no catch. The official pages control.</p>
+    <div class="lib-grid">
+      <div class="lib-group">
+        <h3>Shelf I — The Program</h3>
+        <div class="lg-sub">What the license is, and the rules that define it.</div>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/llpgeneraloverview/" target="_blank" rel="noopener"><span class="no">01</span><span class="b"><strong>LLP Program Overview</strong><span>What the Licensed Legal Paraprofessional license is, why the Supreme Court created it, and the program's history.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/faq_llp/" target="_blank" rel="noopener"><span class="no">02</span><span class="b"><strong>The Regulator's LLP FAQ</strong><span>OARC's own answers — who qualifies, what an LLP may do, and the carve-outs an LLP may not touch.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/rulesgoverningadmissions/" target="_blank" rel="noopener"><span class="no">03</span><span class="b"><strong>Rules Governing Admission — C.R.C.P. 207.1 &amp; 207.8</strong><span>The scope rule and the admissions rule: the two rules the whole license stands on.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/PDF/LLP/LLP%20Rules%20Governing%20Admission%20to%20the%20Practice%20of%20Law.pdf" target="_blank" rel="noopener"><span class="no">04</span><span class="b"><strong>The 207 Rules, Compiled<em>PDF</em></strong><span>Every LLP admission rule in one court document — download it, print it, mark it up.</span></span></a>
+        <a class="doc" href="https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Legal-Paraprofessional-Rules-of-Professional-Conduct" target="_blank" rel="noopener"><span class="no">05</span><span class="b"><strong>LLP Rules of Professional Conduct</strong><span>The ethics rules behind the exam's entire second section — hosted by the Colorado Bar Association.</span></span></a>
+      </div>
+      <div class="lib-group">
+        <h3>Shelf II — The Application</h3>
+        <div class="lg-sub">Getting into the November 10 exam.</div>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener"><span class="no">06</span><span class="b"><strong>2026 LLP Examination Page</strong><span>November 10 at the Ralph L. Carr Judicial Center — regular deadline Aug 7, late deadline Sep 4, informational webinar Sep 10.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener"><span class="no">07</span><span class="b"><strong>Application, Instructions &amp; Fees</strong><span>Step-by-step filing with the Office of Attorney Regulation Counsel.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/wp-content/uploads/PDF/BLE/Eligiblity%20to%20Sit%20for%20the%20LLP%20Exam%20in%20Colorado.pdf" target="_blank" rel="noopener"><span class="no">08</span><span class="b"><strong>Eligibility to Sit<em>PDF</em></strong><span>The official guidance on the education and documented-experience pathways.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/fingerprinting-information/" target="_blank" rel="noopener"><span class="no">09</span><span class="b"><strong>Fingerprinting &amp; Criminal History</strong><span>How to submit prints for the character-and-fitness review.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/testing-accommodations-and-medical-aid-or-device-information/" target="_blank" rel="noopener"><span class="no">10</span><span class="b"><strong>Testing Accommodations</strong><span>Requesting accommodations or a medical aid/device for exam day.</span></span></a>
+      </div>
+      <div class="lib-group">
+        <h3>Shelf III — What's Tested</h3>
+        <div class="lg-sub">Study from the source, then drill with us.</div>
+        <a class="doc" href="https://www.coloradolegalregulation.com/wp-content/uploads/2026/06/Final-Updated-Core-Competencies-Amended-5-22-2026.pdf" target="_blank" rel="noopener"><span class="no">11</span><span class="b"><strong>LLP Core Competencies<em>PDF</em></strong><span>The exam blueprint, amended May 22, 2026 — every subject the exam may test. Our 405-question library is organized around it.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/llpsampleqa/" target="_blank" rel="noopener"><span class="no">12</span><span class="b"><strong>The Court's Own Sample Essay Q&amp;A</strong><span>Official sample essays with summary answers. Read theirs — then write ours against the clock.</span></span></a>
+        <a class="doc" href="https://www.courts.state.co.us/Forms/" target="_blank" rel="noopener"><span class="no">13</span><span class="b"><strong>Colorado Judicial Branch Forms (JDF)</strong><span>The Sworn Financial Statement, petitions, parenting plans, and child support worksheets behind the questions.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/" target="_blank" rel="noopener"><span class="no">14</span><span class="b"><strong>OARC Home</strong><span>Announcements, registration, and everything else the regulator posts that can affect the 2026 cycle.</span></span></a>
+      </div>
+      <div class="lib-group">
+        <h3>Shelf IV — After the Exam</h3>
+        <div class="lg-sub">Results, admission, and the oath.</div>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/llpexaminationresults/" target="_blank" rel="noopener"><span class="no">15</span><span class="b"><strong>Exam Results Information</strong><span>When and how results issue after November 10.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/clearance/" target="_blank" rel="noopener"><span class="no">16</span><span class="b"><strong>Clearance &amp; Admission Holds</strong><span>Clearing any conditions between passing and admission.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/current-lawyers/newlyadmitted/" target="_blank" rel="noopener"><span class="no">17</span><span class="b"><strong>Admissions Ceremony &amp; the Oath</strong><span>The finish line — ceremony details for newly admitted licensees.</span></span></a>
+        <a class="doc" href="https://www.coloradolegalregulation.com/future-lawyers/llpunsuccessfulexaminees/" target="_blank" rel="noopener"><span class="no">18</span><span class="b"><strong>If You Don't Pass</strong><span>The regulator's information for unsuccessful examinees — and the road to the retake.</span></span></a>
+      </div>
     </div>
     <div class="disc-band"><b>These links belong to the Colorado Supreme Court / OARC — not to us.</b> We're an independent study resource; the official pages control if anything conflicts. No email, no signup, no catch — go read them.</div>
     <div style="margin-top:56px">

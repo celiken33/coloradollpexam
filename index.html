@@ -119,6 +119,10 @@
   .t-lbl{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#A9C8E8;font-weight:700;margin-top:5px}
   .t-sep{color:#A9D2F5;font-size:1.7rem;font-weight:800;opacity:.6}
   .timer-cap{margin-top:14px;font-size:.88rem;color:#B9D5F0;text-align:center}
+  a.urgent-bar{display:block;background:#FFD100;color:#14355F;text-align:center;font-weight:800;font-size:.86rem;letter-spacing:.02em;padding:10px 16px;text-decoration:none;line-height:1.4}
+  a.urgent-bar b{font-weight:900}
+  a.urgent-bar:hover{background:#FFDD33}
+  @media(max-width:640px){a.urgent-bar{font-size:.76rem;padding:9px 12px}}
   @media(max-width:560px){.t-cell{min-width:70px;padding:10px 12px}.t-num{font-size:1.5rem}}
   .hero-sun{position:absolute;top:70px;right:12%;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,#FFD100 0%,rgba(255,209,0,.45) 52%,transparent 72%);z-index:1}
   .range{position:absolute;bottom:-2px;left:0;right:0;z-index:2}
@@ -339,6 +343,7 @@
 </style>
 </head>
 <body>
+<a class="urgent-bar" href="#deadlines" id="urgentbar">⚡ <b>LATE FILING IS OPEN</b> — closes August 31 · One exam in 2026: November 10 · <b><span id="udays">Deadlines →</span></b></a>
 
 <!-- ================= HEADER ================= -->
 <header>
@@ -365,7 +370,7 @@
 <div class="hero" id="top">
   <div class="hero-sun" aria-hidden="true"></div>
   <div class="wrap">
-    <span class="eyebrow">★ Attorney-Built · For the Nov 10, 2026 Colorado LLP Exam</span>
+    <span class="eyebrow">★ Attorney-Built · One Exam in 2026 — November 10</span>
     <h1><span class="h1-top">Your LLP exam prep starts here.</span><em>Be ready on November 10.</em></h1>
     <p class="lede">Attorney-authored practice for Colorado's Licensed Legal Paraprofessional exam — <strong>93 hand-picked sample questions</strong> from our 405-question library, plus all 6 sample essays, every answer explained. Try 6 of them and <strong>2 full sample essays</strong> free below.</p>
     <div class="hero-cred">
@@ -390,7 +395,7 @@
       <span class="t-sep">:</span>
       <div class="t-cell"><div class="t-num" id="t-s">—</div><div class="t-lbl">seconds</div></div>
     </div>
-    <div class="timer-cap">until exam day, November 10, 2026 — plenty of time if you start today. (<a href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Late filing closes August 31.</a>)</div>
+    <div class="timer-cap">until the <strong>only</strong> exam of 2026 — November 10. Start today and it's plenty of time; wait, and it isn't. (<a href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Late filing closes August 31.</a>)</div>
   </div>
   <svg class="range" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 190 L0 110 L140 48 L215 86 L300 22 L370 68 L455 30 L540 92 L640 8 L742 88 L830 40 L930 98 L1030 34 L1130 96 L1240 56 L1340 100 L1440 70 L1440 190 Z" fill="rgba(250,247,241,.14)"/>
@@ -726,6 +731,19 @@
   var target = new Date(2026,10,10,8,0,0); // Nov 10, 2026, 8:00 AM
   var reg=document.getElementById('regflag');
   if(reg && new Date() > new Date(2026,6,31,23,59,59)) reg.textContent='Closed — late filing thru Aug 31';
+  var ubar=document.getElementById('urgentbar'), udays=document.getElementById('udays');
+  if(ubar && udays){
+    var nowd=new Date(), lateEnd=new Date(2026,7,31,23,59,59);
+    if(nowd <= lateEnd){
+      var dleft=Math.max(1, Math.ceil((lateEnd - nowd)/86400000));
+      udays.textContent = dleft+(dleft===1?' day':' days')+' left to file →';
+    } else if(nowd <= target){
+      var dexam=Math.max(1, Math.ceil((target - nowd)/86400000));
+      ubar.innerHTML='⚡ <b>FILING FOR 2026 HAS CLOSED</b> · The field is set — <b>'+dexam+(dexam===1?' day':' days')+'</b> to exam day, November 10 →';
+    } else {
+      ubar.style.display='none';
+    }
+  }
   var el = {d:document.getElementById('t-d'),h:document.getElementById('t-h'),m:document.getElementById('t-m'),s:document.getElementById('t-s')};
   function pad(n){ return (n<10?'0':'')+n; }
   function tick(){

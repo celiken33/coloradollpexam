@@ -275,6 +275,23 @@
   .opts.locked .opt{cursor:pointer}
   .opt.inspect{border-color:var(--blue-soft);box-shadow:0 0 0 2px var(--gold-soft)}
   .why .optinfo{margin-top:10px;padding-top:10px;border-top:1px dashed rgba(20,53,95,.3);font-size:.9rem;line-height:1.55}
+  .tutlabel{display:block;font-size:.66rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-soft);margin-bottom:3px}
+  .why .matters{margin-top:10px;padding:10px 12px;background:rgba(255,209,0,.15);border-left:3px solid #FFD100;border-radius:0 8px 8px 0;font-size:.9rem;line-height:1.55;color:var(--ink)}
+  /* ===== route guide ===== */
+  #pathguide{background:var(--cream);padding:72px 0 64px}
+  .path-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:32px}
+  a.path-card{display:block;background:var(--white);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 28px;text-decoration:none;transition:transform .13s ease}
+  a.path-card:hover{transform:translateY(-3px)}
+  a.path-card.second{background:linear-gradient(180deg,#14355F,#0C1F3A);border-left-color:#FFD100;border-color:#14355F}
+  .path-tag{display:inline-block;font-size:.68rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--blue-soft);background:var(--gold-soft);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+  a.path-card.second .path-tag{background:#FFD100;color:#14355F}
+  .path-h{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:800;color:var(--ink);margin-bottom:8px}
+  a.path-card.second .path-h{color:#fff}
+  .path-p{font-size:.93rem;line-height:1.6;color:var(--muted)}
+  a.path-card.second .path-p{color:#CFE0F2}
+  .path-go{display:block;margin-top:14px;font-weight:800;font-size:.85rem;color:var(--blue-soft)}
+  a.path-card.second .path-go{color:#FFD100}
+  @media(max-width:840px){.path-grid{grid-template-columns:1fr}}
   .calc-toggle{display:inline-flex;align-items:center;gap:7px;background:var(--gold-soft);color:var(--blue-soft);border:1.5px solid var(--gold);border-radius:999px;padding:7px 14px;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:800;letter-spacing:.03em;cursor:pointer;margin-bottom:12px;transition:background .12s}
   .calc-toggle:hover{background:#DDEAF8}
   .calc{display:none;position:fixed;right:96px;top:50%;transform:translateY(-50%);z-index:120;width:252px;background:var(--ink);border-radius:14px;padding:14px;box-shadow:0 18px 50px rgba(12,31,58,.5)}
@@ -705,6 +722,31 @@
   <path d="M0 90 L0 68 L190 38 L350 64 L520 32 L690 62 L860 26 L1030 58 L1200 38 L1370 66 L1440 50 L1440 90 Z" fill="#0C1F3A"/>
 </svg>
 
+<!-- ================= ROUTE GUIDE ================= -->
+<section id="pathguide">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="kicker">The Tutor's Route Guide</span>
+      <h2>First climb, or second?</h2>
+      <p class="sub" style="margin:0 auto">Wherever you're starting from, there's a mapped route to November 10. Pick yours.</p>
+    </div>
+    <div class="path-grid">
+      <a class="path-card" href="#pricing">
+        <span class="path-tag">First time · Your First Ascent</span>
+        <div class="path-h">Start with THE 93 — or take the whole library.</div>
+        <p class="path-p">Drill the free six above, then get the 93 hand-picked sample questions with every answer explained — $99.95 — or go all in on THE FULL 405 for just $25 more. In 2025, first-timers passed at <strong>87%</strong>. Prep once, pass once.</p>
+        <span class="path-go">Choose your guide →</span>
+      </a>
+      <a class="path-card second" href="#rpprogram">
+        <span class="path-tag">Retaking · Your Second Ascent</span>
+        <div class="path-h">One-on-one with the Principal — $299.</div>
+        <p class="path-p">Repeaters passed at <strong>60%</strong> in 2025 — the second climb needs a different plan than the first. A private 1-on-1 session, a personalized restart plan, essay feedback, and the complete library. Built only for retakers.</p>
+        <span class="path-go">Meet the Principal →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PRICING ================= -->
 <section id="pricing">
   <div class="wrap">
@@ -929,7 +971,7 @@ var QUESTIONS = [
     correct:0,
     why:"Run the formula: (40% × $8,000) − (50% × $3,000) = $3,200 − $1,500 = $1,700 per month, advisory. ($2,800 is the formula run backwards — 50% of the higher income minus 40% of the lower.) The court then weighs the statutory factors and the guideline term before entering an award. Candidates who memorize the formula but never run it lose these points on arithmetic alone.",
     auth:"Authority: C.R.S. 14-10-114(3)(a)(I)(A)",
-    optnotes:["Correct — (40% × $8,000) − (50% × $3,000) = $3,200 − $1,500 = $1,700.","$2,000 is a rounded guess — the formula doesn't round for you. Run it: $3,200 − $1,500.","$2,800 is the formula run backwards — 50% of the higher income minus 40% of the lower.","$0 only happens when the formula goes negative. With a $5,000 income gap, it doesn't."]
+    optnotes:["Correct — (40% × $8,000) − (50% × $3,000) = $3,200 − $1,500 = $1,700.","$2,000 is a rounded guess — the formula doesn't round for you. Run it: $3,200 − $1,500.","$2,800 is the formula run backwards — 50% of the higher income minus 40% of the lower.","$0 only happens when the formula goes negative. With a $5,000 income gap, it doesn't."], matters:"On exam day, the formula is free money — it's printed in your memory or it isn't. In practice, this number anchors every maintenance negotiation you'll ever run."
   },
   {
     id:"FL-147", subj:"Maintenance · The Zero Floor", calc:true,
@@ -938,7 +980,7 @@ var QUESTIONS = [
     correct:1,
     why:"(40% × $6,000) − (50% × $6,000) = $2,400 − $3,000 = −$600 — and a negative result is floored at $0. Roughly equal incomes typically produce no guideline maintenance, reflecting comparable abilities to meet needs. The zero floor is the detail formula-memorizers miss.",
     auth:"Authority: C.R.S. 14-10-114(3)(a)",
-    optnotes:["$2,400 is 40% of $6,000 — that's only half the formula. You still subtract 50% of the other spouse's income.","Correct — $2,400 − $3,000 = −$600, and a negative result is floored at $0.","$3,000 is 50% of one income — that's the number you subtract, not the answer.","$600 is the right arithmetic with the wrong sign — the negative result floors at zero; nobody pays it."]
+    optnotes:["$2,400 is 40% of $6,000 — that's only half the formula. You still subtract 50% of the other spouse's income.","Correct — $2,400 − $3,000 = −$600, and a negative result is floored at $0.","$3,000 is 50% of one income — that's the number you subtract, not the answer.","$600 is the right arithmetic with the wrong sign — the negative result floors at zero; nobody pays it."], matters:"Equal-income couples ask about maintenance constantly. Knowing the guideline says $0 — and being able to say why — is the difference between advising and guessing."
   },
   {
     id:"FL-257", subj:"Property · Do the Math", calc:true,
@@ -947,7 +989,7 @@ var QUESTIONS = [
     correct:1,
     why:"The inherited corpus ($40,000) stays separate, but the appreciation during the marriage is marital and subject to division — exactly $55,000 − $40,000 = $15,000. ($15,500 is bait for estimators; run the subtraction.) Corpus separate, growth marital — the separate-property-appreciation rule in its simplest form.",
     auth:"Authority: C.R.S. 14-10-113(4)",
-    optnotes:["$15,500 is estimator's bait — the growth is exactly $55,000 − $40,000.","Correct — the corpus stays separate; the $15,000 of appreciation during the marriage is marital.","$40,000 is the separate corpus — the inheritance itself never becomes marital.","$0 assumes the growth stays separate too. In Colorado, appreciation of separate property during the marriage is marital."]
+    optnotes:["$15,500 is estimator's bait — the growth is exactly $55,000 − $40,000.","Correct — the corpus stays separate; the $15,000 of appreciation during the marriage is marital.","$40,000 is the separate corpus — the inheritance itself never becomes marital.","$0 assumes the growth stays separate too. In Colorado, appreciation of separate property during the marriage is marital."], matters:"Characterization decides who keeps what. Miss the appreciation rule and you hand over — or wrongly claim — $15,000 the law has already allocated."
   },
   {
     id:"FL-270", subj:"Scope · Putting It Together",
@@ -956,7 +998,7 @@ var QUESTIONS = [
     correct:2,
     why:"Child support, the home division, and the parenting plan are all in scope. Preparing the QDRO that divides the pension is a collateral-issue carve-out — it must go to an attorney or QDRO specialist, even though the LLP can handle the agreement to divide the asset. In scope, in scope, in scope… then the carve-out. Spotting the odd one out is the exam's signature move.",
     auth:"Authority: C.R.C.P. 207.1; C.R.S. 14-10-113",
-    optnotes:["Calculating child support is squarely in scope — core LLP work under C.R.C.P. 207.1.","Dividing the marital home is in scope — the agreement, the math, the paperwork.","Correct — preparing the QDRO is a collateral-issue carve-out. It goes to an attorney or QDRO specialist.","Parenting plans are core LLP work — fully in scope."]
+    optnotes:["Calculating child support is squarely in scope — core LLP work under C.R.C.P. 207.1.","Dividing the marital home is in scope — the agreement, the math, the paperwork.","Correct — preparing the QDRO is a collateral-issue carve-out. It goes to an attorney or QDRO specialist.","Parenting plans are core LLP work — fully in scope."], matters:"Scope is the license. In practice, touching a carve-out isn't a wrong answer — it's the unauthorized practice of law."
   },
   {
     id:"FL-268", subj:"UCCJEA vs. UIFSA · The Classic Mix-Up",
@@ -965,7 +1007,7 @@ var QUESTIONS = [
     correct:1,
     why:"The UCCJEA governs jurisdiction over child-custody/APR determinations; UIFSA governs jurisdiction over support. Mixing them up is a common error — and registration of a foreign order under either one is a carve-out outside an LLP's scope.",
     auth:"Authority: C.R.S. 14-13-101; C.R.S. 14-5-101",
-    optnotes:["Backwards — this exact swap is the trap the examiners set.","Correct — UCCJEA governs custody/APR jurisdiction; UIFSA governs support jurisdiction.","Neither act touches property division — that's C.R.S. 14-10-113's territory.","Adoption runs under its own code — Title 19, not these acts."]
+    optnotes:["Backwards — this exact swap is the trap the examiners set.","Correct — UCCJEA governs custody/APR jurisdiction; UIFSA governs support jurisdiction.","Neither act touches property division — that's C.R.S. 14-10-113's territory.","Adoption runs under its own code — Title 19, not these acts."], matters:"File under the wrong act and the court has no jurisdiction — months lost, orders void. The exam tests it because practice punishes it."
   },
   {
     id:"FL-241", subj:"Evidence · The CFI Report",
@@ -974,7 +1016,7 @@ var QUESTIONS = [
     correct:1,
     why:"A CFI or PRE report informs the court but does not bind it; the parties may cross-examine the investigator and present contrary evidence. The court independently determines best interests on the whole record. Persuasive, not binding — the distinction the exam loves.",
     auth:"Authority: C.R.S. 14-10-116.5",
-    optnotes:["No report binds the court — best interests is always the court's independent determination.","Correct — the report is evidence: considered, weighed, and fully challengeable.","CFI reports can absolutely be challenged — cross-examination and contrary evidence are standard.","Nothing replaces the hearing — the report informs it, never substitutes for it."]
+    optnotes:["No report binds the court — best interests is always the court's independent determination.","Correct — the report is evidence: considered, weighed, and fully challengeable.","CFI reports can absolutely be challenged — cross-examination and contrary evidence are standard.","Nothing replaces the hearing — the report informs it, never substitutes for it."], matters:"Clients read a CFI report as a verdict. A licensed professional knows it isn't — and challenges it, supplements it, or leans on it."
   }
 ];
 
@@ -1092,14 +1134,14 @@ QUESTIONS.forEach(function(item,qi){
         opts.querySelectorAll('.opt').forEach(function(btn){ btn.classList.remove('inspect'); });
         b.classList.add('inspect');
         var info=why.querySelector('.optinfo');
-        if(info){ info.style.display='block'; info.innerHTML='<b>'+letters[oi]+' — </b>'+item.optnotes[oi]; }
+        if(info){ info.style.display='block'; info.innerHTML='<span class="tutlabel">Tutor\'s note · Option '+letters[oi]+'</span>'+item.optnotes[oi]; }
       }
     });
     opts.appendChild(b);
   });
   card.appendChild(opts);
   var why=document.createElement('div'); why.className='why';
-  why.innerHTML='<div class="verdict"></div><div>'+item.why+'</div><div class="optinfo" style="display:none"></div><span class="auth">'+item.auth+'</span>';
+  why.innerHTML='<div class="verdict"></div><div>'+item.why+'</div>'+(item.matters?'<div class="matters"><span class="tutlabel">Why it matters</span>'+item.matters+'</div>':'')+'<div class="optinfo" style="display:none"></div><span class="auth">'+item.auth+'</span>';
   card.appendChild(why);
   host.appendChild(card);
 });

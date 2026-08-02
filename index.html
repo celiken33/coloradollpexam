@@ -1055,6 +1055,7 @@
       <h2>Suit up. Order THE 93 by email.</h2>
       <p class="sub">Rather order by email, or have a question first? Drop a <strong>username</strong> and a good email — we'll send your secure <strong>$99.95</strong> payment link, and the full PDF lands the moment you pay.</p>
       <p class="tiny">We'll only use your email for your order and delivering the guide. Unsubscribe anytime. We never sell or share your address.</p>
+      <p class="tiny" style="margin-top:10px"><strong>Ordering a different guide by email?</strong> <a href="https://form.jotform.com/262130906553049" target="_blank" rel="noopener"><strong>THE LATE START — $79.95</strong></a> · <a href="https://form.jotform.com/262130543251041" target="_blank" rel="noopener"><strong>THE FULL 405 — $124.95</strong></a> · <a href="https://form.jotform.com/262130596392055" target="_blank" rel="noopener"><strong>THE SECOND ASCENT — $299</strong></a></p>
     </div>
     <div class="form-shell">
       <iframe src="https://form.jotform.com/262100283102034" title="Buy the Colorado LLP Exam Prep Guide"></iframe>
@@ -1443,7 +1444,7 @@ function buildIndex(){
   ix.push({t:'THE FULL 405 — the complete library · $124.95',s:'Every question we\u2019ve written · 13.5 hours at exam pace',g:'Guides & Programs',h:'#pricing'});
   ix.push({t:'THE LATE START — starting in August · $79.95',s:'File late, study fast — 14-week plan + starter set + essays',g:'Guides & Programs',h:'#latestart'});
   ix.push({t:'THE SECOND ASCENT — retakers, 1-on-1 with the Principal · $299',s:'A private session, a personalized restart plan',g:'Guides & Programs',h:'#rpprogram'});
-  ix.push({t:'Order by email instead',s:'Username + email — we send the payment link',g:'Guides & Programs',h:'#reserve'});
+  ix.push({t:'Order any guide by email instead',s:'THE 93, LATE START, FULL 405, or SECOND ASCENT — username + email, we send the payment link',g:'Guides & Programs',h:'#reserve'});
   document.querySelectorAll('#resources a.doc').forEach(function(a){
     var st=a.querySelector('strong'),sm=a.querySelector('.b > span');
     if(st) ix.push({t:st.textContent.replace('PDF',' (PDF)'),s:(sm?sm.textContent:'Official document'),g:'The Official Library',h:a.getAttribute('href'),x:1});

@@ -37,14 +37,14 @@
 {"@context":"https://schema.org","@graph":[
  {"@type":"Product","name":"THE 93 — Colorado LLP Exam Prep Guide (2026)","description":"93 hand-picked sample questions from a 405-question library, plus all 6 sample essays with model answers and grading notes. Every answer explained with controlling Colorado authority. PDF delivered by email. Original sample materials; independent study aid.","brand":{"@type":"Brand","name":"ColoradoLLPExam.com"},"image":"https://coloradollpexam.com/og-image.png","url":"https://coloradollpexam.com/#pricing","offers":{"@type":"Offer","price":"99.95","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://coloradollpexam.com/#pricing"}},
  {"@type":"Product","name":"THE FULL 405 — Colorado LLP Complete Library (2026)","description":"The complete library: all 405 original sample questions with every answer explained, plus all 6 sample essays with model answers and grading notes. Includes everything in THE 93. PDF delivered by email.","brand":{"@type":"Brand","name":"ColoradoLLPExam.com"},"image":"https://coloradollpexam.com/og-image.png","url":"https://coloradollpexam.com/#pricing","offers":{"@type":"Offer","price":"124.95","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://coloradollpexam.com/#pricing"}},
- {"@type":"Product","name":"THE SECOND ASCENT — THE RP PROGRAM · 1-on-1 With the Principal (2026)","description":"Retaker program for the Colorado LLP exam: one private 1-on-1 session with the attorney-author, a personalized restart plan from your diagnostic miss list, feedback on up to 3 practice essays, everything in THE FULL 405, and priority email support through exam day.","brand":{"@type":"Brand","name":"ColoradoLLPExam.com"},"image":"https://coloradollpexam.com/og-image.png","url":"https://coloradollpexam.com/#rpprogram","offers":{"@type":"Offer","price":"499.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://coloradollpexam.com/#rpprogram"}}
+ {"@type":"Product","name":"THE SECOND ASCENT — THE RP PROGRAM · 1-on-1 With the Principal (2026)","description":"Retaker program for the Colorado LLP exam: one private 1-on-1 session with the attorney-author, a personalized restart plan from your diagnostic miss list, feedback on up to 3 practice essays, everything in THE FULL 405, and priority email support through exam day.","brand":{"@type":"Brand","name":"ColoradoLLPExam.com"},"image":"https://coloradollpexam.com/og-image.png","url":"https://coloradollpexam.com/#rpprogram","offers":{"@type":"Offer","price":"299.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://coloradollpexam.com/#rpprogram"}}
 ]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"What is a Licensed Legal Paraprofessional?","acceptedAnswer":{"@type":"Answer","text":"A new license created by the Colorado Supreme Court allowing qualified paraprofessionals to represent clients in less-complex domestic relations matters — dissolution, parentage, and allocation of parental responsibilities — within the scope defined by C.R.C.P. 207.1."}},
  {"@type":"Question","name":"What's actually on the Colorado LLP exam?","acceptedAnswer":{"@type":"Answer","text":"Two multiple-choice sections (family law and LLP ethics) plus essays, testing the published LLP Core Competencies. Our library spans 405 questions across every tested subject; the guide distills it to 93 hand-picked questions, plus all 6 sample essays."}},
- {"@type":"Question","name":"What does it cost, and what's free?","acceptedAnswer":{"@type":"Answer","text":"The 6 sample questions and 2 full essays on the site are free, and so is everything in the resource hub. THE 93 Exam Prep Guide is a one-time $99.95 PDF. THE FULL 405 — the complete library, all 405 sample questions plus all 6 sample essays — is $124.95. THE SECOND ASCENT, the 1-on-1 retaker program with the attorney-author, is $499. Checkout is encrypted and handled by Stripe."}},
+ {"@type":"Question","name":"What does it cost, and what's free?","acceptedAnswer":{"@type":"Answer","text":"The 6 sample questions and 2 full essays on the site are free, and so is everything in the resource hub. THE 93 Exam Prep Guide is a one-time $99.95 PDF. THE FULL 405 — the complete library, all 405 sample questions plus all 6 sample essays — is $124.95. THE SECOND ASCENT, the 1-on-1 retaker program with the attorney-author, is $299. Checkout is encrypted and handled by Stripe."}},
  {"@type":"Question","name":"Am I eligible to sit for the LLP exam in November?","acceptedAnswer":{"@type":"Answer","text":"Eligibility runs through the Office of Attorney Regulation Counsel — education plus documented paralegal experience pathways. Check the official application instructions at coloradolegalregulation.com and file by the deadline (regular deadline July 31, 2026; late deadline August 31, 2026)."}},
  {"@type":"Question","name":"Who created these materials?","acceptedAnswer":{"@type":"Answer","text":"A Colorado family law attorney with 23+ years in domestic relations practice and 30+ years in the legal profession, spanning Pennsylvania to Colorado — also a Colorado District Court-appointed Child & Family Investigator (CFI) and a former government investigator for Denver Human Services. The guide was written specifically for Colorado's LLP exam, not adapted from generic bar-prep material."}},
  {"@type":"Question","name":"Is ColoradoLLPExam.com affiliated with the Colorado Supreme Court?","acceptedAnswer":{"@type":"Answer","text":"No. ColoradoLLPExam.com is an independent study resource. We're not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the Colorado Judicial Branch."}}
@@ -272,6 +272,9 @@
   .why .verdict.good{color:var(--green)}
   .why .verdict.bad{color:var(--red)}
   .why .auth{display:block;margin-top:10px;font-size:.8rem;color:var(--muted);font-style:italic}
+  .opts.locked .opt{cursor:pointer}
+  .opt.inspect{border-color:var(--blue-soft);box-shadow:0 0 0 2px var(--gold-soft)}
+  .why .optinfo{margin-top:10px;padding-top:10px;border-top:1px dashed rgba(20,53,95,.3);font-size:.9rem;line-height:1.55}
   .calc-toggle{display:inline-flex;align-items:center;gap:7px;background:var(--gold-soft);color:var(--blue-soft);border:1.5px solid var(--gold);border-radius:999px;padding:7px 14px;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:800;letter-spacing:.03em;cursor:pointer;margin-bottom:12px;transition:background .12s}
   .calc-toggle:hover{background:#DDEAF8}
   .calc{display:none;position:fixed;right:96px;top:50%;transform:translateY(-50%);z-index:120;width:252px;background:var(--ink);border-radius:14px;padding:14px;box-shadow:0 18px 50px rgba(12,31,58,.5)}
@@ -735,7 +738,7 @@
           <span>Encrypted SSL/TLS checkout · Powered by <strong>Stripe</strong> · Card, Apple Pay, Klarna, Cash App Pay &amp; Amazon Pay · Your card details go to Stripe — never to us</span>
         </div>
         <div class="buy-fine">Instant confirmation on Stripe's secure page — your PDF is delivered by email right after payment.</div>
-        <div class="buy-fine" style="margin-top:6px">Retaking the exam? <a href="#rpprogram" style="color:#FFD100;font-weight:800;text-decoration:none">THE SECOND ASCENT — 1-on-1 with the Principal · $499 →</a></div>
+        <div class="buy-fine" style="margin-top:6px">Retaking the exam? <a href="#rpprogram" style="color:#FFD100;font-weight:800;text-decoration:none">THE SECOND ASCENT — 1-on-1 with the Principal · $299 →</a></div>
       </div>
       <div class="summit-col">
         <div class="summit-item"><div class="pk">⛰️</div><div><h3>Built like the real exam</h3><p>Same style as exam day — one clearly right answer, distractors that teach. These are the 93 we'd drill first: the computations, the interplays, the carve-out traps.</p></div></div>
@@ -761,7 +764,7 @@
       <p class="rp-sub">In 2025, first-timers passed at <strong>87%</strong> — repeaters at <strong>60%</strong>. The second climb needs a different plan than the first, and this time you won't build it alone. You'll build it one-on-one with <strong>the Principal</strong> — the Colorado family law attorney who wrote all 405 questions in our library.</p>
     </div>
     <div class="rp-card">
-      <div class="rp-price"><span class="rp-amt">$499</span><span class="rp-per">one-time · retakers only · the second go-around, done right</span></div>
+      <div class="rp-price"><span class="rp-amt">$299</span><span class="rp-per">one-time · retakers only · the second go-around, done right</span></div>
       <ul class="rp-list">
         <li><b>One private 1-on-1 session with the Principal</b> — your misses, your plan, your questions, worked live.</li>
         <li><b>A personalized restart plan</b> built from your diagnostic miss list — not a generic syllabus. You failed specific questions; we rebuild from exactly there.</li>
@@ -769,7 +772,7 @@
         <li><b>Everything in THE FULL 405</b> — all 405 sample questions and all 6 sample essays, every answer explained and keyed to authority.</li>
         <li><b>Priority email support through exam day</b> — November 10, 2026. You ask, the Principal answers first.</li>
       </ul>
-      <a class="rp-btn" href="https://buy.stripe.com/bJe14n3B3dAM0BZgKW5J602" target="_blank" rel="noopener">Begin THE SECOND ASCENT NOW — $499</a>
+      <a class="rp-btn" href="https://buy.stripe.com/bJe14n3B3dAM0BZgKW5J602" target="_blank" rel="noopener">Begin THE SECOND ASCENT NOW — $299</a>
       <div class="zap-line"><span class="zap">⚡ Enrollment Confirmed Instantly · Library PDF by Email</span></div>
       <div class="rp-fine">Original sample materials · Independent study aid — not legal advice · No pass guarantee (nobody honest offers one) · Not affiliated with the Colorado Supreme Court or OARC · Encrypted checkout by Stripe</div>
     </div>
@@ -830,7 +833,7 @@
       <div class="faq-grid">
       <div class="faq"><h3>What is a Licensed Legal Paraprofessional?</h3><p>A new license created by the Colorado Supreme Court allowing qualified paraprofessionals to represent clients in less-complex domestic relations matters — dissolution, parentage, and allocation of parental responsibilities — within the scope defined by C.R.C.P. 207.1.</p></div>
       <div class="faq"><h3>What's actually on the exam?</h3><p>Two multiple-choice sections (family law and LLP ethics) plus essays, testing the published LLP Core Competencies. Our library spans 405 questions across every tested subject; the guide distills it to 93 hand-picked questions, plus all 6 sample essays.</p></div>
-      <div class="faq"><h3>What does it cost, and what's free?</h3><p>The 6 sample questions and 2 full essays on this page are free, forever — and so is everything in the resource hub above. THE 93 Exam Prep Guide is a one-time $99.95 PDF. Want everything? THE FULL 405 — our complete library, all 405 sample questions plus all 6 sample essays — is $124.95, just $25 more. Retaking the exam? <a href="#rpprogram">THE SECOND ASCENT</a> — our 1-on-1 retaker program with the Principal — is $499. Checkout is encrypted and handled by Stripe; your card details never touch our servers.</p></div>
+      <div class="faq"><h3>What does it cost, and what's free?</h3><p>The 6 sample questions and 2 full essays on this page are free, forever — and so is everything in the resource hub above. THE 93 Exam Prep Guide is a one-time $99.95 PDF. Want everything? THE FULL 405 — our complete library, all 405 sample questions plus all 6 sample essays — is $124.95, just $25 more. Retaking the exam? <a href="#rpprogram">THE SECOND ASCENT</a> — our 1-on-1 retaker program with the Principal — is $299. Checkout is encrypted and handled by Stripe; your card details never touch our servers.</p></div>
       <div class="faq"><h3>Am I eligible to sit in November?</h3><p>Eligibility runs through the Office of Attorney Regulation Counsel — education plus documented paralegal experience pathways. Check the official <a href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener">application instructions</a> and file by the deadline.</p></div>
       <div class="faq"><h3>Who created these materials?</h3><p>A Colorado family law attorney with 23+ years in domestic relations practice and 30+ years in the legal profession, spanning Pennsylvania to Colorado — also a Colorado District Court-appointed Child &amp; Family Investigator (CFI) and a former government investigator for Denver Human Services in Denver, Colorado. The guide was written specifically for Colorado's LLP exam, not adapted from generic bar-prep material.</p></div>
       <div class="faq"><h3>Is this site affiliated with the Court?</h3><p>No. ColoradoLLPExam.com is an independent study resource. We're not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or the Colorado Judicial Branch.</p></div>
@@ -925,7 +928,8 @@ var QUESTIONS = [
     opts:["$1,700/month","$2,000/month","$2,800/month","$0"],
     correct:0,
     why:"Run the formula: (40% × $8,000) − (50% × $3,000) = $3,200 − $1,500 = $1,700 per month, advisory. ($2,800 is the formula run backwards — 50% of the higher income minus 40% of the lower.) The court then weighs the statutory factors and the guideline term before entering an award. Candidates who memorize the formula but never run it lose these points on arithmetic alone.",
-    auth:"Authority: C.R.S. 14-10-114(3)(a)(I)(A)"
+    auth:"Authority: C.R.S. 14-10-114(3)(a)(I)(A)",
+    optnotes:["Correct — (40% × $8,000) − (50% × $3,000) = $3,200 − $1,500 = $1,700.","$2,000 is a rounded guess — the formula doesn't round for you. Run it: $3,200 − $1,500.","$2,800 is the formula run backwards — 50% of the higher income minus 40% of the lower.","$0 only happens when the formula goes negative. With a $5,000 income gap, it doesn't."]
   },
   {
     id:"FL-147", subj:"Maintenance · The Zero Floor", calc:true,
@@ -933,7 +937,8 @@ var QUESTIONS = [
     opts:["$2,400/month","$0","$3,000/month","$600/month"],
     correct:1,
     why:"(40% × $6,000) − (50% × $6,000) = $2,400 − $3,000 = −$600 — and a negative result is floored at $0. Roughly equal incomes typically produce no guideline maintenance, reflecting comparable abilities to meet needs. The zero floor is the detail formula-memorizers miss.",
-    auth:"Authority: C.R.S. 14-10-114(3)(a)"
+    auth:"Authority: C.R.S. 14-10-114(3)(a)",
+    optnotes:["$2,400 is 40% of $6,000 — that's only half the formula. You still subtract 50% of the other spouse's income.","Correct — $2,400 − $3,000 = −$600, and a negative result is floored at $0.","$3,000 is 50% of one income — that's the number you subtract, not the answer.","$600 is the right arithmetic with the wrong sign — the negative result floors at zero; nobody pays it."]
   },
   {
     id:"FL-257", subj:"Property · Do the Math", calc:true,
@@ -941,7 +946,8 @@ var QUESTIONS = [
     opts:["$15,500","$15,000","$40,000","$0"],
     correct:1,
     why:"The inherited corpus ($40,000) stays separate, but the appreciation during the marriage is marital and subject to division — exactly $55,000 − $40,000 = $15,000. ($15,500 is bait for estimators; run the subtraction.) Corpus separate, growth marital — the separate-property-appreciation rule in its simplest form.",
-    auth:"Authority: C.R.S. 14-10-113(4)"
+    auth:"Authority: C.R.S. 14-10-113(4)",
+    optnotes:["$15,500 is estimator's bait — the growth is exactly $55,000 − $40,000.","Correct — the corpus stays separate; the $15,000 of appreciation during the marriage is marital.","$40,000 is the separate corpus — the inheritance itself never becomes marital.","$0 assumes the growth stays separate too. In Colorado, appreciation of separate property during the marriage is marital."]
   },
   {
     id:"FL-270", subj:"Scope · Putting It Together",
@@ -949,7 +955,8 @@ var QUESTIONS = [
     opts:["Calculating child support","Dividing the marital home","Preparing the QDRO for the pension","Drafting the parenting plan"],
     correct:2,
     why:"Child support, the home division, and the parenting plan are all in scope. Preparing the QDRO that divides the pension is a collateral-issue carve-out — it must go to an attorney or QDRO specialist, even though the LLP can handle the agreement to divide the asset. In scope, in scope, in scope… then the carve-out. Spotting the odd one out is the exam's signature move.",
-    auth:"Authority: C.R.C.P. 207.1; C.R.S. 14-10-113"
+    auth:"Authority: C.R.C.P. 207.1; C.R.S. 14-10-113",
+    optnotes:["Calculating child support is squarely in scope — core LLP work under C.R.C.P. 207.1.","Dividing the marital home is in scope — the agreement, the math, the paperwork.","Correct — preparing the QDRO is a collateral-issue carve-out. It goes to an attorney or QDRO specialist.","Parenting plans are core LLP work — fully in scope."]
   },
   {
     id:"FL-268", subj:"UCCJEA vs. UIFSA · The Classic Mix-Up",
@@ -957,7 +964,8 @@ var QUESTIONS = [
     opts:["UCCJEA = support; UIFSA = custody","UCCJEA = custody/APR jurisdiction; UIFSA = support jurisdiction","Both govern property","Both govern adoption"],
     correct:1,
     why:"The UCCJEA governs jurisdiction over child-custody/APR determinations; UIFSA governs jurisdiction over support. Mixing them up is a common error — and registration of a foreign order under either one is a carve-out outside an LLP's scope.",
-    auth:"Authority: C.R.S. 14-13-101; C.R.S. 14-5-101"
+    auth:"Authority: C.R.S. 14-13-101; C.R.S. 14-5-101",
+    optnotes:["Backwards — this exact swap is the trap the examiners set.","Correct — UCCJEA governs custody/APR jurisdiction; UIFSA governs support jurisdiction.","Neither act touches property division — that's C.R.S. 14-10-113's territory.","Adoption runs under its own code — Title 19, not these acts."]
   },
   {
     id:"FL-241", subj:"Evidence · The CFI Report",
@@ -965,7 +973,8 @@ var QUESTIONS = [
     opts:["Binds the court","Is evidence the court considers but does not have to follow","Cannot be challenged","Replaces the hearing"],
     correct:1,
     why:"A CFI or PRE report informs the court but does not bind it; the parties may cross-examine the investigator and present contrary evidence. The court independently determines best interests on the whole record. Persuasive, not binding — the distinction the exam loves.",
-    auth:"Authority: C.R.S. 14-10-116.5"
+    auth:"Authority: C.R.S. 14-10-116.5",
+    optnotes:["No report binds the court — best interests is always the court's independent determination.","Correct — the report is evidence: considered, weighed, and fully challengeable.","CFI reports can absolutely be challenged — cross-examination and contrary evidence are standard.","Nothing replaces the hearing — the report informs it, never substitutes for it."]
   }
 ];
 
@@ -1055,31 +1064,42 @@ QUESTIONS.forEach(function(item,qi){
     var b=document.createElement('button'); b.className='opt'; b.type='button';
     b.innerHTML='<span class="letter">'+letters[oi]+'</span><span>'+o+'</span>';
     b.addEventListener('click',function(){
-      if(done) return; done=true; answered++;
-      var right = oi===item.correct;
-      if(right) score++;
-      opts.querySelectorAll('.opt').forEach(function(btn,bi){
-        btn.disabled=true;
-        if(bi===item.correct) btn.classList.add('correct');
-        else if(bi===oi && !right) btn.classList.add('wrong');
-      });
       var why=card.querySelector('.why');
-      why.querySelector('.verdict').textContent = right ? '✓ Correct — '+letters[item.correct]+'.' : '✗ Not quite — the answer is '+letters[item.correct]+'.';
-      why.querySelector('.verdict').className = 'verdict '+(right?'good':'bad');
-      why.classList.add('show');
-      if(!TS.fin){
-        TS.fin=true;
-        TS.el.classList.add(TS.t<=90?'tgood':'tbad');
-        why.querySelector('.verdict').textContent += ' Time: '+fmtT(TS.t)+(TS.t<=90?' — on pace.':' — over the 90-second exam pace.');
+      if(!done){
+        done=true; answered++;
+        var right = oi===item.correct;
+        if(right) score++;
+        opts.classList.add('locked');
+        opts.querySelectorAll('.opt').forEach(function(btn,bi){
+          if(bi===item.correct) btn.classList.add('correct');
+          else if(bi===oi && !right) btn.classList.add('wrong');
+        });
+        why.querySelector('.verdict').textContent = right ? '✓ Correct — '+letters[item.correct]+'.' : '✗ Not quite — the answer is '+letters[item.correct]+'.';
+        why.querySelector('.verdict').className = 'verdict '+(right?'good':'bad');
+        why.classList.add('show');
+        if(!TS.fin){
+          TS.fin=true;
+          TS.el.classList.add(TS.t<=90?'tgood':'tbad');
+          why.querySelector('.verdict').textContent += ' Time: '+fmtT(TS.t)+(TS.t<=90?' — on pace.':' — over the 90-second exam pace.');
+        }
+        var hint=why.querySelector('.optinfo');
+        if(hint && item.optnotes){ hint.style.display='block'; hint.innerHTML='<em>Tap any answer choice above — as many as you like — to see why it\'s right or wrong.</em>'; }
+        document.getElementById('score').textContent=score;
+        document.getElementById('answered').textContent=answered;
+        if(item.optnotes) return;
       }
-      document.getElementById('score').textContent=score;
-      document.getElementById('answered').textContent=answered;
+      if(done && item.optnotes){
+        opts.querySelectorAll('.opt').forEach(function(btn){ btn.classList.remove('inspect'); });
+        b.classList.add('inspect');
+        var info=why.querySelector('.optinfo');
+        if(info){ info.style.display='block'; info.innerHTML='<b>'+letters[oi]+' — </b>'+item.optnotes[oi]; }
+      }
     });
     opts.appendChild(b);
   });
   card.appendChild(opts);
   var why=document.createElement('div'); why.className='why';
-  why.innerHTML='<div class="verdict"></div><div>'+item.why+'</div><span class="auth">'+item.auth+'</span>';
+  why.innerHTML='<div class="verdict"></div><div>'+item.why+'</div><div class="optinfo" style="display:none"></div><span class="auth">'+item.auth+'</span>';
   card.appendChild(why);
   host.appendChild(card);
 });

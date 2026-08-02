@@ -128,21 +128,49 @@
   .range{position:absolute;bottom:-2px;left:0;right:0;z-index:2}
 
   /* ===== stats band ===== */
-  .stats{background:var(--white);border-bottom:1px solid var(--line)}
-  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:30px 24px}
+  .stats{background:linear-gradient(180deg,#14355F 0%,#0C1F3A 100%)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:38px 24px 34px}
   .stat{text-align:center;padding:8px}
-  .stat .n{font-family:'Fraunces',serif;font-size:2rem;font-weight:800;color:var(--blue)}
-  .stat .t{font-size:.85rem;color:var(--muted);font-weight:600}
-  .stat.alt{border-top:1px dashed var(--line);margin-top:8px;padding-top:16px}
-  .stat.alt .n{color:var(--gold)}
-  .stats-head{grid-column:1/-1;text-align:center;font-weight:900;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--blue-soft);border-top:1px dashed var(--line);padding-top:20px;margin-top:10px}
-  .stat.alt2 .n{color:var(--ink)}
-  .exam-history{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:4px}
-  .eh{background:var(--gold-soft);border-radius:12px;padding:10px 12px;text-align:center;font-size:.78rem;color:var(--muted);font-weight:600}
-  .eh b{display:block;color:var(--ink);font-size:.85rem}
-  .stats-src{grid-column:1/-1;text-align:center;font-size:.72rem;color:var(--muted);margin-top:10px;line-height:1.5}
-  .stats-src a{color:var(--blue-soft)}
-  @media(max-width:720px){.exam-history{grid-template-columns:repeat(2,1fr)}}
+  .stat .n{font-family:'Fraunces',serif;font-size:2.1rem;font-weight:800;color:#FFD100}
+  .stat .t{font-size:.85rem;color:#CFE0F2;font-weight:600}
+  .stat.alt{border-top:1px dashed rgba(255,255,255,.25);margin-top:10px;padding-top:18px}
+  .stat.alt .n{color:#fff}
+  a.stats-head{grid-column:1/-1;display:block;text-align:center;font-weight:900;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:#FFD100;border-top:1px dashed rgba(255,255,255,.25);padding-top:20px;margin-top:10px;text-decoration:none}
+  a.stats-head:hover{text-decoration:underline}
+
+  /* ===== exam stats dashboard ===== */
+  #examstats{background:linear-gradient(180deg,#0C1F3A 0%,#14355F 100%);padding:84px 0 60px;color:#fff}
+  #examstats .kicker{color:#FFD100}
+  #examstats h2{color:#fff}
+  #examstats .sub{color:#CFE0F2}
+  .xs-tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:36px 0 26px}
+  .xs-tile{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px 10px;text-align:center}
+  .xs-tile .n{font-family:'Fraunces',serif;font-weight:800;font-size:1.7rem;color:#FFD100}
+  .xs-tile .t{font-size:.7rem;color:#CFE0F2;font-weight:600;line-height:1.35;margin-top:3px}
+  .xs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:26px}
+  .xs-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px 22px}
+  .xs-card h3{font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:#CFE0F2;margin-bottom:14px}
+  .bar-row{display:grid;grid-template-columns:88px 1fr 100px;gap:10px;align-items:center;margin-bottom:10px;font-size:.8rem}
+  .bar-row .lbl{color:#B9C9DE;font-weight:700}
+  .bar-track{background:rgba(255,255,255,.09);border-radius:999px;height:14px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:999px;background:#4A7FBF}
+  .bar-fill.gold{background:#FFD100}
+  .bar-row .val{color:#fff;font-weight:800;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .xs-note{font-size:.78rem;color:#B9C9DE;margin-top:10px;font-style:italic}
+  .xs-tablewrap{overflow-x:auto;margin-bottom:26px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:8px 16px 14px}
+  table.xs-table{width:100%;border-collapse:collapse;font-size:.85rem}
+  .xs-table th{font-family:'Inter',sans-serif;font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:#CFE0F2;text-align:right;padding:12px 12px 8px;border-bottom:2px solid #FFD100}
+  .xs-table th:first-child{text-align:left}
+  .xs-table td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.1);color:#EAF1FA;text-align:right;font-variant-numeric:tabular-nums}
+  .xs-table td:first-child{text-align:left;font-weight:700;color:#fff}
+  .xs-table tr.total td{font-weight:800;color:#FFD100;border-bottom:none;border-top:2px solid rgba(255,255,255,.28)}
+  .xs-insights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:26px}
+  .xs-in{background:rgba(255,209,0,.08);border:1px solid rgba(255,209,0,.3);border-radius:14px;padding:16px 18px}
+  .xs-in h4{color:#FFD100;font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+  .xs-in p{font-size:.85rem;color:#EAF1FA;line-height:1.55}
+  .xs-src{font-size:.74rem;color:#B9C9DE;line-height:1.6;border-top:1px solid rgba(255,255,255,.12);padding-top:14px}
+  .xs-src a{color:#CFE0F2}
+  @media(max-width:840px){.xs-tiles{grid-template-columns:repeat(3,1fr)}.xs-grid{grid-template-columns:1fr}.xs-insights{grid-template-columns:1fr}}
   @media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
 
   /* ===== disclaimer band ===== */
@@ -152,12 +180,12 @@
   .disc-band.on-navy b{color:#fff}
 
   /* ===== author band ===== */
-  .author-band{background:var(--white);padding:26px 0 30px}
+  .author-band{background:#FFD100;padding:30px 0 34px}
   .author-band .wrap{display:flex;align-items:center;justify-content:center;gap:16px;text-align:center;flex-wrap:wrap}
-  .author-band .scales{flex:0 0 44px;height:44px;border-radius:50%;background:var(--gold-soft);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center}
-  .author-band p{font-family:'Fraunces',serif;font-size:clamp(1rem,2vw,1.18rem);font-weight:600;color:var(--blue);max-width:760px}
-  .author-band p b{color:var(--blue-soft)}
-  .author-band .cred-sub{display:block;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .author-band .scales{flex:0 0 44px;height:44px;border-radius:50%;background:#14355F;border:2px solid #0C1F3A;display:flex;align-items:center;justify-content:center}
+  .author-band p{font-family:'Fraunces',serif;font-size:clamp(1rem,2vw,1.18rem);font-weight:600;color:#0C1F3A;max-width:760px}
+  .author-band p b{color:#14355F}
+  .author-band .cred-sub{display:block;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#14355F;margin-top:6px;opacity:.85}
 
   /* ===== sections ===== */
   section{padding:72px 0}
@@ -172,15 +200,15 @@
   /* dates */
   #dates{background:var(--cream);padding-top:56px}
   .dates-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
-  .date-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);position:relative}
-  .date-card.hot{border-top:4px solid var(--blue)}
-  .date-card.gold-top{border-top:4px solid var(--gold)}
-  .date-card .d{font-family:'Fraunces',serif;font-weight:800;font-size:1.25rem;margin-bottom:4px}
-  .date-card .l{font-size:.86rem;color:var(--muted)}
-  .date-card .flag{position:absolute;top:14px;right:14px;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-soft);color:#35618F;padding:4px 9px;border-radius:999px}
+  .date-card{background:linear-gradient(180deg,#14355F,#0C1F3A);border:1px solid #14355F;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);position:relative}
+  .date-card.hot{border-top:5px solid #4A7FBF}
+  .date-card.gold-top{border-top:5px solid #FFD100}
+  .date-card .d{font-family:'Fraunces',serif;font-weight:800;font-size:1.35rem;margin-bottom:4px;color:#FFD100}
+  .date-card .l{font-size:.86rem;color:#CFE0F2}
+  .date-card .flag{position:absolute;top:14px;right:14px;font-size:.66rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;background:#FFD100;color:#14355F;padding:4px 10px;border-radius:999px}
   a.date-card{display:block;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
   a.date-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(20,53,95,.16)}
-  .date-card .dgo{display:block;margin-top:10px;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:var(--blue-soft)}
+  .date-card .dgo{display:block;margin-top:10px;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:#FFD100}
   a.date-card:hover .dgo{text-decoration:underline}
   .src-note{font-size:.8rem;color:var(--muted);margin-top:16px}
   @media(max-width:840px){.dates-grid{grid-template-columns:repeat(2,1fr)}}
@@ -367,6 +395,7 @@
     </a>
     <nav class="nav-links">
       <a href="#dates">Deadlines</a>
+      <a href="#examstats">Exam Stats</a>
       <a href="#quiz">Quick Quiz</a>
       <a href="#resources">Free Resources</a>
       <a class="btn btn-gold" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy the Prep Guide NOW — $99.95</a>
@@ -425,18 +454,7 @@
     <div class="stat alt"><div class="n">+312</div><div class="t">More questions than THE 93 — the rest of the library</div></div>
     <div class="stat alt"><div class="n">3</div><div class="t">Full timed practice exams' worth</div></div>
     <div class="stat alt"><div class="n">$124.95</div><div class="t">The whole library. Just $25 more.</div></div>
-    <div class="stats-head">The Exam Since Day One · The Numbers Nobody Else Collects</div>
-    <div class="stat alt2"><div class="n">4</div><div class="t">Exams administered since the program began</div></div>
-    <div class="stat alt2"><div class="n">150</div><div class="t">Candidates who have ever sat for the LLP exam</div></div>
-    <div class="stat alt2"><div class="n">126</div><div class="t">LLPs licensed in Colorado — every passer, all four cycles</div></div>
-    <div class="stat alt2"><div class="n">84%</div><div class="t">All-time pass rate — never below 74% in any sitting</div></div>
-    <div class="exam-history">
-      <div class="eh"><b>Apr 30, 2024</b>70 sat · 62 passed · 89%</div>
-      <div class="eh"><b>Nov 12, 2024</b>35 sat · 29 passed · 83%</div>
-      <div class="eh"><b>Apr 2025</b>23 sat · 17 passed · 74%</div>
-      <div class="eh"><b>Nov 18, 2025</b>22 sat · 18 passed · 82%</div>
-    </div>
-    <div class="stats-src">Compiled from the <a href="https://www.coloradolegalregulation.com/wp-content/uploads/PDF/AboutUs/Annual%20Reports/2025%20Annual%20Report.pdf" target="_blank" rel="noopener">OARC 2025 Annual Report</a> and contemporaneous reporting — the per-sitting history in one place; verify at the source. Why the license exists: in FY2022, <strong>74% of Colorado domestic-relations parties had no lawyer</strong>.</div>
+    <a class="stats-head" href="#examstats">▲ The Exam Since Day One — full statistics dashboard, every sitting since 2024 ↓</a>
   </div>
 </div>
 
@@ -444,7 +462,7 @@
 <div class="author-band">
   <div class="wrap">
     <div class="scales">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14355F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 21h8"/><path d="M4 7h16"/><path d="M6 7l-3 6a3.5 3.5 0 0 0 6 0z"/><path d="M18 7l-3 6a3.5 3.5 0 0 0 6 0z"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD100" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 21h8"/><path d="M4 7h16"/><path d="M6 7l-3 6a3.5 3.5 0 0 0 6 0z"/><path d="M18 7l-3 6a3.5 3.5 0 0 0 6 0z"/></svg>
     </div>
     <p>Created and developed by a <b>Colorado family law attorney with 23+ years in practice</b> — 30+ years in the legal profession, spanning Pennsylvania to Colorado.
       <span class="cred-sub">Colorado District Court-Appointed Child &amp; Family Investigator (CFI) · Former Government Investigator, Denver Human Services — Denver, Colorado</span>
@@ -452,9 +470,80 @@
   </div>
 </div>
 
+<!-- ================= EXAM STATS DASHBOARD ================= -->
+<section id="examstats">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="kicker">Since Day One · The Numbers Nobody Else Collects</span>
+      <h2>Every LLP exam ever given. Every number.</h2>
+      <p class="sub" style="margin:0 auto">Colorado has administered the Licensed Legal Paraprofessional exam four times. We compiled every public statistic — applications, seats, pass rates, scores — into the one dashboard nobody else keeps. And underneath the numbers: what they mean for your November 10.</p>
+    </div>
+    <div class="xs-tiles">
+      <div class="xs-tile"><div class="n">4</div><div class="t">Exams ever administered</div></div>
+      <div class="xs-tile"><div class="n">186</div><div class="t">Applications since 2024</div></div>
+      <div class="xs-tile"><div class="n">150</div><div class="t">Candidates who have sat</div></div>
+      <div class="xs-tile"><div class="n">126</div><div class="t">LLPs licensed in Colorado</div></div>
+      <div class="xs-tile"><div class="n">84%</div><div class="t">All-time pass rate</div></div>
+      <div class="xs-tile"><div class="n">87%</div><div class="t">First-timer pass rate, 2025</div></div>
+    </div>
+    <div class="xs-grid">
+      <div class="xs-card">
+        <h3>Pass rate, by sitting</h3>
+        <div class="bar-row"><span class="lbl">Apr 2024</span><div class="bar-track"><div class="bar-fill gold" style="width:89%"></div></div><span class="val">89%</span></div>
+        <div class="bar-row"><span class="lbl">Nov 2024</span><div class="bar-track"><div class="bar-fill" style="width:83%"></div></div><span class="val">83%</span></div>
+        <div class="bar-row"><span class="lbl">Apr 2025</span><div class="bar-track"><div class="bar-fill" style="width:74%"></div></div><span class="val">74%</span></div>
+        <div class="bar-row"><span class="lbl">Nov 2025</span><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div><span class="val">82%</span></div>
+        <div class="xs-note">Never below 74% — but never a gimme, either.</div>
+      </div>
+      <div class="xs-card">
+        <h3>Candidates who sat, by sitting</h3>
+        <div class="bar-row"><span class="lbl">Apr 2024</span><div class="bar-track"><div class="bar-fill gold" style="width:100%"></div></div><span class="val">70</span></div>
+        <div class="bar-row"><span class="lbl">Nov 2024</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="val">35</span></div>
+        <div class="bar-row"><span class="lbl">Apr 2025</span><div class="bar-track"><div class="bar-fill" style="width:33%"></div></div><span class="val">23</span></div>
+        <div class="bar-row"><span class="lbl">Nov 2025</span><div class="bar-track"><div class="bar-fill" style="width:31%"></div></div><span class="val">22</span></div>
+        <div class="xs-note">The room keeps getting smaller — and 2026 has exactly one sitting.</div>
+      </div>
+      <div class="xs-card">
+        <h3>LLPs licensed in Colorado — running total</h3>
+        <div class="bar-row"><span class="lbl">Jun 2024</span><div class="bar-track"><div class="bar-fill" style="width:49%"></div></div><span class="val">62</span></div>
+        <div class="bar-row"><span class="lbl">Jan 2025</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div><span class="val">91</span></div>
+        <div class="bar-row"><span class="lbl">Dec 2025</span><div class="bar-track"><div class="bar-fill" style="width:86%"></div></div><span class="val">108</span></div>
+        <div class="bar-row"><span class="lbl">Jan 2026</span><div class="bar-track"><div class="bar-fill gold" style="width:100%"></div></div><span class="val">126</span></div>
+        <div class="xs-note">126 licensed as of January 2026 — early enough that you'd still be one of the firsts.</div>
+      </div>
+      <div class="xs-card">
+        <h3>First-timers vs. repeaters — 2025 pass rates</h3>
+        <div class="bar-row"><span class="lbl">First-timers</span><div class="bar-track"><div class="bar-fill gold" style="width:87%"></div></div><span class="val">87%</span></div>
+        <div class="bar-row"><span class="lbl">Repeaters</span><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><span class="val">60%</span></div>
+        <div class="xs-note">One serious prep beats two attempts.</div>
+      </div>
+    </div>
+    <div class="xs-tablewrap">
+      <table class="xs-table">
+        <tr><th>Sitting</th><th>Applied</th><th>Sat</th><th>Passed</th><th>Pass rate</th><th>Avg score</th><th>Passing score</th></tr>
+        <tr><td>April 30, 2024</td><td>84</td><td>70</td><td>62</td><td>89%</td><td>75.41%</td><td>68%</td></tr>
+        <tr><td>November 12, 2024</td><td>47</td><td>35</td><td>29</td><td>83%</td><td>73.76%</td><td>67%</td></tr>
+        <tr><td>April 2025</td><td>30</td><td>23</td><td>17</td><td>74%</td><td>—</td><td>—</td></tr>
+        <tr><td>November 18, 2025</td><td>25</td><td>22</td><td>18</td><td>82%</td><td>—</td><td>—</td></tr>
+        <tr class="total"><td>All-time</td><td>186</td><td>150</td><td>126</td><td>84%</td><td></td><td></td></tr>
+      </table>
+    </div>
+    <div class="xs-insights">
+      <div class="xs-in"><h4>⛰ Thin margins</h4><p>The passing score has run 67–68%, and the room's average lands around 74–75%. The distance between passing and repeating is a handful of questions — the exact kind of questions THE 93 drills.</p></div>
+      <div class="xs-in"><h4>🎯 First time is the best time</h4><p>In 2025, first-timers passed at 87%; repeaters at 60%. One serious prep beats two attempts — drill before your first sitting, not your second.</p></div>
+      <div class="xs-in"><h4>⚡ One shot in 2026</h4><p>Sittings are small — 70 in the first, 22 in the last — and this year there's exactly one: November 10. Miss it, wait a year. Walk in ready instead.</p></div>
+    </div>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:0 0 26px">
+      <a class="btn btn-gold" href="#quiz">Try 6 free sample questions →</a>
+      <a class="btn btn-line" href="#pricing">Buy the Prep Guide NOW — $99.95</a>
+    </div>
+    <div class="xs-src">Independent compilation from the <a href="https://www.coloradolegalregulation.com/wp-content/uploads/PDF/AboutUs/Annual%20Reports/2025%20Annual%20Report.pdf" target="_blank" rel="noopener">OARC 2025 Annual Report</a> and contemporaneous reporting by <a href="https://www.lawweekcolorado.com/article/62-pass-colorados-first-llp-exam/" target="_blank" rel="noopener">Law Week Colorado</a>. Verify at the source — official figures control. Not affiliated with the Colorado Supreme Court or OARC. Next update: after the November 10, 2026 sitting. And the reason the license exists at all: in FY2022, <strong style="color:#FFD100">74% of Colorado domestic-relations parties had no lawyer</strong>.</div>
+  </div>
+</section>
+
 <svg class="mtn-div" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)">
-  <path d="M0 90 L0 60 L180 22 L310 58 L450 14 L590 54 L730 8 L880 52 L1020 18 L1170 56 L1310 30 L1440 58 L1440 90 Z" fill="#fff" opacity=".55"/>
-  <path d="M0 90 L0 76 L200 44 L360 70 L520 36 L690 68 L850 30 L1010 64 L1170 44 L1330 72 L1440 52 L1440 90 Z" fill="#fff"/>
+  <path d="M0 90 L0 60 L180 22 L310 58 L450 14 L590 54 L730 8 L880 52 L1020 18 L1170 56 L1310 30 L1440 58 L1440 90 Z" fill="#14355F" opacity=".55"/>
+  <path d="M0 90 L0 76 L200 44 L360 70 L520 36 L690 68 L850 30 L1010 64 L1170 44 L1330 72 L1440 52 L1440 90 Z" fill="#0C1F3A"/>
 </svg>
 
 <!-- ================= DATES ================= -->

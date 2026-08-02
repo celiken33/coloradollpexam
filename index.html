@@ -135,6 +135,14 @@
   .stat .t{font-size:.85rem;color:var(--muted);font-weight:600}
   .stat.alt{border-top:1px dashed var(--line);margin-top:8px;padding-top:16px}
   .stat.alt .n{color:var(--gold)}
+  .stats-head{grid-column:1/-1;text-align:center;font-weight:900;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--blue-soft);border-top:1px dashed var(--line);padding-top:20px;margin-top:10px}
+  .stat.alt2 .n{color:var(--ink)}
+  .exam-history{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:4px}
+  .eh{background:var(--gold-soft);border-radius:12px;padding:10px 12px;text-align:center;font-size:.78rem;color:var(--muted);font-weight:600}
+  .eh b{display:block;color:var(--ink);font-size:.85rem}
+  .stats-src{grid-column:1/-1;text-align:center;font-size:.72rem;color:var(--muted);margin-top:10px;line-height:1.5}
+  .stats-src a{color:var(--blue-soft)}
+  @media(max-width:720px){.exam-history{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
 
   /* ===== disclaimer band ===== */
@@ -417,6 +425,18 @@
     <div class="stat alt"><div class="n">+312</div><div class="t">More questions than THE 93 — the rest of the library</div></div>
     <div class="stat alt"><div class="n">3</div><div class="t">Full timed practice exams' worth</div></div>
     <div class="stat alt"><div class="n">$124.95</div><div class="t">The whole library. Just $25 more.</div></div>
+    <div class="stats-head">The Exam Since Day One · The Numbers Nobody Else Collects</div>
+    <div class="stat alt2"><div class="n">4</div><div class="t">Exams administered since the program began</div></div>
+    <div class="stat alt2"><div class="n">150</div><div class="t">Candidates who have ever sat for the LLP exam</div></div>
+    <div class="stat alt2"><div class="n">126</div><div class="t">LLPs licensed in Colorado — every passer, all four cycles</div></div>
+    <div class="stat alt2"><div class="n">84%</div><div class="t">All-time pass rate — never below 74% in any sitting</div></div>
+    <div class="exam-history">
+      <div class="eh"><b>Apr 30, 2024</b>70 sat · 62 passed · 89%</div>
+      <div class="eh"><b>Nov 12, 2024</b>35 sat · 29 passed · 83%</div>
+      <div class="eh"><b>Apr 2025</b>23 sat · 17 passed · 74%</div>
+      <div class="eh"><b>Nov 18, 2025</b>22 sat · 18 passed · 82%</div>
+    </div>
+    <div class="stats-src">Compiled from the <a href="https://www.coloradolegalregulation.com/wp-content/uploads/PDF/AboutUs/Annual%20Reports/2025%20Annual%20Report.pdf" target="_blank" rel="noopener">OARC 2025 Annual Report</a> and contemporaneous reporting — the per-sitting history in one place; verify at the source. Why the license exists: in FY2022, <strong>74% of Colorado domestic-relations parties had no lawyer</strong>.</div>
   </div>
 </div>
 
@@ -781,9 +801,9 @@ var QUESTIONS = [
   {
     id:"FL-257", subj:"Property · Do the Math", calc:true,
     q:"A spouse's inheritance grows from $40,000 to $55,000 during the marriage. The marital portion is:",
-    opts:["$55,000","$15,000","$40,000","$0"],
+    opts:["$15,500","$15,000","$40,000","$0"],
     correct:1,
-    why:"The inherited corpus ($40,000) stays separate, but the $15,000 of appreciation during the marriage is marital and subject to division. Corpus separate, growth marital — the separate-property-appreciation rule in its simplest form.",
+    why:"The inherited corpus ($40,000) stays separate, but the appreciation during the marriage is marital and subject to division — exactly $55,000 − $40,000 = $15,000. ($15,500 is bait for estimators; run the subtraction.) Corpus separate, growth marital — the separate-property-appreciation rule in its simplest form.",
     auth:"Authority: C.R.S. 14-10-113(4)"
   },
   {

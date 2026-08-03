@@ -284,6 +284,10 @@
   .lv{display:inline-block;border-radius:999px;padding:1px 10px;font-weight:900;font-size:.68rem;letter-spacing:.05em;font-variant:small-caps;vertical-align:middle}
   .lv-e{background:#EAF1FA;color:#1E4A82}
 
+  .pass100{background:linear-gradient(180deg,#FFD100,#F2C500);text-align:center;padding:30px 20px 32px}
+  .pass100 .p1{font-family:'Fraunces','Georgia',serif;font-variant:small-caps;font-weight:900;font-size:clamp(1.5rem,3.8vw,2.5rem);line-height:1.15;color:#14355F}
+  .pass100 .p2{margin:7px auto 0;max-width:880px;font-size:.95rem;font-weight:600;color:#14355F;opacity:.87}
+
   /* ===== disclaimer band ===== */
   .disc-band{background:var(--white);border:1.5px solid var(--line);border-left:5px solid #FFD100;border-radius:12px;padding:16px 22px;margin:30px auto 0;max-width:880px;font-size:.86rem;line-height:1.6;color:var(--muted)}
   .disc-band b{color:var(--blue)}
@@ -808,6 +812,12 @@
     <div class="stat alt"><div class="n">$124.95</div><div class="t">The whole library. Just $25 more.</div></div>
     <a class="stats-head" href="#examstats">▲ The Exam Since Day One — full statistics dashboard, every sitting since 2024 ↓</a>
   </div>
+</div>
+
+<!-- ================= THE 100% BAND ================= -->
+<div class="pass100" id="pass100">
+  <div class="p1">We are the 100% pass-rate people.</div>
+  <div class="p2">That's the standard we build to — every Colorado question timed, every answer explained, every candidate ready on November 10. A mission, not a guarantee. (Nobody honest offers one.)</div>
 </div>
 
 <!-- ================= AUTHOR BAND ================= -->
@@ -1392,11 +1402,11 @@ var QUESTIONS = [
   {
     id:"ETH-002", subj:"Ethics · Competence Meets the Carve-Out", lvl:"EASY",
     q:"An LLP asked to handle a dissolution issue requiring analysis of a complex trust should:",
-    opts:["Proceed and learn as they go","Associate with a supervising attorney and continue handling the trust issue","Decline the entire case","Advise the client to consult an attorney — it's a competence concern AND a scope carve-out"],
+    opts:["Obtain the client's informed consent, confirmed in writing, and handle the trust analysis","Associate with a supervising attorney and continue handling the trust issue","Decline the entire case","Advise the client to consult an attorney — it's a competence concern AND a scope carve-out"],
     correct:3,
     why:"A complex trust is both outside LLP scope and likely beyond competence — advise the client to get an attorney for that issue (LLP RPC 1.1; C.R.C.P. 207.1), while continuing the in-scope work under 207.1(i). The double-reason answer is the exam's favorite kind.",
     auth:"Authority: Colo. LLP RPC 1.1; C.R.C.P. 207.1",
-    optnotes:["'Learn as you go' fails RPC 1.1 and walks straight into a carve-out.","Association cures competence for ATTORNEYS — it never cures scope for an LLP. A carve-out stays carved out.","Declining everything abandons work the license fully covers — 207.1(i) lets you continue in scope.","Correct — refer the trust issue out, keep the in-scope work."], matters:"This exact fork — refer the piece, keep the case — is how an LLP stays useful AND licensed."
+    optnotes:["Informed consent waives conflicts — it never expands the license. Authorized scope is fixed by C.R.C.P. 207.1; no client signature creates authority the rule withholds.","Association cures competence for ATTORNEYS — it never cures scope for an LLP. A carve-out stays carved out.","Declining everything abandons work the license fully covers — 207.1(i) lets you continue in scope.","Correct — refer the trust issue out, keep the in-scope work."], matters:"This exact fork — refer the piece, keep the case — is how an LLP stays useful AND licensed."
   },
   {
     id:"FL-147", subj:"Maintenance · The Zero Floor", lvl:"WAY HARD", calc:true,
@@ -1604,6 +1614,7 @@ function buildIndex(){
   var ix=[];
   ix.push({t:'The Clock — 6 hours · 135 questions + 2 essays',s:'Exam day, down to the minute',g:'The Clock & Deadlines',h:'#examclock'});
   ix.push({t:'2:00 per multiple-choice question — the exam\u2019s pace (we train you at 1:30)',s:'Why every drill here is timed',g:'The Clock & Deadlines',h:'#examclock'});
+  ix.push({t:'We are the 100% pass-rate people',s:'The standard we build to — a mission, not a guarantee',g:'Why Us',h:'#pass100'});
   ix.push({t:'Exam-day schedule, hour by hour (official PDF)',s:'8:00 check-in · essays 8:45 · ethics 10:45 · family law 1:30',g:'The Clock & Deadlines',h:'https://www.coloradolegalregulation.com/PDF/LLP/Nov2025/LLP%20Exam%20Schedule.pdf',x:1});
   document.querySelectorAll('.date-card').forEach(function(dc){
     var d=dc.querySelector('.d'),l=dc.querySelector('.l');

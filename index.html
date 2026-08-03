@@ -595,6 +595,28 @@
   #dates{padding-top:32px}
   #examclock{padding:34px 0 30px}
   #rpprogram{padding:42px 0 36px}
+
+  /* ===== compact mode pass 3 — two-up layout for quiz & essays ===== */
+  @media(min-width:900px){
+    #quiz-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+    #quiz-cards .qcard{margin-top:0;max-width:none}
+    #essays .wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+    #essays .quiz-head,#essays .quiz-cta{grid-column:1/-1}
+    #essays .essay-card{margin-top:0;max-width:none}
+  }
+  #quiz-cards{margin-top:14px}
+  .xs-tile{padding:10px 8px}
+  .xs-tile .n{font-size:1.5rem}
+  a.doc .b strong{font-size:.92rem}
+  a.doc .b span{font-size:.8rem}
+  .lib-group{padding:0}
+  .price-note{font-size:.8rem}
+  .buy-fine{font-size:.72rem}
+  .trust{font-size:.72rem}
+  .grader p{font-size:.85rem}
+  .model h4{margin:10px 0 4px}
+  .model p{font-size:.88rem;margin-bottom:8px}
+  .auth{font-size:.75rem}
 </style>
 </head>
 <body>

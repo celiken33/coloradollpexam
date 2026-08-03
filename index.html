@@ -1467,7 +1467,7 @@ var host=document.getElementById('quiz-cards');
 QUESTIONS.forEach(function(item,qi){
   var card=document.createElement('div'); card.className='qcard';
   var head=document.createElement('div'); head.className='qtag';
-  head.innerHTML='<span class="subj">◆◆ '+item.subj+'</span><span class="qnum">Question '+(qi+1)+' of '+QUESTIONS.length+' · '+item.id+' · <span class="qtimer">⏱ 0:00</span></span>';
+  head.innerHTML='<span class="subj">Question '+(qi+1)+' of '+QUESTIONS.length+'</span><span class="qnum"><span class="qtimer">⏱ 0:00</span></span>';
   card.appendChild(head);
   var TS={t:0,on:false,fin:false,el:head.querySelector('.qtimer')};
   card.__t=TS; TIMERS.push(TS);

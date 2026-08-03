@@ -224,6 +224,12 @@
   @media(max-width:700px){.ck-seg small{display:none}.ck-seg{font-size:.7rem}}
   /* ===== nav search + overlay ===== */
   .nav-links .nav-buy{padding:8px 14px;font-size:.8rem;white-space:nowrap;box-shadow:0 3px 10px rgba(20,53,95,.25)}
+  .nav-clock{display:inline-flex;align-items:center;gap:5px;background:#0C1F3A;color:#FFD100;border-radius:999px;padding:7px 13px;font-weight:900;font-size:.8rem;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums;opacity:1 !important}
+  .nav-clock b{color:#FFD100}
+  .nav-clock b#nc-t{color:#fff;font-weight:800}
+  .nav-clock .nc-u{color:#8FA9C7;font-weight:800;font-size:.7rem}
+  .nav-clock .nc-ico{font-size:.8rem}
+  @media(max-width:760px){.nav-links a.nav-clock{display:inline-flex !important}}
   .nav-search{display:inline-flex;align-items:center;gap:7px;background:#14355F;color:#fff;border:none;border-radius:999px;padding:8px 16px;font-weight:800;font-size:.85rem;cursor:pointer;font-family:inherit}
   .nav-search:hover{background:#1E4A82}
   .nav-search .kbd{background:rgba(255,255,255,.18);border-radius:5px;padding:1px 7px;font-size:.72rem;font-weight:700}
@@ -690,6 +696,7 @@
       <a href="#examstats">Exam Stats</a>
       <a href="#resources">Free Resources</a>
       <a class="btn btn-gold nav-buy" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy the Prep Guide NOW — $99.95</a>
+      <a class="nav-clock" href="#examclock" aria-label="Countdown to the November 10, 2026 exam"><span class="nc-ico">⏱</span><b id="nc-d">—</b><span class="nc-u">d</span><b id="nc-t">--:--:--</b></a>
       <button class="nav-search" id="navsearch" type="button" aria-label="Search everything on this site">🔍 Search<span class="kbd">/</span></button>
     </nav>
   </div>
@@ -700,7 +707,7 @@
   <div class="hero-sun" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow">★ Attorney-Built · One Exam in 2026 — November 10</span>
-    <h1><span class="h1-top">Your LLP exam prep starts here.</span><em>Be ready on November 10th 2026.</em></h1>
+    <h1><span class="h1-top">Your Colorado LLP exam prep starts here.</span><em>Be ready on November 10th 2026.</em></h1>
     <p class="lede">Attorney-authored practice for Colorado's Licensed Legal Paraprofessional exam — <strong>93 hand-picked sample questions</strong> from our 405-question library, plus all 6 sample essays, every answer explained. Try 12 of them and <strong>2 full sample essays</strong> free below.</p>
     <div class="hero-cred">
       <span>Created by a Colorado family law attorney — 23+ years in practice</span><span class="dot"></span>
@@ -739,8 +746,8 @@
 <section id="examclock">
   <div class="wrap">
     <div style="text-align:center">
-      <span class="kicker">The Clock · Exam Day, Down to the Minute</span>
-      <h2>Exam day is six hours. Own every one of them.</h2>
+      <span class="kicker">The Clock · Colorado's Exam Day, Down to the Minute</span>
+      <h2>Colorado's exam day is six hours. Own every one of them.</h2>
       <p class="sub" style="margin:0 auto">One day, three timed sessions — <a href="https://www.coloradolegalregulation.com/PDF/LLP/Nov2025/LLP%20Exam%20Schedule.pdf" target="_blank" rel="noopener">8:00 a.m. check-in to the 4:45 p.m. close</a>. Time is the exam's second examiner, so this whole site runs on its clock: every drill timed, every pace graded against the real one.</p>
     </div>
     <div class="ck-tiles">
@@ -774,7 +781,7 @@
       <span class="diamond" aria-hidden="true">◆◆</span>
       <div class="peak-mark" style="justify-content:center;display:flex" aria-hidden="true"><i></i><i></i><i></i></div>
       <span class="kicker">Free Sample — Straight From Our Library</span>
-      <h2>Try 12 free sample questions — right now.</h2>
+      <h2>Try 12 free Colorado sample questions — right now.</h2>
       <p class="sub">Straight from our library — every question and explanation written by a Colorado family law attorney with 23+ years in domestic relations practice. Six easy, six way hard — mixed, the way exam day mixes them. Get these twelve right, and the 93 in the guide will finish the job. The real exam gives you <a href="#examclock"><strong>2:00 a question</strong></a> — our clocks grade you at the <strong>1:30 training pace</strong>. Train fast; race slow.</p>
       <div class="score-pill">Score: <b id="score">0</b>&nbsp;/&nbsp;<span id="answered">0</span> answered&nbsp;·&nbsp;⏱ <b id="totaltime">0:00</b> total&nbsp;·&nbsp;training pace 1:30/Q</div>
     </div>
@@ -821,7 +828,7 @@
   <div class="wrap">
     <div style="text-align:center">
       <span class="kicker">Since Day One · The Numbers Nobody Else Collects</span>
-      <h2>Every LLP exam ever given. Every number.</h2>
+      <h2>Every Colorado LLP exam ever given. Every number.</h2>
       <p class="sub" style="margin:0 auto">Colorado has administered the Licensed Legal Paraprofessional exam four times. We compiled every public statistic — applications, seats, pass rates, scores — into the one dashboard nobody else keeps. And underneath the numbers: what they mean for your November 10.</p>
     </div>
     <div class="xs-tiles">
@@ -877,7 +884,7 @@
       </table>
     </div>
     <div class="pl-band" id="passlists">
-      <h3>The Pass Lists — every name, every sitting</h3>
+      <h3>The Colorado Pass Lists — every name, every sitting</h3>
       <div class="pl-sub">All 126 passers, straight from OARC's official alphabetical pass lists. Tap a sitting for the official PDF — or search any name with the 🔍 up top.</div>
       <div class="pl-grid">
         <a class="pl-doc" href="https://www.coloradolegalregulation.com/PDF/LLP/April2024/Alpha%20Pass%20List%20LLP%20April%202024.pdf" target="_blank" rel="noopener">April 2024 Pass List · PDF<span class="ct">62</span></a>
@@ -910,7 +917,7 @@
   <div class="wrap">
     <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
     <span class="kicker">The 2026 Cycle</span>
-    <h2>Important deadlines.</h2>
+    <h2>The Colorado deadlines.</h2>
     <p class="sub">In 2026 the Colorado Supreme Court is offering the Licensed Legal Paraprofessional exam <strong>only once — November 10</strong>. There is no April sitting. Miss the window, wait a year.</p>
     <div class="dates-grid">
       <a class="date-card" href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener"><div class="d">Jul 1, 2026</div><div class="l">Application window opened</div><span class="dgo">How to apply — official instructions →</span></a>
@@ -934,7 +941,7 @@
       <span class="diamond" aria-hidden="true">◆◆</span>
       <div class="peak-mark" style="justify-content:center;display:flex" aria-hidden="true"><i></i><i></i><i></i></div>
       <span class="kicker">Free Sample · Two Full Ascents</span>
-      <h2>Two complete sample essays, with model answers.</h2>
+      <h2>Two complete Colorado essays, with model answers.</h2>
       <p class="sub">The real exam gives you two essays — <a href="#examclock"><strong>90 minutes total, 45 minutes each, 25% of your score</strong></a>. These two are pulled straight from our library — read the prompt, outline against the clock (25 to outline, 20 to write), then reveal the graded model answer and see exactly what earns points.</p>
     </div>
 
@@ -1018,7 +1025,7 @@
   <div class="wrap">
     <div style="text-align:center">
       <span class="kicker">The Tutor's Route Guide</span>
-      <h2>First climb, or second?</h2>
+      <h2>Your Colorado climb — first, or second?</h2>
       <p class="sub" style="margin:0 auto">Wherever you're starting from, there's a mapped route to November 10. Pick yours.</p>
     </div>
     <div class="path-grid">
@@ -1043,7 +1050,7 @@
   <div class="wrap">
     <div style="text-align:center">
       <span class="kicker">The Full Guide</span>
-      <h2>Get the complete guide in 2 minutes.</h2>
+      <h2>Get the complete Colorado guide in 2 minutes.</h2>
       <p class="sub" style="margin:0 auto">Everything between you and the summit — 93 sample questions hand-picked from our 405-question library by the attorney who wrote them, organized by subject, every answer explained and mapped to its controlling authority. Pay, download, start drilling.</p>
     </div>
     <div class="price-grid">
@@ -1084,7 +1091,7 @@
     <div id="latestart">
       <div class="ls-grid">
         <div>
-          <span class="ls-tag">Starting in August? · The Late Start</span>
+          <span class="ls-tag">Starting in August? · Colorado's Late Start</span>
           <h3>File late, study fast, walk in ready.</h3>
           <p style="font-weight:600;font-size:.95rem">The late-filing window is open through <a href="https://www.coloradolegalregulation.com/future-lawyers/applicationinstructionsllp/" target="_blank" rel="noopener" style="color:#14355F"><strong>August 31</strong></a> — and August 1 to November 10 is <strong>101 days: enough runway, if you start now</strong>. The quick guide built exactly for that start:</p>
           <ul>
@@ -1146,7 +1153,7 @@
   <div class="wrap">
     <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
     <span class="kicker">The Official Library · Straight From the Court &amp; OARC</span>
-    <h2>Every official LLP document. One shelf.</h2>
+    <h2>Every official Colorado LLP document. One shelf.</h2>
     <p class="sub">Twenty-three official documents and pages from the Colorado Supreme Court and the Office of Attorney Regulation Counsel — organized by where you are in the journey, linked straight to the source, verified July 30 – August 2, 2026. No email, no catch. The official pages control.</p>
     <div class="lib-grid">
       <div class="lib-group">
@@ -1192,7 +1199,7 @@
     <div class="disc-band"><b>These links belong to the Colorado Supreme Court / OARC — not to us.</b> We're an independent study resource; the official pages control if anything conflicts. No email, no signup, no catch — go read them.</div>
     <div style="margin-top:56px">
       <span class="kicker">Quick FAQ</span>
-      <h2>The LLP license, in brief.</h2>
+      <h2>The Colorado LLP license, in brief.</h2>
       <div class="faq-grid">
       <div class="faq"><h3>What is a Licensed Legal Paraprofessional?</h3><p>A new license created by the Colorado Supreme Court allowing qualified paraprofessionals to represent clients in less-complex domestic relations matters — dissolution, parentage, and allocation of parental responsibilities — within the scope defined by <a href="https://www.coloradolegalregulation.com/future-lawyers/rulesgoverningadmissions/" target="_blank" rel="noopener">C.R.C.P. 207.1</a>.</p></div>
       <div class="faq"><h3>What's actually on the exam?</h3><p>Three timed sections: <strong>90 family-law multiple-choice</strong> (180 minutes, 50% of the score), <strong>45 ethics multiple-choice</strong> (90 minutes, 25%), and <strong>two essays</strong> (90 minutes, 25%) — testing the published <a href="https://www.coloradolegalregulation.com/wp-content/uploads/2026/06/Final-Updated-Core-Competencies-Amended-5-22-2026.pdf" target="_blank" rel="noopener">LLP Core Competencies</a>. Our library spans 405 questions across every tested subject; the guide distills it to 93 hand-picked questions, plus all 6 sample essays.</p></div>
@@ -1216,7 +1223,7 @@
     <div>
       <div class="peak-mark" aria-hidden="true"><i></i><i></i><i></i></div>
       <span class="kicker">Prefer Email?</span>
-      <h2>Suit up. Order THE 93 by email.</h2>
+      <h2>Suit up, Colorado. Order THE 93 by email.</h2>
       <p class="sub">Rather order by email, or have a question first? Drop a <strong>username</strong> and a good email — we'll send your secure <strong>$99.95</strong> payment link, and the full PDF lands the moment you pay.</p>
       <p class="tiny">We'll only use your email for your order and delivering the guide. Unsubscribe anytime. We never sell or share your address.</p>
       <p class="tiny" style="margin-top:10px"><strong>Ordering a different guide by email?</strong> <a href="https://form.jotform.com/262130906553049" target="_blank" rel="noopener"><strong>THE LATE START — $79.95</strong></a> · <a href="https://form.jotform.com/262130543251041" target="_blank" rel="noopener"><strong>THE FULL 405 — $124.95</strong></a> · <a href="https://form.jotform.com/262130596392055" target="_blank" rel="noopener"><strong>THE SECOND ASCENT — $299</strong></a></p>
@@ -1256,7 +1263,7 @@
   <div class="sr-panel">
     <div class="sr-inwrap">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFD100" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
-      <input id="srin" type="text" placeholder="Search anything — deadlines, official PDFs, pass lists, any passer's name, prices, the clock…" autocomplete="off">
+      <input id="srin" type="text" placeholder="Search anything Colorado LLP — deadlines, official PDFs, pass lists, any passer's name, the clock…" autocomplete="off">
       <button class="sr-esc" type="button" onclick="closeSearch()">ESC</button>
     </div>
     <div id="srres"></div>
@@ -1291,6 +1298,8 @@
     var m = Math.floor(ms%3600000/60000);
     var s = Math.floor(ms%60000/1000);
     el.d.textContent = d;
+    var nd=document.getElementById('nc-d'), nt=document.getElementById('nc-t');
+    if(nd){ nd.textContent=d; nt.textContent=pad(h)+':'+pad(m)+':'+pad(s); }
     el.h.textContent = pad(h);
     el.m.textContent = pad(m);
     el.s.textContent = pad(s);

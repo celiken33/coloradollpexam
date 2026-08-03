@@ -224,6 +224,9 @@
   @media(max-width:700px){.ck-seg small{display:none}.ck-seg{font-size:.7rem}}
   /* ===== nav search + overlay ===== */
   .nav-links .nav-buy{padding:8px 14px;font-size:.8rem;white-space:nowrap;box-shadow:0 3px 10px rgba(20,53,95,.25)}
+  .nav-links{gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .nav-links a:not(.btn):not(.nav-clock){padding:6px 13px;border-radius:999px;border:1.5px solid rgba(20,53,95,.16);background:#fff;font-size:.82rem;font-weight:700;opacity:1;white-space:nowrap;line-height:1.25;transition:border-color .12s ease,background .12s ease}
+  .nav-links a:not(.btn):not(.nav-clock):hover{border-color:var(--blue);background:#EAF1FA;opacity:1}
   .nav-clock{display:inline-flex;align-items:center;gap:5px;background:#0C1F3A;color:#FFD100;border-radius:999px;padding:7px 13px;font-weight:900;font-size:.8rem;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums;opacity:1 !important}
   .nav-clock b{color:#FFD100}
   .nav-clock b#nc-t{color:#fff;font-weight:800}
@@ -281,12 +284,23 @@
   .hero h1 em{font-variant:small-caps;letter-spacing:.02em}
   .lvl span,.score-pill{font-variant:small-caps}
 
-  .lv{display:inline-block;border-radius:999px;padding:1px 10px;font-weight:900;font-size:.68rem;letter-spacing:.05em;font-variant:small-caps;vertical-align:middle}
-  .lv-e{background:#EAF1FA;color:#1E4A82}
 
   .pass100{background:linear-gradient(180deg,#FFD100,#F2C500);text-align:center;padding:30px 20px 32px}
   .pass100 .p1{font-family:'Fraunces','Georgia',serif;font-variant:small-caps;font-weight:900;font-size:clamp(1.5rem,3.8vw,2.5rem);line-height:1.15;color:#14355F}
   .pass100 .p2{margin:7px auto 0;max-width:880px;font-size:.95rem;font-weight:600;color:#14355F;opacity:.87}
+
+  .stay-band{margin-top:38px}
+  .stay-band h3{font-size:clamp(1.2rem,2.6vw,1.7rem);color:var(--blue);text-align:center}
+  .stay-sub{max-width:760px;margin:8px auto 18px;text-align:center;font-size:.95rem;color:var(--ink);opacity:.85}
+  .stay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+  .stay{display:block;background:#fff;border:1.5px solid rgba(20,53,95,.14);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:border-color .12s ease,transform .12s ease,box-shadow .12s ease}
+  .stay:hover{border-color:#FFD100;transform:translateY(-2px);box-shadow:0 8px 20px rgba(20,53,95,.12)}
+  .stay b{font-size:.92rem;color:var(--blue)}
+  .stay span{display:block;font-size:.8rem;opacity:.75;margin-top:4px;line-height:1.45}
+  .stay-all{background:#14355F;border-color:#14355F}
+  .stay-all b{color:#FFD100}
+  .stay-all span{color:#CFE0F2;opacity:1}
+  .stay-fine{margin-top:14px;text-align:center;font-size:.78rem;opacity:.6}
 
   /* ===== disclaimer band ===== */
   .disc-band{background:var(--white);border:1.5px solid var(--line);border-left:5px solid #FFD100;border-radius:12px;padding:16px 22px;margin:30px auto 0;max-width:880px;font-size:.86rem;line-height:1.6;color:var(--muted)}
@@ -934,6 +948,19 @@
       <a class="date-card hot" href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener"><div class="d">Aug 31, 2026</div><div class="l">Late filing deadline (final)</div><span class="dgo">Deadlines &amp; fees — official exam page →</span></a>
       <a class="date-card" href="https://www.coloradolegalregulation.com/PDF/LLP/Nov2025/LLP%20Exam%20Schedule.pdf" target="_blank" rel="noopener"><div class="d">Nov 10, 2026</div><div class="l">Exam day — 8:00 a.m. check-in · 6 hours of testing · Ralph L. Carr Judicial Center, Denver</div><span class="dgo">The day, hour by hour — official schedule PDF →</span></a>
     </div>
+    <div class="stay-band" id="nightbefore">
+      <h3>The night before — sleep next to the summit.</h3>
+      <p class="stay-sub">Check-in is <strong>8:00 a.m. sharp</strong> at the Ralph L. Carr Judicial Center, 1300 Broadway, Denver. Book <strong>Monday, November 9</strong> and walk in rested — no I-25 gamble, no parking panic. Direct links, closest first:</p>
+      <div class="stay-grid">
+        <a class="stay" href="https://www.hilton.com/en/hotels/denrtqq-the-art-hotel-denver/" target="_blank" rel="noopener"><b>the ART Hotel Denver — Curio Collection by Hilton</b><span>1201 Broadway · literally across the street — a 1-minute walk to the exam door</span></a>
+        <a class="stay" href="https://www.hilton.com/en/hotels/denddgi-hilton-garden-inn-denver-downtown/" target="_blank" rel="noopener"><b>Hilton Garden Inn Denver Downtown</b><span>1400 Welton St · roughly a 12-minute walk</span></a>
+        <a class="stay" href="https://www.hyatt.com/en-US/hotel/colorado/hyatt-regency-denver-at-colorado-convention-center/dencc" target="_blank" rel="noopener"><b>Hyatt Regency Denver — Colorado Convention Center</b><span>650 15th St · roughly a 15-minute walk</span></a>
+        <a class="stay" href="https://www.marriott.com/en-us/hotels/denrd-residence-inn-denver-city-center/overview/" target="_blank" rel="noopener"><b>Residence Inn by Marriott — Denver City Center</b><span>1725 Champa St · roughly a 17-minute walk · suites with kitchens</span></a>
+        <a class="stay" href="https://www.google.com/maps/search/Ramada+by+Wyndham+Denver+Downtown+1150+E+Colfax+Ave" target="_blank" rel="noopener"><b>Ramada by Wyndham Denver Downtown</b><span>1150 E Colfax Ave · the motel-price pick · about 1 mile — a 5-minute drive</span></a>
+        <a class="stay stay-all" href="https://www.google.com/maps/search/hotels+near+Ralph+L.+Carr+Judicial+Center+Denver" target="_blank" rel="noopener"><b>Every hotel near the exam — live map →</b><span>Compare all Colorado options around 1300 Broadway on Google Maps</span></a>
+      </div>
+      <p class="stay-fine">Independent suggestions — no affiliation with any hotel, no kickbacks. Rates and availability change; book direct and confirm. November 9 is a Monday: downtown Denver fills for conventions, so book the room the day you file.</p>
+    </div>
     <p class="src-note">Dates per the <a href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" target="_blank" rel="noopener">Office of Attorney Regulation Counsel</a> — always confirm against the official site before filing.</p>
   </div>
 </section>
@@ -1440,7 +1467,7 @@ var host=document.getElementById('quiz-cards');
 QUESTIONS.forEach(function(item,qi){
   var card=document.createElement('div'); card.className='qcard';
   var head=document.createElement('div'); head.className='qtag';
-  head.innerHTML='<span class="subj">◆◆ '+item.subj+'</span><span class="qnum">'+(item.lvl==='EASY'?'<span class="lv lv-e">EASY</span> · ':'')+'Question '+(qi+1)+' of '+QUESTIONS.length+' · '+item.id+' · <span class="qtimer">⏱ 0:00</span></span>';
+  head.innerHTML='<span class="subj">◆◆ '+item.subj+'</span><span class="qnum">Question '+(qi+1)+' of '+QUESTIONS.length+' · '+item.id+' · <span class="qtimer">⏱ 0:00</span></span>';
   card.appendChild(head);
   var TS={t:0,on:false,fin:false,el:head.querySelector('.qtimer')};
   card.__t=TS; TIMERS.push(TS);
@@ -1615,6 +1642,7 @@ function buildIndex(){
   ix.push({t:'The Clock — 6 hours · 135 questions + 2 essays',s:'Exam day, down to the minute',g:'The Clock & Deadlines',h:'#examclock'});
   ix.push({t:'2:00 per multiple-choice question — the exam\u2019s pace (we train you at 1:30)',s:'Why every drill here is timed',g:'The Clock & Deadlines',h:'#examclock'});
   ix.push({t:'We are the 100% pass-rate people',s:'The standard we build to — a mission, not a guarantee',g:'Why Us',h:'#pass100'});
+  ix.push({t:'Hotels for the night before — sleep next to the exam',s:'the ART · Hilton Garden Inn · Hyatt Regency · Residence Inn · Ramada — direct links',g:'The Clock & Deadlines',h:'#nightbefore'});
   ix.push({t:'Exam-day schedule, hour by hour (official PDF)',s:'8:00 check-in · essays 8:45 · ethics 10:45 · family law 1:30',g:'The Clock & Deadlines',h:'https://www.coloradolegalregulation.com/PDF/LLP/Nov2025/LLP%20Exam%20Schedule.pdf',x:1});
   document.querySelectorAll('.date-card').forEach(function(dc){
     var d=dc.querySelector('.d'),l=dc.querySelector('.l');

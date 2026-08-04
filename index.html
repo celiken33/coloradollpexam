@@ -74,9 +74,12 @@
 
   /* ===== header ===== */
   header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 24px 4px}
+  .nav-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+  header .nav-links{display:flex;justify-content:center;padding:10px 24px 14px}
+  html{scroll-padding-top:126px}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-  .brand-name{font-weight:800;font-size:1.02rem;letter-spacing:-.01em}
+  .brand-name{font-weight:800;font-size:1.14rem;letter-spacing:-.01em}
   .brand-name span{color:var(--gold)}
   .nav-links{display:flex;align-items:center;gap:20px}
   .nav-links a{font-size:.92rem;font-weight:600;color:var(--ink);text-decoration:none;opacity:.75}
@@ -92,7 +95,7 @@
   .hero .btn-gold{color:var(--blue) !important}
   .btn-line{border:2px solid var(--blue);color:var(--blue);padding:10px 22px;font-size:.95rem;background:transparent}
   .btn-line:hover{background:var(--blue);color:#fff}
-  @media(max-width:760px){.nav-links a:not(.btn){display:none}}
+  @media(max-width:760px){header .nav-links{display:none}.nav{padding:12px 18px}}
 
   /* ===== mountain dividers ===== */
   .mtn-div{display:block;width:100%;height:90px}
@@ -223,9 +226,9 @@
   .ck-note strong{color:#FFD100}
   @media(max-width:700px){.ck-seg small{display:none}.ck-seg{font-size:.7rem}}
   /* ===== nav search + overlay ===== */
-  .nav-links .nav-buy{padding:8px 14px;font-size:.8rem;white-space:nowrap;box-shadow:0 3px 10px rgba(20,53,95,.25)}
-  .nav-links{gap:8px;flex-wrap:wrap;justify-content:flex-end}
-  .nav-links a:not(.btn):not(.nav-clock){padding:6px 13px;border-radius:999px;border:1.5px solid rgba(20,53,95,.16);background:#fff;font-size:.82rem;font-weight:700;opacity:1;white-space:nowrap;line-height:1.25;transition:border-color .12s ease,background .12s ease}
+  .nav-buy{padding:8px 16px;font-size:.8rem;white-space:nowrap;box-shadow:0 3px 10px rgba(20,53,95,.25)}
+  .nav-links{gap:12px;flex-wrap:wrap}
+  .nav-links a:not(.btn):not(.nav-clock){padding:8px 18px;border-radius:999px;border:1.5px solid rgba(20,53,95,.16);background:#fff;font-size:.88rem;font-weight:700;opacity:1;white-space:nowrap;line-height:1.3;transition:border-color .12s ease,background .12s ease;box-shadow:0 1px 4px rgba(20,53,95,.06)}
   .nav-links a:not(.btn):not(.nav-clock):hover{border-color:var(--blue);background:#EAF1FA;opacity:1}
   .nav-clock{display:inline-flex;align-items:center;gap:5px;background:#0C1F3A;color:#FFD100;border-radius:999px;padding:7px 13px;font-weight:900;font-size:.8rem;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums;opacity:1 !important}
   .nav-clock b{color:#FFD100}
@@ -706,17 +709,19 @@
       </svg>
       <span class="brand-name">Colorado<span>LLP</span>Exam</span>
     </a>
-    <nav class="nav-links">
-      <a href="#quiz">Quick Quiz</a>
-      <a href="#examclock">The Clock</a>
-      <a href="#dates">Deadlines</a>
-      <a href="#examstats">Exam Stats</a>
-      <a href="#resources">Free Resources</a>
-      <a class="btn btn-gold nav-buy" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy the Prep Guide NOW — $99.95</a>
+    <div class="nav-actions">
       <a class="nav-clock" href="#examclock" aria-label="Countdown to the November 10, 2026 exam"><span class="nc-ico">⏱</span><b id="nc-d">—</b><span class="nc-u">d</span><b id="nc-t">--:--:--</b></a>
       <button class="nav-search" id="navsearch" type="button" aria-label="Search everything on this site">🔍 Search<span class="kbd">/</span></button>
-    </nav>
+      <a class="btn btn-gold nav-buy" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy the Prep Guide NOW — $99.95</a>
+    </div>
   </div>
+  <nav class="wrap nav-links" aria-label="Site sections">
+    <a href="#quiz">Quick Quiz</a>
+    <a href="#examclock">The Clock</a>
+    <a href="#dates">Deadlines</a>
+    <a href="#examstats">Exam Stats</a>
+    <a href="#resources">Free Resources</a>
+  </nav>
 </header>
 
 <!-- ================= HERO ================= -->
@@ -784,9 +789,9 @@
     <div class="ck-cap"><span>8:00 a.m. — doors &amp; check-in</span><span>4:45 p.m. — done</span></div>
     <div class="ck-weights">The scoring split: <b>50%</b> Family Law MC · <b>25%</b> Ethics MC · <b>25%</b> Essays — <a href="https://www.coloradolegalregulation.com/future-lawyers/llpunsuccessfulexaminees/" target="_blank" rel="noopener" style="color:#CFE7FF">per OARC</a></div>
     <p class="ck-note">That's <strong>2:00 per multiple-choice question</strong> and <strong>45:00 per essay</strong> — so every free question below carries a live timer graded at our <strong>1:30 training pace</strong>, and both free essays run a 25-minute outline clock. Train faster than race day, and November 10 feels slow.</p>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a class="btn" href="#quiz" style="background:#FFD100;color:#14355F;box-shadow:0 6px 18px rgba(0,0,0,.3)">Start a timed drill right now ↓</a>
-      <a class="btn btn-line" style="border-color:rgba(255,255,255,.65);color:#fff" href="https://www.coloradolegalregulation.com/PDF/LLP/Nov2025/LLP%20Exam%20Schedule.pdf" target="_blank" rel="noopener">The official exam-day schedule (PDF) →</a>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:13px;margin-top:6px">
+      <a class="btn" href="#quiz" style="background:#FFD100;color:#14355F;box-shadow:0 8px 24px rgba(0,0,0,.35);padding:15px 34px;font-size:1.05rem;font-weight:900;letter-spacing:.01em">Start a timed drill right now ↓</a>
+      <a class="btn btn-line" style="border-color:rgba(255,255,255,.65);color:#fff;padding:9px 20px;font-size:.88rem" href="https://www.coloradolegalregulation.com/PDF/LLP/Nov2025/LLP%20Exam%20Schedule.pdf" target="_blank" rel="noopener">The official exam-day schedule (PDF) →</a>
     </div>
   </div>
 </section>
@@ -1357,7 +1362,7 @@ var QUESTIONS = [
   {
     id:"FL-270", subj:"Scope · Putting It Together", lvl:"WAY HARD",
     q:"A 12-year marriage, two minor children, combined income $150,000, a marital home, the husband's pension, and a disputed inheritance. Which issue is OUTSIDE an LLP's scope?",
-    opts:["Calculating child support","Dividing the marital home","Preparing the QDRO for the pension","Drafting the parenting plan"],
+    opts:["Calculating child support","Dividing the marital home","Preparing a QDRO for the pension","Drafting the parenting plan"],
     correct:2,
     why:"Child support, the home division, and the parenting plan are all in scope. Preparing the QDRO that divides the pension is a collateral-issue carve-out — it must go to an attorney or QDRO specialist, even though the LLP can handle the agreement to divide the asset. In scope, in scope, in scope… then the carve-out. Spotting the odd one out is the exam's signature move.",
     auth:"Authority: C.R.C.P. 207.1; C.R.S. 14-10-113",

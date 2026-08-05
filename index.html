@@ -332,6 +332,41 @@
   .tn-reopen{margin-top:8px;background:#14355F;color:#FFD100;border:none;border-radius:999px;padding:8px 18px;font-weight:800;font-size:.84rem;cursor:pointer;font-family:'Inter',sans-serif}
   .tn-reopen:hover{background:#1E4A82}
 
+  /* ===== THE FULL READ ===== */
+  .xr .tn-head{background:#0C1F3A}
+  .xr-score{display:flex;gap:14px;align-items:center;justify-content:center;margin:4px 0 12px;flex-wrap:wrap}
+  .xr-big{font-family:'Fraunces',serif;font-weight:900;font-size:3rem;color:#14355F;line-height:1}
+  .xr-big small{font-size:1.2rem;color:#5B6B80;font-weight:700}
+  .xr-badge{border-radius:999px;padding:7px 16px;font-weight:900;font-size:.82rem;letter-spacing:.04em}
+  .xr-badge.up{background:#EAF7EF;color:#1E7A46}
+  .xr-badge.dn{background:#FDEEED;color:#B3261E}
+  .xr-chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:6px}
+  .xr-chip{background:#F4F8FD;border:1px solid #DCE8F5;border-radius:999px;padding:5px 13px;font-size:.78rem;font-weight:700;color:#14355F}
+  .xr-row{display:flex;align-items:center;gap:9px;padding:7px 4px;border-bottom:1px solid #EFF4FA;font-size:.86rem}
+  .xr-row .r{width:20px;font-weight:900}
+  .xr-row .r.ok{color:#1E7A46}.xr-row .r.no{color:#B3261E}
+  .xr-row .sj{flex:1;font-weight:600;color:#0C1F3A}
+  .xr-row .tt{font-variant-numeric:tabular-nums;color:#5B6B80;font-size:.78rem}
+  .xr-row .lv2{font-size:.66rem;font-weight:900;letter-spacing:.05em;color:#4A7FBF}
+  .xr-card{border:1.5px solid #E3ECF6;border-radius:14px;padding:13px 15px;margin:9px 0;position:relative}
+  .xr-card.top1{border-color:#FFD100;background:linear-gradient(135deg,#FFFDF2,#FFF8DC)}
+  .xr-rank{position:absolute;top:-11px;left:14px;background:#14355F;color:#FFD100;border-radius:999px;padding:2px 12px;font-weight:900;font-size:.72rem;letter-spacing:.05em}
+  .xr-card.top1 .xr-rank{background:#FFD100;color:#14355F}
+  .xr-card h4{font-size:.98rem;color:#14355F;margin:2px 0 4px;font-family:'Inter',sans-serif}
+  .xr-card p{font-size:.84rem;line-height:1.5;color:#33465E;margin:0 0 4px}
+  .xr-card .a{font-size:.76rem;font-style:italic;color:#5B6B80}
+  .xr-card .a a{color:#1E4A82;font-weight:700}
+  .xr-mail{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  .xr-mail input{flex:1;min-width:210px;border:1.5px solid #C9D9EC;border-radius:999px;padding:10px 16px;font-family:'Inter',sans-serif;font-size:.88rem}
+  .xr-mail button,.xr-mail a.mbtn{background:#14355F;color:#FFD100;border:none;border-radius:999px;padding:10px 18px;font-weight:800;font-size:.84rem;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:none;display:inline-block}
+  .xr-mail button:hover,.xr-mail a.mbtn:hover{background:#1E4A82}
+  .xr-note{font-size:.74rem;color:#5B6B80;margin-top:6px}
+  .xr-prog{background:#F4F8FD;border-radius:12px;padding:12px 15px;margin-top:10px}
+  .xr-prog .pr{display:flex;gap:10px;align-items:baseline;font-size:.86rem;padding:3px 0}
+  .xr-prog .pr b{font-variant-numeric:tabular-nums}
+  .xr-open{margin-left:10px;background:#FFD100;color:#14355F;border:none;border-radius:999px;padding:6px 15px;font-weight:900;font-size:.78rem;cursor:pointer;font-family:'Inter',sans-serif}
+  .tn-auth a{color:#1E4A82;font-weight:700}
+
   /* ===== disclaimer band ===== */
   .disc-band{background:var(--white);border:1.5px solid var(--line);border-left:5px solid #FFD100;border-radius:12px;padding:16px 22px;margin:30px auto 0;max-width:880px;font-size:.86rem;line-height:1.6;color:var(--muted)}
   .disc-band b{color:var(--blue)}
@@ -1599,7 +1634,9 @@ QUESTIONS.forEach(function(item,qi){
         if(hint && item.optnotes){ hint.style.display='block'; hint.innerHTML='<em>Tap any answer choice to open its tutor\u2019s note.</em> <button class="tn-reopen" type="button">Open the Tutor\u2019s Note window ▸</button>'; }
         document.getElementById('score').textContent=score;
         document.getElementById('answered').textContent=answered;
-        if(window.openTnote) window.openTnote(card, oi, why.querySelector('.verdict').textContent);
+        if(window.recordX) window.recordX(item, oi===item.correct, TS.t);
+        if(answered===QUESTIONS.length && window.openExamRead){ setTimeout(function(){ window.openExamRead(true); }, 350); }
+        else if(window.openTnote) window.openTnote(card, oi, why.querySelector('.verdict').textContent);
         if(item.optnotes) return;
       }
       if(done && item.optnotes){
@@ -1617,6 +1654,142 @@ QUESTIONS.forEach(function(item,qi){
   card.appendChild(why);
   host.appendChild(card);
 });
+
+/* ---------- pinpoint authority links (OG sources) ---------- */
+window.AUTHMAP=[
+  [/C\.R\.S\.\s*14-10-106(\([0-9a-zA-Z()]+\))?/g,'https://law.justia.com/codes/colorado/title-14/dissolution-of-marriage-parental-responsibilities/article-10/section-14-10-106/'],
+  [/C\.R\.S\.\s*14-10-113(\([0-9a-zA-Z()]+\))?/g,'https://law.justia.com/codes/colorado/title-14/dissolution-of-marriage-parental-responsibilities/article-10/section-14-10-113/'],
+  [/C\.R\.S\.\s*14-10-114(\([0-9a-zA-Z()]+\))?/g,'https://law.justia.com/codes/colorado/title-14/dissolution-of-marriage-parental-responsibilities/article-10/section-14-10-114/'],
+  [/C\.R\.S\.\s*14-10-115(\([0-9a-zA-Z()]+\))?/g,'https://law.justia.com/codes/colorado/title-14/dissolution-of-marriage-parental-responsibilities/article-10/section-14-10-115/'],
+  [/C\.R\.S\.\s*14-10-116\.5/g,'https://law.justia.com/codes/colorado/title-14/dissolution-of-marriage-parental-responsibilities/article-10/section-14-10-116-5/'],
+  [/C\.R\.S\.\s*14-13-101/g,'https://law.justia.com/codes/colorado/title-14/dissolution-of-marriage-parental-responsibilities/article-13/part-1/section-14-13-101/'],
+  [/C\.R\.S\.\s*14-5-101/g,'https://law.justia.com/codes/colorado/title-14/desertion-and-nonsupport/article-5/part-1/section-14-5-101/'],
+  [/C\.R\.C\.P\.\s*207\.1/g,'https://www.coloradolegalregulation.com/PDF/LLP/LLP%20Rules%20Governing%20Admission%20to%20the%20Practice%20of%20Law.pdf'],
+  [/Colo\.\s*LLP\s*RPC\s*[0-9.]+/g,'https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Legal-Paraprofessional-Rules-of-Professional-Conduct']
+];
+window.linkAuth=function(txt){
+  var out=String(txt).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  window.AUTHMAP.forEach(function(m){
+    out=out.replace(m[0],function(hit){ return '<a href="'+m[1]+'" target="_blank" rel="noopener">'+hit+'</a>'; });
+  });
+  return out;
+};
+
+/* ---------- THE FULL READ: comprehensive post-exam insight ---------- */
+(function(){
+  window.__XR=[];
+  window.recordX=function(item,ok,t){ window.__XR.push({id:item.id,subj:item.subj,lvl:item.lvl||'',calc:!!item.calc,ok:ok,t:t||0,matters:item.matters||'',auth:item.auth||'',why:item.why||''}); };
+  function fmt(t){ var m=Math.floor(t/60),x=t%60; return m+':'+(x<10?'0':'')+x; }
+  var ov=document.createElement('div'); ov.className='tn-ov xr'; ov.id='xrov';
+  ov.innerHTML='<div class="tn" role="dialog" aria-modal="true" aria-label="Your exam — the full read">'
+    +'<div class="tn-head"><span>\u25C6\u25C6 Your Exam \u2014 The Full Read</span><button class="tn-x" type="button" aria-label="Close">\u2715</button></div>'
+    +'<div class="tn-body" id="xr-body"></div></div>';
+  document.body.appendChild(ov);
+  ov.addEventListener('click',function(e){ if(e.target===ov) ov.classList.remove('open'); });
+  ov.querySelector('.tn-x').addEventListener('click',function(){ ov.classList.remove('open'); });
+  function loadSess(em){ try{ return JSON.parse(localStorage.getItem('llpx_'+em)||'[]'); }catch(e){ return []; } }
+  window.openExamRead=function(){
+    var R=window.__XR; if(!R.length) return;
+    var score=R.filter(function(r){return r.ok;}).length, n=R.length, pct=Math.round(100*score/n);
+    var tot=R.reduce(function(a,r){return a+r.t;},0), avg=Math.round(tot/n);
+    var easy=R.filter(function(r){return r.lvl==='EASY';}), hard=R.filter(function(r){return r.lvl!=='EASY';});
+    var eAvg=easy.length?Math.round(easy.reduce(function(a,r){return a+r.t;},0)/easy.length):0;
+    var hAvg=hard.length?Math.round(hard.reduce(function(a,r){return a+r.t;},0)/hard.length):0;
+    var over=R.filter(function(r){return r.t>120;}).length;
+    var banked=R.reduce(function(a,r){return a+Math.max(0,120-r.t);},0);
+    var above=pct>=68;
+    var h='';
+    h+='<div class="xr-score"><span class="xr-big">'+score+'<small>/'+n+'</small></span>'
+      +'<span class="xr-badge '+(above?'up':'dn')+'">'+pct+'% \u2014 '+(above?'above':'below')+' the exam\u2019s 68% line</span></div>';
+    h+='<div class="xr-chips">'
+      +'<span class="xr-chip">\u23F1 '+fmt(tot)+' total \u00B7 '+fmt(avg)+'/question</span>'
+      +'<span class="xr-chip">easy six '+fmt(eAvg)+' \u00B7 hard six '+fmt(hAvg)+'</span>'
+      +'<span class="xr-chip">'+(over? over+' question'+(over>1?'s':'')+' past the exam\u2019s 2:00' : 'never past the exam\u2019s 2:00')+'</span>'
+      +'<span class="xr-chip">'+Math.round(banked/60)+' min banked vs exam pace</span></div>';
+    h+='<div class="tn-sec"><span class="tn-lbl">Question by question \u2014 your exam</span>';
+    R.forEach(function(r,i){
+      var p=r.subj.split('\u00B7'); var top=(p[0]||'').trim(), sub=(p[1]||'').trim();
+      h+='<div class="xr-row"><span class="r '+(r.ok?'ok':'no')+'">'+(r.ok?'\u2713':'\u2717')+'</span>'
+        +'<span class="sj">'+top+' \u2014 '+sub+'</span>'
+        +'<span class="lv2">'+(r.lvl==='EASY'?'EASY':'HARD')+(r.calc?' \u00B7 CALC':'')+'</span>'
+        +'<span class="tt">\u23F1 '+fmt(r.t)+'</span></div>';
+    });
+    h+='</div>';
+    var ranked=R.map(function(r){
+      var w=0;
+      if(!r.ok) w+=3;
+      if(r.t>120) w+=1.5; else if(r.t>90) w+=0.8;
+      if(r.lvl!=='EASY') w+=0.4;
+      return {r:r,w:w};
+    }).filter(function(x){return x.w>0;}).sort(function(a,b){return b.w-a.w;}).slice(0,5);
+    h+='<div class="tn-sec"><span class="tn-lbl">'+(ranked.length?'The list \u2014 top subjects to rock before November 10':'Nothing to fix \u2014 the polish list')+'</span>';
+    if(!ranked.length){
+      h+='<div class="xr-card top1"><span class="xr-rank">PERFECT 12</span><h4>You cleared the free twelve.</h4><p>Next ceiling: hold this accuracy at 1:30 a question across 93 straight \u2014 that\u2019s what the guide drills.</p></div>';
+    }
+    ranked.forEach(function(x,i){
+      var p=x.r.subj.split('\u00B7'); var top=(p[0]||'').trim(), sub=(p[1]||'').trim();
+      var reason=x.r.ok?('Right \u2014 but '+fmt(x.r.t)+' on the clock. Speed is the miss you can\u2019t see.'):x.r.matters;
+      h+='<div class="xr-card'+(i===0?' top1':'')+'"><span class="xr-rank">#'+(i+1)+(i===0?' \u00B7 START HERE':'')+'</span>'
+        +'<h4>'+top+' \u2014 '+sub+'</h4>'
+        +'<p>'+String(reason).replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</p>'
+        +'<span class="a">Pinpoint authority: '+window.linkAuth(String(x.r.auth).replace('Authority: ',''))+'</span></div>';
+    });
+    h+='</div>';
+    var savedEm=localStorage.getItem('llpx_email')||'';
+    var sess=savedEm?loadSess(savedEm):[];
+    if(sess.length){
+      h+='<div class="xr-prog"><span class="tn-lbl">Your climb \u2014 '+sess.length+' saved exam'+(sess.length>1?'s':'')+' on this device</span>';
+      sess.slice(-4).forEach(function(sx){
+        h+='<div class="pr"><b>'+sx.score+'/12</b><span>\u00B7 '+fmt(sx.tot)+' \u00B7 '+sx.d+'</span></div>';
+      });
+      var last=sess[sess.length-1];
+      var d1=score-last.score, d2=last.tot-tot;
+      h+='<div class="pr" style="font-weight:800;color:#14355F">This exam vs last: '+(d1>=0?'+':'')+d1+' answers \u00B7 '+(d2>=0?fmt(Math.abs(d2))+' faster':fmt(Math.abs(d2))+' slower')+'</div>';
+      var fixed=last.miss?last.miss.filter(function(id){ var cur=R.find(function(r){return r.id===id;}); return cur&&cur.ok; }):[];
+      if(fixed.length) h+='<div class="pr" style="color:#1E7A46">\u2713 Fixed since last time: '+fixed.join(', ')+'</div>';
+      h+='</div>';
+    }
+    h+='<div class="tn-sec"><span class="tn-lbl">Save it \u2014 come back and beat it</span>'
+      +'<div class="xr-mail"><input type="email" id="xr-em" placeholder="you@email.com" value="'+savedEm.replace(/"/g,'')+'">'
+      +'<button type="button" id="xr-save">Save this exam</button>'
+      +'<a class="mbtn" id="xr-mailme" href="#">\uD83D\uDCE7 Email me my results</a></div>'
+      +'<div class="xr-note" id="xr-msg">Your exams accumulate under your email on this device \u2014 finish the twelve again anytime and the Full Read shows your climb, session over session. The email copy goes to your inbox (cc: the Principal) with a comeback link.</div></div>';
+    h+='<div class="tn-buy"><div class="t1">This read covered 12. The guide runs the same tutor across all 93 \u2014 every answer explained, every authority linked.</div>'
+      +'<a class="b1" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy THE 93 \u2014 $99.95 \u2192</a>'
+      +'<a class="b2" href="https://buy.stripe.com/fZu7sL5Jb1S4gAX7am5J601" target="_blank" rel="noopener">or THE FULL 405 \u2014 the whole library \u00B7 $124.95 \u2192</a></div>';
+    document.getElementById('xr-body').innerHTML=h;
+    ov.classList.add('open');
+    ov.querySelector('.tn').scrollTop=0;
+    var missIds=R.filter(function(r){return !r.ok;}).map(function(r){return r.id;});
+    document.getElementById('xr-save').addEventListener('click',function(){
+      var em=(document.getElementById('xr-em').value||'').trim().toLowerCase();
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){ document.getElementById('xr-msg').textContent='Enter a valid email to save your exam.'; return; }
+      localStorage.setItem('llpx_email',em);
+      var arr=loadSess(em);
+      arr.push({d:new Date().toLocaleDateString(),score:score,tot:tot,miss:missIds});
+      localStorage.setItem('llpx_'+em,JSON.stringify(arr.slice(-20)));
+      document.getElementById('xr-msg').textContent='Saved \u2014 '+arr.length+' exam'+(arr.length>1?'s':'')+' tracked under '+em+' on this device. Finish the twelve again to see your climb.';
+    });
+    document.getElementById('xr-mailme').addEventListener('click',function(e){
+      var em=(document.getElementById('xr-em').value||'').trim();
+      var lines=['My Colorado LLP practice exam \u2014 coloradollpexam.com','','Score: '+score+'/12 ('+pct+'%) \u2014 '+(above?'above':'below')+' the 68% line','Time: '+fmt(tot)+' total \u00B7 '+fmt(avg)+'/question \u00B7 '+Math.round(banked/60)+' min banked vs exam pace','','TOP SUBJECTS TO ROCK:'];
+      ranked.forEach(function(x,i){ var p=x.r.subj.split('\u00B7'); lines.push((i+1)+'. '+(p[0]||'').trim()+' \u2014 '+(p[1]||'').trim()+' ('+String(x.r.auth).replace('Authority: ','')+')'); });
+      if(!ranked.length) lines.push('Perfect 12 \u2014 next stop: all 93.');
+      lines.push('','Come back and beat it: https://coloradollpexam.com/#quiz','THE 93 \u2014 every answer explained: https://coloradollpexam.com/#pricing');
+      this.href='mailto:'+encodeURIComponent(em)+'?cc=charles@longmont.law&subject='+encodeURIComponent('My Colorado LLP practice exam \u2014 '+score+'/12')+'&body='+encodeURIComponent(lines.join('\n'));
+    });
+  };
+  document.addEventListener('click',function(e){
+    if(e.target && e.target.id==='xr-reopen'){ window.openExamRead(); }
+  });
+  var sp=document.querySelector('.score-pill');
+  if(sp){ var ob=new MutationObserver(function(){
+      if(window.__XR.length>=12 && !document.getElementById('xr-reopen')){
+        var b=document.createElement('button'); b.id='xr-reopen'; b.className='xr-open'; b.type='button'; b.textContent='Your Full Read \u25B8';
+        sp.appendChild(b);
+      }
+    }); ob.observe(sp,{childList:true,subtree:true,characterData:true}); }
+})();
 
 /* ---------- the tutor's note window ---------- */
 (function(){
@@ -1650,7 +1823,7 @@ QUESTIONS.forEach(function(item,qi){
     h+='<div class="tn-sec"><span class="tn-lbl">The rule</span><div class="tn-rule">'+esc(item.why)+'</div></div>';
     h+='<div class="tn-sec"><span class="tn-lbl">The exam tactic</span><div class="tn-rule">'+tactic(item)+'</div></div>';
     if(item.matters) h+='<div class="tn-sec"><span class="tn-lbl">Why it matters in practice</span><div class="tn-rule">'+esc(item.matters)+'</div></div>';
-    h+='<span class="tn-auth">'+esc(item.auth)+' \u00B7 Original sample material \u2014 verify against current law.</span>';
+    h+='<span class="tn-auth">'+(window.linkAuth?window.linkAuth(item.auth):esc(item.auth))+' \u00B7 Original sample material \u2014 verify against current law.</span>';
     h+='<div class="tn-buy"><div class="t1">Want this tutor on every question? All 93 come explained exactly like this.</div>'
       +'<a class="b1" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy THE 93 \u2014 $99.95 \u2192</a>'
       +'<a class="b2" href="https://buy.stripe.com/fZu7sL5Jb1S4gAX7am5J601" target="_blank" rel="noopener">or the whole library \u2014 THE FULL 405, all 405 questions \u00B7 $124.95 \u2192</a></div>';
@@ -1725,6 +1898,7 @@ function buildIndex(){
   ix.push({t:'The Clock — 6 hours · 135 questions + 2 essays',s:'Exam day, down to the minute',g:'The Clock & Deadlines',h:'#examclock'});
   ix.push({t:'2:00 per multiple-choice question — the exam\u2019s pace (we train you at 1:30)',s:'Why every drill here is timed',g:'The Clock & Deadlines',h:'#examclock'});
   ix.push({t:'We are the 100% pass-rate people',s:'The standard we build to — a mission, not a guarantee',g:'Why Us',h:'#pass100'});
+  ix.push({t:'Your Exam — The Full Read: finish the 12, get the full breakdown',s:'Score, pace, subject-by-subject, your top-5 study list — and your climb across sessions',g:'Study & Free Stuff',h:'#quiz'});
   ix.push({t:'Hotels for the night before — sleep next to the exam',s:'the ART · Hilton Garden Inn · Hyatt Regency · Residence Inn · Ramada — direct links',g:'The Clock & Deadlines',h:'#nightbefore'});
   ix.push({t:'Exam-day schedule, hour by hour (official PDF)',s:'8:00 check-in · essays 8:45 · ethics 10:45 · family law 1:30',g:'The Clock & Deadlines',h:'https://www.coloradolegalregulation.com/PDF/LLP/Nov2025/LLP%20Exam%20Schedule.pdf',x:1});
   document.querySelectorAll('.date-card').forEach(function(dc){

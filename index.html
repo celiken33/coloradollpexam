@@ -1967,7 +1967,7 @@ window.linkAuth=function(txt){
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
   function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
   function tactic(item){
-    if(item.calc) return 'Run the number before you read the choices. Every wrong answer on this question is built from one specific slip \u2014 a forgotten cap, a skipped subtraction, a rounded day. If your math matches an option to the penny, trust your math.';
+    if(item.calc) return 'Run the WHOLE formula before you look at the choices \u2014 every option here matches some half-done version of the math to the penny. That\u2019s the trap: a penny-perfect match proves nothing unless you ran every step. Finish the formula, then find your number.';
     for(var i=0;i<item.opts.length;i++){ if(/^Both /.test(item.opts[i])) return 'See the \u201Cboth\u201D option? When it pairs two answers that can\u2019t both be true, it\u2019s bait for the half-sure. Verify each half on its own \u2014 one false half kills the pair. The exam loves candidates who buy insurance.'; }
     return 'Answer from the rule before you look down \u2014 then find your rule in the list. Every wrong answer here is a real rule pulled from a neighboring statute; only the facts in the stem crown the winner.';
   }

@@ -332,6 +332,47 @@
   .tn-reopen{margin-top:8px;background:#14355F;color:#FFD100;border:none;border-radius:999px;padding:8px 18px;font-weight:800;font-size:.84rem;cursor:pointer;font-family:'Inter',sans-serif}
   .tn-reopen:hover{background:#1E4A82}
 
+  /* ===== THE CLOCK — big & prominent ===== */
+  #examclock{padding:74px 0 66px !important;border-top:6px solid #FFD100;border-bottom:6px solid #FFD100;box-shadow:inset 0 30px 70px rgba(0,0,0,.3)}
+  #examclock .kicker{font-size:1rem;letter-spacing:.16em;text-shadow:0 0 24px rgba(255,209,0,.5)}
+  #examclock h2{font-size:clamp(2.2rem,5.2vw,3.6rem) !important;line-height:1.08;text-shadow:0 4px 24px rgba(0,0,0,.4)}
+  #examclock .sub{font-size:1.05rem}
+  .ck-tiles{margin:34px 0 24px !important;gap:14px !important}
+  .ck-tile{padding:24px 12px !important;border-width:1.5px;border-radius:18px;background:rgba(255,255,255,.09)}
+  .ck-tile .n{font-size:3rem !important;text-shadow:0 3px 18px rgba(255,209,0,.35)}
+  .ck-tile .t{font-size:.84rem;margin-top:10px}
+  .ck-note{font-size:1.02rem}
+  @media(max-width:640px){.ck-tile .n{font-size:2.1rem !important}#examclock h2{font-size:1.8rem !important}}
+
+  /* ===== verdict badges ===== */
+  .vb-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:2px 0 10px}
+  .vb{border-radius:999px;padding:5px 13px;font-weight:900;font-size:.72rem;letter-spacing:.05em;white-space:nowrap}
+  .vb-ok{background:#1E7A46;color:#fff}
+  .vb-no{background:#B3261E;color:#fff}
+  .vb-you{background:#FDEEED;color:#B3261E;border:1px solid #F3C2BE}
+  .vb-ans{background:#14355F;color:#FFD100}
+  .vb-time{background:#F4F8FD;color:#14355F;border:1px solid #DCE8F5;font-variant-numeric:tabular-nums}
+  .vb-pace-good{background:#FFD100;color:#14355F}
+  .vb-pace-mid{background:#EAF1FA;color:#1E4A82}
+  .vb-pace-bad{background:#FDEEED;color:#B3261E;border:1px solid #F3C2BE}
+  .vb-bank{background:#EAF7EF;color:#1E7A46;font-variant-numeric:tabular-nums}
+
+  /* ===== one-question gossamer popup ===== */
+  .qz-ov{position:fixed;inset:0;background:rgba(10,25,48,.62);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);z-index:230;display:none;align-items:center;justify-content:center;padding:30px 14px;overflow:auto}
+  .qz-ov.open{display:flex}
+  .qz-shell{width:min(780px,97vw)}
+  .qz-shell .qcard{margin:0;box-shadow:0 30px 90px rgba(0,0,0,.45)}
+  .qz-head{display:flex;flex-direction:column;align-items:center;gap:3px;margin-bottom:12px;text-align:center}
+  .qzh-t{font-family:'Fraunces',serif;font-weight:900;font-variant:small-caps;color:#FFD100;font-size:1.25rem;letter-spacing:.04em}
+  .qzh-s{color:#CFE0F2;font-size:.82rem;font-weight:600}
+  .qz-shell .opt.selected{border-color:#FFD100 !important;box-shadow:0 0 0 3px rgba(255,209,0,.35);background:#FFFBEA}
+  .qz-bar{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+  .qz-bar button{border:none;border-radius:999px;font-family:'Inter',sans-serif;font-weight:900;cursor:pointer;padding:11px 24px;font-size:.9rem}
+  .qz-close{background:rgba(255,255,255,.16);color:#fff;border:1.5px solid rgba(255,255,255,.45) !important}
+  .qz-close:hover{background:rgba(255,255,255,.28)}
+  .qz-next{background:#FFD100;color:#14355F;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+  .qz-next:hover{background:#F2C500}
+
   /* ===== THE FULL READ ===== */
   .xr .tn-head{background:#0C1F3A}
   .xr-score{display:flex;gap:14px;align-items:center;justify-content:center;margin:4px 0 12px;flex-wrap:wrap}
@@ -1618,25 +1659,18 @@ QUESTIONS.forEach(function(item,qi){
           if(bi===item.correct) btn.classList.add('correct');
           else if(bi===oi && !right) btn.classList.add('wrong');
         });
-        why.querySelector('.verdict').textContent = right ? '✓ Correct — '+letters[item.correct]+'.' : '✗ Not quite — the answer is '+letters[item.correct]+'.';
-        why.querySelector('.verdict').className = 'verdict '+(right?'good':'bad');
         why.classList.add('show');
-        if(!TS.fin){
-          TS.fin=true;
-          TS.el.classList.add(TS.t<=120?'tgood':'tbad');
-          var pv;
-          if(TS.t<=90) pv=' — on training pace (1:30). Exam day gives you 2:00 — you just banked '+(120-TS.t)+' seconds.';
-          else if(TS.t<=120) pv=' — over our 1:30 training pace, but still inside the exam\u2019s 2:00. Keep tightening.';
-          else pv=' — over the exam\u2019s own 2:00-per-question pace. Drill this subject until the clock stops being the problem.';
-          why.querySelector('.verdict').textContent += ' Time: '+fmtT(TS.t)+pv;
-        }
+        if(!TS.fin){ TS.fin=true; TS.el.classList.add(TS.t<=120?'tgood':'tbad'); }
+        card.__tn.v={right:right,oi:oi,t:TS.t};
+        why.querySelector('.verdict').className='verdict vb-row';
+        why.querySelector('.verdict').innerHTML = window.vBadges(right, letters[item.correct], letters[oi], TS.t);
         var hint=why.querySelector('.optinfo');
         if(hint && item.optnotes){ hint.style.display='block'; hint.innerHTML='<em>Tap any answer choice to open its tutor\u2019s note.</em> <button class="tn-reopen" type="button">Open the Tutor\u2019s Note window ▸</button>'; }
         document.getElementById('score').textContent=score;
         document.getElementById('answered').textContent=answered;
         if(window.recordX) window.recordX(item, oi===item.correct, TS.t);
         if(answered===QUESTIONS.length && window.openExamRead){ setTimeout(function(){ window.openExamRead(true); }, 350); }
-        else if(window.openTnote) window.openTnote(card, oi, why.querySelector('.verdict').textContent);
+        else if(window.openTnote) window.openTnote(card, oi, true);
         if(item.optnotes) return;
       }
       if(done && item.optnotes){
@@ -1667,6 +1701,17 @@ window.AUTHMAP=[
   [/C\.R\.C\.P\.\s*207\.1/g,'https://www.coloradolegalregulation.com/PDF/LLP/LLP%20Rules%20Governing%20Admission%20to%20the%20Practice%20of%20Law.pdf'],
   [/Colo\.\s*LLP\s*RPC\s*[0-9.]+/g,'https://www.cobar.org/For-Members/Opinions-Rules-Statutes/Legal-Paraprofessional-Rules-of-Professional-Conduct']
 ];
+window.vBadges=function(right,ansL,pickL,t){
+  function f(x){ var m=Math.floor(x/60),s2=x%60; return m+':'+(s2<10?'0':'')+s2; }
+  var b='<span class="vb '+(right?'vb-ok':'vb-no')+'">'+(right?'\u2713 CORRECT':'\u2717 MISSED')+'</span>';
+  if(!right) b+='<span class="vb vb-you">YOU: '+pickL+'</span>';
+  b+='<span class="vb vb-ans">ANSWER: '+ansL+'</span>';
+  b+='<span class="vb vb-time">\u23F1 '+f(t)+'</span>';
+  if(t<=90) b+='<span class="vb vb-pace-good">TRAINING PACE \u2713</span><span class="vb vb-bank">+'+(120-t)+'s BANKED</span>';
+  else if(t<=120) b+='<span class="vb vb-pace-mid">INSIDE EXAM 2:00</span>';
+  else b+='<span class="vb vb-pace-bad">OVER 2:00 \u2014 DRILL IT</span>';
+  return b;
+};
 window.linkAuth=function(txt){
   var out=String(txt).replace(/&/g,'&amp;').replace(/</g,'&lt;');
   window.AUTHMAP.forEach(function(m){
@@ -1791,6 +1836,122 @@ window.linkAuth=function(txt){
     }); ob.observe(sp,{childList:true,subtree:true,characterData:true}); }
 })();
 
+/* ---------- focus mode: proctored one-question takeover ---------- */
+(function(){
+  var ov=document.createElement('div'); ov.className='qz-ov'; ov.id='qzov';
+  var shell=document.createElement('div'); shell.className='qz-shell';
+  var head=document.createElement('div'); head.className='qz-head';
+  var bar=document.createElement('div'); bar.className='qz-bar';
+  var bBack=document.createElement('button'); bBack.type='button'; bBack.className='qz-close'; bBack.textContent='\u25C2 Back';
+  var bExit=document.createElement('button'); bExit.type='button'; bExit.className='qz-close'; bExit.textContent='\u2715 Exit focus mode';
+  var bSubmit=document.createElement('button'); bSubmit.type='button'; bSubmit.className='qz-next'; bSubmit.textContent='SUBMIT ANSWER';
+  var bNext=document.createElement('button'); bNext.type='button'; bNext.className='qz-next'; bNext.textContent='Next question \u25B8';
+  bar.appendChild(bBack); bar.appendChild(bExit); bar.appendChild(bSubmit); bar.appendChild(bNext);
+  ov.appendChild(shell);
+  document.body.appendChild(ov);
+  var cur=-1, ph=null, pending=-1, allow=false;
+  function cards(){ return [].slice.call(document.querySelectorAll('#quiz-cards .qcard')); }
+  function isLocked(c){ return !!c.querySelector('.opts.locked'); }
+  function syncBar(c){
+    var locked=isLocked(c);
+    bSubmit.style.display = locked ? 'none' : 'inline-block';
+    bSubmit.disabled = pending < 0;
+    bSubmit.style.opacity = pending < 0 ? .45 : 1;
+    bNext.style.display = locked ? 'inline-block' : 'none';
+    var cs=cards();
+    bNext.textContent = (nextUnanswered(cur)<0) ? 'Finish \u2014 your Full Read \u25B8' : 'Next question \u25B8';
+    head.innerHTML='<span class="qzh-t">\u25C6\u25C6 Focus Mode \u00B7 Question '+(cur+1)+' of '+cs.length+'</span><span class="qzh-s">One question. One screen. '+(locked?'Answered \u2014 read the note, then move.':'Pick your answer, then hit SUBMIT.')+'</span>';
+  }
+  function putBack(){
+    if(cur>=0 && ph && ph.parentNode){
+      var c=shell.querySelector('.qcard');
+      if(c) ph.parentNode.replaceChild(c, ph);
+    }
+    ph=null; cur=-1; pending=-1;
+    document.body.style.overflow='';
+  }
+  window.closeQ=function(){ putBack(); ov.classList.remove('open'); };
+  window.openQ=function(i){
+    var cs=cards();
+    if(i<0||i>=cs.length){ window.closeQ(); return; }
+    putBack();
+    var c=cs[i];
+    ph=document.createElement('div'); ph.style.display='none';
+    c.parentNode.replaceChild(ph, c);
+    shell.innerHTML=''; shell.appendChild(head); shell.appendChild(c); shell.appendChild(bar);
+    cur=i; pending=-1;
+    c.querySelectorAll('.opt.selected').forEach(function(o){ o.classList.remove('selected'); });
+    syncBar(c);
+    ov.classList.add('open');
+    document.body.style.overflow='hidden';
+    ov.scrollTop=0;
+  };
+  function nextUnanswered(from){
+    var cs=cards();
+    for(var k=1;k<=cs.length;k++){
+      var j=(from+k)%cs.length;
+      if(!isLocked(cs[j])) return j;
+    }
+    return -1;
+  }
+  // proctored two-step: select, then SUBMIT commits
+  shell.addEventListener('click',function(e){
+    if(allow) return;
+    var opt=e.target.closest ? e.target.closest('.opt') : null;
+    if(!opt) return;
+    var c=shell.querySelector('.qcard');
+    if(!c || isLocked(c)) return; // after lock, taps open tutor notes normally
+    e.stopPropagation(); e.preventDefault();
+    c.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected'); });
+    opt.classList.add('selected');
+    pending=[].indexOf.call(c.querySelectorAll('.opt'), opt);
+    syncBar(c);
+  }, true);
+  bSubmit.addEventListener('click',function(){
+    var c=shell.querySelector('.qcard');
+    if(!c || pending<0) return;
+    allow=true;
+    c.querySelectorAll('.opt')[pending].click();
+    allow=false;
+    c.querySelectorAll('.opt.selected').forEach(function(o){ o.classList.remove('selected'); });
+    pending=-1;
+    syncBar(c);
+  });
+  bNext.addEventListener('click',function(){
+    var n=nextUnanswered(cur);
+    if(n<0){ window.closeQ(); if(window.__XR && window.__XR.length>=12 && window.openExamRead) window.openExamRead(); }
+    else window.openQ(n);
+  });
+  bBack.addEventListener('click',function(){
+    if(cur>0) window.openQ(cur-1); else window.closeQ();
+  });
+  bExit.addEventListener('click', window.closeQ);
+  ov.addEventListener('click',function(e){ if(e.target===ov) window.closeQ(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && ov.classList.contains('open')) window.closeQ(); });
+  // base cards: touching a question takes over the window
+  document.addEventListener('click',function(e){
+    var c=e.target.closest ? e.target.closest('.qcard') : null;
+    if(!c || ov.contains(c)) return;
+    if(e.target.closest('.tn-reopen')) return;
+    e.preventDefault(); e.stopPropagation();
+    window.openQ(cards().indexOf(c));
+  }, true);
+  // quiz CTAs launch the first unanswered question
+  document.addEventListener('click',function(e){
+    var a=e.target.closest ? e.target.closest('a[href="#quiz"]') : null;
+    if(!a) return;
+    var n=nextUnanswered(-1);
+    if(n>=0){ setTimeout(function(){ window.openQ(n); }, 250); }
+  });
+  // the 12th submit hands off to the Full Read cleanly
+  var _oer=window.openExamRead||null;
+  Object.defineProperty(window,'openExamRead',{
+    get:function(){ return _oer && function(){ if(ov.classList.contains('open')) window.closeQ(); return _oer.apply(window, arguments); }; },
+    set:function(f){ _oer=f; },
+    configurable:true
+  });
+})();
+
 /* ---------- the tutor's note window ---------- */
 (function(){
   var ov=document.createElement('div'); ov.className='tn-ov'; ov.id='tnov';
@@ -1813,16 +1974,17 @@ window.linkAuth=function(txt){
     var item=d.item, L=d.letters, right=(oi===item.correct);
     document.getElementById('tn-qid').textContent=' \u00B7 '+item.subj+' \u00B7 '+item.id;
     var h='';
-    if(verdictText){ h+='<div class="tn-verdict '+(right?'good':'bad')+'">'+esc(verdictText)+'</div>'; }
-    h+='<div class="tn-sec"><span class="tn-lbl">'+(right?'Your answer \u2014 and it\u2019s the one':'The answer you tapped')+'</span>'
+    var V=card.__tn.v;
+    if(V){ h+='<div class="vb-row">'+window.vBadges(V.right, L[item.correct], L[V.oi], V.t)+'</div>'; }
+    h+='<div class="tn-sec"><span class="tn-lbl">'+(right?'This answer \u2014 the one':'This answer')+'</span>'
       +'<div class="tn-pick'+(right?' win':'')+'"><b class="tl">'+L[oi]+'.</b> '+esc(item.opts[oi])+'<br>'+esc(item.optnotes[oi])+'</div></div>';
     if(!right){
-      h+='<div class="tn-sec"><span class="tn-lbl">The credited answer</span>'
+      h+='<div class="tn-sec"><span class="tn-lbl">The answer</span>'
         +'<div class="tn-pick win"><b class="tl">'+L[item.correct]+'.</b> '+esc(item.opts[item.correct])+'<br>'+esc(item.optnotes[item.correct])+'</div></div>';
     }
     h+='<div class="tn-sec"><span class="tn-lbl">The rule</span><div class="tn-rule">'+esc(item.why)+'</div></div>';
     h+='<div class="tn-sec"><span class="tn-lbl">The exam tactic</span><div class="tn-rule">'+tactic(item)+'</div></div>';
-    if(item.matters) h+='<div class="tn-sec"><span class="tn-lbl">Why it matters in practice</span><div class="tn-rule">'+esc(item.matters)+'</div></div>';
+    if(item.matters) h+='<div class="tn-sec"><span class="tn-lbl">Why it matters</span><div class="tn-rule">'+esc(item.matters)+'</div></div>';
     h+='<span class="tn-auth">'+(window.linkAuth?window.linkAuth(item.auth):esc(item.auth))+' \u00B7 Original sample material \u2014 verify against current law.</span>';
     h+='<div class="tn-buy"><div class="t1">Want this tutor on every question? All 93 come explained exactly like this.</div>'
       +'<a class="b1" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy THE 93 \u2014 $99.95 \u2192</a>'

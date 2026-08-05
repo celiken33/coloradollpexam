@@ -1850,7 +1850,8 @@ window.linkAuth=function(txt){
   ov.appendChild(shell);
   document.body.appendChild(ov);
   var cur=-1, ph=null, pending=-1, allow=false;
-  function cards(){ return [].slice.call(document.querySelectorAll('#quiz-cards .qcard')); }
+  [].slice.call(document.querySelectorAll('#quiz-cards .qcard')).forEach(function(c,i){ c.dataset.qi=i; });
+  function cards(){ return [].slice.call(document.querySelectorAll('.qcard[data-qi]')).sort(function(a,b){ return (+a.dataset.qi)-(+b.dataset.qi); }); }
   function isLocked(c){ return !!c.querySelector('.opts.locked'); }
   function syncBar(c){
     var locked=isLocked(c);
@@ -1918,7 +1919,8 @@ window.linkAuth=function(txt){
     syncBar(c);
   });
   bNext.addEventListener('click',function(){
-    var n=nextUnanswered(cur);
+    var c0=cur; putBack();
+    var n=nextUnanswered(c0);
     if(n<0){ window.closeQ(); if(window.__XR && window.__XR.length>=12 && window.openExamRead) window.openExamRead(); }
     else window.openQ(n);
   });

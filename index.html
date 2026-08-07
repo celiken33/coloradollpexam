@@ -1805,10 +1805,10 @@ window.linkAuth=function(txt){
     if(easy.length && easyOk===easy.length) S.push(['THE FUNDAMENTALS','Perfect on the easy six \u2014 every foundational rule.','Those are the free points on exam day. Candidates fail by dropping them; you did not drop one.']);
     if(fastRight>=6) S.push(['SPEED WITH ACCURACY','You answered '+fastRight+' questions correctly inside 1:30 \u2014 our training pace, faster than exam day requires.','Exam day gives 2:00. You are already living under it, which means the clock will not be what beats you.']);
     if(best>=4) S.push(['YOU GO ON RUNS','Your best streak: '+best+' correct in a row.','Sustained accuracy is exactly what a 135-question day demands. You have the endurance gear.']);
-    if(!S.length){
+    if(S.length<2){
       var okSubj=R.filter(function(r){return r.ok;});
       if(okSubj.length) S.push(['YOU GOT ON THE BOARD','Correct on '+okSubj.map(function(r){return top(r);}).filter(function(v,i,a){return a.indexOf(v)===i;}).slice(0,3).join(', ')+'.','Those are real Colorado rules, held under a running clock. That is a foundation \u2014 the rest is drilling.']);
-      else S.push(['YOU FINISHED','You took twelve timed questions cold and did not quit.','Most people never test themselves before exam day and find out in November. You found out in fifteen minutes, with time to fix it.']);
+      if(S.length<2) S.push(['YOU FINISHED','You took twelve timed questions cold and did not quit.','Most people never test themselves before exam day and find out in November \u2014 too late. You found out today, with time to fix every one of these.']);
     }
     S=S.slice(0,4);
     // ---------- the verdict ----------
@@ -1817,7 +1817,7 @@ window.linkAuth=function(txt){
     else if(pct>=83) V=['You are already above the line \u2014 comfortably.','At <b class="rv-gold">'+pct+'%</b> you clear the exam\u2019s 68% cut with room to spare, on questions written to be harder than the published samples.','From here it is not about learning family law. It is about closing '+(n-score)+' specific gap'+((n-score)>1?'s':'')+' and holding this accuracy across 135 questions in one sitting.'];
     else if(above) V=['You would pass this today \u2014 and that is only the beginning.','<b class="rv-gold">'+pct+'%</b> clears the 68% line. But November 10 is 135 questions and two essays, not twelve \u2014 the margin you want is wider than the one you have.','Close the gaps below and this stops being a coin flip and starts being a formality.'];
     else if(pct>=58) V=['You are one question from the line \u2014 and that is genuinely good news.','<b class="rv-gold">'+pct+'%</b> sits just under the 68% cut. Candidates who land here are not missing the law; they are missing <b>a handful of specific rules and a little clock discipline</b>.','That gap closes in weeks, not months \u2014 and you found it in August instead of in November.'];
-    else V=['This is the most useful score you could get today.','<b class="rv-gold">'+pct+'%</b> on questions built harder than the official samples, cold, with no prep \u2014 that is a diagnostic, not a verdict. Every candidate who passed in 2025 started somewhere like this.','You now know exactly which rules are costing you points, with 96 days to fix them. That is a plan, not a problem.'];
+    else V=['This is the most useful score you could get today.','<b class="rv-gold">'+pct+'%</b> on questions built harder than the official samples, cold, with no prep \u2014 that is a diagnostic, not a verdict. Every candidate who passed in 2025 started somewhere like this.','You now know exactly which rules are costing you points, with '+Math.max(1,Math.ceil((new Date(2026,10,10)-new Date())/86400000))+' days to fix them. That is a plan, not a problem.'];
     h+='<div class="rv"><h3>'+V[0]+'</h3><p>'+V[1]+'</p><p>'+V[2]+'</p></div>';
     // ---------- strengths ----------
     h+='<div class="tn-sec"><span class="tn-lbl">Your strengths \u2014 what the data actually shows</span>';

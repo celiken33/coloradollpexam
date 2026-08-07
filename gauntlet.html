@@ -156,7 +156,7 @@ footer a{color:var(--ice)}
     var h='<div class="att-row">';
     for(var i=1;i<=3;i++){
       var cls = (st.log[i-1]==='win')?'att won':((st.log[i-1])?'att used':(i===cur?'att now':'att'));
-      var lab = (st.log[i-1]==='win')?('RUN '+i+' · WON'):(st.log[i-1]?('RUN '+i+' · '+st.log[i-1]):('RUN '+i+(i===cur?' · NOW':'')));
+      var lab = (st.log[i-1]==='win')?('RUN '+i+' · WON'):(st.log[i-1]?('RUN '+i+' · '+(st.log[i-1]==='ended'?'ENDED':st.log[i-1])):('RUN '+i+(i===cur?' · NOW':'')));
       h+='<span class="'+cls+'">'+lab+'</span>';
     }
     return h+'</div>';
@@ -185,6 +185,7 @@ footer a{color:var(--ice)}
   }
   function run(att){
     var qs=D.slice((att-1)*12, att*12), i=0, right=0, marks=[];
+    st.att=att; st.log[att-1]='ended'; save(st);   // spend the run up front, not at finish
     track('gauntlet_start','run '+att);
     step();
     function step(){

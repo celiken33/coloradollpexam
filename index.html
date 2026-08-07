@@ -1808,7 +1808,8 @@ window.linkAuth=function(txt){
     if(S.length<2){
       var okSubj=R.filter(function(r){return r.ok;});
       if(okSubj.length) S.push(['YOU GOT ON THE BOARD','Correct on '+okSubj.map(function(r){return top(r);}).filter(function(v,i,a){return a.indexOf(v)===i;}).slice(0,3).join(', ')+'.','Those are real Colorado rules, held under a running clock. That is a foundation \u2014 the rest is drilling.']);
-      if(S.length<2) S.push(['YOU FINISHED','You took twelve timed questions cold and did not quit.','Most people never test themselves before exam day and find out in November \u2014 too late. You found out today, with time to fix every one of these.']);
+      if(S.length<2) S.push(['YOU FINISHED ALL TWELVE','You sat twelve timed questions cold and did not quit on one of them.','Most candidates never test themselves before exam day \u2014 they find out in November, when nothing can be fixed. You found out today, with every one of these still fixable.']);
+      if(S.length<2) S.push(['YOU KNOW YOUR NUMBER','You have a real baseline now, not a guess.','You cannot close a gap you have never measured. Everyone who passed in 2025 started by finding out exactly where they stood.']);
     }
     S=S.slice(0,4);
     // ---------- the verdict ----------
@@ -1874,7 +1875,7 @@ window.linkAuth=function(txt){
       +'<button type="button" id="xr-save">Save this exam</button>'
       +'<a class="mbtn" id="xr-mailme" href="#">\uD83D\uDCE7 Email me my results</a></div>'
       +'<div class="xr-note" id="xr-msg">Your exams accumulate under your email on this device \u2014 finish the twelve again anytime and the Full Read shows your climb, session over session. The email copy goes to your inbox (cc: the Principal) with a comeback link.</div></div>';
-    h+='<div class="rv-close"><b>Here is the honest math:</b> November 10 is one day, six hours, 135 questions and two essays \u2014 and every one of them is a rule someone can learn. You just proved you can hold '+score+' of 12 under a running clock, cold. Nobody walks in perfect; they walk in <b>prepared</b>. Fix the '+(ranked.length||0)+' subject'+(((ranked.length||0)===1)?'':'s')+' above, keep the strengths sharp, and let the clock stop being the enemy.<br><br><b>See you on the other side of November 10.</b></div>';
+    h+='<div class="rv-close"><b>Here is the honest math:</b> November 10 is one day, six hours, 135 questions and two essays \u2014 and every one of them is a rule someone can learn. '+(score>0?('You just proved you can hold '+score+' of 12 under a running clock, cold.'):'You just sat twelve of them cold and found out exactly where you stand \u2014 the only honest place to start.')+' Nobody walks in perfect; they walk in <b>prepared</b>. Fix the '+(ranked.length||0)+' subject'+(((ranked.length||0)===1)?'':'s')+' above, keep the strengths sharp, and let the clock stop being the enemy.<br><br><b>See you on the other side of November 10.</b></div>';
     h+='<div class="em-box"><h4>✉ Get this review by email — and unlock the finisher price</h4>'
       +'<p>You finished all twelve. Enter your email and we send you this whole review — score, strengths, ranked study list — <b>plus your finisher unlock: THE FULL 405, the complete library, for $69.99 instead of $124.95.</b> That is $55 off, and only finishers see it.</p>'
       +'<div class="em-row"><input type="email" id="em-in" placeholder="you@email.com" value="'+savedEm.replace(/"/g,'')+'">'

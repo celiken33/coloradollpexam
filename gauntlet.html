@@ -178,6 +178,10 @@ footer a{color:var(--ice)}
       +'<button class="btn btn-go sx-go" id="g-start">Begin run '+att+' \u2192</button>'
       +'<p class="fine">Answer 12 of 12 and THE SUCCESS 405 is yours, free.</p></div>';
     document.getElementById('g-start').addEventListener('click',function(){ run(att); });
+    if(P.get('start')==='1' && !window.__autostarted){   // pill sends them straight in
+      window.__autostarted=true;
+      setTimeout(function(){ var b=document.getElementById('g-start'); if(b) b.click(); }, 60);
+    }
   }
   function run(att){
     var qs=D.slice((att-1)*12, att*12), i=0, right=0, marks=[];

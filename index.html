@@ -1836,7 +1836,7 @@ window.linkAuth=function(txt){
       var w=0;
       if(!r.ok) w+=3;
       if(r.t>120) w+=1.5; else if(r.t>90) w+=0.8;
-      if(r.lvl!=='EASY') w+=0.4;
+      if(w>0 && r.lvl!=='EASY') w+=0.4;
       return {r:r,w:w};
     }).filter(function(x){return x.w>0;}).sort(function(a,b){return b.w-a.w;}).slice(0,5);
     h+='<div class="tn-sec"><span class="tn-lbl">'+(ranked.length?'Where to aim next \u2014 your top subjects to rock before November 10':'Nothing to fix \u2014 the polish list')+'</span>';

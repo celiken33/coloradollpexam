@@ -1894,7 +1894,7 @@ window.linkAuth=function(txt){
       if(!go) return;
       go.addEventListener('click',function(){
         var em=(inp.value||'').trim();
-        if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(em)){ msg.className='em-msg err'; msg.textContent='Enter a valid email and we will send it right over.'; return; }
+        if(!/^\S+@\S+\.\S+$/.test(em)){ msg.className='em-msg err'; msg.textContent='Enter a valid email and we will send it right over.'; return; }
         go.disabled=true; go.textContent='Sending\\u2026';
         var focusTxt=ranked.length
           ? ranked.map(function(x,i){ var p=x.r.subj.split('\\u00B7'); return (i+1)+'. '+(p[0]||'').trim()+' \\u2014 '+(p[1]||'').trim()+'  ['+String(x.r.auth).replace('Authority: ','')+']'; }).join('\\n')

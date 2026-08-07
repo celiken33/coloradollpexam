@@ -31,7 +31,8 @@ h1,h2,h3{font-family:'Fraunces','Georgia',serif;color:var(--blue)}
 header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid #E7E1D6}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 22px;max-width:1080px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.05rem}
-.brand span{color:var(--gold)}
+.brand>span{color:var(--ink)}
+.brand span span{color:var(--gold)}
 .nav a.cta{background:var(--blue);color:#fff;border-radius:999px;padding:9px 18px;font-weight:800;font-size:.82rem;text-decoration:none;white-space:nowrap;box-shadow:0 3px 10px rgba(20,53,95,.25)}
 .hero{background:linear-gradient(180deg,#0C1F3A,#14355F);color:#fff;padding:52px 0 44px;text-align:center}
 .hero h1{color:#fff;font-size:clamp(1.7rem,4.6vw,2.7rem);line-height:1.15;margin-bottom:10px}
@@ -67,7 +68,7 @@ footer a{color:#CFE7FF}
 <body>
 <header>
   <div class="nav">
-    <a class="brand" href="/">Colorado<span>LLP</span>Exam</a>
+    <a class="brand" href="/" aria-label="Colorado LLP Exam Prep home"><svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true" style="flex:none"><rect width="34" height="34" rx="8" fill="#14355F"/><path d="M3 26 L11 14 L16 21 L21 11 L31 26 Z" fill="#1E4A82"/><path d="M21 11 L24.5 16.5 L21 16 L18.5 14.8 Z" fill="#FFFFFF" opacity=".85"/><circle cx="9" cy="8" r="3.2" fill="#FFD100"/></svg><span>Colorado<span>LLP</span>Exam</span></a>
     <a class="cta" href="/#quiz">Try 12 free sample questions →</a>
   </div>
 </header>
@@ -109,38 +110,5 @@ footer a{color:#CFE7FF}
 <footer><div class="wrap">
 &copy; 2026 <a href="/">ColoradoLLPExam.com</a> — attorney-built prep for Colorado’s Licensed Legal Paraprofessional exam. Independent study aid — <strong>not legal advice</strong>; no attorney-client or LLP-client relationship. Not affiliated with, sponsored by, or endorsed by the Colorado Supreme Court, the Office of Attorney Regulation Counsel, or any bar authority. All questions and essays are original sample materials — not actual exam content. Dates, fees, and requirements change — always verify against <a href="https://www.coloradolegalregulation.com/future-lawyers/llpexamination/" rel="noopener" target="_blank">official sources</a> before relying on them. We stand by our work. <a href="/#pricing">THE 93 — $99.95</a> · <a href="/#latestart">YOUR BEST START — $9.95</a> · <a href="/#rpprogram">THE SECOND ASCENT — $499</a>
 </div></footer>
-<script>
-(function(){try{
-var F='262178024696060',BASE='https://submit.jotform.com/submit/';
-var sid=sessionStorage.getItem('llpt_sid')||('s'+Math.random().toString(36).slice(2,10));
-sessionStorage.setItem('llpt_sid',sid);
-function send(ev,detail){try{
- var fd=new FormData();
- fd.append('formID',F);
- fd.append('q2_q2_textbox0',ev);
- fd.append('q3_q3_textbox1',location.pathname||'/');
- var ref='direct';
- try{ if(document.referrer){ var h=new URL(document.referrer).hostname; ref=(h===location.hostname)?'internal':h; } }catch(e2){}
- fd.append('q4_q4_textbox2',ref);
- fd.append('q5_q5_textbox3',sid);
- fd.append('q6_q6_textbox4',String(detail||''));
- if(!(navigator.sendBeacon&&navigator.sendBeacon(BASE+F,fd)))
-   fetch(BASE+F,{method:'POST',body:fd,mode:'no-cors',keepalive:true});
-}catch(e){}}
-window.llpTrack=send;
-var seen=sessionStorage.getItem('llpt_seen')||'';
-if(seen.indexOf('|'+location.pathname+'|')<0){
-  sessionStorage.setItem('llpt_seen',seen+'|'+location.pathname+'|');
-  send('pageview','');
-}
-document.addEventListener('click',function(e){
-  var a=e.target.closest&&e.target.closest('a[href*="buy.stripe.com"]');
-  if(!a)return;
-  var m={'5J600':'THE 93','5J601':'FULL 405','5J602':'SECOND ASCENT','5J603':'BEST START'};
-  var k=Object.keys(m).find(function(x){return a.href.indexOf(x)>-1});
-  send('buy_click',k?m[k]:'other');
-},true);
-}catch(e){}})();
-</script>
 </body>
 </html>

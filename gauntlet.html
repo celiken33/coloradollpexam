@@ -59,6 +59,19 @@ h1 em{font-style:normal;color:var(--gold);display:block}
 .dot{width:20px;height:20px;border-radius:50%;background:#E3ECF6;font-size:.62rem;font-weight:900;color:#fff;display:flex;align-items:center;justify-content:center}
 .dot.ok{background:var(--green)}.dot.no{background:var(--red)}
 .gate{text-align:center}
+.sx{text-align:center;padding:4px 0 2px}
+.sx-kick{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#8FE3FF,#5FCCFF);color:#000;
+  border-radius:999px;padding:7px 18px;font-weight:900;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;
+  box-shadow:0 5px 20px rgba(95,204,255,.45)}
+.sx-h{font-family:'Fraunces',serif;font-weight:900;color:#14355F;font-size:clamp(1.5rem,5.2vw,2.15rem);
+  line-height:1.1;margin:14px 0 4px}
+.sx-h b{color:#1E4A82}
+.sx-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:16px auto 12px;max-width:400px}
+.sx-t{background:#F4F8FD;border:1.5px solid #E3ECF6;border-radius:14px;padding:12px 6px}
+.sx-t .n{font-family:'Fraunces',serif;font-weight:900;font-size:1.65rem;color:#14355F;line-height:1}
+.sx-t .l{font-size:.62rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#5B6B80;margin-top:5px}
+.sx-p{color:#5B6B80;font-size:.87rem;margin-bottom:16px}
+.sx-go{padding:16px 38px;font-size:1.06rem}
 .gate input{width:100%;max-width:340px;border:1.5px solid #C9D9EC;border-radius:999px;padding:14px 20px;font-family:inherit;font-size:1rem;margin-bottom:11px}
 .fine{font-size:.76rem;color:#5B6B80;margin-top:10px;line-height:1.55}
 .msg{font-weight:800;font-size:.88rem;margin-top:10px}
@@ -98,18 +111,24 @@ footer a{color:var(--ice)}
 </div>
 
 <footer>
-  THE GAUNTLET is a free promotion by <a href="/">ColoradoLLPExam.com</a>. Original sample materials — not actual exam content. Independent study aid, not legal advice. Not affiliated with the Colorado Supreme Court, OARC, or any bar authority. One prize per person; three attempts per email; questions never repeat across your attempts. Winners are verified against the entry record before the library is sent.
+  THE GAUNTLET is a free promotion by <a href="/">ColoradoLLPExam.com</a>. Original sample materials — not actual exam content. Independent study aid, not legal advice. Not affiliated with the Colorado Supreme Court, OARC, or any bar authority. One library per person; three attempts; questions never repeat across your attempts.
 </footer>
 
 <script src="/gauntlet-pool.js"></script>
 <script>
 (function(){
   var FORM='262178024696060';             // site tracker (events)
-  var ENTRY='262181208360046';             // gauntlet entry form (sends the private link)
   var CLAIM='262181863654059';             // winner claims ONLY (sends the library)
   var POOL=(window.GPOOL||[]);
   var P=new URLSearchParams(location.search);
   var key=(P.get('k')||'').trim();
+  if(!key){                                  // no link, no token — mint one and get out of the way
+    try{ key=localStorage.getItem('gnt_device')||''; }catch(e){}
+    if(!key){
+      key='g'+Math.random().toString(36).slice(2,10)+Date.now().toString(36);
+      try{ localStorage.setItem('gnt_device',key); }catch(e){}
+    }
+  }
   var gate=document.getElementById('gate');
   function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
   function track(ev,detail){ try{
@@ -131,37 +150,7 @@ footer a{color:var(--ice)}
   function state(){ try{ return JSON.parse(localStorage.getItem('gnt_'+key)||'{"att":0,"log":[]}'); }catch(e){ return {att:0,log:[]}; } }
   function save(st){ try{ localStorage.setItem('gnt_'+key,JSON.stringify(st)); }catch(e){} }
 
-  // ---------- no key: the application gate ----------
-  if(!key){
-    gate.innerHTML='<h2 style="font-size:1.55rem;color:#14355F;margin-bottom:6px">Apply for your run</h2>'
-      +'<p style="color:#33465E;font-size:.95rem;margin-bottom:16px">Enter your email and we send your private link — 12 questions drawn from our 405-question library, and two more runs behind it if you need them.</p>'
-      +'<input type="email" id="g-em" placeholder="you@email.com" autocomplete="email">'
-      +'<div><button class="btn btn-go" id="g-go">Send my link →</button></div>'
-      +'<div class="msg" id="g-msg"></div>'
-      +'<p class="fine">Three attempts, 36 questions, never a repeat. Nothing to buy, nothing to cancel. If you are serious about November 10, you have nothing to lose but fifteen minutes.</p>';
-    document.getElementById('g-go').addEventListener('click',function(){
-      var em=(document.getElementById('g-em').value||'').trim(), m=document.getElementById('g-msg');
-      if(!/^\S+@\S+\.\S+$/.test(em)){ m.className='msg err'; m.textContent='Enter a valid email and your link goes out immediately.'; return; }
-      var tok=(hash(em.toLowerCase()+'::llp2026').toString(36)+Math.random().toString(36).slice(2,6));
-      var b=this; b.disabled=true; b.textContent='Sending…';
-      var fd=new FormData();
-      fd.append('formID',ENTRY);
-      fd.append('q2_q2_email0',em);
-      fd.append('q3_q3_textbox1','https://coloradollpexam.com/gauntlet.html?k='+tok);
-      fd.append('q4_q4_textbox2',tok);
-      track('gauntlet_apply','');
-      fetch('https://submit.jotform.com/submit/'+ENTRY,{method:'POST',body:fd,mode:'no-cors'})
-        .then(function(){ done(); }).catch(function(){ done(); });
-      function done(){
-        m.className='msg ok';
-        m.innerHTML='✓ Sent to '+esc(em)+' — check your inbox (and spam, once).<br><a href="?k='+tok+'" style="color:#14355F;font-weight:900">Or start right now →</a>';
-        b.textContent='Sent ✓';
-      }
-    });
-    return;
-  }
-
-  // ---------- with a key: run the gauntlet ----------
+  // ---------- run it ----------
   var D=deck(key), st=state();
   function attemptPills(cur){
     var h='<div class="att-row">';
@@ -177,12 +166,17 @@ footer a{color:var(--ice)}
     if(st.log.indexOf('win')>-1){ winScreen(true); return; }
     if(att>3){ outScreen(); return; }
     gate.innerHTML=attemptPills(att)
-      +'<div style="text-align:center">'
-      +'<h2 style="font-size:1.6rem;color:#14355F">Run '+att+' of 3</h2>'
-      +'<p style="color:#33465E;font-size:.95rem;margin:8px 0 4px">Twelve questions you have never seen. One wrong answer ends the run.</p>'
-      +'<p style="color:#5B6B80;font-size:.85rem;margin-bottom:16px">No clock, no tricks — just the law. Take your time.</p>'
-      +'<button class="btn btn-go" id="g-start">Begin run '+att+' →</button>'
-      +'<p class="fine">Answer 12 of 12 and THE SUCCESS 405 is yours free.</p></div>';
+      +'<div class="sx">'
+      +'<span class="sx-kick">Run '+att+' of 3 \u00B7 ready when you are</span>'
+      +'<h2 class="sx-h">Twelve questions.<br><b>Nothing you have seen.</b></h2>'
+      +'<div class="sx-tiles">'
+        +'<div class="sx-t"><div class="n">12</div><div class="l">Questions</div></div>'
+        +'<div class="sx-t"><div class="n">'+(4-att)+'</div><div class="l">Run'+((4-att)===1?'':'s')+' left</div></div>'
+        +'<div class="sx-t"><div class="n">0</div><div class="l">Repeats</div></div>'
+      +'</div>'
+      +'<p class="sx-p">No clock, no tricks \u2014 just the law. Take your time.</p>'
+      +'<button class="btn btn-go sx-go" id="g-start">Begin run '+att+' \u2192</button>'
+      +'<p class="fine">Answer 12 of 12 and THE SUCCESS 405 is yours, free.</p></div>';
     document.getElementById('g-start').addEventListener('click',function(){ run(att); });
   }
   function run(att){
@@ -241,7 +235,7 @@ footer a{color:var(--ice)}
       +(already?'':'<p style="color:#33465E;font-size:.93rem;margin-bottom:14px">Confirm the email to send it to and the Principal will deliver it personally.</p>'
       +'<input type="email" id="w-em" placeholder="you@email.com" style="width:100%;max-width:340px;border:1.5px solid #C9D9EC;border-radius:999px;padding:14px 20px;font-family:inherit;font-size:1rem;margin-bottom:11px">'
       +'<div><button class="btn btn-go" id="w-go">Claim THE SUCCESS 405 →</button></div><div class="msg" id="w-msg"></div>')
-      +'<p class="fine">Winners are verified against the entry record. One library per person — and if you can go twelve for twelve cold, November 10 is a formality.</p>'
+      +'<p class="fine">One library per person — and if you can go twelve for twelve cold, November 10 is a formality.</p>'
       +'<div style="margin-top:14px"><a class="btn btn-line" href="/#quiz">Back to the free 12</a></div></div>';
     var g=document.getElementById('w-go');
     if(g) g.addEventListener('click',function(){

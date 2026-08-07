@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE 12/12 GAUNTLET — Colorado LLP Exam Prep</title>
-<meta name="description" content="Answer 12 of 12 correctly and THE FULL 405 is yours free. Three attempts, 36 questions, never a repeat. Colorado LLP exam prep.">
+<meta name="description" content="Answer 12 of 12 correctly and THE SUCCESS 405 is yours free. Three attempts, 36 questions, never a repeat. Colorado LLP exam prep.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://coloradollpexam.com/gauntlet.html">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -76,14 +76,14 @@ footer a{color:var(--ice)}
 <body>
 <header><div class="hd">
   <a class="brand" href="/" aria-label="Colorado LLP Exam Prep home"><svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true" style="flex:none"><rect width="34" height="34" rx="8" fill="#FAF7F1"/><path d="M3 26 L11 14 L16 21 L21 11 L31 26 Z" fill="#14355F"/><path d="M21 11 L24.5 16.5 L21 16 L18.5 14.8 Z" fill="#FAF7F1" opacity=".95"/><circle cx="9" cy="8" r="3.2" fill="#FFD100"/></svg><span style="color:#fff">Colorado<span style="color:#FFD100">LLP</span>Exam</span></a>
-  <span class="hd-pill">★ 12 FOR 12 · THE FULL 405 FREE</span>
+  <span class="hd-pill">★ 12 FOR 12 · THE SUCCESS 405 FREE</span>
 </div></header>
 
 <div class="wrap">
   <div class="hero">
     <span class="kick">The Gauntlet</span>
-    <h1>Twelve for twelve.<em>The whole library, free.</em></h1>
-    <p class="lede">Answer all 12 correctly and <b style="color:#fff">THE FULL 405 — every question, every explanation, all 6 essays — is yours at no charge.</b> Miss one and the run is over. You get three.</p>
+    <h1>Twelve of twelve.<em>The whole library, free.</em></h1>
+    <p class="lede">Answer twelve of twelve of our model exam questions correctly &mdash; <b style="color:#fff">we give you three tries</b> &mdash; and you immediately receive our <b style="color:#FFD100">SUCCESS 405</b>: every question, every explanation, all 6 sample essays, at no charge. Miss one and the run is over.</p>
     <div class="rules">
       <div class="rule"><div class="n">12</div><div class="t">QUESTIONS PER RUN</div></div>
       <div class="rule"><div class="n">3</div><div class="t">ATTEMPTS, EVER</div></div>
@@ -181,7 +181,7 @@ footer a{color:var(--ice)}
       +'<p style="color:#33465E;font-size:.95rem;margin:8px 0 4px">Twelve questions you have never seen. One wrong answer ends the run.</p>'
       +'<p style="color:#5B6B80;font-size:.85rem;margin-bottom:16px">No clock, no tricks — just the law. Take your time.</p>'
       +'<button class="btn btn-go" id="g-start">Begin run '+att+' →</button>'
-      +'<p class="fine">Answer 12 of 12 and THE FULL 405 is yours free.</p></div>';
+      +'<p class="fine">Answer 12 of 12 and THE SUCCESS 405 is yours free.</p></div>';
     document.getElementById('g-start').addEventListener('click',function(){ run(att); });
   }
   function run(att){
@@ -235,11 +235,11 @@ footer a{color:var(--ice)}
     gate.innerHTML=attemptPills(0)
       +'<div class="win"><div style="font-weight:900;letter-spacing:.1em;font-size:.78rem">★ TWELVE FOR TWELVE ★</div>'
       +'<h2 style="margin:8px 0 6px">You just won the library.</h2>'
-      +'<p style="font-size:.98rem;font-weight:700;max-width:460px;margin:0 auto">THE FULL 405 — all 405 sample questions, every answer explained and keyed to Colorado authority, plus all 6 sample essays — is yours, free.</p></div>'
+      +'<p style="font-size:.98rem;font-weight:700;max-width:460px;margin:0 auto">THE SUCCESS 405 — all 405 sample questions, every answer explained and keyed to Colorado authority, plus all 6 sample essays — is yours, free.</p></div>'
       +'<div style="text-align:center;margin-top:18px">'
       +(already?'':'<p style="color:#33465E;font-size:.93rem;margin-bottom:14px">Confirm the email to send it to and the Principal will deliver it personally.</p>'
       +'<input type="email" id="w-em" placeholder="you@email.com" style="width:100%;max-width:340px;border:1.5px solid #C9D9EC;border-radius:999px;padding:14px 20px;font-family:inherit;font-size:1rem;margin-bottom:11px">'
-      +'<div><button class="btn btn-go" id="w-go">Claim THE FULL 405 →</button></div><div class="msg" id="w-msg"></div>')
+      +'<div><button class="btn btn-go" id="w-go">Claim THE SUCCESS 405 →</button></div><div class="msg" id="w-msg"></div>')
       +'<p class="fine">Winners are verified against the entry record. One library per person — and if you can go twelve for twelve cold, November 10 is a formality.</p>'
       +'<div style="margin-top:14px"><a class="btn btn-line" href="/#quiz">Back to the free 12</a></div></div>';
     var g=document.getElementById('w-go');
@@ -250,7 +250,7 @@ footer a{color:var(--ice)}
       var fd=new FormData();
       fd.append('formID',ENTRY);
       fd.append('q2_q2_email0',em);
-      fd.append('q3_q3_textbox1','WINNER 12/12 — send THE FULL 405 — key '+key);
+      fd.append('q3_q3_textbox1','WINNER 12/12 — send THE SUCCESS 405 — key '+key);
       fd.append('q4_q4_textbox2',key);
       track('gauntlet_win','claimed');
       fetch('https://submit.jotform.com/submit/'+ENTRY,{method:'POST',body:fd,mode:'no-cors'}).then(d).catch(d);
@@ -271,8 +271,8 @@ footer a{color:var(--ice)}
       +'<div style="text-align:center;margin-top:18px">'
       +(left>0
         ? '<button class="btn btn-go" id="g-again">Start run '+(att+1)+' →</button><p class="fine">Take a breath first if you want. The link in your inbox brings you right back here.</p>'
-        : '<p style="color:#33465E;font-size:.95rem;margin-bottom:14px">The library that would have answered all thirty-six is <b>THE FULL 405</b> — and finishers get it for $69.99 instead of $124.95.</p>'
-          +'<a class="btn btn-go" href="https://buy.stripe.com/eVq00j4F7eEQ84r3Ya5J604" target="_blank" rel="noopener">Get THE FULL 405 — $69.99 →</a>'
+        : '<p style="color:#33465E;font-size:.95rem;margin-bottom:14px">The library that would have answered all thirty-six is <b>THE SUCCESS 405</b> — and finishers get it for $69.99 instead of $124.95.</p>'
+          +'<a class="btn btn-go" href="https://buy.stripe.com/eVq00j4F7eEQ84r3Ya5J604" target="_blank" rel="noopener">Get THE SUCCESS 405 — $69.99 →</a>'
           +'<p class="fine">You showed up and tested yourself against 36 real questions. Most candidates find out in November. You found out with time to fix it.</p>')
       +'<div style="margin-top:14px"><a class="btn btn-line" href="/#quiz">Try the free 12 on the main site</a></div></div>';
     var a=document.getElementById('g-again');

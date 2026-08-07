@@ -403,6 +403,15 @@
 
   /* ===== verdict badges ===== */
   .vb-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:2px 0 10px}
+  .vhero{text-align:center;border-radius:14px;padding:16px 18px 14px;margin:0 0 14px}
+  .vhero.good{background:#EAF7EF;border:2px solid #1E7A46}
+  .vhero.bad{background:#FDEEED;border:2px solid #B3261E}
+  .vhero .vh1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.35rem,4.4vw,1.95rem);line-height:1.15}
+  .vhero.good .vh1{color:#1E7A46}
+  .vhero.bad .vh1{color:#B3261E}
+  .vhero .vh2{font-size:.9rem;font-weight:700;color:#33465E;margin-top:7px;line-height:1.45}
+  .vhero .vh2 b{color:#0C1F3A}
+  .vrow2{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:11px}
   .vb{border-radius:999px;padding:5px 13px;font-weight:900;font-size:.72rem;letter-spacing:.05em;white-space:nowrap}
   .vb-ok{background:#1E7A46;color:#fff}
   .vb-no{background:#B3261E;color:#fff}
@@ -2287,7 +2296,17 @@ window.linkAuth=function(txt){
     document.getElementById('tn-qid').textContent=' \u00B7 '+item.subj+' \u00B7 '+item.id;
     var h='';
     var V=card.__tn.v;
-    if(V){ h+='<div class="vb-row">'+window.vBadges(V.right, L[item.correct], L[V.oi], V.t)+'</div>'; }
+    if(V){
+      function f2(x){ var m=Math.floor(x/60),s2=x%60; return m+':'+(s2<10?'0':'')+s2; }
+      h+='<div class="vhero '+(V.right?'good':'bad')+'">'
+        +'<div class="vh1">'+(V.right?('\u2713 CORRECT \u2014 '+L[item.correct]):('\u2717 MISSED \u2014 the answer is '+L[item.correct]))+'</div>'
+        +'<div class="vh2">'+(V.right?'':'You chose <b>'+L[V.oi]+'</b>. ')+'<b>'+L[item.correct]+'.</b> '+esc(item.opts[item.correct])+'</div>'
+        +'<div class="vrow2">'
+        +'<span class="vb vb-time">\u23F1 '+f2(V.t)+'</span>'
+        +(V.t<=90?'<span class="vb vb-pace-good">TRAINING PACE \u2713</span><span class="vb vb-bank">+'+(120-V.t)+'s BANKED</span>'
+          :(V.t<=120?'<span class="vb vb-pace-mid">INSIDE EXAM 2:00</span>':'<span class="vb vb-pace-bad">OVER 2:00 \u2014 DRILL IT</span>'))
+        +'</div></div>';
+    }
     h+='<div class="tn-sec"><span class="tn-lbl">'+(right?'This answer \u2014 the one':'This answer')+'</span>'
       +'<div class="tn-pick'+(right?' win':'')+'"><b class="tl">'+L[oi]+'.</b> '+esc(item.opts[oi])+'<br>'+esc(item.optnotes[oi])+'</div></div>';
     if(!right){

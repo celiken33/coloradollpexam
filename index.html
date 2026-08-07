@@ -2408,7 +2408,9 @@ window.linkAuth=function(txt){
       function f2(x){ var m=Math.floor(x/60),s2=x%60; return m+':'+(s2<10?'0':'')+s2; }
       h+='<div class="vhero '+(V.right?'good':'bad')+'">'
         +'<div class="vh1">'+(V.right?('\u2713 CORRECT \u2014 '+L[item.correct]):('\u2717 MISSED \u2014 the answer is '+L[item.correct]))+'</div>'
-        +'<div class="vh2">'+(V.right?'':'You chose <b>'+L[V.oi]+'</b>. ')+'<b>'+L[item.correct]+'.</b> '+esc(item.opts[item.correct])+'</div>'
+        +'<div class="vh2">'+(V.right
+            ? ('<b>'+L[item.correct]+'</b> \u2014 '+esc(item.opts[item.correct]))
+            : ('You chose <b>'+L[V.oi]+'</b>. The credited answer is <b>'+L[item.correct]+'</b> \u2014 '+esc(item.opts[item.correct])))+'</div>'
         +'<div class="vrow2">'
         +'<span class="vb vb-time">\u23F1 '+f2(V.t)+'</span>'
         +(V.t<=90?'<span class="vb vb-pace-good">TRAINING PACE \u2713</span><span class="vb vb-bank">+'+(120-V.t)+'s BANKED</span>'

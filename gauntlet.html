@@ -236,7 +236,7 @@ footer a{color:var(--ice)}
       +'<input type="email" id="w-em" placeholder="you@email.com" style="width:100%;max-width:340px;border:1.5px solid #C9D9EC;border-radius:999px;padding:14px 20px;font-family:inherit;font-size:1rem;margin-bottom:11px">'
       +'<div><button class="btn btn-go" id="w-go">Claim THE SUCCESS 405 →</button></div><div class="msg" id="w-msg"></div>')
       +'<p class="fine">One library per person — and if you can go twelve for twelve cold, November 10 is a formality.</p>'
-      +'<div style="margin-top:14px"><a class="btn btn-line" href="/#quiz">Back to the free 12</a></div></div>';
+      +'<div style="margin-top:14px"><a class="btn btn-line" href="/">Back to the site</a></div></div>';
     var g=document.getElementById('w-go');
     if(g) g.addEventListener('click',function(){
       var em=(document.getElementById('w-em').value||'').trim(), m=document.getElementById('w-msg');
@@ -265,11 +265,14 @@ footer a{color:var(--ice)}
       +'</p></div>'
       +'<div style="text-align:center;margin-top:18px">'
       +(left>0
-        ? '<button class="btn btn-go" id="g-again">Start run '+(att+1)+' →</button><p class="fine">Take a breath first if you want. The link in your inbox brings you right back here.</p>'
+        ? '<button class="btn btn-go" id="g-again">Start run '+(att+1)+' →</button><p class="fine">Take a breath first if you want — this page remembers where you are.</p>'
         : '<p style="color:#33465E;font-size:.95rem;margin-bottom:14px">The library that would have answered all thirty-six is <b>THE SUCCESS 405</b> — and finishers get it for $69.99 instead of $124.95.</p>'
           +'<a class="btn btn-go" href="https://buy.stripe.com/eVq00j4F7eEQ84r3Ya5J604" target="_blank" rel="noopener">Get THE SUCCESS 405 — $69.99 →</a>'
           +'<p class="fine">You showed up and tested yourself against 36 real questions. Most candidates find out in November. You found out with time to fix it.</p>')
-      +'<div style="margin-top:14px"><a class="btn btn-line" href="/#quiz">Try the free 12 on the main site</a></div></div>';
+      +(left>0
+        ? '<div style="margin-top:14px"><a class="btn btn-line" href="/">Back to the site</a></div>'
+        : '<div style="margin-top:14px"><a class="btn btn-line" href="/#quiz">Try the free 12 on the main site</a></div>')
+      +'</div>';
     var a=document.getElementById('g-again');
     if(a) a.addEventListener('click',startScreen);
   }

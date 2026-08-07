@@ -1043,8 +1043,6 @@
       <span>Former Government Investigator — Denver Human Services</span>
     </div>
     <div class="timer" aria-label="Countdown to the November 10, 2026 exam">
-      <div class="t-cell big"><div class="t-num" id="t-y">—</div><div class="t-lbl">years</div></div>
-      <span class="t-sep">:</span>
       <div class="t-cell big"><div class="t-num" id="t-mo">—</div><div class="t-lbl">months</div></div>
       <span class="t-sep">:</span>
       <div class="t-cell big"><div class="t-num" id="t-d">—</div><div class="t-lbl">days</div></div>
@@ -1683,7 +1681,7 @@
       ubar.style.display='none';
     }
   }
-  var el = {y:document.getElementById('t-y'),mo:document.getElementById('t-mo'),d:document.getElementById('t-d'),h:document.getElementById('t-h'),m:document.getElementById('t-m'),s:document.getElementById('t-s')};
+  var el = {mo:document.getElementById('t-mo'),d:document.getElementById('t-d'),h:document.getElementById('t-h'),m:document.getElementById('t-m'),s:document.getElementById('t-s')};
   function pad(n){ return (n<10?'0':'')+n; }
   function span(now, tgt){
     // calendar-accurate: whole years, then whole months, then the remainder
@@ -1702,8 +1700,7 @@
   }
   function tick(){
     var v = span(new Date(), target);
-    el.y.textContent  = v.y;
-    el.mo.textContent = v.mo;
+    el.mo.textContent = v.y>0 ? (v.y*12 + v.mo) : v.mo;   // no years badge — fold them into months
     el.d.textContent  = v.d;
     el.h.textContent  = pad(v.h);
     el.m.textContent  = pad(v.m);

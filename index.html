@@ -1811,6 +1811,7 @@ window.linkAuth=function(txt){
     document.getElementById('xr-body').innerHTML=h;
     ov.classList.add('open');
     ov.querySelector('.tn').scrollTop=0;
+    if(window.llpTrack) window.llpTrack('quiz_done', score+'/12 in '+tot+'s');
     var missIds=R.filter(function(r){return !r.ok;}).map(function(r){return r.id;});
     document.getElementById('xr-save').addEventListener('click',function(){
       var em=(document.getElementById('xr-em').value||'').trim().toLowerCase();
@@ -1820,6 +1821,7 @@ window.linkAuth=function(txt){
       arr.push({d:new Date().toLocaleDateString(),score:score,tot:tot,miss:missIds});
       localStorage.setItem('llpx_'+em,JSON.stringify(arr.slice(-20)));
       document.getElementById('xr-msg').textContent='Saved \u2014 '+arr.length+' exam'+(arr.length>1?'s':'')+' tracked under '+em+' on this device. Finish the twelve again to see your climb.';
+      if(window.llpTrack) window.llpTrack('email_saved','session '+arr.length);
     });
     document.getElementById('xr-mailme').addEventListener('click',function(e){
       var em=(document.getElementById('xr-em').value||'').trim();
@@ -2173,6 +2175,39 @@ function srRender(q){
   var lay=document.getElementById('searchlay');
   if(lay) lay.addEventListener('click',function(e){ if(e.target===lay) closeSearch(); });
 })();
+</script>
+<script>
+(function(){try{
+var F='262178024696060',BASE='https://submit.jotform.com/submit/';
+var sid=sessionStorage.getItem('llpt_sid')||('s'+Math.random().toString(36).slice(2,10));
+sessionStorage.setItem('llpt_sid',sid);
+function send(ev,detail){try{
+ var fd=new FormData();
+ fd.append('formID',F);
+ fd.append('q2_q2_textbox0',ev);
+ fd.append('q3_q3_textbox1',location.pathname||'/');
+ var ref='direct';
+ try{ if(document.referrer){ var h=new URL(document.referrer).hostname; ref=(h===location.hostname)?'internal':h; } }catch(e2){}
+ fd.append('q4_q4_textbox2',ref);
+ fd.append('q5_q5_textbox3',sid);
+ fd.append('q6_q6_textbox4',String(detail||''));
+ if(!(navigator.sendBeacon&&navigator.sendBeacon(BASE+F,fd)))
+   fetch(BASE+F,{method:'POST',body:fd,mode:'no-cors',keepalive:true});
+}catch(e){}}
+window.llpTrack=send;
+var seen=sessionStorage.getItem('llpt_seen')||'';
+if(seen.indexOf('|'+location.pathname+'|')<0){
+  sessionStorage.setItem('llpt_seen',seen+'|'+location.pathname+'|');
+  send('pageview','');
+}
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href*="buy.stripe.com"]');
+  if(!a)return;
+  var m={'5J600':'THE 93','5J601':'FULL 405','5J602':'SECOND ASCENT','5J603':'BEST START'};
+  var k=Object.keys(m).find(function(x){return a.href.indexOf(x)>-1});
+  send('buy_click',k?m[k]:'other');
+},true);
+}catch(e){}})();
 </script>
 </body>
 </html>

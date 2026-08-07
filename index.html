@@ -1854,7 +1854,7 @@ window.linkAuth=function(txt){
     h+='</div>';
     // plain-text versions of the review for the emailed copy
     var revTxt=V[0]+'\\n\\n'+V[1].replace(/<[^>]+>/g,'')+'\\n\\n'+V[2].replace(/<[^>]+>/g,'');
-    var stTxt=S.map(function(x){ return '\\u2022 '+x[0]+' \\u2014 '+x[1]+' '+x[2]; }).join('\\n\\n');
+    var stTxt=S.map(function(x){ return '• '+x[0]+' — '+x[1]+' '+x[2]; }).join('\\n\\n');
     var savedEm=localStorage.getItem('llpx_email')||'';
     var sess=savedEm?loadSess(savedEm):[];
     if(sess.length){
@@ -1895,22 +1895,22 @@ window.linkAuth=function(txt){
       go.addEventListener('click',function(){
         var em=(inp.value||'').trim();
         if(!/^\S+@\S+\.\S+$/.test(em)){ msg.className='em-msg err'; msg.textContent='Enter a valid email and we will send it right over.'; return; }
-        go.disabled=true; go.textContent='Sending\\u2026';
+        go.disabled=true; go.textContent='Sending…';
         var focusTxt=ranked.length
-          ? ranked.map(function(x,i){ var p=x.r.subj.split('\\u00B7'); return (i+1)+'. '+(p[0]||'').trim()+' \\u2014 '+(p[1]||'').trim()+'  ['+String(x.r.auth).replace('Authority: ','')+']'; }).join('\\n')
-          : 'Nothing to fix \\u2014 a perfect 12. Next stop: all 93 at exam pace.';
+          ? ranked.map(function(x,i){ var p=x.r.subj.split('·'); return (i+1)+'. '+(p[0]||'').trim()+' — '+(p[1]||'').trim()+'  ['+String(x.r.auth).replace('Authority: ','')+']'; }).join('\\n')
+          : 'Nothing to fix — a perfect 12. Next stop: all 93 at exam pace.';
         var fd=new FormData();
         fd.append('formID','262178487299072');
         fd.append('q2_q2_email0',em);
-        fd.append('q3_q3_textbox1',score+'/'+n+' ('+pct+'%) \\u2014 '+(above?'above':'below')+' the 68% line \\u00B7 '+fmt(tot)+' total, '+fmt(avg)+'/question');
+        fd.append('q3_q3_textbox1',score+'/'+n+' ('+pct+'%) — '+(above?'above':'below')+' the 68% line · '+fmt(tot)+' total, '+fmt(avg)+'/question');
         fd.append('q4_q4_textarea2',revTxt);
         fd.append('q5_q5_textarea3',stTxt);
         fd.append('q6_q6_textarea4',focusTxt);
         try{ localStorage.setItem('llpx_email',em); }catch(e){}
         if(window.llpTrack) window.llpTrack('review_emailed', score+'/'+n);
         fetch('https://submit.jotform.com/submit/262178487299072',{method:'POST',body:fd,mode:'no-cors'})
-          .then(function(){ msg.className='em-msg ok'; msg.textContent='\\u2713 On its way to '+em+' \\u2014 check your inbox (and spam, once).'; go.textContent='Sent \\u2713'; })
-          .catch(function(){ msg.className='em-msg ok'; msg.textContent='\\u2713 On its way to '+em+' \\u2014 check your inbox (and spam, once).'; go.textContent='Sent \\u2713'; });
+          .then(function(){ msg.className='em-msg ok'; msg.textContent='✓ On its way to '+em+' — check your inbox (and spam, once).'; go.textContent='Sent ✓'; })
+          .catch(function(){ msg.className='em-msg ok'; msg.textContent='✓ On its way to '+em+' — check your inbox (and spam, once).'; go.textContent='Sent ✓'; });
       });
     })();
     document.getElementById('xr-save').addEventListener('click',function(){

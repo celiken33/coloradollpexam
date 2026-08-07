@@ -362,9 +362,11 @@
   #gauntlet:before{content:"";position:absolute;inset:0;
     background:repeating-linear-gradient(115deg,rgba(255,209,0,.05) 0 2px,transparent 2px 22px);pointer-events:none}
   .gt-in{position:relative;text-align:center}
-  .gt-kick{display:inline-flex;align-items:center;gap:9px;background:#FFD100;color:#0A1830;border-radius:999px;
-    padding:7px 20px;font-weight:900;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
-    box-shadow:0 6px 22px rgba(255,209,0,.36)}
+  .gt-kick{display:inline-flex;align-items:center;gap:9px;
+    background:linear-gradient(135deg,#8FE3FF 0%,#5FCCFF 48%,#8FE3FF 100%);color:#000;
+    border:1.5px solid rgba(255,255,255,.85);border-radius:999px;
+    padding:8px 22px;font-weight:900;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+    box-shadow:0 6px 26px rgba(95,204,255,.55),0 0 0 4px rgba(143,227,255,.16)}
   .gt-kick .dot{width:8px;height:8px;border-radius:50%;background:#B3261E;box-shadow:0 0 0 0 rgba(179,38,30,.7);
     animation:gtpulse 1.9s infinite}
   @keyframes gtpulse{0%{box-shadow:0 0 0 0 rgba(179,38,30,.75)}70%{box-shadow:0 0 0 11px rgba(179,38,30,0)}100%{box-shadow:0 0 0 0 rgba(179,38,30,0)}}
@@ -1025,7 +1027,7 @@
       <div class="d">Perfect, or it doesn't count. That's the whole rule.</div></div>
     <div class="gt-card"><div class="n">3</div><div class="t">Attempts</div>
       <div class="d">Three separate sets of twelve — 36 distinct questions in all.</div></div>
-    <div class="gt-card"><div class="n">0</div><div class="t">Repeats</div>
+    <div class="gt-card"><div class="n">0</div><div class="t">Repeat Questions</div>
       <div class="d">A question you've already seen never comes back on a later run.</div></div>
     <div class="gt-card"><div class="n">$124.95</div><div class="t">What You Win</div>
       <div class="d">The full 405-question library, sent to your inbox at no charge.</div></div>
@@ -1640,9 +1642,12 @@
     el.h.textContent  = pad(v.h);
     el.m.textContent  = pad(v.m);
     el.s.textContent  = pad(v.s);
-    var nd=document.getElementById('nc-d'), nt=document.getElementById('nc-t');
+    var nd=document.getElementById('nc-d'), nt=document.getElementById('nc-t'),
+        nu=document.querySelector('.nav-clock .nc-u');
     if(nd){
-      nd.textContent = (v.mo>0 ? v.mo+'mo '+v.d : v.td);
+      if(v.y>0){ nd.textContent = v.y+'y '+v.mo+'mo '+v.d+'d'; if(nu) nu.textContent=''; }
+      else if(v.mo>0){ nd.textContent = v.mo+'mo '+v.d+'d'; if(nu) nu.textContent=''; }
+      else { nd.textContent = v.td; if(nu) nu.textContent='d'; }
       nt.textContent = pad(v.h)+':'+pad(v.m)+':'+pad(v.s);
     }
   }

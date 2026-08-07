@@ -430,7 +430,11 @@
     background:linear-gradient(135deg,#8FE3FF 0%,#5FCCFF 48%,#8FE3FF 100%);color:#000;
     border:1.5px solid rgba(255,255,255,.85);border-radius:999px;
     padding:8px 22px;font-weight:900;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
-    box-shadow:0 6px 26px rgba(95,204,255,.55),0 0 0 4px rgba(143,227,255,.16)}
+    box-shadow:0 6px 26px rgba(95,204,255,.55),0 0 0 4px rgba(143,227,255,.16);
+    text-decoration:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+  a.gt-kick:hover{transform:translateY(-2px);
+    box-shadow:0 10px 32px rgba(95,204,255,.72),0 0 0 5px rgba(143,227,255,.24)}
+  a.gt-kick:focus-visible{outline:3px solid #fff;outline-offset:3px}
   .gt-kick .dot{width:8px;height:8px;border-radius:50%;background:#B3261E;box-shadow:0 0 0 0 rgba(179,38,30,.7);
     animation:gtpulse 1.9s infinite}
   @keyframes gtpulse{0%{box-shadow:0 0 0 0 rgba(179,38,30,.75)}70%{box-shadow:0 0 0 11px rgba(179,38,30,0)}100%{box-shadow:0 0 0 0 rgba(179,38,30,0)}}
@@ -1070,7 +1074,7 @@
 
 <!-- ================= THE GAUNTLET ================= -->
 <section id="gauntlet"><div class="wrap gt-in">
-  <span class="gt-kick"><span class="dot"></span>The Gauntlet &nbsp;·&nbsp; Open Now</span>
+  <a class="gt-kick" href="/gauntlet.html"><span class="dot"></span>The Gauntlet &nbsp;·&nbsp; Open Now</a>
   <h2 class="gt-h">Answer <b>12 of 12</b><small>of our model exam questions</small>Get <b>The Success 405</b></h2>
   <p class="gt-sub">Correctly answer twelve of twelve of our model exam questions — <b>we give you three tries</b> —
      and you immediately receive our <b>SUCCESS 405 sample questions</b> — our entire library, free. No card, no catch.</p>

@@ -1880,7 +1880,7 @@ window.linkAuth=function(txt){
     document.body.style.overflow='';
   }
   window.closeQ=function(){ putBack(); ov.classList.remove('open'); };
-  window.openQ=function(i){
+  window.openQ=function(i,pre){
     var cs=cards();
     if(i<0||i>=cs.length){ window.closeQ(); return; }
     putBack();
@@ -1890,6 +1890,10 @@ window.linkAuth=function(txt){
     shell.innerHTML=''; shell.appendChild(head); shell.appendChild(c); shell.appendChild(bar);
     cur=i; pending=-1;
     c.querySelectorAll('.opt.selected').forEach(function(o){ o.classList.remove('selected'); });
+    if(typeof pre==='number' && pre>=0 && !isLocked(c)){
+      var pos=c.querySelectorAll('.opt');
+      if(pos[pre]){ pos[pre].classList.add('selected'); pending=pre; }
+    }
     syncBar(c);
     ov.classList.add('open');
     document.body.style.overflow='hidden';
@@ -1944,7 +1948,10 @@ window.linkAuth=function(txt){
     if(!c || ov.contains(c)) return;
     if(e.target.closest('.tn-reopen')) return;
     e.preventDefault(); e.stopPropagation();
-    window.openQ(cards().indexOf(c));
+    var opt=e.target.closest ? e.target.closest('.opt') : null;
+    var pre=-1;
+    if(opt){ pre=[].indexOf.call(c.querySelectorAll('.opt'), opt); }
+    window.openQ(cards().indexOf(c), pre>=0?pre:undefined);
   }, true);
   // quiz CTAs launch the first unanswered question
   document.addEventListener('click',function(e){

@@ -105,7 +105,8 @@ footer a{color:var(--ice)}
 <script>
 (function(){
   var FORM='262178024696060';             // site tracker (events)
-  var ENTRY='262181208360046';             // gauntlet entry form
+  var ENTRY='262181208360046';             // gauntlet entry form (sends the private link)
+  var CLAIM='262181863654059';             // winner claims ONLY (sends the library)
   var POOL=(window.GPOOL||[]);
   var P=new URLSearchParams(location.search);
   var key=(P.get('k')||'').trim();
@@ -248,12 +249,12 @@ footer a{color:var(--ice)}
       if(!/^\S+@\S+\.\S+$/.test(em)){ m.className='msg err'; m.textContent='Enter the email to send the library to.'; return; }
       this.disabled=true; this.textContent='Claiming…';
       var fd=new FormData();
-      fd.append('formID',ENTRY);
-      fd.append('q2_q2_email0',em);
-      fd.append('q3_q3_textbox1','WINNER 12/12 — send THE SUCCESS 405 — key '+key);
-      fd.append('q4_q4_textbox2',key);
+      fd.append('formID',CLAIM);
+      fd.append('q3_q3_email1',em);
+      fd.append('q8_result','12/12 \u2014 perfect run');
+      fd.append('q9_token',key);
       track('gauntlet_win','claimed');
-      fetch('https://submit.jotform.com/submit/'+ENTRY,{method:'POST',body:fd,mode:'no-cors'}).then(d).catch(d);
+      fetch('https://submit.jotform.com/submit/'+CLAIM,{method:'POST',body:fd,mode:'no-cors'}).then(d).catch(d);
       var b=this;
       function d(){ m.className='msg ok'; m.textContent='✓ Claim recorded — THE SUCCESS 405 is on its way to '+em+'. Check your inbox (and spam, once).'; b.textContent='Claimed ✓'; }
     });

@@ -430,6 +430,32 @@
   .qz-next{background:#FFD100;color:#14355F;box-shadow:0 8px 24px rgba(0,0,0,.35)}
   .qz-next:hover{background:#F2C500}
 
+  /* ===== FULL READ visuals ===== */
+  .xr-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 4px}
+  .xr-stat{background:#14355F;border-radius:13px;padding:13px 6px;text-align:center}
+  .xr-stat.warn{background:#B3261E}
+  .xr-stat.good{background:#1E7A46}
+  .xr-stat .v{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;color:#FFD100;line-height:1;font-variant-numeric:tabular-nums}
+  .xr-stat.warn .v,.xr-stat.good .v{color:#fff}
+  .xr-stat .k{font-size:.6rem;font-weight:900;letter-spacing:.09em;color:#CFE0F2;margin-top:5px}
+  .xr-meter{margin:14px 0 6px}
+  .xr-mtrack{position:relative;height:26px;background:#EDF3FA;border-radius:999px;overflow:hidden}
+  .xr-mfill{height:100%;border-radius:999px;background:linear-gradient(90deg,#1E7A46,#2FA163);transition:width .8s ease}
+  .xr-mfill.bad{background:linear-gradient(90deg,#B3261E,#D8443B)}
+  .xr-mline{position:absolute;top:-4px;bottom:-4px;width:3px;background:#14355F;left:68%}
+  .xr-mlbl{display:flex;justify-content:space-between;font-size:.68rem;font-weight:900;color:#5B6B80;letter-spacing:.05em;margin-top:5px}
+  .xr-mnum{position:absolute;top:50%;transform:translateY(-50%);left:12px;font-weight:900;font-size:.82rem;color:#fff;letter-spacing:.04em}
+  .xr-qbar{display:grid;grid-template-columns:20px 1fr 62px;gap:9px;align-items:center;padding:5px 2px;border-bottom:1px solid #F1F6FB}
+  .xr-qbar .m{font-weight:900;font-size:.95rem}
+  .xr-qbar .m.ok{color:#1E7A46}.xr-qbar .m.no{color:#B3261E}
+  .xr-qname{font-size:.8rem;font-weight:700;color:#0C1F3A;margin-bottom:3px;line-height:1.25}
+  .xr-qtrack{height:9px;background:#EDF3FA;border-radius:999px;overflow:hidden}
+  .xr-qfill{height:100%;border-radius:999px;background:#4A7FBF}
+  .xr-qfill.ok{background:#1E7A46}.xr-qfill.no{background:#B3261E}
+  .xr-qfill.slow{background:#E8A33D}
+  .xr-qt{text-align:right;font-variant-numeric:tabular-nums;font-size:.76rem;font-weight:800;color:#5B6B80}
+  .xr-qtags{display:inline-block;font-size:.58rem;font-weight:900;letter-spacing:.05em;color:#4A7FBF;margin-left:6px}
+
   /* ===== THE FULL READ ===== */
   .xr .tn-head{background:#0C1F3A}
   .xr-score{display:flex;gap:14px;align-items:center;justify-content:center;margin:4px 0 12px;flex-wrap:wrap}
@@ -1869,11 +1895,19 @@ window.linkAuth=function(txt){
     var h='';
     h+='<div class="xr-score"><span class="xr-big">'+score+'<small>/'+n+'</small></span>'
       +'<span class="xr-badge '+(above?'up':'dn')+'">'+pct+'% \u2014 '+(above?'above':'below')+' the exam\u2019s 68% line</span></div>';
+    h+='<div class="xr-meter"><div class="xr-mtrack"><div class="xr-mfill'+(above?'':' bad')+'" style="width:'+pct+'%"></div>'
+      +'<div class="xr-mline"></div><div class="xr-mnum">'+pct+'%</div></div>'
+      +'<div class="xr-mlbl"><span>0%</span><span>\u25B2 68% PASS LINE</span><span>100%</span></div></div>';
+    h+='<div class="xr-stats">'
+      +'<div class="xr-stat"><div class="v">'+fmt(tot)+'</div><div class="k">TOTAL TIME</div></div>'
+      +'<div class="xr-stat"><div class="v">'+fmt(avg)+'</div><div class="k">PER QUESTION</div></div>'
+      +'<div class="xr-stat good"><div class="v">'+Math.round(banked/60)+'m</div><div class="k">BANKED</div></div>'
+      +'<div class="xr-stat'+(over?' warn':' good')+'"><div class="v">'+over+'</div><div class="k">OVER 2:00</div></div></div>';
     h+='<div class="xr-chips">'
-      +'<span class="xr-chip">\u23F1 '+fmt(tot)+' total \u00B7 '+fmt(avg)+'/question</span>'
-      +'<span class="xr-chip">easy six '+fmt(eAvg)+' \u00B7 hard six '+fmt(hAvg)+'</span>'
-      +'<span class="xr-chip">'+(over? over+' question'+(over>1?'s':'')+' past the exam\u2019s 2:00' : 'never past the exam\u2019s 2:00')+'</span>'
-      +'<span class="xr-chip">'+Math.round(banked/60)+' min banked vs exam pace</span></div>';
+      +'<span class="xr-chip">EASY SIX '+fmt(eAvg)+'</span>'
+      +'<span class="xr-chip">HARD SIX '+fmt(hAvg)+'</span>'
+      +'<span class="xr-chip">EXAM PACE 2:00</span>'
+      +'<span class="xr-chip" style="background:#FFD100;border-color:#FFD100;color:#14355F">WE TRAIN 1:30</span></div>';
     // ---------- domain + strength analysis ----------
     var eth=R.filter(function(r){return r.id.indexOf('ETH')===0;});
     var fl=R.filter(function(r){return r.id.indexOf('FL')===0;});
@@ -1914,12 +1948,16 @@ window.linkAuth=function(txt){
     S.forEach(function(x){ h+='<div class="st-card"><span class="st-tag">'+x[0]+'</span><b>'+x[1]+'</b><span>'+x[2]+'</span></div>'; });
     h+='</div>';
     h+='<div class="tn-sec"><span class="tn-lbl">Question by question \u2014 your exam</span>';
+    var maxT=Math.max.apply(null,R.map(function(r){return r.t;}).concat([60]));
     R.forEach(function(r,i){
-      var p=r.subj.split('\u00B7'); var top=(p[0]||'').trim(), sub=(p[1]||'').trim();
-      h+='<div class="xr-row"><span class="r '+(r.ok?'ok':'no')+'">'+(r.ok?'\u2713':'\u2717')+'</span>'
-        +'<span class="sj">'+top+' \u2014 '+sub+'</span>'
-        +'<span class="lv2">'+(r.lvl==='EASY'?'EASY':'HARD')+(r.calc?' \u00B7 CALC':'')+'</span>'
-        +'<span class="tt">\u23F1 '+fmt(r.t)+'</span></div>';
+      var p=r.subj.split('\u00B7'); var tp=(p[0]||'').trim(), sub=(p[1]||'').trim();
+      var w=Math.max(5,Math.round(100*r.t/maxT));
+      var cls=r.ok?(r.t>120?'slow':'ok'):'no';
+      h+='<div class="xr-qbar"><span class="m '+(r.ok?'ok':'no')+'">'+(r.ok?'\u2713':'\u2717')+'</span>'
+        +'<span><span class="xr-qname">'+tp+' \u2014 '+sub
+        +'<span class="xr-qtags">'+(r.lvl==='EASY'?'EASY':'HARD')+(r.calc?' \u00B7 CALC':'')+'</span></span>'
+        +'<span class="xr-qtrack"><span class="xr-qfill '+cls+'" style="width:'+w+'%"></span></span></span>'
+        +'<span class="xr-qt">'+fmt(r.t)+'</span></div>';
     });
     h+='</div>';
     var ranked=R.map(function(r){
@@ -1989,11 +2027,99 @@ window.linkAuth=function(txt){
         var focusTxt=ranked.length
           ? ranked.map(function(x,i){ var p=x.r.subj.split('·'); return (i+1)+'. '+(p[0]||'').trim()+' — '+(p[1]||'').trim()+'  ['+String(x.r.auth).replace('Authority: ','')+']'; }).join('\\n')
           : 'Nothing to fix — a perfect 12. Next stop: all 93 at exam pace.';
+        // ---------- build the visual email ----------
+        var NAVY='#14355F', INK='#0C1F3A', GOLD='#FFD100', GREEN='#1E7A46', RED='#B3261E', ICE='#F4F8FD';
+        function pill(txt,bg,fg,bd){ return '<td style="background:'+bg+';color:'+fg+';border:1px solid '+(bd||bg)+';border-radius:999px;padding:7px 14px;font:900 12px Arial,sans-serif;letter-spacing:.04em;white-space:nowrap">'+txt+'</td><td style="width:7px"></td>'; }
+        function statBox(num,lab,bg,fg){ return '<td align="center" style="background:'+bg+';border-radius:12px;padding:13px 8px"><div style="font:900 26px Georgia,serif;color:'+fg+';line-height:1">'+num+'</div><div style="font:700 10px Arial,sans-serif;color:#CFE0F2;letter-spacing:.08em;margin-top:4px">'+lab+'</div></td><td style="width:8px"></td>'; }
+        function bar(label,val,max,color){
+          var w=Math.max(6,Math.round(100*val/(max||1)));
+          return '<tr><td style="font:700 12px Arial,sans-serif;color:'+INK+';padding:5px 8px 5px 0;width:44%">'+label+'</td>'
+            +'<td style="padding:5px 0"><table role="presentation" cellpadding="0" cellspacing="0" style="width:100%"><tr>'
+            +'<td style="background:'+color+';height:14px;border-radius:7px;width:'+w+'%"></td><td></td></tr></table></td>'
+            +'<td style="font:900 12px Arial,sans-serif;color:'+NAVY+';padding:5px 0 5px 8px;text-align:right;white-space:nowrap">'+val+'</td></tr>';
+        }
+        var H='<div style="background:#FAF7F1;padding:0;margin:0">';
+        H+='<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;max-width:640px;margin:0 auto;background:#FFFFFF">';
+        // header
+        H+='<tr><td style="background:'+NAVY+';padding:22px 24px"><div style="font:900 13px Arial,sans-serif;color:'+GOLD+';letter-spacing:.14em">COLORADOLLPEXAM.COM</div>'
+          +'<div style="font:900 25px Georgia,serif;color:#FFFFFF;margin-top:6px">Your Exam — The Full Read</div></td></tr>';
+        // score hero
+        H+='<tr><td align="center" style="padding:24px 24px 6px"><div style="font:900 62px Georgia,serif;color:'+NAVY+';line-height:1">'+score+'<span style="font-size:24px;color:#5B6B80">/'+n+'</span></div>'
+          +'<div style="display:inline-block;background:'+(above?'#EAF7EF':'#FDEEED')+';color:'+(above?GREEN:RED)+';border-radius:999px;padding:8px 18px;font:900 14px Arial,sans-serif;margin-top:10px">'+pct+'% — '+(above?'ABOVE':'BELOW')+' THE EXAM’S 68% LINE</div></td></tr>';
+        // stat blocks
+        H+='<tr><td style="padding:16px 24px 4px"><table role="presentation" cellpadding="0" cellspacing="0" style="width:100%"><tr>'
+          +statBox(fmt(tot),'TOTAL TIME',NAVY,GOLD)
+          +statBox(fmt(avg),'PER QUESTION',NAVY,GOLD)
+          +statBox(Math.round(banked/60)+'m','BANKED',NAVY,GOLD)
+          +statBox(over,'OVER 2:00',over?RED:GREEN,'#FFFFFF')
+          +'</tr></table></td></tr>';
+        // pace pills
+        H+='<tr><td style="padding:12px 24px 0"><table role="presentation" cellpadding="0" cellspacing="0"><tr>'
+          +pill('EASY SIX '+fmt(eAvg),ICE,NAVY,'#DCE8F5')
+          +pill('HARD SIX '+fmt(hAvg),ICE,NAVY,'#DCE8F5')
+          +pill('EXAM PACE 2:00',ICE,NAVY,'#DCE8F5')
+          +pill('WE TRAIN 1:30',GOLD,NAVY,GOLD)
+          +'</tr></table></td></tr>';
+        // verdict
+        H+='<tr><td style="padding:20px 24px 4px"><table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;background:'+NAVY+';border-radius:14px"><tr><td style="padding:18px 20px">'
+          +'<div style="font:900 19px Georgia,serif;color:'+GOLD+';line-height:1.25">'+V[0]+'</div>'
+          +'<div style="font:400 14px Arial,sans-serif;color:#DCEAF8;line-height:1.6;margin-top:8px">'+V[1].replace(/<b class="rv-gold">/g,'<b style="color:'+GOLD+'">')+'</div>'
+          +'<div style="font:400 14px Arial,sans-serif;color:#DCEAF8;line-height:1.6;margin-top:8px">'+V[2].replace(/<b class="rv-gold">/g,'<b style="color:'+GOLD+'">')+'</div>'
+          +'</td></tr></table></td></tr>';
+        // strengths
+        H+='<tr><td style="padding:18px 24px 0"><div style="font:900 11px Arial,sans-serif;color:#4A7FBF;letter-spacing:.1em">YOUR STRENGTHS — WHAT THE DATA SHOWS</div></td></tr>';
+        S.forEach(function(x){
+          H+='<tr><td style="padding:9px 24px 0"><table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;background:#F2FBF6;border:1px solid #BFE3CD;border-radius:12px"><tr><td style="padding:13px 15px">'
+            +'<div style="display:inline-block;background:'+GREEN+';color:#FFF;border-radius:999px;padding:3px 11px;font:900 10px Arial,sans-serif;letter-spacing:.06em">'+x[0]+'</div>'
+            +'<div style="font:900 14px Arial,sans-serif;color:'+GREEN+';margin-top:7px">'+x[1]+'</div>'
+            +'<div style="font:400 13px Arial,sans-serif;color:#274B39;line-height:1.5;margin-top:3px">'+x[2]+'</div>'
+            +'</td></tr></table></td></tr>';
+        });
+        // question-by-question bars
+        H+='<tr><td style="padding:20px 24px 0"><div style="font:900 11px Arial,sans-serif;color:#4A7FBF;letter-spacing:.1em">EVERY QUESTION — YOUR CLOCK</div>'
+          +'<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;margin-top:8px">';
+        var maxT=Math.max.apply(null,R.map(function(r){return r.t;}).concat([1]));
+        R.forEach(function(r){
+          var nm=(r.subj.split('\u00B7')[0]||'').trim();
+          H+=bar((r.ok?'✔ ':'✘ ')+nm, fmt(r.t), 1, r.ok?GREEN:RED).replace('>'+fmt(r.t)+'<','>'+fmt(r.t)+'<')
+             .replace('width:6%','width:'+Math.max(6,Math.round(100*r.t/maxT))+'%');
+        });
+        H+='</table></td></tr>';
+        // focus list
+        H+='<tr><td style="padding:20px 24px 0"><div style="font:900 11px Arial,sans-serif;color:#4A7FBF;letter-spacing:.1em">WHERE TO AIM NEXT — BEFORE NOVEMBER 10</div></td></tr>';
+        (ranked.length?ranked:[]).forEach(function(x,i){
+          var p=x.r.subj.split('\u00B7');
+          H+='<tr><td style="padding:9px 24px 0"><table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;background:'+(i===0?'#FFFDF2':'#FFFFFF')+';border:'+(i===0?'2px solid '+GOLD:'1px solid #E3ECF6')+';border-radius:12px"><tr><td style="padding:13px 15px">'
+            +'<div style="display:inline-block;background:'+(i===0?GOLD:NAVY)+';color:'+(i===0?NAVY:GOLD)+';border-radius:999px;padding:3px 11px;font:900 10px Arial,sans-serif;letter-spacing:.06em">#'+(i+1)+(i===0?' · START HERE':'')+'</div>'
+            +'<div style="font:900 14px Arial,sans-serif;color:'+NAVY+';margin-top:7px">'+(p[0]||'').trim()+' — '+(p[1]||'').trim()+'</div>'
+            +'<div style="font:400 13px Arial,sans-serif;color:#33465E;line-height:1.5;margin-top:3px">'+(x.r.ok?('Right — but '+fmt(x.r.t)+' on the clock. Speed is the miss you cannot see.'):x.r.matters)+'</div>'
+            +'<div style="font:italic 12px Arial,sans-serif;color:#5B6B80;margin-top:5px">'+String(x.r.auth).replace('Authority: ','Authority: ')+'</div>'
+            +'</td></tr></table></td></tr>';
+        });
+        if(!ranked.length) H+='<tr><td style="padding:9px 24px 0"><div style="background:#FFFDF2;border:2px solid '+GOLD+';border-radius:12px;padding:14px 16px;font:900 15px Georgia,serif;color:'+NAVY+'">Nothing to fix. You cleared all twelve — next ceiling is volume: 135 questions in one day.</div></td></tr>';
+        // inspiration
+        H+='<tr><td style="padding:20px 24px 0"><table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;background:'+GOLD+';border-radius:14px"><tr><td style="padding:17px 19px;font:400 14px Arial,sans-serif;color:'+INK+';line-height:1.6">'
+          +'<b>Here is the honest math:</b> November 10 is one day, six hours, 135 questions and two essays — and every one of them is a rule someone can learn. Nobody walks in perfect; they walk in <b>prepared</b>.'
+          +'<div style="font:900 16px Georgia,serif;color:'+NAVY+';margin-top:10px">See you on the other side of November 10.</div>'
+          +'</td></tr></table></td></tr>';
+        // offer
+        H+='<tr><td style="padding:20px 24px 0"><table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;background:'+NAVY+';border-radius:14px"><tr><td align="center" style="padding:22px 20px">'
+          +'<div style="display:inline-block;background:'+RED+';color:#FFF;border-radius:999px;padding:5px 15px;font:900 11px Arial,sans-serif;letter-spacing:.08em">YOUR FINISHER UNLOCK</div>'
+          +'<div style="font:900 21px Georgia,serif;color:#FFFFFF;margin-top:11px;line-height:1.3">THE FULL 405 — the complete library</div>'
+          +'<div style="font:400 13px Arial,sans-serif;color:#CFE0F2;margin-top:6px;line-height:1.5">All 405 sample questions, every answer explained and keyed to Colorado authority, plus all 6 sample essays.</div>'
+          +'<div style="margin-top:12px"><span style="font:900 30px Georgia,serif;color:'+GOLD+'">$69.99</span> <span style="font:700 15px Arial,sans-serif;color:#9FBBD8;text-decoration:line-through">$124.95</span></div>'
+          +'<div style="margin-top:14px"><a href="https://buy.stripe.com/eVq00j4F7eEQ84r3Ya5J604" style="display:inline-block;background:'+GOLD+';color:'+NAVY+';border-radius:999px;padding:14px 30px;font:900 15px Arial,sans-serif;text-decoration:none">Unlock THE FULL 405 →</a></div>'
+          +'<div style="font:400 11px Arial,sans-serif;color:#9FBBD8;margin-top:10px">$55 off — because you finished all twelve.</div>'
+          +'</td></tr></table></td></tr>';
+        // footer
+        H+='<tr><td style="padding:20px 24px 26px"><div style="border-top:1px solid #E7E1D6;padding-top:12px;font:400 11px Arial,sans-serif;color:#5B6B80;line-height:1.6">'
+          +'— <b>The Principal</b>, ColoradoLLPExam.com<br>Original sample materials — not actual exam content. Independent study aid, not legal advice. Not affiliated with the Colorado Supreme Court or OARC. <a href="https://coloradollpexam.com/#quiz" style="color:#1E4A82">Come back and beat your score →</a>'
+          +'</div></td></tr></table></div>';
         var fd=new FormData();
         fd.append('formID','262178487299072');
         fd.append('q2_q2_email0',em);
         fd.append('q3_q3_textbox1',score+'/'+n+' ('+pct+'%) — '+(above?'above':'below')+' the 68% line · '+fmt(tot)+' total, '+fmt(avg)+'/question');
-        fd.append('q4_q4_textarea2',revTxt);
+        fd.append('q4_q4_textarea2',H);
         fd.append('q5_q5_textarea3',stTxt);
         fd.append('q6_q6_textarea4',focusTxt);
         try{ localStorage.setItem('llpx_email',em); }catch(e){}

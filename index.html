@@ -1852,9 +1852,8 @@ window.linkAuth=function(txt){
   var bar=document.createElement('div'); bar.className='qz-bar';
   var bBack=document.createElement('button'); bBack.type='button'; bBack.className='qz-close'; bBack.textContent='\u25C2 Back';
   var bExit=document.createElement('button'); bExit.type='button'; bExit.className='qz-close'; bExit.textContent='\u2715 Exit focus mode';
-  var bSubmit=document.createElement('button'); bSubmit.type='button'; bSubmit.className='qz-next'; bSubmit.textContent='SUBMIT ANSWER';
   var bNext=document.createElement('button'); bNext.type='button'; bNext.className='qz-next'; bNext.textContent='Next question \u25B8';
-  bar.appendChild(bBack); bar.appendChild(bExit); bar.appendChild(bSubmit); bar.appendChild(bNext);
+  bar.appendChild(bBack); bar.appendChild(bExit); bar.appendChild(bNext);
   ov.appendChild(shell);
   document.body.appendChild(ov);
   var cur=-1, ph=null, pending=-1, allow=false;
@@ -1863,13 +1862,10 @@ window.linkAuth=function(txt){
   function isLocked(c){ return !!c.querySelector('.opts.locked'); }
   function syncBar(c){
     var locked=isLocked(c);
-    bSubmit.style.display = locked ? 'none' : 'inline-block';
-    bSubmit.disabled = pending < 0;
-    bSubmit.style.opacity = pending < 0 ? .45 : 1;
     bNext.style.display = locked ? 'inline-block' : 'none';
     var cs=cards();
     bNext.textContent = (nextUnanswered(cur)<0) ? 'Finish \u2014 your Full Read \u25B8' : 'Next question \u25B8';
-    head.innerHTML='<span class="qzh-t">\u25C6\u25C6 Focus Mode \u00B7 Question '+(cur+1)+' of '+cs.length+'</span><span class="qzh-s">One question. One screen. '+(locked?'Answered \u2014 read the note, then move.':'Pick your answer, then hit SUBMIT.')+'</span>';
+    head.innerHTML='<span class="qzh-t">\u25C6\u25C6 Focus Mode \u00B7 Question '+(cur+1)+' of '+cs.length+'</span><span class="qzh-s">One question. One screen. '+(locked?'Answered \u2014 read the note, then move.':'Tap your answer \u2014 that is it.')+'</span>';
   }
   function putBack(){
     if(cur>=0 && ph && ph.parentNode){
@@ -1890,11 +1886,11 @@ window.linkAuth=function(txt){
     shell.innerHTML=''; shell.appendChild(head); shell.appendChild(c); shell.appendChild(bar);
     cur=i; pending=-1;
     c.querySelectorAll('.opt.selected').forEach(function(o){ o.classList.remove('selected'); });
+    syncBar(c);
     if(typeof pre==='number' && pre>=0 && !isLocked(c)){
       var pos=c.querySelectorAll('.opt');
-      if(pos[pre]){ pos[pre].classList.add('selected'); pending=pre; }
+      if(pos[pre]) setTimeout(function(){ pos[pre].click(); }, 70);
     }
-    syncBar(c);
     ov.classList.add('open');
     document.body.style.overflow='hidden';
     ov.scrollTop=0;
@@ -1907,28 +1903,11 @@ window.linkAuth=function(txt){
     }
     return -1;
   }
-  // proctored two-step: select, then SUBMIT commits
+  // one tap answers: the card's own handler commits; we just refresh the bar
   shell.addEventListener('click',function(e){
-    if(allow) return;
-    var opt=e.target.closest ? e.target.closest('.opt') : null;
-    if(!opt) return;
+    if(!(e.target.closest && e.target.closest('.opt'))) return;
     var c=shell.querySelector('.qcard');
-    if(!c || isLocked(c)) return; // after lock, taps open tutor notes normally
-    e.stopPropagation(); e.preventDefault();
-    c.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('selected'); });
-    opt.classList.add('selected');
-    pending=[].indexOf.call(c.querySelectorAll('.opt'), opt);
-    syncBar(c);
-  }, true);
-  bSubmit.addEventListener('click',function(){
-    var c=shell.querySelector('.qcard');
-    if(!c || pending<0) return;
-    allow=true;
-    c.querySelectorAll('.opt')[pending].click();
-    allow=false;
-    c.querySelectorAll('.opt.selected').forEach(function(o){ o.classList.remove('selected'); });
-    pending=-1;
-    syncBar(c);
+    if(c) setTimeout(function(){ syncBar(c); }, 30);
   });
   bNext.addEventListener('click',function(){
     var c0=cur; putBack();

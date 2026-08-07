@@ -349,6 +349,20 @@
   .ck-note{font-size:1.02rem}
   @media(max-width:640px){.ck-tile .n{font-size:2.1rem !important}#examclock h2{font-size:1.8rem !important}}
 
+  /* ===== email my review ===== */
+  .em-box{background:linear-gradient(135deg,#FFFDF2,#FFF3C4);border:2px solid #FFD100;border-radius:16px;padding:17px 19px;margin:16px 0 6px}
+  .em-box h4{font-family:'Fraunces',serif;color:#14355F;font-size:1.12rem;margin:0 0 5px}
+  .em-box p{font-size:.87rem;color:#33465E;margin:0 0 11px;line-height:1.5}
+  .em-row{display:flex;gap:8px;flex-wrap:wrap}
+  .em-row input{flex:1;min-width:200px;border:1.5px solid #C9D9EC;border-radius:999px;padding:12px 17px;font-family:'Inter',sans-serif;font-size:.92rem;background:#fff}
+  .em-row button{background:#14355F;color:#FFD100;border:none;border-radius:999px;padding:12px 24px;font-weight:900;font-size:.9rem;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;box-shadow:0 5px 14px rgba(20,53,95,.3)}
+  .em-row button:hover{background:#1E4A82}
+  .em-row button[disabled]{opacity:.5;cursor:default}
+  .em-msg{font-size:.83rem;margin-top:9px;font-weight:700;color:#14355F;line-height:1.5}
+  .em-msg.ok{color:#1E7A46}
+  .em-msg.err{color:#B3261E}
+  .em-fine{font-size:.72rem;color:#5B6B80;margin-top:7px}
+
   /* ===== the review ===== */
   .rv{border-radius:16px;padding:18px 20px;margin:14px 0 6px;background:linear-gradient(135deg,#14355F,#0C1F3A);color:#fff}
   .rv h3{font-family:'Fraunces',serif;color:#FFD100;font-size:clamp(1.15rem,3vw,1.5rem);margin:0 0 7px;line-height:1.2}
@@ -1838,6 +1852,9 @@ window.linkAuth=function(txt){
         +'<span class="a">Pinpoint authority: '+window.linkAuth(String(x.r.auth).replace('Authority: ',''))+'</span></div>';
     });
     h+='</div>';
+    // plain-text versions of the review for the emailed copy
+    var revTxt=V[0]+'\\n\\n'+V[1].replace(/<[^>]+>/g,'')+'\\n\\n'+V[2].replace(/<[^>]+>/g,'');
+    var stTxt=S.map(function(x){ return '\\u2022 '+x[0]+' \\u2014 '+x[1]+' '+x[2]; }).join('\\n\\n');
     var savedEm=localStorage.getItem('llpx_email')||'';
     var sess=savedEm?loadSess(savedEm):[];
     if(sess.length){
@@ -1858,6 +1875,12 @@ window.linkAuth=function(txt){
       +'<a class="mbtn" id="xr-mailme" href="#">\uD83D\uDCE7 Email me my results</a></div>'
       +'<div class="xr-note" id="xr-msg">Your exams accumulate under your email on this device \u2014 finish the twelve again anytime and the Full Read shows your climb, session over session. The email copy goes to your inbox (cc: the Principal) with a comeback link.</div></div>';
     h+='<div class="rv-close"><b>Here is the honest math:</b> November 10 is one day, six hours, 135 questions and two essays \u2014 and every one of them is a rule someone can learn. You just proved you can hold '+score+' of 12 under a running clock, cold. Nobody walks in perfect; they walk in <b>prepared</b>. Fix the '+(ranked.length||0)+' subject'+(((ranked.length||0)===1)?'':'s')+' above, keep the strengths sharp, and let the clock stop being the enemy.<br><br><b>See you on the other side of November 10.</b></div>';
+    h+='<div class="em-box"><h4>\u2709 Want this whole review emailed to you?</h4>'
+      +'<p>Your score, your strengths, and your ranked study list \u2014 sent to your inbox in one click, so you can work from it all week (and forward it to whoever is keeping you honest).</p>'
+      +'<div class="em-row"><input type="email" id="em-in" placeholder="you@email.com" value="'+savedEm.replace(/"/g,'')+'">'
+      +'<button type="button" id="em-go">Send me my review \u2192</button></div>'
+      +'<div class="em-msg" id="em-msg"></div>'
+      +'<div class="em-fine">One email with your results. No list-bombing, no sharing your address \u2014 ever.</div></div>';
     h+='<div class="tn-buy"><div class="t1">This read covered 12. The guide runs the same tutor across all 93 \u2014 every answer explained, every authority linked.</div>'
       +'<a class="b1" href="https://buy.stripe.com/4gM3cv5JbcwI0BZ2U65J600" target="_blank" rel="noopener">Buy THE 93 \u2014 $99.95 \u2192</a>'
       +'<a class="b2" href="https://buy.stripe.com/fZu7sL5Jb1S4gAX7am5J601" target="_blank" rel="noopener">or THE FULL 405 \u2014 the whole library \u00B7 $124.95 \u2192</a></div>';
@@ -1866,6 +1889,30 @@ window.linkAuth=function(txt){
     ov.querySelector('.tn').scrollTop=0;
     if(window.llpTrack) window.llpTrack('quiz_done', score+'/12 in '+tot+'s');
     var missIds=R.filter(function(r){return !r.ok;}).map(function(r){return r.id;});
+    (function(){
+      var go=document.getElementById('em-go'), inp=document.getElementById('em-in'), msg=document.getElementById('em-msg');
+      if(!go) return;
+      go.addEventListener('click',function(){
+        var em=(inp.value||'').trim();
+        if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(em)){ msg.className='em-msg err'; msg.textContent='Enter a valid email and we will send it right over.'; return; }
+        go.disabled=true; go.textContent='Sending\\u2026';
+        var focusTxt=ranked.length
+          ? ranked.map(function(x,i){ var p=x.r.subj.split('\\u00B7'); return (i+1)+'. '+(p[0]||'').trim()+' \\u2014 '+(p[1]||'').trim()+'  ['+String(x.r.auth).replace('Authority: ','')+']'; }).join('\\n')
+          : 'Nothing to fix \\u2014 a perfect 12. Next stop: all 93 at exam pace.';
+        var fd=new FormData();
+        fd.append('formID','262178487299072');
+        fd.append('q2_q2_email0',em);
+        fd.append('q3_q3_textbox1',score+'/'+n+' ('+pct+'%) \\u2014 '+(above?'above':'below')+' the 68% line \\u00B7 '+fmt(tot)+' total, '+fmt(avg)+'/question');
+        fd.append('q4_q4_textarea2',revTxt);
+        fd.append('q5_q5_textarea3',stTxt);
+        fd.append('q6_q6_textarea4',focusTxt);
+        try{ localStorage.setItem('llpx_email',em); }catch(e){}
+        if(window.llpTrack) window.llpTrack('review_emailed', score+'/'+n);
+        fetch('https://submit.jotform.com/submit/262178487299072',{method:'POST',body:fd,mode:'no-cors'})
+          .then(function(){ msg.className='em-msg ok'; msg.textContent='\\u2713 On its way to '+em+' \\u2014 check your inbox (and spam, once).'; go.textContent='Sent \\u2713'; })
+          .catch(function(){ msg.className='em-msg ok'; msg.textContent='\\u2713 On its way to '+em+' \\u2014 check your inbox (and spam, once).'; go.textContent='Sent \\u2713'; });
+      });
+    })();
     document.getElementById('xr-save').addEventListener('click',function(){
       var em=(document.getElementById('xr-em').value||'').trim().toLowerCase();
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){ document.getElementById('xr-msg').textContent='Enter a valid email to save your exam.'; return; }

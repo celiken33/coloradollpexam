@@ -129,12 +129,16 @@
   .t-num{font-family:'Fraunces',serif;font-size:2.1rem;font-weight:800;color:#CFE7FF;line-height:1;font-variant-numeric:tabular-nums}
   .t-lbl{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#A9C8E8;font-weight:700;margin-top:5px}
   .t-sep{color:#A9D2F5;font-size:1.7rem;font-weight:800;opacity:.6}
+  .t-cell.big{background:rgba(255,209,0,.13);border-color:rgba(255,209,0,.55);box-shadow:0 0 26px rgba(255,209,0,.18)}
+  .t-cell.big .t-num{color:#FFD100}
+  .t-cell.big .t-lbl{color:#F0DC96}
+  @media(max-width:860px){.timer{gap:7px}.t-cell{min-width:74px;padding:12px 13px}.t-num{font-size:1.75rem}.t-sep{font-size:1.25rem}}
   .timer-cap{margin-top:14px;font-size:.88rem;color:#FFD100;text-align:center}
   a.urgent-bar{display:block;background:#FFD100;color:#14355F;text-align:center;font-weight:800;font-size:.86rem;letter-spacing:.02em;padding:10px 16px;text-decoration:none;line-height:1.4}
   a.urgent-bar b{font-weight:900}
   a.urgent-bar:hover{background:#FFDD33}
   @media(max-width:640px){a.urgent-bar{font-size:.76rem;padding:9px 12px}}
-  @media(max-width:560px){.t-cell{min-width:70px;padding:10px 12px}.t-num{font-size:1.5rem}}
+  @media(max-width:560px){.t-cell{min-width:56px;padding:9px 8px}.t-num{font-size:1.28rem}.t-lbl{font-size:.55rem;letter-spacing:.06em}.t-sep{display:none}.timer{gap:6px}}
   .hero-sun{position:absolute;top:70px;right:12%;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,#FFD100 0%,rgba(255,209,0,.45) 52%,transparent 72%);z-index:1}
   .range{position:absolute;bottom:-2px;left:0;right:0;z-index:2}
 
@@ -348,6 +352,44 @@
   .ck-tile .t{font-size:.84rem;margin-top:10px}
   .ck-note{font-size:1.02rem}
   @media(max-width:640px){.ck-tile .n{font-size:2.1rem !important}#examclock h2{font-size:1.8rem !important}}
+
+  /* ===== THE GAUNTLET mega banner ===== */
+  #gauntlet{background:
+      radial-gradient(1100px 380px at 20% -30%,rgba(255,209,0,.20),transparent 62%),
+      radial-gradient(900px 340px at 88% 120%,rgba(255,209,0,.13),transparent 60%),
+      linear-gradient(135deg,#0A1830,#14355F 52%,#0A1830);
+    border-top:6px solid #FFD100;border-bottom:6px solid #FFD100;padding:34px 0 38px;position:relative;overflow:hidden}
+  #gauntlet:before{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(115deg,rgba(255,209,0,.05) 0 2px,transparent 2px 22px);pointer-events:none}
+  .gt-in{position:relative;text-align:center}
+  .gt-kick{display:inline-flex;align-items:center;gap:9px;background:#FFD100;color:#0A1830;border-radius:999px;
+    padding:7px 20px;font-weight:900;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+    box-shadow:0 6px 22px rgba(255,209,0,.36)}
+  .gt-kick .dot{width:8px;height:8px;border-radius:50%;background:#B3261E;box-shadow:0 0 0 0 rgba(179,38,30,.7);
+    animation:gtpulse 1.9s infinite}
+  @keyframes gtpulse{0%{box-shadow:0 0 0 0 rgba(179,38,30,.75)}70%{box-shadow:0 0 0 11px rgba(179,38,30,0)}100%{box-shadow:0 0 0 0 rgba(179,38,30,0)}}
+  .gt-h{font-family:'Fraunces',serif;font-weight:900;color:#fff;line-height:.94;margin:15px 0 6px;
+    font-size:clamp(2.5rem,8.2vw,5.6rem);letter-spacing:-.02em;text-transform:uppercase}
+  .gt-h b{color:#FFD100;text-shadow:0 4px 26px rgba(255,209,0,.4)}
+  .gt-sub{color:#EAF2FB;font-size:clamp(1rem,2.3vw,1.32rem);font-weight:700;max-width:760px;margin:0 auto;line-height:1.45}
+  .gt-sub b{color:#FFD100}
+  .gt-pills{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:20px auto 4px;max-width:900px}
+  .gt-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,209,0,.5);
+    color:#fff;border-radius:999px;padding:8px 15px;font-weight:900;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase}
+  .gt-pill i{font-style:normal;color:#FFD100;font-size:.95rem;line-height:1}
+  .gt-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:22px auto 0;max-width:960px}
+  .gt-card{background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.16);border-radius:16px;padding:16px 13px}
+  .gt-card .n{font-family:'Fraunces',serif;font-weight:900;font-size:2.05rem;color:#FFD100;line-height:1}
+  .gt-card .t{color:#fff;font-weight:900;font-size:.82rem;letter-spacing:.05em;margin-top:7px;text-transform:uppercase}
+  .gt-card .d{color:#BFD4EA;font-size:.79rem;margin-top:5px;line-height:1.4}
+  .gt-cta{display:inline-flex;align-items:center;gap:11px;background:#FFD100;color:#0A1830;border-radius:999px;
+    padding:17px 38px;font-weight:900;font-size:clamp(1rem,2.5vw,1.22rem);letter-spacing:.05em;text-transform:uppercase;
+    text-decoration:none;margin-top:26px;box-shadow:0 12px 34px rgba(255,209,0,.34);transition:transform .15s,box-shadow .15s}
+  .gt-cta:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(255,209,0,.46)}
+  .gt-dare{color:#FFD100;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.02rem,2.6vw,1.5rem);
+    margin-top:20px;font-weight:700}
+  .gt-fine{color:#93AECD;font-size:.72rem;margin-top:12px;line-height:1.55;max-width:730px;margin-left:auto;margin-right:auto}
+  @media(max-width:640px){#gauntlet{padding:26px 0 30px}.gt-card .n{font-size:1.7rem}}
 
   /* ===== TRENDING (auto-updated daily) ===== */
   #trending{display:none;background:linear-gradient(135deg,#14355F,#0C1F3A);padding:26px 0 30px;border-top:5px solid #FFD100;border-bottom:5px solid #FFD100}
@@ -936,7 +978,11 @@
       <a class="btn btn-line" href="#pricing">Buy the Prep Guide NOW — $99.95</a>
     </div>
     <div class="timer" aria-label="Countdown to the November 10, 2026 exam">
-      <div class="t-cell"><div class="t-num" id="t-d">—</div><div class="t-lbl">days</div></div>
+      <div class="t-cell big"><div class="t-num" id="t-y">—</div><div class="t-lbl">years</div></div>
+      <span class="t-sep">:</span>
+      <div class="t-cell big"><div class="t-num" id="t-mo">—</div><div class="t-lbl">months</div></div>
+      <span class="t-sep">:</span>
+      <div class="t-cell big"><div class="t-num" id="t-d">—</div><div class="t-lbl">days</div></div>
       <span class="t-sep">:</span>
       <div class="t-cell"><div class="t-num" id="t-h">—</div><div class="t-lbl">hours</div></div>
       <span class="t-sep">:</span>
@@ -958,6 +1004,38 @@
     <path d="M0 190 L0 166 L230 130 L390 156 L540 120 L700 152 L850 112 L1000 150 L1160 126 L1320 154 L1440 136 L1440 190 Z" fill="#FAF7F1"/>
   </svg>
 </div>
+
+<!-- ================= THE GAUNTLET ================= -->
+<section id="gauntlet"><div class="wrap gt-in">
+  <span class="gt-kick"><span class="dot"></span>The Gauntlet &nbsp;·&nbsp; Open Now</span>
+  <h2 class="gt-h">Answer <b>12 of 12</b><br>Take the <b>405</b> Free</h2>
+  <p class="gt-sub">Twelve questions pulled at random from our proprietary 405-question library.
+     Miss none of them and the entire library is <b>yours, gratis</b> — no card, no catch.</p>
+
+  <div class="gt-pills">
+    <span class="gt-pill"><i>✦</i> 3 Attempts</span>
+    <span class="gt-pill"><i>⇄</i> Never the Same Question Twice</span>
+    <span class="gt-pill"><i>⏱</i> 2:00 Exam Pace</span>
+    <span class="gt-pill"><i>✉</i> Apply With an Email</span>
+    <span class="gt-pill"><i>$</i> Costs Nothing</span>
+  </div>
+
+  <div class="gt-cards">
+    <div class="gt-card"><div class="n">12/12</div><div class="t">The Bar</div>
+      <div class="d">Perfect, or it doesn't count. That's the whole rule.</div></div>
+    <div class="gt-card"><div class="n">3</div><div class="t">Attempts</div>
+      <div class="d">Three separate sets of twelve — 36 distinct questions in all.</div></div>
+    <div class="gt-card"><div class="n">0</div><div class="t">Repeats</div>
+      <div class="d">A question you've already seen never comes back on a later run.</div></div>
+    <div class="gt-card"><div class="n">$124.95</div><div class="t">What You Win</div>
+      <div class="d">The full 405-question library, sent to your inbox at no charge.</div></div>
+  </div>
+
+  <a class="gt-cta" href="/gauntlet.html">Enter The Gauntlet →</a>
+  <div class="gt-dare">What do you have to lose — if you're serious about this?</div>
+  <p class="gt-fine">Apply with your email and we send your private link. Original sample materials written
+     for this course — not actual exam questions. We stand by our work. No pass guarantee; nobody honest offers one.</p>
+</div></section>
 
 <!-- ================= TRENDING — rebuilt nightly from real traffic ================= -->
 <section id="trending"><div class="wrap">
@@ -1537,20 +1615,36 @@
       ubar.style.display='none';
     }
   }
-  var el = {d:document.getElementById('t-d'),h:document.getElementById('t-h'),m:document.getElementById('t-m'),s:document.getElementById('t-s')};
+  var el = {y:document.getElementById('t-y'),mo:document.getElementById('t-mo'),d:document.getElementById('t-d'),h:document.getElementById('t-h'),m:document.getElementById('t-m'),s:document.getElementById('t-s')};
   function pad(n){ return (n<10?'0':'')+n; }
+  function span(now, tgt){
+    // calendar-accurate: whole years, then whole months, then the remainder
+    if(tgt <= now) return {y:0,mo:0,d:0,h:0,m:0,s:0,td:0};
+    var y  = tgt.getFullYear() - now.getFullYear();
+    var mo = tgt.getMonth()    - now.getMonth();
+    var d  = tgt.getDate()     - now.getDate();
+    var t  = (tgt.getHours()*3600 + tgt.getMinutes()*60 + tgt.getSeconds())
+           - (now.getHours()*3600 + now.getMinutes()*60 + now.getSeconds());
+    if(t < 0){ t += 86400; d -= 1; }
+    if(d < 0){ mo -= 1; d += new Date(tgt.getFullYear(), tgt.getMonth(), 0).getDate(); }
+    if(mo < 0){ y -= 1; mo += 12; }
+    return {y:y, mo:mo, d:d,
+            h:Math.floor(t/3600), m:Math.floor(t%3600/60), s:t%60,
+            td:Math.floor((tgt-now)/86400000)};
+  }
   function tick(){
-    var ms = Math.max(0, target - new Date());
-    var d = Math.floor(ms/86400000);
-    var h = Math.floor(ms%86400000/3600000);
-    var m = Math.floor(ms%3600000/60000);
-    var s = Math.floor(ms%60000/1000);
-    el.d.textContent = d;
+    var v = span(new Date(), target);
+    el.y.textContent  = v.y;
+    el.mo.textContent = v.mo;
+    el.d.textContent  = v.d;
+    el.h.textContent  = pad(v.h);
+    el.m.textContent  = pad(v.m);
+    el.s.textContent  = pad(v.s);
     var nd=document.getElementById('nc-d'), nt=document.getElementById('nc-t');
-    if(nd){ nd.textContent=d; nt.textContent=pad(h)+':'+pad(m)+':'+pad(s); }
-    el.h.textContent = pad(h);
-    el.m.textContent = pad(m);
-    el.s.textContent = pad(s);
+    if(nd){
+      nd.textContent = (v.mo>0 ? v.mo+'mo '+v.d : v.td);
+      nt.textContent = pad(v.h)+':'+pad(v.m)+':'+pad(v.s);
+    }
   }
   tick(); setInterval(tick, 1000);
 })();

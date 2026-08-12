@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado LLP Exam - All 405 Questions + 12-Question Quiz</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            color: #333;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #14355F 0%, #0C1F3A 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 32px; margin-bottom: 10px; }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .tab-btn {
+            padding: 12px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            color: #666;
+            transition: all 0.3s;
+        }
+        .tab-btn.active {
+            color: #14355F;
+            border-bottom-color: #14355F;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        
+        /* Quiz Section */
+        .quiz-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .quiz-question {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid #14355F;
+        }
+        .quiz-q-text { font-weight: 600; margin-bottom: 15px; font-size: 16px; }
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .quiz-option {
+            padding: 12px 16px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+        .quiz-option:hover { background: #f0f0f0; border-color: #14355F; }
+        .quiz-option.selected { background: #E3F2FD; border-color: #14355F; }
+        .quiz-option.correct { background: #E8F5E9; border-color: #4CAF50; }
+        .quiz-option.wrong { background: #FFEBEE; border-color: #F44336; }
+        .quiz-option.disabled { cursor: not-allowed; opacity: 0.6; }
+        
+        /* Results */
+        .results {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .score-big { font-size: 48px; font-weight: 900; color: #14355F; margin: 20px 0; }
+        .result-message { font-size: 18px; color: #666; line-height: 1.6; margin: 20px 0; }
+        
+        /* Question Bank */
+        .question-bank {
+            display: grid;
+            gap: 15px;
+        }
+        .question-card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #14355F;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .question-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .question-card-id { font-weight: 700; color: #14355F; font-size: 12px; }
+        .question-card-text { font-size: 14px; margin: 8px 0; }
+        .question-card-meta { font-size: 12px; color: #999; }
+        
+        .hidden { display: none; }
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #14355F;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        .btn-primary {
+            padding: 12px 24px;
+            background: #14355F;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-primary:hover { background: #0C1F3A; }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Colorado LLP Exam Prep</h1>
+            <p>All 405 Questions + 12-Question Timed Quiz</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('quiz')">📝 12-Question Quiz</button>
+            <button class="tab-btn" onclick="switchTab('bank')">📚 All 405 Questions</button>
+        </div>
+        
+        <!-- Quiz Tab -->
+        <div id="quiz" class="tab-content active">
+            <div class="quiz-container">
+                <div id="quiz-loading" class="spinner"></div>
+                <div id="quiz-content" class="hidden">
+                    <div id="quiz-display"></div>
+                    <div id="quiz-status" style="margin-top: 20px; text-align: center; font-weight: 600;"></div>
+                    <button id="submit-btn" class="btn-primary hidden" onclick="submitQuiz()" style="margin-top: 20px; width: 100%;">Submit Quiz & Reveal Answers</button>
+                </div>
+                <div id="quiz-results" class="results hidden">
+                    <div class="score-big" id="final-score"></div>
+                    <div class="result-message" id="result-msg"></div>
+                    <button class="btn-primary" onclick="retakeQuiz()">Take Another Quiz</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question Bank Tab -->
+        <div id="bank" class="tab-content">
+            <div class="quiz-container">
+                <div style="margin-bottom: 20px;">
+                    <input type="text" id="search-box" placeholder="Search questions..." 
+                           style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
+                </div>
+                <div class="question-bank" id="question-bank"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ALL_QUESTIONS = {};
+        let QUIZ_QUESTIONS = [];
+        let USER_ANSWERS = {};
+        let QUIZ_ACTIVE = false;
+        
+        // Load all 405 questions
+        fetch('raw405.json')
+            .then(r => r.json())
+            .then(data => {
+                ALL_QUESTIONS = data;
+                initQuiz();
+                renderQuestionBank();
+                document.getElementById('quiz-loading').style.display = 'none';
+                document.getElementById('quiz-content').classList.remove('hidden');
+            })
+            .catch(e => console.error('Failed to load questions:', e));
+        
+        function initQuiz() {
+            const ids = Object.keys(ALL_QUESTIONS).sort(() => Math.random() - 0.5).slice(0, 12);
+            QUIZ_QUESTIONS = ids;
+            USER_ANSWERS = {};
+            QUIZ_ACTIVE = true;
+            renderQuiz();
+        }
+        
+        function renderQuiz() {
+            let html = '';
+            QUIZ_QUESTIONS.forEach((id, idx) => {
+                const q = ALL_QUESTIONS[id];
+                html += `
+                    <div class="quiz-question">
+                        <div class="quiz-q-text">${idx + 1}. ${q.q}</div>
+                        <div class="quiz-options">
+                            ${['A', 'B', 'C', 'D'].map((letter, oi) => `
+                                <button class="quiz-option" data-qid="${id}" data-opt="${letter}" 
+                                        onclick="selectAnswer('${id}', '${letter}', this)">
+                                    <strong>${letter}.</strong> ${q.opts[letter]}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('quiz-display').innerHTML = html;
+            updateQuizStatus();
+        }
+        
+        function selectAnswer(qid, letter, btn) {
+            if (!QUIZ_ACTIVE) return;
+            
+            USER_ANSWERS[qid] = letter;
+            
+            // Visual feedback: mark as selected
+            document.querySelectorAll(`[data-qid="${qid}"]`).forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            
+            updateQuizStatus();
+        }
+        
+        function updateQuizStatus() {
+            const answered = Object.keys(USER_ANSWERS).length;
+            const total = QUIZ_QUESTIONS.length;
+            document.getElementById('quiz-status').innerHTML = `${answered} of ${total} answered`;
+            
+            const btn = document.getElementById('submit-btn');
+            if (answered === total) {
+                btn.classList.remove('hidden');
+            } else {
+                btn.classList.add('hidden');
+            }
+        }
+        
+        function submitQuiz() {
+            QUIZ_ACTIVE = false;
+            let correct = 0;
+            
+            // Reveal answers
+            QUIZ_QUESTIONS.forEach(qid => {
+                const q = ALL_QUESTIONS[qid];
+                const userAns = USER_ANSWERS[qid];
+                const isCorrect = userAns === q.correct;
+                
+                if (isCorrect) correct++;
+                
+                // Show correctness
+                document.querySelectorAll(`[data-qid="${qid}"]`).forEach(btn => {
+                    if (btn.dataset.opt === q.correct) {
+                        btn.classList.add('correct');
+                    } else if (btn.dataset.opt === userAns && !isCorrect) {
+                        btn.classList.add('wrong');
+                    }
+                    btn.classList.add('disabled');
+                });
+            });
+            
+            // Show results
+            showResults(correct, QUIZ_QUESTIONS.length);
+        }
+        
+        function showResults(score, total) {
+            const pct = Math.round(100 * score / total);
+            let msg = '';
+            
+            if (score === total) {
+                msg = '🎉 Perfect! You scored 12/12. You are ready for exam day.';
+            } else if (pct >= 83) {
+                msg = `✅ Great work! ${pct}% — you pass the exam with room to spare.`;
+            } else if (pct >= 68) {
+                msg = `📊 You passed at ${pct}%. That's the exam cutoff — now drill the gaps.`;
+            } else {
+                msg = `📚 Score: ${pct}%. These gaps are exactly what THE 93 study guide targets.`;
+            }
+            
+            document.getElementById('final-score').textContent = `${score}/${total}`;
+            document.getElementById('result-msg').textContent = msg;
+            document.getElementById('quiz-content').classList.add('hidden');
+            document.getElementById('quiz-results').classList.remove('hidden');
+        }
+        
+        function retakeQuiz() {
+            document.getElementById('quiz-results').classList.add('hidden');
+            document.getElementById('quiz-content').classList.remove('hidden');
+            initQuiz();
+        }
+        
+        function renderQuestionBank() {
+            let html = '';
+            Object.entries(ALL_QUESTIONS).forEach(([id, q]) => {
+                html += `
+                    <div class="question-card" onclick="showQuestionDetail('${id}')">
+                        <div class="question-card-id">${id}</div>
+                        <div class="question-card-text">${q.q}</div>
+                        <div class="question-card-meta">A. ${q.opts.A.substring(0, 40)}...</div>
+                    </div>
+                `;
+            });
+            document.getElementById('question-bank').innerHTML = html;
+        }
+        
+        function showQuestionDetail(id) {
+            const q = ALL_QUESTIONS[id];
+            alert(`${id}: ${q.q}\n\nCorrect: ${q.correct}\n\nExplanation: ${q}`);
+        }
+        
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tab).classList.add('active');
+        }
+        
+        // Search functionality
+        document.getElementById('search-box')?.addEventListener('keyup', function(e) {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.question-card').forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(query) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

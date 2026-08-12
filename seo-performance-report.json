@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-08-12T02:56:22.990Z",
+  "site": "coloradollpexam.com",
+  "files": [
+    {
+      "name": "index.html",
+      "size_bytes": 255414,
+      "size_kb": "249.43",
+      "lines": 2904,
+      "exists": true
+    },
+    {
+      "name": "quiz-405-all.html",
+      "size_bytes": 13337,
+      "size_kb": "13.02",
+      "lines": 345,
+      "exists": true
+    },
+    {
+      "name": "get-success-405.html",
+      "size_bytes": 672284,
+      "size_kb": "656.53",
+      "lines": 199,
+      "exists": true
+    },
+    {
+      "name": "raw405.json",
+      "size_bytes": 119683,
+      "size_kb": "116.88",
+      "lines": 4052,
+      "exists": true
+    }
+  ],
+  "seo": {
+    "has_meta_description": true,
+    "has_og_tags": true,
+    "has_twitter_tags": true,
+    "has_canonical": true,
+    "has_viewport": true,
+    "has_charset": true,
+    "has_lang": true,
+    "has_structured_data": true,
+    "has_robots": true,
+    "has_theme_color": true,
+    "has_favicons": true,
+    "has_h1": true,
+    "title_length_ok": true,
+    "desc_length_ok": true
+  },
+  "performance": {
+    "total_html_size_kb": "249.43",
+    "total_json_size_kb": "116.88",
+    "base64_embedded": false,
+    "css_minified": false,
+    "has_preconnect": true,
+    "lazy_loading": false,
+    "async_scripts": 0,
+    "defer_scripts": 0,
+    "inline_css_size": 72618
+  },
+  "accessibility": {
+    "has_lang_attr": true,
+    "has_title": true,
+    "has_viewport_meta": true,
+    "buttons_have_role": true,
+    "has_skip_links": false,
+    "heading_hierarchy": true,
+    "form_labels": false,
+    "alt_text_present": false,
+    "semantic_html": true
+  },
+  "security": {
+    "no_inline_event_handlers": false,
+    "uses_https": true,
+    "no_eval": true,
+    "no_document_write": true,
+    "content_security_policy": true,
+    "charset_defined": true,
+    "no_vulnerable_packages": true,
+    "third_party_limited": false,
+    "form_validation": true
+  },
+  "bestPractices": {
+    "responsive_design": true,
+    "mobile_first_css": true,
+    "uses_semantic_tags": true,
+    "dark_mode_friendly": false,
+    "no_console_errors": true,
+    "clean_code_comments": true,
+    "uses_css_variables": true,
+    "fonts_optimized": true,
+    "no_deprecated_apis": true,
+    "error_handling": true
+  },
+  "scores": {
+    "seo": 100,
+    "accessibility": 67,
+    "security": 78,
+    "bestPractices": 90,
+    "quiz": 88
+  },
+  "json": {
+    "total_questions": 405,
+    "structure_valid": true,
+    "sample_keys": [
+      "correct",
+      "q",
+      "opts"
+    ]
+  }
+}

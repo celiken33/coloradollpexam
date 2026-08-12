@@ -1,0 +1,4052 @@
+{
+"FL-001": {
+"correct": "B",
+"q": "In Colorado, what is the sole legal ground a petitioner must establish to obtain a decree of dissolution of marriage?",
+"opts": {
+"A": "Adultery or other marital fault",
+"B": "That the marriage is irretrievably broken",
+"C": "One year of continuous separation",
+"D": "Mutual written consent of both spouses"
+}
+},
+"FL-002": {
+"correct": "C",
+"q": "How long must a party be domiciled in Colorado before the court may enter a decree of dissolution?",
+"opts": {
+"A": "30 days",
+"B": "60 days",
+"C": "91 days",
+"D": "182 days"
+}
+},
+"FL-003": {
+"correct": "B",
+"q": "A petition is served on the respondent on March 1. What is the earliest the court may enter a dissolution decree, assuming all other requirements are met?",
+"opts": {
+"A": "Immediately upon the respondent's default",
+"B": "After 91 days from service",
+"C": "After 30 days from service",
+"D": "After 6 months from filing"
+}
+},
+"FL-004": {
+"correct": "C",
+"q": "A wife files for dissolution in Colorado. The husband lives out of state, was never married in Colorado, and has no contacts here. The court most clearly has jurisdiction to:",
+"opts": {
+"A": "Divide the husband's out-of-state pension",
+"B": "Order the husband to pay maintenance",
+"C": "Dissolve the marital status",
+"D": "Enter a money judgment against the husband for marital debt"
+}
+},
+"FL-005": {
+"correct": "B",
+"q": "Under the UCCJEA, the 'home state' of a 4-year-old child is generally where the child:",
+"opts": {
+"A": "Was born",
+"B": "Has lived with a parent for at least 6 consecutive months before the case began",
+"C": "Currently attends preschool",
+"D": "Has the most extended family"
+}
+},
+"FL-006": {
+"correct": "B",
+"q": "The UCCJEA gives initial child-custody jurisdiction priority to:",
+"opts": {
+"A": "The state with the most evidence about the child",
+"B": "The home state of the child",
+"C": "Whichever state the petitioner chooses",
+"D": "The state where the marriage occurred"
+}
+},
+"FL-007": {
+"correct": "C",
+"q": "A decree of legal separation may be converted to a decree of dissolution on motion after the decree of legal separation has been in effect for at least:",
+"opts": {
+"A": "91 days",
+"B": "120 days",
+"C": "182 days",
+"D": "one year"
+}
+},
+"FL-008": {
+"correct": "B",
+"q": "A declaration of invalidity (annulment) in Colorado is available on grounds such as:",
+"opts": {
+"A": "Irretrievable breakdown",
+"B": "Lack of capacity to consent due to age, duress, fraud, or incapacity",
+"C": "Incompatibility after a long marriage",
+"D": "One spouse's relocation"
+}
+},
+"FL-009": {
+"correct": "B",
+"q": "Venue for a Colorado dissolution is generally proper in the county where:",
+"opts": {
+"A": "The marriage license was issued",
+"B": "Either party resides",
+"C": "The petitioner's attorney practices",
+"D": "The parties last vacationed together"
+}
+},
+"FL-010": {
+"correct": "B",
+"q": "A Colorado dissolution is typically commenced by filing a:",
+"opts": {
+"A": "Complaint and answer",
+"B": "Petition (and summons if not a co-petition)",
+"C": "Motion for decree",
+"D": "Notice of separation"
+}
+},
+"FL-011": {
+"correct": "B",
+"q": "During a pending dissolution, a party who needs interim support or a parenting schedule should seek:",
+"opts": {
+"A": "A permanent decree",
+"B": "Temporary orders under Section 14-10-108",
+"C": "A protection order only",
+"D": "Summary judgment"
+}
+},
+"FL-012": {
+"correct": "B",
+"q": "Upon filing and service of a dissolution petition, the automatic temporary injunction generally restrains the parties from:",
+"opts": {
+"A": "Speaking to each other",
+"B": "Transferring marital property except in the usual course of business or for necessities, and from molesting or disturbing the other",
+"C": "Leaving the state",
+"D": "Hiring counsel"
+}
+},
+"FL-013": {
+"correct": "B",
+"q": "C.R.C.P. 16.2 imposes on each party in a domestic relations case a duty of:",
+"opts": {
+"A": "Disclosure only if requested",
+"B": "Full and honest disclosure of all material financial information",
+"C": "Disclosure limited to tax returns",
+"D": "Disclosure only after temporary orders"
+}
+},
+"FL-014": {
+"correct": "B",
+"q": "If a party fails to disclose a material asset, C.R.C.P. 16.2(e) allows the court to reallocate that asset on a motion filed within:",
+"opts": {
+"A": "1 year of the decree",
+"B": "5 years of the decree",
+"C": "6 months of the decree",
+"D": "no time limit"
+}
+},
+"FL-015": {
+"correct": "A",
+"q": "The form used to disclose a party's income, expenses, assets, and debts in a Colorado domestic case is the:",
+"opts": {
+"A": "Sworn Financial Statement (JDF 1111)",
+"B": "Petition (JDF 1101)",
+"C": "Parenting Plan (JDF 1113)",
+"D": "Separation Agreement (JDF 1115)"
+}
+},
+"FL-016": {
+"correct": "C",
+"q": "Mandatory financial disclosures and the Sworn Financial Statement are generally due within how many days after service or first appearance?",
+"opts": {
+"A": "14 days",
+"B": "21 days",
+"C": "42 days",
+"D": "91 days"
+}
+},
+"FL-017": {
+"correct": "B",
+"q": "In many Colorado domestic relations cases, before a contested hearing the parties are typically required to:",
+"opts": {
+"A": "Waive their right to counsel",
+"B": "Attend mediation or another form of alternative dispute resolution",
+"C": "Submit to binding arbitration",
+"D": "Post a bond"
+}
+},
+"FL-018": {
+"correct": "B",
+"q": "A written document allocating parenting time and decision-making that the parties submit (or the court orders) is called a:",
+"opts": {
+"A": "Sworn Financial Statement",
+"B": "Parenting Plan",
+"C": "Separation Agreement",
+"D": "Decree of Invalidity"
+}
+},
+"FL-019": {
+"correct": "B",
+"q": "A separation agreement resolving property and maintenance is binding on the court unless the court finds it:",
+"opts": {
+"A": "Signed without counsel",
+"B": "Unconscionable",
+"C": "Longer than 10 pages",
+"D": "Not notarized"
+}
+},
+"FL-020": {
+"correct": "B",
+"q": "If a properly served respondent fails to respond or appear, the petitioner may seek:",
+"opts": {
+"A": "Dismissal",
+"B": "A decree by default after the waiting period",
+"C": "Criminal contempt",
+"D": "An automatic appeal"
+}
+},
+"FL-021": {
+"correct": "B",
+"q": "Personal service of a dissolution summons and petition on an in-state respondent is generally accomplished by:",
+"opts": {
+"A": "Email from the petitioner",
+"B": "Delivery by a process server or sheriff, or by the respondent's waiver/acceptance",
+"C": "Posting at the courthouse",
+"D": "Publication in all cases"
+}
+},
+"FL-022": {
+"correct": "B",
+"q": "Many districts hold an early hearing to set deadlines and identify issues, called the:",
+"opts": {
+"A": "Permanent orders hearing",
+"B": "Initial status conference",
+"C": "Sentencing hearing",
+"D": "Pretrial readiness conference only"
+}
+},
+"FL-023": {
+"correct": "A",
+"q": "Before a contested permanent orders hearing, parties commonly file a document identifying witnesses, exhibits, and issues, known as a:",
+"opts": {
+"A": "Trial Management Certificate",
+"B": "Notice of Appeal",
+"C": "Writ of Garnishment",
+"D": "Bill of Particulars"
+}
+},
+"FL-024": {
+"correct": "B",
+"q": "Under C.R.C.P. 207.1, an LLP preparing pleadings may:",
+"opts": {
+"A": "Use only JDF forms",
+"B": "Use JDF forms or templates generally accepted by the court",
+"C": "Never draft documents",
+"D": "Draft only if an attorney signs"
+}
+},
+"FL-025": {
+"correct": "D",
+"q": "A final decree of dissolution typically incorporates all of the following EXCEPT:",
+"opts": {
+"A": "The parenting plan",
+"B": "The property division",
+"C": "The maintenance and child support orders",
+"D": "A finding of marital fault"
+}
+},
+"FL-243": {
+"correct": "B",
+"q": "Many domestic relations matters are heard by:",
+"opts": {
+"A": "Only Supreme Court justices",
+"B": "District court judges or magistrates",
+"C": "Juries",
+"D": "Arbitrators only"
+}
+},
+"FL-244": {
+"correct": "B",
+"q": "A party dissatisfied with a magistrate's order may generally seek:",
+"opts": {
+"A": "Immediate appeal to the Supreme Court",
+"B": "A petition for review by the district court judge",
+"C": "Nothing",
+"D": "A new trial automatically"
+}
+},
+"FL-247": {
+"correct": "B",
+"q": "If a respondent is properly served and does not appear, the petitioner may:",
+"opts": {
+"A": "Never proceed",
+"B": "Proceed to default orders after the waiting period, with required disclosures and proposed orders",
+"C": "Be dismissed",
+"D": "Only mediate"
+}
+},
+"FL-249": {
+"correct": "B",
+"q": "In cases involving children, many Colorado courts require parents to:",
+"opts": {
+"A": "Post bond",
+"B": "Complete an approved parenting/co-parenting education class",
+"C": "Hire a CFI",
+"D": "Attend criminal court"
+}
+},
+"FL-026": {
+"correct": "B",
+"q": "Colorado law replaced the terms 'custody' and 'visitation' with:",
+"opts": {
+"A": "'Guardianship' and 'access'",
+"B": "'Decision-making responsibility' and 'parenting time'",
+"C": "'Care' and 'control'",
+"D": "'Residence' and 'contact'"
+}
+},
+"FL-027": {
+"correct": "B",
+"q": "The governing standard for an initial allocation of parental responsibilities is:",
+"opts": {
+"A": "The tender-years doctrine",
+"B": "The best interests of the child",
+"C": "The maternal preference",
+"D": "Equal time in all cases"
+}
+},
+"FL-028": {
+"correct": "B",
+"q": "Which of the following is a statutory best-interests factor for parenting time?",
+"opts": {
+"A": "The wealth of each parent",
+"B": "The ability of each parent to encourage a loving relationship between the child and the other parent",
+"C": "The parents' religion",
+"D": "Which parent filed first"
+}
+},
+"FL-029": {
+"correct": "B",
+"q": "A child's wishes regarding parenting time are considered:",
+"opts": {
+"A": "Always controlling at any age",
+"B": "If the child is sufficiently mature to express reasoned and independent preferences",
+"C": "Only if the child is at least 16",
+"D": "Never"
+}
+},
+"FL-030": {
+"correct": "B",
+"q": "Allocation of decision-making responsibility concerns:",
+"opts": {
+"A": "The day-to-day schedule",
+"B": "Major decisions such as education, health care, and religious upbringing",
+"C": "Who claims the child on taxes",
+"D": "Child support amount"
+}
+},
+"FL-031": {
+"correct": "B",
+"q": "In deciding whether to order joint decision-making, the court additionally considers:",
+"opts": {
+"A": "Whether the parties can cooperate and make shared decisions",
+"B": "The parents' incomes",
+"C": "Who owns the marital home",
+"D": "The child's grades only"
+}
+},
+"FL-032": {
+"correct": "B",
+"q": "Credible evidence that one parent committed domestic violence:",
+"opts": {
+"A": "Is irrelevant to APR",
+"B": "Must be considered and may rebut the appropriateness of joint decision-making",
+"C": "Automatically terminates parental rights",
+"D": "Only matters in criminal court"
+}
+},
+"FL-033": {
+"correct": "B",
+"q": "A court may impose a substantial restriction on a parent's parenting time only if it finds that parenting time would:",
+"opts": {
+"A": "Be inconvenient for the other parent",
+"B": "Endanger the child's physical health or significantly impair the child's emotional development",
+"C": "Reduce child support",
+"D": "Cause the child to miss extracurriculars"
+}
+},
+"FL-034": {
+"correct": "B",
+"q": "Which statement is correct?",
+"opts": {
+"A": "Parenting time and decision-making must always be allocated to the same parent",
+"B": "Parenting time and decision-making are allocated separately and may differ",
+"C": "Decision-making automatically follows the majority-time parent",
+"D": "Only one parent may ever have decision-making"
+}
+},
+"FL-035": {
+"correct": "B",
+"q": "To assist high-conflict parents in implementing a parenting plan, a court may appoint a:",
+"opts": {
+"A": "Special prosecutor",
+"B": "Parenting coordinator",
+"C": "Receiver",
+"D": "Guardian of the estate"
+}
+},
+"FL-036": {
+"correct": "A",
+"q": "To investigate and make recommendations about the child's best interests, the court may appoint a:",
+"opts": {
+"A": "Child and Family Investigator (CFI) or Parental Responsibilities Evaluator (PRE)",
+"B": "Bailiff",
+"C": "Court reporter",
+"D": "Magistrate's clerk"
+}
+},
+"FL-037": {
+"correct": "B",
+"q": "When parents live in different cities and an initial APR determination is being made (no prior order), the court:",
+"opts": {
+"A": "Applies a presumption against the out-of-town parent",
+"B": "Applies the best-interests factors without a presumption and without requiring either parent to stay",
+"C": "Requires the moving parent to prove necessity",
+"D": "Automatically awards majority time to the in-state parent"
+}
+},
+"FL-038": {
+"correct": "B",
+"q": "In allocating parental responsibilities, the court:",
+"opts": {
+"A": "May presume the mother is the better caregiver",
+"B": "Shall not presume any person is better able to serve the child's interests because of that person's sex",
+"C": "Must favor the higher earner",
+"D": "Must favor the parent who keeps the home"
+}
+},
+"FL-039": {
+"correct": "B",
+"q": "Colorado's APR statute reflects a policy of:",
+"opts": {
+"A": "Minimizing contact with both parents",
+"B": "Encouraging frequent and continuing contact with both parents where safe",
+"C": "Always awarding sole decision-making",
+"D": "Limiting parenting time to weekends"
+}
+},
+"FL-040": {
+"correct": "B",
+"q": "Where a parent has had limited contact, a court may order a:",
+"opts": {
+"A": "Permanent no-contact order without findings",
+"B": "Graduated 'step-up' parenting schedule that increases contact over time",
+"C": "Termination of parental rights",
+"D": "Automatic 50/50 schedule"
+}
+},
+"FL-041": {
+"correct": "B",
+"q": "Supervised parenting time is appropriate when:",
+"opts": {
+"A": "The parents simply dislike each other",
+"B": "There is a safety concern that nonetheless does not justify denying all contact",
+"C": "One parent earns less",
+"D": "The child prefers it for convenience"
+}
+},
+"FL-042": {
+"correct": "B",
+"q": "Parents who agree to change their parenting schedule should:",
+"opts": {
+"A": "Simply act on the change without court involvement",
+"B": "Submit a stipulated modification for the court to approve",
+"C": "Wait two years regardless",
+"D": "File a new dissolution"
+}
+},
+"FL-043": {
+"correct": "B",
+"q": "Decision-making about the child's religious upbringing:",
+"opts": {
+"A": "Is never within the court's allocation",
+"B": "Is part of decision-making responsibility that can be allocated",
+"C": "Always goes to the majority-time parent",
+"D": "Is decided by the child alone"
+}
+},
+"FL-044": {
+"correct": "B",
+"q": "In allocating parenting time among multiple children, courts generally:",
+"opts": {
+"A": "Split siblings between households as a default",
+"B": "Consider keeping siblings together as part of best interests",
+"C": "Always keep all children with the mother",
+"D": "Ignore sibling relationships"
+}
+},
+"FL-045": {
+"correct": "B",
+"q": "A non-parent (e.g., grandparent) may seek allocation of parental responsibilities when:",
+"opts": {
+"A": "Never",
+"B": "The child is not in the physical care of a parent, or the non-parent has had the child in their care for the statutory period",
+"C": "Only with both parents' consent",
+"D": "Only after adoption"
+}
+},
+"FL-046": {
+"correct": "B",
+"q": "Under the 2018+ amendments, the court's determination of parenting time gives paramount consideration to:",
+"opts": {
+"A": "Parental convenience",
+"B": "The child's safety and the child's physical, mental, and emotional needs",
+"C": "Equalizing the parents' time exactly",
+"D": "The parents' employment schedules"
+}
+},
+"FL-047": {
+"correct": "B",
+"q": "Where one parent has committed domestic violence against the other, joint decision-making:",
+"opts": {
+"A": "Is required to promote cooperation",
+"B": "Is generally not appropriate, and the court must consider the safety of the child and abused party",
+"C": "Must still be ordered if the abuser requests it",
+"D": "Is mandatory after counseling"
+}
+},
+"FL-048": {
+"correct": "B",
+"q": "Before allocating parental responsibilities to an alleged father whose parentage is disputed, the court generally must:",
+"opts": {
+"A": "Ignore parentage",
+"B": "Resolve parentage (e.g., via the Uniform Parentage Act) first",
+"C": "Award him equal time immediately",
+"D": "Refer the matter to criminal court"
+}
+},
+"FL-049": {
+"correct": "B",
+"q": "While a motion to modify parenting time is pending, the existing order:",
+"opts": {
+"A": "Is automatically suspended",
+"B": "Remains in effect until modified",
+"C": "Is void",
+"D": "Converts to 50/50"
+}
+},
+"FL-050": {
+"correct": "B",
+"q": "If the frequent-contact policy conflicts with the child's safety, the court must:",
+"opts": {
+"A": "Prioritize contact",
+"B": "Prioritize the child's safety and needs",
+"C": "Order equal time anyway",
+"D": "Defer to the parents' agreement regardless of safety"
+}
+},
+"FL-069": {
+"correct": "B",
+"q": "After Colorado makes an initial APR determination, it generally retains exclusive, continuing jurisdiction until:",
+"opts": {
+"A": "The child turns 12",
+"B": "Neither the child nor a parent has a significant connection to Colorado and substantial evidence is no longer available here, or all have left the state",
+"C": "The other parent objects",
+"D": "Five years pass"
+}
+},
+"FL-070": {
+"correct": "B",
+"q": "A Colorado court may exercise temporary emergency jurisdiction under the UCCJEA when:",
+"opts": {
+"A": "The petitioner prefers Colorado",
+"B": "The child is present in Colorado and has been abandoned or emergency protection is needed because of threatened mistreatment or abuse",
+"C": "The other state is far away",
+"D": "The parents were married in Colorado"
+}
+},
+"FL-075": {
+"correct": "B",
+"q": "Which best describes an LLP's authorized scope as to parental responsibilities?",
+"opts": {
+"A": "Only initial APR, never modification",
+"B": "Both the initial allocation and modification of parental responsibilities, within the rule's limits",
+"C": "Only decision-making, never parenting time",
+"D": "No APR work at all"
+}
+},
+"FL-051": {
+"correct": "B",
+"q": "A motion to modify parenting time (not changing the majority residential parent) is generally decided under:",
+"opts": {
+"A": "The endangerment standard only",
+"B": "The best interests of the child",
+"C": "Clear and convincing evidence of unfitness",
+"D": "A presumption against any change"
+}
+},
+"FL-052": {
+"correct": "B",
+"q": "To change the parent with whom the child resides a majority of the time over objection, the moving party generally must show best interests PLUS:",
+"opts": {
+"A": "Nothing more",
+"B": "A statutory trigger such as the present environment endangers the child or the parties agree",
+"C": "That the other parent earns less",
+"D": "A two-year waiting period only"
+}
+},
+"FL-053": {
+"correct": "A",
+"q": "Modification of decision-making responsibility is governed by which statute?",
+"opts": {
+"A": "Section 14-10-131",
+"B": "Section 14-10-115",
+"C": "Section 14-10-114",
+"D": "Section 14-10-108"
+}
+},
+"FL-054": {
+"correct": "B",
+"q": "Under Section 14-10-131, to modify decision-making the court must find a change in circumstances and that modification is in the child's best interests; to change the primary decision-maker's authority over objection, it generally requires:",
+"opts": {
+"A": "Mere convenience",
+"B": "A showing that retaining the arrangement endangers the child and the harm of change is outweighed by its advantages",
+"C": "The child's consent only",
+"D": "A 10% income change"
+}
+},
+"FL-061": {
+"correct": "B",
+"q": "After a contested decision-making order, a party generally may not file a motion to modify decision-making for:",
+"opts": {
+"A": "6 months",
+"B": "2 years, absent endangerment or the child's integration",
+"C": "5 years",
+"D": "No limit"
+}
+},
+"FL-062": {
+"correct": "B",
+"q": "One trigger to change the majority residential parent is that the child has been:",
+"opts": {
+"A": "Enrolled in a new school",
+"B": "Integrated into the moving party's family with the consent of the other party",
+"C": "Old enough to drive",
+"D": "Receiving better grades"
+}
+},
+"FL-063": {
+"correct": "B",
+"q": "If both parents agree to change the majority residential parent, the court:",
+"opts": {
+"A": "Cannot approve it",
+"B": "May modify if the change is in the child's best interests and the parties agree",
+"C": "Must hold a contested hearing anyway",
+"D": "Must wait two years"
+}
+},
+"FL-064": {
+"correct": "B",
+"q": "The 'endangerment' trigger for changing the majority residential parent requires the present environment to:",
+"opts": {
+"A": "Be merely suboptimal",
+"B": "Endanger the child's physical health or significantly impair the child's emotional development, with the harm of change outweighed by its advantages",
+"C": "Cause inconvenience",
+"D": "Reduce parenting time slightly"
+}
+},
+"FL-065": {
+"correct": "B",
+"q": "A parent seeking a modest change to weeknight exchange times should expect the court to apply:",
+"opts": {
+"A": "The endangerment standard",
+"B": "The best-interests standard for a minor modification",
+"C": "A criminal standard",
+"D": "No standard; it is automatic"
+}
+},
+"FL-068": {
+"correct": "B",
+"q": "In a contested modification, the moving party generally bears the burden to show:",
+"opts": {
+"A": "Beyond a reasonable doubt",
+"B": "By a preponderance that the statutory standard is met",
+"C": "Nothing; the court decides sua sponte",
+"D": "Clear and convincing in all cases"
+}
+},
+"FL-072": {
+"correct": "B",
+"q": "A within-town move that does not substantially change geography:",
+"opts": {
+"A": "Triggers the full relocation analysis",
+"B": "Generally does not trigger the heightened relocation factors",
+"C": "Requires a new dissolution",
+"D": "Automatically changes the majority parent"
+}
+},
+"FL-073": {
+"correct": "B",
+"q": "On any APR modification, the ultimate touchstone remains:",
+"opts": {
+"A": "The parents' preferences",
+"B": "The best interests of the child",
+"C": "Equalizing time",
+"D": "Minimizing support"
+}
+},
+"FL-055": {
+"correct": "B",
+"q": "When a majority-time parent seeks to relocate post-decree with the child to a distant location, the court applies the best-interests factors PLUS the additional relocation factors found in:",
+"opts": {
+"A": "Section 14-10-124 only",
+"B": "Section 14-10-129(2)(c)",
+"C": "Section 14-10-115",
+"D": "The UCCJEA"
+}
+},
+"FL-056": {
+"correct": "B",
+"q": "In a contested post-decree relocation, the burden allocation is best described as:",
+"opts": {
+"A": "The relocating parent must prove the move is necessary",
+"B": "Neither parent bears a presumption; the court weighs all factors for the child's best interests",
+"C": "The objecting parent must prove the child will be harmed",
+"D": "The relocating parent automatically wins if employed"
+}
+},
+"FL-057": {
+"correct": "B",
+"q": "The Ciesluk framework reflects the tension between:",
+"opts": {
+"A": "Two non-constitutional statutes",
+"B": "Each parent's competing constitutional interests (the right to travel and the right to parent) and the child's best interests",
+"C": "Federal and state tax law",
+"D": "Contract and tort law"
+}
+},
+"FL-058": {
+"correct": "B",
+"q": "The key difference between Spahmer (pre-decree) and Ciesluk (post-decree) relocation is that:",
+"opts": {
+"A": "Spahmer applies a presumption against moving",
+"B": "In a pre-decree initial determination the court cannot order a parent to live somewhere and simply allocates based on where parents will live, while post-decree adds the 129(2)(c) relocation factors",
+"C": "Both require proof of necessity",
+"D": "Ciesluk applies only to interstate moves"
+}
+},
+"FL-059": {
+"correct": "B",
+"q": "A parent intending to relocate with the child to a residence that substantially changes geography should:",
+"opts": {
+"A": "Move first and notify later",
+"B": "Provide advance written notice to the other parent as soon as practicable",
+"C": "Notify only the school",
+"D": "Never notify the other parent"
+}
+},
+"FL-060": {
+"correct": "B",
+"q": "In a relocation dispute, the court may NOT:",
+"opts": {
+"A": "Modify the parenting plan to accommodate the move",
+"B": "Enter temporary orders allowing the child to relocate before a full hearing in a contested case (it must hold a hearing)",
+"C": "Consider the child's best interests",
+"D": "Appoint a CFI"
+}
+},
+"FL-066": {
+"correct": "B",
+"q": "If a court permits a child's relocation, it commonly:",
+"opts": {
+"A": "Eliminates the other parent's time",
+"B": "Fashions a long-distance parenting plan (e.g., extended summers, holidays, virtual contact)",
+"C": "Orders the moving parent to pay all of the other parent's travel forever",
+"D": "Terminates decision-making"
+}
+},
+"FL-067": {
+"correct": "B",
+"q": "Among the relocation factors, the court weighs:",
+"opts": {
+"A": "The moving parent's new partner's income",
+"B": "The anticipated impact of the move on the child and the child's present and future relationships with both parents",
+"C": "The cost of the moving truck",
+"D": "The objecting parent's hobbies"
+}
+},
+"FL-071": {
+"correct": "B",
+"q": "A majority-time parent who relocates with the child without notice or consent risks:",
+"opts": {
+"A": "Nothing",
+"B": "An order to return the child, modification, or other remedies, and the move being weighed against them",
+"C": "Automatic approval",
+"D": "Criminal immunity"
+}
+},
+"FL-074": {
+"correct": "B",
+"q": "For relocation involving a very young child with limited school ties, courts:",
+"opts": {
+"A": "Ignore the move's effect",
+"B": "Still apply the relocation factors, weighing the child's developmental needs and bonding with each parent",
+"C": "Automatically allow the move",
+"D": "Automatically deny the move"
+}
+},
+"FL-076": {
+"correct": "B",
+"q": "Colorado calculates child support using which model?",
+"opts": {
+"A": "Percentage-of-obligor-income model",
+"B": "Income shares model",
+"C": "Melson formula",
+"D": "Flat statutory amount"
+}
+},
+"FL-077": {
+"correct": "B",
+"q": "Which is generally included in 'gross income' for child support?",
+"opts": {
+"A": "TANF public assistance",
+"B": "Salary, wages, commissions, bonuses, and self-employment income",
+"C": "Child support received for a different child",
+"D": "SNAP benefits"
+}
+},
+"FL-078": {
+"correct": "B",
+"q": "For a self-employed parent, gross income equals gross receipts minus:",
+"opts": {
+"A": "All claimed business deductions on the tax return",
+"B": "Ordinary and necessary expenses required to produce income (not all tax deductions)",
+"C": "Nothing",
+"D": "Personal living expenses"
+}
+},
+"FL-079": {
+"correct": "B",
+"q": "Income may be imputed to a parent who is:",
+"opts": {
+"A": "Working full time",
+"B": "Voluntarily unemployed or underemployed, absent an exception",
+"C": "Disabled and unable to work",
+"D": "Caring for an infant under 30 months in some cases"
+}
+},
+"FL-080": {
+"correct": "B",
+"q": "The under-30-months caregiver exception to imputation applies when a parent:",
+"opts": {
+"A": "Cares for any child",
+"B": "Is caring for a child under 30 months of age for whom the parents owe a joint legal duty of support",
+"C": "Has any preschooler",
+"D": "Simply prefers not to work"
+}
+},
+"FL-081": {
+"correct": "B",
+"q": "The worksheet shifts from sole physical care (Worksheet A) to shared physical care (Worksheet B) when each parent has at least:",
+"opts": {
+"A": "52 overnights",
+"B": "93 overnights",
+"C": "182 overnights",
+"D": "120 overnights"
+}
+},
+"FL-082": {
+"correct": "B",
+"q": "Worksheet B (shared physical care) accounts for duplicated household costs by:",
+"opts": {
+"A": "Halving the obligation",
+"B": "Multiplying the basic obligation by a factor (commonly 1.5) before allocation",
+"C": "Eliminating support",
+"D": "Doubling each parent's income"
+}
+},
+"FL-083": {
+"correct": "B",
+"q": "Which is a permitted adjustment added to the basic obligation?",
+"opts": {
+"A": "The obligor's car payment",
+"B": "Work-related child care costs, the child's health insurance premium, and extraordinary medical expenses",
+"C": "The obligor's student loans",
+"D": "Vacation costs"
+}
+},
+"FL-084": {
+"correct": "B",
+"q": "A parent who pays the child's health insurance premium:",
+"opts": {
+"A": "Gets no credit",
+"B": "Receives credit on the worksheet for the child's share of the premium",
+"C": "Must pay double",
+"D": "Loses parenting time"
+}
+},
+"FL-085": {
+"correct": "B",
+"q": "Unreimbursed medical expenses become 'extraordinary' (shared as an add-on) when they exceed:",
+"opts": {
+"A": "$50 per child per year",
+"B": "$250 per child per year",
+"C": "$1,000 per child per year",
+"D": "Any amount"
+}
+},
+"FL-086": {
+"correct": "B",
+"q": "After determining the adjusted basic obligation, the court allocates it:",
+"opts": {
+"A": "Equally regardless of income",
+"B": "In proportion to each parent's share of combined adjusted gross income",
+"C": "Entirely to the higher earner",
+"D": "Based on who has the child more, ignoring income"
+}
+},
+"FL-087": {
+"correct": "B",
+"q": "For very low-income obligors, Colorado's guideline provides:",
+"opts": {
+"A": "No support is ever ordered",
+"B": "A low-income adjustment and self-support reserve so the obligor retains a minimum subsistence amount",
+"C": "A flat $500 minimum",
+"D": "Triple support"
+}
+},
+"FL-088": {
+"correct": "B",
+"q": "For the parenting-time adjustment, the court counts:",
+"opts": {
+"A": "Hours of contact",
+"B": "The number of overnights each parent has with the child per year",
+"C": "Weekend days only",
+"D": "School days only"
+}
+},
+"FL-089": {
+"correct": "B",
+"q": "When imputing potential income, the court considers:",
+"opts": {
+"A": "Only the minimum wage",
+"B": "Employment potential and probable earnings based on work history, education, skills, and job opportunities",
+"C": "The other parent's income only",
+"D": "A flat statewide average"
+}
+},
+"FL-090": {
+"correct": "B",
+"q": "A parent supporting children from another relationship may receive:",
+"opts": {
+"A": "No consideration",
+"B": "An adjustment/deduction for other children the parent has a legal duty to support",
+"C": "Double credit",
+"D": "An exemption from all support"
+}
+},
+"FL-091": {
+"correct": "B",
+"q": "When maintenance is ordered in the same case, for the child support calculation:",
+"opts": {
+"A": "Maintenance is ignored",
+"B": "Maintenance actually paid is deducted from the payor's income and added to the recipient's income",
+"C": "Maintenance is added to both incomes",
+"D": "Maintenance doubles the obligation"
+}
+},
+"FL-092": {
+"correct": "B",
+"q": "A court may deviate from the guideline amount if:",
+"opts": {
+"A": "A parent simply asks",
+"B": "Application would be inequitable, unjust, or inappropriate, with specific findings",
+"C": "The obligor dislikes the amount",
+"D": "Never"
+}
+},
+"FL-093": {
+"correct": "B",
+"q": "Child support generally continues until the child reaches the age of emancipation, which in Colorado is presumptively:",
+"opts": {
+"A": "18",
+"B": "19",
+"C": "21",
+"D": "16"
+}
+},
+"FL-094": {
+"correct": "B",
+"q": "Court-ordered payment of college expenses:",
+"opts": {
+"A": "Is mandatory in all cases",
+"B": "Is generally not required absent the parties' agreement",
+"C": "Is automatic until age 25",
+"D": "Is required for public colleges only"
+}
+},
+"FL-095": {
+"correct": "B",
+"q": "Support for a child who is physically or mentally disabled:",
+"opts": {
+"A": "Always ends at 19",
+"B": "May continue past 19 where the disability arose before emancipation and the child cannot be self-supporting",
+"C": "Is never available",
+"D": "Ends at 18"
+}
+},
+"FL-096": {
+"correct": "B",
+"q": "If a 19-year-old is still enrolled in high school, support:",
+"opts": {
+"A": "Ends immediately at 19",
+"B": "May continue until the end of the month following graduation, up to age 21 in some cases",
+"C": "Continues to age 25",
+"D": "Never continues"
+}
+},
+"FL-097": {
+"correct": "B",
+"q": "For a parent who is incarcerated, courts generally:",
+"opts": {
+"A": "Always impute prior income",
+"B": "Do not treat incarceration as voluntary unemployment justifying imputation in most circumstances",
+"C": "Terminate support automatically",
+"D": "Double the obligation"
+}
+},
+"FL-098": {
+"correct": "B",
+"q": "A father with 70 overnights per year and the mother with 295:",
+"opts": {
+"A": "Uses Worksheet B",
+"B": "Uses Worksheet A because the father is below 93 overnights",
+"C": "Pays no support",
+"D": "Uses neither worksheet"
+}
+},
+"FL-099": {
+"correct": "B",
+"q": "Allocation of the federal dependency tax benefit between parents:",
+"opts": {
+"A": "Is forbidden",
+"B": "May be allocated by the court as part of the orders, often to maximize the family's overall benefit",
+"C": "Always goes to the mother",
+"D": "Is decided by the IRS only"
+}
+},
+"FL-100": {
+"correct": "B",
+"q": "The amount produced by the guideline is:",
+"opts": {
+"A": "Merely a suggestion",
+"B": "Rebuttably presumed to be the correct amount of child support",
+"C": "Always a maximum",
+"D": "Only advisory like maintenance"
+}
+},
+"FL-101": {
+"correct": "B",
+"q": "A child support order may be modified upon a showing of:",
+"opts": {
+"A": "Any change at all",
+"B": "A substantial and continuing change of circumstances",
+"C": "Fraud only",
+"D": "The obligor's request alone"
+}
+},
+"FL-102": {
+"correct": "B",
+"q": "There is a presumption of a substantial and continuing change if applying the guideline to current circumstances would change the support obligation by at least:",
+"opts": {
+"A": "5%",
+"B": "10%",
+"C": "25%",
+"D": "50%"
+}
+},
+"FL-103": {
+"correct": "B",
+"q": "A child support modification is generally effective:",
+"opts": {
+"A": "Back to the child's birth",
+"B": "Retroactive to the date the motion to modify was filed",
+"C": "Only prospectively from the order date",
+"D": "Back five years"
+}
+},
+"FL-114": {
+"correct": "B",
+"q": "When physical care of the child changes, support modification may be effective:",
+"opts": {
+"A": "Only from the new order",
+"B": "As of the date the change in physical care occurred, in defined circumstances",
+"C": "Never",
+"D": "Five years later"
+}
+},
+"FL-104": {
+"correct": "B",
+"q": "Past-due child support installments:",
+"opts": {
+"A": "Can be retroactively forgiven by the court at will",
+"B": "Become vested judgments as they accrue and are not subject to retroactive modification",
+"C": "Disappear after one year",
+"D": "Are never enforceable"
+}
+},
+"FL-105": {
+"correct": "B",
+"q": "A common automatic enforcement tool for child support is:",
+"opts": {
+"A": "Wage garnishment by income assignment (withholding)",
+"B": "Criminal indictment in all cases",
+"C": "Property seizure without notice",
+"D": "License revocation without findings"
+}
+},
+"FL-106": {
+"correct": "B",
+"q": "Unpaid child support generally accrues statutory interest at:",
+"opts": {
+"A": "No interest",
+"B": "A statutory rate (commonly 12% per year, compounded monthly) on arrears",
+"C": "2% per year",
+"D": "The federal funds rate"
+}
+},
+"FL-107": {
+"correct": "B",
+"q": "For significant nonpayment, the state may:",
+"opts": {
+"A": "Do nothing",
+"B": "Suspend the obligor's driver's, professional, or recreational licenses",
+"C": "Imprison without process",
+"D": "Garnish 100% of wages"
+}
+},
+"FL-108": {
+"correct": "B",
+"q": "Remedial contempt for nonpayment of child support is characterized by:",
+"opts": {
+"A": "A fixed punitive jail term",
+"B": "A coercive sanction the obligor can purge by complying (the 'keys to the cell')",
+"C": "No findings required",
+"D": "Automatic disbarment"
+}
+},
+"FL-109": {
+"correct": "B",
+"q": "Punitive contempt under C.R.C.P. 107:",
+"opts": {
+"A": "Is within an LLP's scope",
+"B": "Is outside an LLP's scope and requires an attorney",
+"C": "Is the same as remedial contempt",
+"D": "Is never available in family cases"
+}
+},
+"FL-111": {
+"correct": "B",
+"q": "Past-due support may be collected through:",
+"opts": {
+"A": "Interception of state and federal tax refunds",
+"B": "The obligor's voluntary tips only",
+"C": "Seizure of exempt benefits",
+"D": "None of these"
+}
+},
+"FL-110": {
+"correct": "B",
+"q": "A key element the movant must establish in a remedial contempt for nonpayment is that the obligor:",
+"opts": {
+"A": "Has a high income",
+"B": "Had the present ability to comply and willfully failed to do so",
+"C": "Was once employed",
+"D": "Lives in Colorado"
+}
+},
+"FL-112": {
+"correct": "B",
+"q": "Interstate establishment and enforcement of support orders is governed by:",
+"opts": {
+"A": "The UCCJEA",
+"B": "The Uniform Interstate Family Support Act (UIFSA)",
+"C": "The Hague Convention only",
+"D": "State contract law"
+}
+},
+"FL-113": {
+"correct": "B",
+"q": "Registration of a foreign (out-of-state) support order for enforcement in Colorado is:",
+"opts": {
+"A": "Within an LLP's scope",
+"B": "Outside an LLP's scope (a carve-out)",
+"C": "Prohibited entirely",
+"D": "Automatic"
+}
+},
+"FL-115": {
+"correct": "B",
+"q": "Which event generally emancipates a child for support purposes before 19?",
+"opts": {
+"A": "Getting a part-time job",
+"B": "Marriage or entry into active military duty",
+"C": "Starting high school",
+"D": "Moving to a new school district"
+}
+},
+"FL-116": {
+"correct": "B",
+"q": "A subsequent child born to the obligor in a new relationship:",
+"opts": {
+"A": "Increases the existing order automatically",
+"B": "May be considered as an adjustment but does not automatically reduce an existing order",
+"C": "Has no possible relevance",
+"D": "Terminates the existing order"
+}
+},
+"FL-117": {
+"correct": "B",
+"q": "In an initial determination, the court may order child support retroactive to:",
+"opts": {
+"A": "Never",
+"B": "The date of physical separation or the child's birth in a parentage case, as provided by statute",
+"C": "Only the hearing date",
+"D": "Ten years prior"
+}
+},
+"FL-118": {
+"correct": "B",
+"q": "Voluntary payments a parent makes beyond the ordered amount:",
+"opts": {
+"A": "Always count as a credit against future support",
+"B": "Generally do not create a credit against future support absent agreement or order",
+"C": "Double the obligation",
+"D": "Terminate support"
+}
+},
+"FL-119": {
+"correct": "B",
+"q": "The self-support reserve in the guideline functions to:",
+"opts": {
+"A": "Maximize the obligation",
+"B": "Ensure the obligor retains a minimum income for basic needs",
+"C": "Eliminate support for high earners",
+"D": "Increase interest on arrears"
+}
+},
+"FL-120": {
+"correct": "B",
+"q": "A parent facing imputation can rebut it by showing:",
+"opts": {
+"A": "Nothing can rebut imputation",
+"B": "That the unemployment/underemployment is not voluntary or that an exception (incapacity, infant care, good-faith career change) applies",
+"C": "That they dislike working",
+"D": "That the other parent earns more"
+}
+},
+"FL-121": {
+"correct": "B",
+"q": "Child support obligations in bankruptcy are:",
+"opts": {
+"A": "Fully dischargeable",
+"B": "Non-dischargeable domestic support obligations entitled to priority",
+"C": "Discharged after 7 years",
+"D": "Reduced automatically"
+}
+},
+"FL-122": {
+"correct": "B",
+"q": "Courts often direct child support to be paid through:",
+"opts": {
+"A": "Cash with no record",
+"B": "The Family Support Registry to create a payment record",
+"C": "A friend of the family",
+"D": "The child directly"
+}
+},
+"FL-123": {
+"correct": "B",
+"q": "If an obligor loses a job, the support obligation:",
+"opts": {
+"A": "Automatically drops to zero",
+"B": "Continues at the ordered amount until the court modifies it",
+"C": "Is forgiven",
+"D": "Doubles"
+}
+},
+"FL-124": {
+"correct": "B",
+"q": "Child support orders must address:",
+"opts": {
+"A": "Only cash support",
+"B": "Provision of the child's medical support (health insurance and/or cash medical)",
+"C": "Only parenting time",
+"D": "College savings"
+}
+},
+"FL-125": {
+"correct": "A",
+"q": "Which child support task is within an LLP's authorized scope?",
+"opts": {
+"A": "Establishing, enforcing, and modifying child support, including remedial contempt",
+"B": "Punitive contempt",
+"C": "Registering a foreign support order",
+"D": "Preparing a QDRO"
+}
+},
+"FL-126": {
+"correct": "B",
+"q": "Spousal maintenance in Colorado is governed primarily by:",
+"opts": {
+"A": "Section 14-10-115",
+"B": "Section 14-10-114",
+"C": "Section 14-10-113",
+"D": "Section 14-10-124"
+}
+},
+"FL-127": {
+"correct": "B",
+"q": "The statutory maintenance guideline is best described as:",
+"opts": {
+"A": "Mandatory and binding",
+"B": "Advisory; the court must consider it but make findings and may deviate",
+"C": "A maximum cap only",
+"D": "Applicable only to short marriages"
+}
+},
+"FL-128": {
+"correct": "B",
+"q": "Under the advisory guideline, the monthly maintenance amount equals:",
+"opts": {
+"A": "50% of the higher income",
+"B": "40% of the higher earner's monthly adjusted gross income minus 50% of the lower earner's",
+"C": "30% of combined income",
+"D": "The difference in the parties' incomes"
+}
+},
+"FL-129": {
+"correct": "B",
+"q": "The advisory maintenance formula applies when the parties' combined annual adjusted gross income is:",
+"opts": {
+"A": "$120,000 or less",
+"B": "$240,000 or less",
+"C": "$360,000 or less",
+"D": "Unlimited"
+}
+},
+"FL-130": {
+"correct": "B",
+"q": "The advisory guideline term of maintenance is determined by:",
+"opts": {
+"A": "A flat 5 years",
+"B": "A percentage of the length of the marriage on a statutory schedule",
+"C": "The recipient's age only",
+"D": "The number of children"
+}
+},
+"FL-131": {
+"correct": "B",
+"q": "The advisory maintenance term schedule generally begins to apply at marriages of at least:",
+"opts": {
+"A": "1 year",
+"B": "3 years (36 months)",
+"C": "7 years",
+"D": "10 years"
+}
+},
+"FL-132": {
+"correct": "B",
+"q": "In setting maintenance, the court must consider factors including:",
+"opts": {
+"A": "Only the recipient's income",
+"B": "The financial resources of each party, lifestyle during the marriage, distribution of marital property, income, employment, age, and health",
+"C": "Marital fault",
+"D": "Which party filed first"
+}
+},
+"FL-133": {
+"correct": "B",
+"q": "Temporary maintenance during the pending case:",
+"opts": {
+"A": "Cannot be ordered",
+"B": "May be ordered to maintain the status quo and meet needs until final orders",
+"C": "Is always permanent",
+"D": "Requires a 3-year marriage"
+}
+},
+"FL-134": {
+"correct": "B",
+"q": "Post-decree maintenance is generally:",
+"opts": {
+"A": "Never modifiable",
+"B": "Modifiable on a substantial and continuing change, unless the parties agreed it is non-modifiable",
+"C": "Modifiable only upward",
+"D": "Modifiable only by the payor"
+}
+},
+"FL-135": {
+"correct": "B",
+"q": "Absent contrary agreement, maintenance ordinarily terminates upon:",
+"opts": {
+"A": "The payor's retirement automatically",
+"B": "The death of either party or the remarriage of the recipient",
+"C": "The recipient getting any job",
+"D": "Five years regardless of the order"
+}
+},
+"FL-136": {
+"correct": "B",
+"q": "For maintenance orders entered after 2018, the federal tax treatment is:",
+"opts": {
+"A": "Deductible to payor, taxable to recipient",
+"B": "Not deductible to the payor and not taxable to the recipient",
+"C": "Taxable to both",
+"D": "A credit to the payor"
+}
+},
+"FL-137": {
+"correct": "B",
+"q": "For the maintenance formula, 'adjusted gross income' generally means gross income less:",
+"opts": {
+"A": "All household expenses",
+"B": "Pre-existing child support and maintenance obligations actually paid for other relationships",
+"C": "Rent and utilities",
+"D": "Discretionary spending"
+}
+},
+"FL-138": {
+"correct": "B",
+"q": "Where combined income exceeds the guideline cap, the court:",
+"opts": {
+"A": "Must award the formula amount anyway",
+"B": "Determines maintenance based on the statutory factors, reasonable need, and ability to pay",
+"C": "Cannot award maintenance",
+"D": "Awards exactly 40% of the higher income"
+}
+},
+"FL-139": {
+"correct": "B",
+"q": "In deciding maintenance, the court considers the property division because:",
+"opts": {
+"A": "Property is irrelevant to maintenance",
+"B": "Income-producing or liquid property awarded to a spouse affects that spouse's ability to meet needs independently",
+"C": "Property always eliminates maintenance",
+"D": "Maintenance must equal the property award"
+}
+},
+"FL-140": {
+"correct": "B",
+"q": "When the court awards maintenance, it must:",
+"opts": {
+"A": "Simply state an amount",
+"B": "Make findings concerning the amount and term, including the guideline calculation and the statutory factors",
+"C": "Defer to the parties only",
+"D": "Order the guideline amount without explanation"
+}
+},
+"FL-141": {
+"correct": "B",
+"q": "A recipient's earning capacity and need for education or training:",
+"opts": {
+"A": "Are irrelevant",
+"B": "Are considered, and rehabilitative maintenance may support a transition to self-sufficiency",
+"C": "Bar any maintenance",
+"D": "Require a vocational degree"
+}
+},
+"FL-142": {
+"correct": "B",
+"q": "Maintenance may sometimes be structured as:",
+"opts": {
+"A": "Only monthly payments",
+"B": "A lump sum or property transfer in lieu of periodic maintenance, by agreement or order",
+"C": "Never anything but monthly",
+"D": "Payment by the children"
+}
+},
+"FL-143": {
+"correct": "B",
+"q": "Absent a specific agreement, the recipient's cohabitation with a new partner:",
+"opts": {
+"A": "Automatically terminates maintenance",
+"B": "May support a modification motion based on changed circumstances but does not automatically terminate statutory maintenance",
+"C": "Increases maintenance",
+"D": "Has no possible relevance"
+}
+},
+"FL-144": {
+"correct": "B",
+"q": "If the parties agree maintenance is contractual and non-modifiable:",
+"opts": {
+"A": "The court can still modify it freely",
+"B": "Neither party may later obtain a modification, providing certainty",
+"C": "Only the payor can modify",
+"D": "It must be reviewed annually"
+}
+},
+"FL-145": {
+"correct": "B",
+"q": "Handling a maintenance claim within a dissolution is:",
+"opts": {
+"A": "Outside an LLP's scope",
+"B": "Within an LLP's scope as part of dissolution/legal separation matters",
+"C": "Allowed only with attorney co-counsel",
+"D": "Prohibited"
+}
+},
+"FL-146": {
+"correct": "A",
+"q": "Higher earner: $8,000/month AGI; lower earner: $3,000/month AGI; combined under cap. The advisory amount is:",
+"opts": {
+"A": "$1,700/month",
+"B": "$2,000/month",
+"C": "$5,000/month",
+"D": "$0"
+}
+},
+"FL-147": {
+"correct": "B",
+"q": "If both spouses earn $6,000/month AGI, the advisory maintenance amount is:",
+"opts": {
+"A": "$2,400/month",
+"B": "$0 (the formula yields a negative number, floored at zero)",
+"C": "$3,000/month",
+"D": "$600/month"
+}
+},
+"FL-148": {
+"correct": "B",
+"q": "When both maintenance and child support are ordered, the court calculates:",
+"opts": {
+"A": "Child support first",
+"B": "Maintenance first, then adjusts incomes before calculating child support",
+"C": "Both simultaneously and independently",
+"D": "Only one of the two"
+}
+},
+"FL-149": {
+"correct": "B",
+"q": "A central policy underlying maintenance is to:",
+"opts": {
+"A": "Punish the higher earner",
+"B": "Address economic disparity and support the recipient's reasonable needs and transition toward self-sufficiency",
+"C": "Equalize the parties' incomes permanently",
+"D": "Reward the longer-married spouse"
+}
+},
+"FL-150": {
+"correct": "B",
+"q": "A court may sometimes 'reserve' the issue of maintenance, meaning:",
+"opts": {
+"A": "Maintenance is denied forever",
+"B": "The court declines to award now but retains authority to consider maintenance later within the permissible period",
+"C": "Maintenance is automatically granted later",
+"D": "The parties cannot raise it again"
+}
+},
+"FL-151": {
+"correct": "B",
+"q": "Colorado divides marital property under which system?",
+"opts": {
+"A": "Community property (equal split)",
+"B": "Equitable distribution",
+"C": "Title-based ownership",
+"D": "Forfeiture to the innocent spouse"
+}
+},
+"FL-152": {
+"correct": "B",
+"q": "Marital property generally includes:",
+"opts": {
+"A": "Only property titled in both names",
+"B": "All property acquired by either spouse during the marriage, with limited exceptions",
+"C": "Only the marital home",
+"D": "Property acquired before the marriage"
+}
+},
+"FL-153": {
+"correct": "B",
+"q": "Which is generally separate (non-marital) property?",
+"opts": {
+"A": "A bonus earned during the marriage",
+"B": "Property acquired by gift, bequest, devise, or descent",
+"C": "Wages earned during the marriage",
+"D": "A home purchased during the marriage with marital funds"
+}
+},
+"FL-154": {
+"correct": "B",
+"q": "The increase in value of one spouse's separate property during the marriage is:",
+"opts": {
+"A": "Always separate",
+"B": "Marital property subject to division",
+"C": "Ignored entirely",
+"D": "Returned to the donor"
+}
+},
+"FL-155": {
+"correct": "B",
+"q": "When separate funds are commingled with marital funds so they cannot be traced:",
+"opts": {
+"A": "They remain separate automatically",
+"B": "They may lose their separate character and be treated as marital",
+"C": "They become the bank's property",
+"D": "They are split with the donor"
+}
+},
+"FL-156": {
+"correct": "B",
+"q": "Marital property is generally valued as of:",
+"opts": {
+"A": "The date of marriage",
+"B": "The date of the decree or the hearing on property division",
+"C": "The date of separation",
+"D": "The date of filing"
+}
+},
+"FL-157": {
+"correct": "B",
+"q": "In dividing marital property, the court considers factors including:",
+"opts": {
+"A": "Marital fault",
+"B": "Each spouse's contribution (including as homemaker), the value of separate property set apart, economic circumstances, and changes in separate property value",
+"C": "Which spouse filed first",
+"D": "The length of the engagement"
+}
+},
+"FL-158": {
+"correct": "B",
+"q": "Marital debts are:",
+"opts": {
+"A": "Always assigned to the higher earner",
+"B": "Allocated equitably along with marital assets",
+"C": "Ignored by the court",
+"D": "Assigned to whoever incurred them in all cases"
+}
+},
+"FL-159": {
+"correct": "B",
+"q": "The marital portion of a spouse's pension or 401(k) earned during the marriage is:",
+"opts": {
+"A": "Separate property",
+"B": "Marital property subject to division",
+"C": "Exempt from division",
+"D": "The employer's property"
+}
+},
+"FL-160": {
+"correct": "B",
+"q": "Preparing the qualified domestic relations order (QDRO) needed to divide a 401(k) is:",
+"opts": {
+"A": "Within an LLP's scope",
+"B": "Outside an LLP's scope (a collateral-issue carve-out)",
+"C": "Unnecessary for any plan",
+"D": "The judge's personal task"
+}
+},
+"FL-161": {
+"correct": "B",
+"q": "Awarding the marital home to the parent with majority parenting time:",
+"opts": {
+"A": "Is prohibited",
+"B": "May be appropriate as an economic-circumstances factor, considering the children's stability",
+"C": "Is required by statute",
+"D": "Eliminates child support"
+}
+},
+"FL-162": {
+"correct": "B",
+"q": "If a valid premarital agreement governs property, an LLP:",
+"opts": {
+"A": "May litigate its enforceability",
+"B": "May not prepare or litigate pre- or post-nuptial agreements (a carve-out)",
+"C": "Must draft a new one",
+"D": "Can ignore it"
+}
+},
+"FL-163": {
+"correct": "B",
+"q": "Colorado's enforceability standards for premarital and marital agreements are set by the:",
+"opts": {
+"A": "Uniform Commercial Code",
+"B": "Colorado Marital Agreement Act / Uniform Premarital and Marital Agreements Act",
+"C": "UCCJEA",
+"D": "Probate Code"
+}
+},
+"FL-164": {
+"correct": "B",
+"q": "If a spouse is a trust beneficiary and trust information is relevant to the division, an LLP:",
+"opts": {
+"A": "Should value the trust themselves",
+"B": "Must treat it as a carve-out outside scope and involve an attorney",
+"C": "May ignore the trust",
+"D": "Can subpoena the trustee alone"
+}
+},
+"FL-165": {
+"correct": "B",
+"q": "Where a marital estate includes a closely held business, valuation:",
+"opts": {
+"A": "Is unnecessary",
+"B": "Often requires expert valuation, and preparing documents to sell/distribute a business entity is a carve-out",
+"C": "Is the judge's job alone",
+"D": "Is prohibited"
+}
+},
+"FL-166": {
+"correct": "B",
+"q": "If a spouse wastes marital assets (e.g., on an affair or gambling) in contemplation of divorce, the court may:",
+"opts": {
+"A": "Do nothing",
+"B": "Consider the dissipation/economic fault in making an equitable division",
+"C": "Award the wasting spouse more",
+"D": "Order criminal charges"
+}
+},
+"FL-167": {
+"correct": "B",
+"q": "A gift from one spouse to the other during the marriage is generally:",
+"opts": {
+"A": "Separate property of the recipient",
+"B": "Marital property subject to division",
+"C": "Returned to the donor",
+"D": "Void"
+}
+},
+"FL-168": {
+"correct": "B",
+"q": "A spouse claiming an asset is separate bears the burden to:",
+"opts": {
+"A": "Do nothing; it is presumed separate",
+"B": "Trace and prove the separate source of the property by a preponderance",
+"C": "Prove it beyond a reasonable doubt",
+"D": "Obtain the other spouse's consent"
+}
+},
+"FL-169": {
+"correct": "B",
+"q": "If an asset was not divided and was not disclosed, the remedy may include:",
+"opts": {
+"A": "Nothing",
+"B": "Reopening to divide the omitted asset, including under Rule 16.2(e) within 5 years for nondisclosure",
+"C": "Automatic 50/50 of all assets",
+"D": "Criminal restitution only"
+}
+},
+"FL-170": {
+"correct": "B",
+"q": "Income generated by separate property during the marriage (e.g., rent, interest) is:",
+"opts": {
+"A": "Always separate",
+"B": "Often treated as marital, like appreciation, depending on the circumstances",
+"C": "The donor's property",
+"D": "Exempt"
+}
+},
+"FL-171": {
+"correct": "B",
+"q": "A 60/40 division of marital property in favor of one spouse is:",
+"opts": {
+"A": "Per se improper",
+"B": "Permissible if the court finds it equitable under the factors",
+"C": "Required in all cases",
+"D": "Only allowed by agreement"
+}
+},
+"FL-172": {
+"correct": "B",
+"q": "Debt one spouse incurs after separation but before the decree is:",
+"opts": {
+"A": "Always marital",
+"B": "Analyzed for whether it benefited the marriage or is separate; not automatically marital",
+"C": "Always the other spouse's",
+"D": "Ignored"
+}
+},
+"FL-173": {
+"correct": "B",
+"q": "For a home one spouse owned before marriage but paid down with marital funds, the court may recognize:",
+"opts": {
+"A": "No marital interest",
+"B": "A marital interest in the appreciation and in equity built with marital funds during the marriage",
+"C": "Full marital ownership of the home",
+"D": "Only the down payment"
+}
+},
+"FL-174": {
+"correct": "B",
+"q": "Parties may resolve property division by:",
+"opts": {
+"A": "Court order only",
+"B": "A separation agreement, which binds the court unless unconscionable",
+"C": "Oral handshake only",
+"D": "The children's preference"
+}
+},
+"FL-175": {
+"correct": "B",
+"q": "Which property-related task is within an LLP's scope?",
+"opts": {
+"A": "Drafting a QDRO",
+"B": "Negotiating and drafting the agreement dividing the marital home and ordinary accounts",
+"C": "Litigating a prenuptial agreement",
+"D": "Preparing business-sale documents"
+}
+},
+"FL-176": {
+"correct": "B",
+"q": "Civil protection orders in Colorado are governed primarily by:",
+"opts": {
+"A": "Title 14, Article 10",
+"B": "Title 13, Article 14",
+"C": "Title 19, Article 4",
+"D": "Title 15"
+}
+},
+"FL-177": {
+"correct": "B",
+"q": "The typical structure of a civil protection order proceeding is:",
+"opts": {
+"A": "A single permanent order with no hearing",
+"B": "A temporary (ex parte) protection order followed by a hearing on a permanent order",
+"C": "Only a criminal charge",
+"D": "An automatic lifetime ban"
+}
+},
+"FL-178": {
+"correct": "B",
+"q": "A temporary protection order may issue when the petitioner shows:",
+"opts": {
+"A": "Mere dislike",
+"B": "Imminent danger to the life or health of the petitioner or others",
+"C": "A prior breakup",
+"D": "A property dispute"
+}
+},
+"FL-179": {
+"correct": "B",
+"q": "At the hearing to make a protection order permanent, the petitioner must generally prove the grounds by:",
+"opts": {
+"A": "Beyond a reasonable doubt",
+"B": "A preponderance of the evidence",
+"C": "Clear and convincing evidence",
+"D": "No proof is needed"
+}
+},
+"FL-180": {
+"correct": "B",
+"q": "After a TPO issues, the return hearing on a permanent order is typically set within:",
+"opts": {
+"A": "24 hours",
+"B": "14 days",
+"C": "90 days",
+"D": "one year"
+}
+},
+"FL-181": {
+"correct": "B",
+"q": "A protection order may include provisions such as:",
+"opts": {
+"A": "Only a no-contact term",
+"B": "No-contact, stay-away, exclusion from a shared residence, and temporary care/parenting provisions",
+"C": "A property sale order",
+"D": "A criminal sentence"
+}
+},
+"FL-182": {
+"correct": "B",
+"q": "Mutual protection orders (against both parties):",
+"opts": {
+"A": "Are favored",
+"B": "Are disfavored absent separate petitions and independent findings against each party",
+"C": "Are automatic",
+"D": "Are required in every case"
+}
+},
+"FL-183": {
+"correct": "B",
+"q": "A civil protection order is:",
+"opts": {
+"A": "The same as a criminal case",
+"B": "Separate from any criminal case arising out of the same conduct",
+"C": "A substitute for prosecution",
+"D": "Only available after a conviction"
+}
+},
+"FL-184": {
+"correct": "B",
+"q": "A permanent protection order for domestic abuse commonly triggers:",
+"opts": {
+"A": "No firearm consequences",
+"B": "Federal and state restrictions on the respondent's possession of firearms",
+"C": "An automatic firearm permit",
+"D": "Increased gun rights"
+}
+},
+"FL-185": {
+"correct": "B",
+"q": "A permanent protection order:",
+"opts": {
+"A": "Expires in one year automatically",
+"B": "Remains in effect until modified or dismissed, and the restrained party may later seek modification",
+"C": "Cannot ever be changed",
+"D": "Must be renewed monthly"
+}
+},
+"FL-186": {
+"correct": "B",
+"q": "A protection order may be sought by:",
+"opts": {
+"A": "Only married petitioners",
+"B": "A person who alleges abuse, stalking, or threats, including in non-marital relationships",
+"C": "Only parents",
+"D": "Only employers"
+}
+},
+"FL-187": {
+"correct": "B",
+"q": "A protection order proceeding may include temporary provisions for children when:",
+"opts": {
+"A": "Never",
+"B": "Necessary for the children's safety, subject to the domestic relations court's authority over APR",
+"C": "Always, permanently",
+"D": "Only if the children testify"
+}
+},
+"FL-188": {
+"correct": "B",
+"q": "Violating a protection order can result in:",
+"opts": {
+"A": "No consequence",
+"B": "Criminal charges and/or contempt",
+"C": "Only a fine paid to the respondent",
+"D": "Automatic dismissal of the order"
+}
+},
+"FL-189": {
+"correct": "B",
+"q": "Representing a client in a civil protection order matter is:",
+"opts": {
+"A": "Outside an LLP's scope",
+"B": "Within an LLP's authorized scope",
+"C": "Allowed only for the respondent",
+"D": "Prohibited"
+}
+},
+"FL-190": {
+"correct": "B",
+"q": "When courts are closed, law enforcement may obtain from an on-call judge an:",
+"opts": {
+"A": "Permanent protection order",
+"B": "Emergency protection order (EPO) of short duration",
+"C": "Automatic divorce",
+"D": "Arrest warrant only"
+}
+},
+"FL-191": {
+"correct": "B",
+"q": "An adult legal name change in Colorado is governed by:",
+"opts": {
+"A": "Title 14",
+"B": "C.R.S. 13-15-101",
+"C": "Title 19",
+"D": "The UCCJEA"
+}
+},
+"FL-192": {
+"correct": "B",
+"q": "An adult petitioner for a name change typically must provide:",
+"opts": {
+"A": "Nothing",
+"B": "A petition, and (depending on circumstances) a fingerprint-based criminal history check and publication, unless waived for safety",
+"C": "A jury trial",
+"D": "A doctor's note"
+}
+},
+"FL-193": {
+"correct": "B",
+"q": "A name change for a minor generally requires:",
+"opts": {
+"A": "Only the petitioning parent's consent",
+"B": "Notice to and often consent of both parents (or good cause), with the child's best interests considered",
+"C": "No notice to the other parent",
+"D": "The minor's sole decision"
+}
+},
+"FL-194": {
+"correct": "B",
+"q": "A court may deny a name change if it is sought:",
+"opts": {
+"A": "To take a spouse's surname",
+"B": "For a fraudulent or unlawful purpose, such as evading creditors or law enforcement",
+"C": "After divorce",
+"D": "For religious reasons"
+}
+},
+"FL-195": {
+"correct": "B",
+"q": "A party may have a former name restored:",
+"opts": {
+"A": "Only in a separate action",
+"B": "As part of the dissolution decree on request",
+"C": "Never",
+"D": "Only with the other spouse's consent"
+}
+},
+"FL-196": {
+"correct": "B",
+"q": "For a survivor of domestic violence, the court may:",
+"opts": {
+"A": "Require publication always",
+"B": "Waive publication and seal records to protect the petitioner's safety",
+"C": "Deny the change",
+"D": "Notify the abuser"
+}
+},
+"FL-197": {
+"correct": "B",
+"q": "A granted legal name change:",
+"opts": {
+"A": "Erases the person's history",
+"B": "Changes the person's legal name going forward; the person should update records and IDs",
+"C": "Requires re-doing for each agency by court",
+"D": "Is temporary"
+}
+},
+"FL-198": {
+"correct": "B",
+"q": "Handling an adult or minor name change is:",
+"opts": {
+"A": "Outside an LLP's scope",
+"B": "Within an LLP's authorized scope",
+"C": "Allowed only with attorney supervision",
+"D": "Prohibited for minors"
+}
+},
+"FL-199": {
+"correct": "B",
+"q": "A required fingerprint-based criminal history check for an adult name change is intended to:",
+"opts": {
+"A": "Punish the petitioner",
+"B": "Ensure the change is not sought to evade law enforcement or registration obligations",
+"C": "Generate revenue",
+"D": "Delay the case"
+}
+},
+"FL-200": {
+"correct": "B",
+"q": "If one parent objects to a minor's name change, the court:",
+"opts": {
+"A": "Must deny it",
+"B": "Decides based on the child's best interests after a hearing",
+"C": "Must grant it",
+"D": "Defers to the child only"
+}
+},
+"FL-201": {
+"correct": "B",
+"q": "Assisting an adult with a legal gender-designation change is:",
+"opts": {
+"A": "Outside an LLP's scope",
+"B": "Within an LLP's authorized scope",
+"C": "Allowed only in juvenile court",
+"D": "Prohibited"
+}
+},
+"FL-202": {
+"correct": "B",
+"q": "Colorado permits a change of the sex designation on a birth certificate:",
+"opts": {
+"A": "Never",
+"B": "Through a statutory process, generally without requiring surgery",
+"C": "Only with a court order after surgery",
+"D": "Only for minors"
+}
+},
+"FL-203": {
+"correct": "B",
+"q": "A person changing gender designation often simultaneously seeks:",
+"opts": {
+"A": "A new Social Security number only",
+"B": "A legal name change, which an LLP may also handle",
+"C": "A criminal record change",
+"D": "A new birthdate"
+}
+},
+"FL-204": {
+"correct": "B",
+"q": "For a minor's gender-designation change, the process:",
+"opts": {
+"A": "Is identical to an adult's",
+"B": "May require parental consent or court involvement and additional documentation",
+"C": "Is prohibited",
+"D": "Requires a jury"
+}
+},
+"FL-205": {
+"correct": "B",
+"q": "In handling identity-change matters, an LLP should be attentive to:",
+"opts": {
+"A": "Publicizing the change widely",
+"B": "Protecting the client's privacy and safety, including seeking record sealing or publication waivers where appropriate",
+"C": "Ignoring confidentiality",
+"D": "Notifying the public"
+}
+},
+"FL-206": {
+"correct": "B",
+"q": "Parentage in Colorado is determined under the:",
+"opts": {
+"A": "Uniform Commercial Code",
+"B": "Uniform Parentage Act (Title 19, Article 4)",
+"C": "UCCJEA",
+"D": "Probate Code"
+}
+},
+"FL-207": {
+"correct": "B",
+"q": "A man is presumed to be the father if:",
+"opts": {
+"A": "He pays support",
+"B": "He and the child's mother are married (or were within 300 days before birth) or he holds the child out as his own",
+"C": "He requests it",
+"D": "He is older than the mother"
+}
+},
+"FL-208": {
+"correct": "B",
+"q": "Parentage may be established without court action by:",
+"opts": {
+"A": "A verbal statement",
+"B": "A voluntary acknowledgment of parentage signed by both parents",
+"C": "A birth announcement",
+"D": "Naming the child"
+}
+},
+"FL-209": {
+"correct": "B",
+"q": "A signed acknowledgment of parentage may generally be rescinded:",
+"opts": {
+"A": "Anytime",
+"B": "Within a limited statutory period (e.g., 60 days) or before a related proceeding, whichever is earlier",
+"C": "Only after 5 years",
+"D": "Never"
+}
+},
+"FL-210": {
+"correct": "B",
+"q": "In a contested parentage case, the court may order:",
+"opts": {
+"A": "Nothing",
+"B": "Genetic (DNA) testing to determine biological parentage",
+"C": "A lie-detector test",
+"D": "A jury verdict only"
+}
+},
+"FL-211": {
+"correct": "B",
+"q": "An LLP may handle a parentage case when it involves:",
+"opts": {
+"A": "Three or more alleged parents disputing parentage",
+"B": "Two parties (a two-party parentage determination)",
+"C": "A contested ICWA matter",
+"D": "A trust dispute"
+}
+},
+"FL-212": {
+"correct": "B",
+"q": "Which parentage scenario is OUTSIDE an LLP's scope?",
+"opts": {
+"A": "A mother and one alleged father with DNA testing",
+"B": "A dispute where more than two people assert or deny legal parentage",
+"C": "An uncontested acknowledgment",
+"D": "Establishing support after parentage"
+}
+},
+"FL-213": {
+"correct": "B",
+"q": "An action to establish parentage:",
+"opts": {
+"A": "Can never be time-barred",
+"B": "May be subject to statutory standing and limitation provisions, varying by presumption",
+"C": "Has no procedural rules",
+"D": "Is criminal"
+}
+},
+"FL-214": {
+"correct": "B",
+"q": "After parentage is established, the court may order:",
+"opts": {
+"A": "No support",
+"B": "Child support, including potentially retroactive support to birth within limits",
+"C": "Only future support starting at age 5",
+"D": "Support paid to the state only"
+}
+},
+"FL-215": {
+"correct": "B",
+"q": "Parentage involving assisted reproduction or surrogacy:",
+"opts": {
+"A": "Is always simple",
+"B": "Can raise complex legal issues that may exceed an LLP's competence/scope",
+"C": "Is criminal",
+"D": "Is identical to ordinary parentage"
+}
+},
+"FL-216": {
+"correct": "B",
+"q": "A presumption of parentage may be rebutted:",
+"opts": {
+"A": "Never",
+"B": "By clear and convincing evidence, including genetic test results, in an appropriate proceeding",
+"C": "By a simple denial",
+"D": "Only after the child turns 18"
+}
+},
+"FL-217": {
+"correct": "B",
+"q": "In some parentage disputes, the court may consider:",
+"opts": {
+"A": "Only biology",
+"B": "The child's best interests and the policy of protecting established parent-child relationships, not biology alone",
+"C": "Only the mother's wishes",
+"D": "The alleged father's income only"
+}
+},
+"FL-218": {
+"correct": "B",
+"q": "A valid, unrescinded acknowledgment of parentage:",
+"opts": {
+"A": "Is merely advisory",
+"B": "Has the legal effect of a determination of parentage (like a judgment)",
+"C": "Must be re-signed yearly",
+"D": "Requires court approval to take effect"
+}
+},
+"FL-219": {
+"correct": "B",
+"q": "To order support against an out-of-state alleged parent, the court needs:",
+"opts": {
+"A": "Nothing",
+"B": "Personal jurisdiction (e.g., under UIFSA's long-arm provisions)",
+"C": "Only the child's presence",
+"D": "The other parent's consent"
+}
+},
+"FL-220": {
+"correct": "B",
+"q": "Which parentage task is within an LLP's scope?",
+"opts": {
+"A": "A four-party parentage dispute",
+"B": "A two-party action to establish parentage and resulting support and APR",
+"C": "A contested ICWA placement",
+"D": "Drafting a surrogacy contract"
+}
+},
+"FL-221": {
+"correct": "B",
+"q": "Which of the following is within an LLP's authorized family law scope?",
+"opts": {
+"A": "Registering a foreign order",
+"B": "Dissolution, legal separation, and declaration of invalidity",
+"C": "Punitive contempt",
+"D": "A prenuptial agreement dispute"
+}
+},
+"FL-222": {
+"correct": "B",
+"q": "If a complex out-of-scope issue arises mid-case, C.R.C.P. 207.1(i) allows an LLP to:",
+"opts": {
+"A": "Do nothing further",
+"B": "Continue representing the client on the in-scope matters while the client obtains an attorney for the out-of-scope issue",
+"C": "Take over the out-of-scope issue anyway",
+"D": "Withdraw entirely and keep the fee"
+}
+},
+"FL-223": {
+"correct": "B",
+"q": "Registration of an out-of-state custody or support order is:",
+"opts": {
+"A": "Within an LLP's scope",
+"B": "A carve-out outside an LLP's scope",
+"C": "Always unnecessary",
+"D": "Handled by the clerk for the LLP"
+}
+},
+"FL-224": {
+"correct": "B",
+"q": "A contested common-law marriage (existence or formation date disputed) is:",
+"opts": {
+"A": "Within an LLP's scope",
+"B": "Outside an LLP's scope (a carve-out)",
+"C": "Not recognized in Colorado",
+"D": "Decided by the parties"
+}
+},
+"FL-225": {
+"correct": "B",
+"q": "Certain non-parent decision-making or parenting-time disputes are outside an LLP's scope when:",
+"opts": {
+"A": "The child is over 12",
+"B": "The court has determined the Indian Child Welfare Act (ICWA) applies and a non-parent's contested request is involved",
+"C": "The parents agree",
+"D": "No tribe is involved"
+}
+},
+"FL-248": {
+"correct": "B",
+"q": "When part of a matter is out of scope, an LLP and an attorney:",
+"opts": {
+"A": "Cannot both be involved",
+"B": "May work in tandem, with the attorney handling the out-of-scope issue",
+"C": "Must merge into one firm",
+"D": "Are prohibited from communicating"
+}
+},
+"FL-250": {
+"correct": "B",
+"q": "A competent LLP's first task when a complex issue appears is to:",
+"opts": {
+"A": "Proceed regardless",
+"B": "Recognize whether it falls within a carve-out or exceeds the LLP's competence and advise the client accordingly",
+"C": "Ask the judge to decide scope",
+"D": "Withdraw from everything"
+}
+},
+"FL-226": {
+"correct": "B",
+"q": "In a hearing within their scope, an LLP may:",
+"opts": {
+"A": "Only sit silently",
+"B": "Examine witnesses, make objections and offers of proof, and argue to the court",
+"C": "Only file documents",
+"D": "Only speak if the judge asks"
+}
+},
+"FL-227": {
+"correct": "B",
+"q": "Regarding witness testimony, the current rule:",
+"opts": {
+"A": "Bars an LLP from questioning witnesses",
+"B": "Permits an LLP to elicit testimony and examine any witness",
+"C": "Allows only cross-examination",
+"D": "Allows questioning only of the client"
+}
+},
+"FL-228": {
+"correct": "B",
+"q": "Concerning expert witnesses, the current rule:",
+"opts": {
+"A": "Bars LLPs from any case with an expert",
+"B": "Contains no scope limitation specific to expert witnesses",
+"C": "Requires attorney co-counsel for experts",
+"D": "Forbids cross-examining experts"
+}
+},
+"FL-229": {
+"correct": "B",
+"q": "The comment to C.R.C.P. 207.1 directs that an LLP's authorized scope be:",
+"opts": {
+"A": "Narrowly construed",
+"B": "Liberally construed to include ordinary and reasonable actions within scope not expressly prohibited",
+"C": "Ignored",
+"D": "Limited to JDF forms"
+}
+},
+"FL-230": {
+"correct": "B",
+"q": "Preparing a QDRO to divide retirement assets is outside scope because it is:",
+"opts": {
+"A": "A simple form",
+"B": "A collateral issue requiring analysis outside the LLP's authorized practice",
+"C": "Always handled by the plan",
+"D": "Within Title 19"
+}
+},
+"FL-231": {
+"correct": "B",
+"q": "Which is a collateral-issue carve-out an LLP must refer out?",
+"opts": {
+"A": "Calculating child support",
+"B": "An immigration, criminal, or bankruptcy issue affecting the family matter",
+"C": "Drafting a parenting plan",
+"D": "Filing a dissolution petition"
+}
+},
+"FL-232": {
+"correct": "B",
+"q": "Preparing documents to effectuate the sale or distribution of a business entity is:",
+"opts": {
+"A": "Within scope",
+"B": "Outside scope, except an agreement addressing the underlying property division",
+"C": "Always required",
+"D": "Handled by the court"
+}
+},
+"FL-242": {
+"correct": "B",
+"q": "A dispute about the value of or income from a trust in which a party is a beneficiary is:",
+"opts": {
+"A": "Within scope",
+"B": "A carve-out outside an LLP's scope",
+"C": "Irrelevant to family law",
+"D": "Handled by the trustee in the divorce"
+}
+},
+"FL-245": {
+"correct": "B",
+"q": "If a client wants to jail an ex-spouse purely to punish past nonpayment, the LLP should:",
+"opts": {
+"A": "File for punitive contempt",
+"B": "Explain that punitive contempt is outside scope and refer the client to an attorney, while offering remedial remedies within scope",
+"C": "Refuse all help",
+"D": "Ignore the request"
+}
+},
+"FL-233": {
+"correct": "B",
+"q": "The key difference between remedial and punitive contempt is:",
+"opts": {
+"A": "The courtroom used",
+"B": "Remedial is coercive and purgeable; punitive imposes a fixed sanction to punish and is outside LLP scope",
+"C": "Remedial requires a jury",
+"D": "There is no difference"
+}
+},
+"FL-234": {
+"correct": "B",
+"q": "To establish remedial contempt for violating a court order, the movant must show:",
+"opts": {
+"A": "Only that an order exists",
+"B": "A valid order, the respondent's knowledge of it, present ability to comply, and willful noncompliance",
+"C": "Criminal intent beyond a reasonable doubt",
+"D": "That the respondent is wealthy"
+}
+},
+"FL-235": {
+"correct": "B",
+"q": "Most contested family law issues are decided by:",
+"opts": {
+"A": "Beyond a reasonable doubt",
+"B": "A preponderance of the evidence",
+"C": "Clear and convincing evidence in all cases",
+"D": "No standard"
+}
+},
+"FL-240": {
+"correct": "B",
+"q": "An offer of proof is used to:",
+"opts": {
+"A": "Object to the judge",
+"B": "Preserve for the record what excluded evidence would have shown",
+"C": "Cross-examine the judge",
+"D": "Pay the filing fee"
+}
+},
+"FL-236": {
+"correct": "B",
+"q": "The UCCJEA primarily exists to:",
+"opts": {
+"A": "Set child support amounts",
+"B": "Allocate jurisdiction among states for custody/APR and prevent conflicting orders",
+"C": "Divide marital property",
+"D": "Govern adoptions"
+}
+},
+"FL-238": {
+"correct": "B",
+"q": "Under the UCCJEA, at any given time a child generally has:",
+"opts": {
+"A": "Multiple home states",
+"B": "At most one home state",
+"C": "No home state ever",
+"D": "A home state chosen by the parents"
+}
+},
+"FL-237": {
+"correct": "B",
+"q": "UIFSA primarily governs:",
+"opts": {
+"A": "Custody jurisdiction",
+"B": "Establishment, enforcement, and modification of support orders across state lines",
+"C": "Property division",
+"D": "Name changes"
+}
+},
+"FL-239": {
+"correct": "B",
+"q": "If a party's income changes significantly after initial disclosures but before the hearing, the party must:",
+"opts": {
+"A": "Wait to be asked",
+"B": "Supplement disclosures promptly under the continuing duty",
+"C": "Do nothing",
+"D": "Disclose only at the hearing"
+}
+},
+"FL-246": {
+"correct": "B",
+"q": "A party who hides assets in violation of Rule 16.2 may face:",
+"opts": {
+"A": "No consequence",
+"B": "Sanctions, reallocation of the asset within 5 years, and adverse credibility findings",
+"C": "A reward",
+"D": "Dismissal of the other party's case"
+}
+},
+"FL-241": {
+"correct": "B",
+"q": "In an APR hearing, a CFI's report:",
+"opts": {
+"A": "Binds the court",
+"B": "Is evidence the court considers but does not have to follow",
+"C": "Cannot be challenged",
+"D": "Replaces the hearing"
+}
+},
+"FL-251": {
+"correct": "B",
+"q": "The concept that a court may dissolve a marriage even without personal jurisdiction to divide property is called:",
+"opts": {
+"A": "Comity",
+"B": "Divisible divorce",
+"C": "Res judicata",
+"D": "Forum non conveniens"
+}
+},
+"FL-252": {
+"correct": "B",
+"q": "In a case with both awards, an error candidates make is:",
+"opts": {
+"A": "Calculating maintenance first",
+"B": "Calculating child support before adjusting incomes for maintenance paid",
+"C": "Considering the guideline",
+"D": "Making findings"
+}
+},
+"FL-253": {
+"correct": "B",
+"q": "A parent with majority time moving out of state post-decree implicates:",
+"opts": {
+"A": "Only best interests with no extra factors",
+"B": "The relocation factors of 14-10-129(2)(c) and, if changing the majority parent, the endangerment trigger",
+"C": "Section 14-10-113 only",
+"D": "No standards"
+}
+},
+"FL-254": {
+"correct": "B",
+"q": "Income is NOT imputed to a parent who is:",
+"opts": {
+"A": "Underemployed by choice",
+"B": "Physically or mentally incapacitated, or caring for a child under 30 months for whom both owe support",
+"C": "Working part-time voluntarily",
+"D": "Recently promoted"
+}
+},
+"FL-255": {
+"correct": "B",
+"q": "The shared-care worksheet (B) applies when each parent has at least how many overnights?",
+"opts": {
+"A": "52",
+"B": "93",
+"C": "120",
+"D": "182"
+}
+},
+"FL-256": {
+"correct": "B",
+"q": "The advisory maintenance formula applies up to a combined annual adjusted gross income of:",
+"opts": {
+"A": "$120,000",
+"B": "$240,000",
+"C": "$360,000",
+"D": "No cap"
+}
+},
+"FL-257": {
+"correct": "B",
+"q": "A spouse's inheritance grows from $40,000 to $55,000 during the marriage. The marital portion is:",
+"opts": {
+"A": "$55,000",
+"B": "$15,000 (the appreciation)",
+"C": "$40,000",
+"D": "$0"
+}
+},
+"FL-258": {
+"correct": "B",
+"q": "A recalculation showing support should change by 12% creates:",
+"opts": {
+"A": "No presumption",
+"B": "A rebuttable presumption of a substantial and continuing change",
+"C": "An automatic denial",
+"D": "A criminal issue"
+}
+},
+"FL-259": {
+"correct": "B",
+"q": "To restrict a parent's parenting time, the court must find that parenting time would:",
+"opts": {
+"A": "Be inconvenient",
+"B": "Endanger the child's physical health or significantly impair emotional development",
+"C": "Cost too much",
+"D": "Reduce support"
+}
+},
+"FL-260": {
+"correct": "B",
+"q": "After the decree, property division is:",
+"opts": {
+"A": "Freely modifiable like support",
+"B": "Generally final and not modifiable absent fraud, nondisclosure, or other narrow grounds",
+"C": "Modifiable any time",
+"D": "Void"
+}
+},
+"FL-261": {
+"correct": "B",
+"q": "Absent exceptions, child support ends when the child reaches:",
+"opts": {
+"A": "18",
+"B": "19",
+"C": "21",
+"D": "16"
+}
+},
+"FL-262": {
+"correct": "B",
+"q": "In a contest between a fit parent and a non-parent, the law gives:",
+"opts": {
+"A": "Equal footing",
+"B": "Special weight to the parent's constitutionally protected interest, with the non-parent facing a higher standard",
+"C": "Preference to the non-parent",
+"D": "No preference"
+}
+},
+"FL-263": {
+"correct": "B",
+"q": "Because the maintenance guideline is advisory, the court must:",
+"opts": {
+"A": "Simply apply the formula",
+"B": "Make findings on the guideline amount/term and the statutory factors",
+"C": "Defer to the payor",
+"D": "Award nothing"
+}
+},
+"FL-264": {
+"correct": "B",
+"q": "The dependency tax benefit may be allocated to the non-residential parent:",
+"opts": {
+"A": "Never",
+"B": "By court order, often conditioned on the obligor being current, with the residential parent executing IRS Form 8332",
+"C": "Automatically",
+"D": "Only by the IRS"
+}
+},
+"FL-265": {
+"correct": "B",
+"q": "Colorado's refined test for common-law marriage (post-Hogsett) focuses on:",
+"opts": {
+"A": "Cohabitation alone",
+"B": "The parties' mutual agreement to enter marriage, shown by conduct manifesting that agreement",
+"C": "A ceremony",
+"D": "A 7-year cohabitation rule"
+}
+},
+"FL-266": {
+"correct": "B",
+"q": "A support modification is generally effective from:",
+"opts": {
+"A": "The child's birth",
+"B": "The date the motion was filed",
+"C": "The hearing date only",
+"D": "One year before filing"
+}
+},
+"FL-267": {
+"correct": "B",
+"q": "When a dissolution involves a contested prenup and a QDRO, a competent LLP should:",
+"opts": {
+"A": "Handle everything",
+"B": "Continue on in-scope issues and advise the client to retain an attorney for the prenup dispute and QDRO",
+"C": "Withdraw entirely",
+"D": "Ignore the carve-outs"
+}
+},
+"FL-268": {
+"correct": "B",
+"q": "Which pairing is correct?",
+"opts": {
+"A": "UCCJEA = support; UIFSA = custody",
+"B": "UCCJEA = custody/APR jurisdiction; UIFSA = support jurisdiction",
+"C": "Both govern property",
+"D": "Both govern adoption"
+}
+},
+"FL-269": {
+"correct": "B",
+"q": "The special remedy for a materially omitted or misstated asset due to nondisclosure allows reallocation within:",
+"opts": {
+"A": "1 year",
+"B": "5 years",
+"C": "10 years",
+"D": "No limit"
+}
+},
+"FL-270": {
+"correct": "C",
+"q": "A 12-year marriage, two minor children, combined income $150,000, a marital home, the husband's pension, and a disputed inheritance. Which issue is OUTSIDE an LLP's scope?",
+"opts": {
+"A": "Calculating child support",
+"B": "Dividing the marital home",
+"C": "Preparing the QDRO for the pension",
+"D": "Drafting the parenting plan"
+}
+},
+"ETH-001": {
+"correct": "B",
+"q": "Under Colo. LLP RPC 1.1, an LLP must:",
+"opts": {
+"A": "Take any case offered",
+"B": "Provide competent representation requiring legal knowledge, skill, thoroughness, and preparation reasonably necessary",
+"C": "Guarantee a result",
+"D": "Match an attorney's expertise in all fields"
+}
+},
+"ETH-002": {
+"correct": "B",
+"q": "An LLP asked to handle a dissolution issue requiring analysis of a complex trust should:",
+"opts": {
+"A": "Proceed and learn as they go",
+"B": "Advise the client to consult an attorney, because the issue is both a competence concern and a scope carve-out",
+"C": "Refer only if the client asks",
+"D": "Decline the entire case"
+}
+},
+"ETH-003": {
+"correct": "B",
+"q": "Maintaining competence requires an LLP to:",
+"opts": {
+"A": "Never change practice areas",
+"B": "Keep abreast of changes in the law and practice, including continuing education",
+"C": "Rely solely on past training",
+"D": "Avoid technology"
+}
+},
+"ETH-015": {
+"correct": "B",
+"q": "An LLP lacking competence in a discrete in-scope task may:",
+"opts": {
+"A": "Never handle it",
+"B": "Acquire competence through reasonable preparation or associate with a competent LLP/attorney",
+"C": "Only refer it out",
+"D": "Guess"
+}
+},
+"ETH-020": {
+"correct": "B",
+"q": "An LLP's duty of competence in technology includes:",
+"opts": {
+"A": "Ignoring technology",
+"B": "Reasonable understanding of relevant technology, including e-filing and protecting client data",
+"C": "Outsourcing all decisions",
+"D": "Avoiding email"
+}
+},
+"ETH-004": {
+"correct": "B",
+"q": "Under LLP RPC 1.2, an LLP may limit the scope of a representation if:",
+"opts": {
+"A": "The client is unaware",
+"B": "The limitation is reasonable and the client gives informed consent",
+"C": "The LLP simply prefers it",
+"D": "A judge approves"
+}
+},
+"ETH-005": {
+"correct": "B",
+"q": "A defining ethical duty unique to LLPs is to:",
+"opts": {
+"A": "Conceal their license type",
+"B": "Advise clients of the limitations on the LLP's license and authorized practice",
+"C": "Practice in all areas of law",
+"D": "Avoid court"
+}
+},
+"ETH-006": {
+"correct": "B",
+"q": "The client, not the LLP, generally decides:",
+"opts": {
+"A": "Which witnesses to cross-examine",
+"B": "The objectives of the representation, such as whether to settle",
+"C": "Courtroom tactics",
+"D": "The wording of motions"
+}
+},
+"ETH-007": {
+"correct": "B",
+"q": "An LLP may NOT counsel or assist a client to:",
+"opts": {
+"A": "Pursue a lawful but aggressive position",
+"B": "Engage in conduct the LLP knows is criminal or fraudulent",
+"C": "File a disclosed motion",
+"D": "Negotiate firmly"
+}
+},
+"ETH-016": {
+"correct": "B",
+"q": "Informed consent under the LLP rules requires:",
+"opts": {
+"A": "A signature only",
+"B": "The client's agreement after the LLP communicates adequate information about the material risks and reasonable alternatives",
+"C": "No explanation",
+"D": "Court approval"
+}
+},
+"ETH-019": {
+"correct": "B",
+"q": "Limited-scope (unbundled) representation by an LLP is:",
+"opts": {
+"A": "Prohibited",
+"B": "Permitted if reasonable and with informed consent, with disclosure to the court as required",
+"C": "Always full-service only",
+"D": "Allowed without telling anyone"
+}
+},
+"ETH-023": {
+"correct": "B",
+"q": "If a client insists on pursuing an out-of-scope objective, the LLP should:",
+"opts": {
+"A": "Pursue it anyway",
+"B": "Explain the scope limit, decline the out-of-scope work, and advise the client to consult an attorney",
+"C": "Hide the limitation",
+"D": "Sign an attorney's name"
+}
+},
+"ETH-008": {
+"correct": "B",
+"q": "LLP RPC 1.3 requires an LLP to:",
+"opts": {
+"A": "Act whenever convenient",
+"B": "Act with reasonable diligence and promptness in representing a client",
+"C": "Prioritize the highest-paying client",
+"D": "Delay to increase fees"
+}
+},
+"ETH-009": {
+"correct": "B",
+"q": "If an LLP's workload prevents diligent handling of a new matter, the LLP should:",
+"opts": {
+"A": "Take it anyway",
+"B": "Decline or limit the workload so each client is served competently and diligently",
+"C": "Hand it to a non-licensed assistant",
+"D": "Delay indefinitely"
+}
+},
+"ETH-010": {
+"correct": "B",
+"q": "Upon completing or terminating a representation, diligence and related duties require the LLP to:",
+"opts": {
+"A": "Keep the file forever secret",
+"B": "Take steps to protect the client's interests, such as returning the file and giving notice",
+"C": "Abandon the client",
+"D": "Destroy the file immediately"
+}
+},
+"ETH-017": {
+"correct": "B",
+"q": "Missing a filing deadline that harms the client most directly implicates:",
+"opts": {
+"A": "Confidentiality",
+"B": "Diligence (and possibly competence)",
+"C": "Advertising rules",
+"D": "Trust accounting"
+}
+},
+"ETH-022": {
+"correct": "B",
+"q": "A single, isolated act of neglect versus a pattern:",
+"opts": {
+"A": "Both are always disbarment",
+"B": "Either can violate diligence; a pattern is more serious and aggravating",
+"C": "Only a pattern matters",
+"D": "Neither matters"
+}
+},
+"ETH-011": {
+"correct": "B",
+"q": "LLP RPC 1.4 requires an LLP to:",
+"opts": {
+"A": "Communicate only in writing",
+"B": "Keep the client reasonably informed and promptly comply with reasonable requests for information",
+"C": "Communicate only at the end",
+"D": "Speak only to opposing counsel"
+}
+},
+"ETH-012": {
+"correct": "B",
+"q": "Explaining a matter so the client can make informed decisions includes:",
+"opts": {
+"A": "Only legal jargon",
+"B": "Explaining the practical and legal options, including scope limits affecting the client",
+"C": "Withholding bad news",
+"D": "Deferring all decisions to the LLP"
+}
+},
+"ETH-013": {
+"correct": "B",
+"q": "A settlement offer received from the opposing party should be:",
+"opts": {
+"A": "Accepted by the LLP",
+"B": "Promptly communicated to the client, who decides whether to accept",
+"C": "Rejected silently",
+"D": "Disclosed only at trial"
+}
+},
+"ETH-014": {
+"correct": "B",
+"q": "If a client makes a decision the LLP disagrees with but that is lawful and within the client's authority, the LLP should:",
+"opts": {
+"A": "Override the client",
+"B": "Abide by the client's lawful decision on objectives after advising them",
+"C": "Withdraw automatically",
+"D": "Report the client"
+}
+},
+"ETH-018": {
+"correct": "B",
+"q": "How promptly must an LLP respond to a client's reasonable requests for information?",
+"opts": {
+"A": "Within a year",
+"B": "Promptly, or with a reasonable explanation if a prompt substantive response is not feasible",
+"C": "Only after the case ends",
+"D": "Never required"
+}
+},
+"ETH-021": {
+"correct": "B",
+"q": "When a matter involves a decision reserved to the client, the LLP must:",
+"opts": {
+"A": "Decide for efficiency",
+"B": "Reasonably consult with the client about the means to accomplish the objectives",
+"C": "Avoid consultation",
+"D": "Let opposing counsel decide"
+}
+},
+"ETH-024": {
+"correct": "B",
+"q": "Communicating with a represented opposing party directly about the matter is:",
+"opts": {
+"A": "Encouraged",
+"B": "Prohibited without the consent of that party's counsel (the no-contact rule)",
+"C": "Required",
+"D": "Allowed by email only"
+}
+},
+"ETH-025": {
+"correct": "B",
+"q": "When dealing with an unrepresented person, an LLP must:",
+"opts": {
+"A": "Give legal advice freely",
+"B": "Not state or imply disinterest, and avoid giving legal advice other than to secure counsel if the person's interests conflict",
+"C": "Pretend to represent them",
+"D": "Conceal the LLP's role"
+}
+},
+"ETH-026": {
+"correct": "B",
+"q": "Under LLP RPC 1.5, an LLP's fee must be:",
+"opts": {
+"A": "The maximum the market allows",
+"B": "Reasonable",
+"C": "Set by the court",
+"D": "Equal to an attorney's fee"
+}
+},
+"ETH-027": {
+"correct": "B",
+"q": "Which is a factor in determining the reasonableness of a fee?",
+"opts": {
+"A": "The client's astrological sign",
+"B": "The time and labor required, novelty and difficulty, customary fee, and results obtained",
+"C": "The LLP's mortgage",
+"D": "The opposing party's wealth"
+}
+},
+"ETH-028": {
+"correct": "B",
+"q": "The basis or rate of the fee should be communicated to the client:",
+"opts": {
+"A": "Never",
+"B": "Preferably in writing, before or within a reasonable time after commencing the representation",
+"C": "Only if asked",
+"D": "After the case ends"
+}
+},
+"ETH-029": {
+"correct": "B",
+"q": "Is there a cap on what an LLP may charge?",
+"opts": {
+"A": "Yes, half an attorney's rate by rule",
+"B": "No statutory cap, but the fee must be reasonable",
+"C": "Yes, a flat $100/hour",
+"D": "Yes, set by the client's income"
+}
+},
+"ETH-030": {
+"correct": "B",
+"q": "A contingent fee in a domestic relations matter is:",
+"opts": {
+"A": "Always permitted",
+"B": "Generally prohibited when contingent on securing a dissolution or on the amount of support/property",
+"C": "Encouraged",
+"D": "Required"
+}
+},
+"ETH-031": {
+"correct": "B",
+"q": "Advance fees (retainers) paid by a client are generally:",
+"opts": {
+"A": "The LLP's money immediately",
+"B": "Client funds held in trust until earned, subject to the safekeeping rules",
+"C": "A gift",
+"D": "Nonrefundable always"
+}
+},
+"ETH-032": {
+"correct": "B",
+"q": "On termination of the representation, any unearned portion of a fee:",
+"opts": {
+"A": "Is kept by the LLP",
+"B": "Must be refunded to the client",
+"C": "Is paid to the court",
+"D": "Is forfeited"
+}
+},
+"ETH-033": {
+"correct": "B",
+"q": "Fee splitting between an LLP and a lawyer not in the same firm is:",
+"opts": {
+"A": "Always allowed",
+"B": "Permitted only under conditions (e.g., proportional to services or joint responsibility, client consent, reasonable total fee)",
+"C": "Always prohibited",
+"D": "Allowed without disclosure"
+}
+},
+"ETH-034": {
+"correct": "B",
+"q": "Charging a client for a clearly excessive number of hours is:",
+"opts": {
+"A": "Permissible if billed",
+"B": "A violation of the reasonableness requirement and potentially fraudulent",
+"C": "Encouraged",
+"D": "A trust-accounting issue only"
+}
+},
+"ETH-035": {
+"correct": "B",
+"q": "If a fee dispute arises, the LLP should be aware that:",
+"opts": {
+"A": "The client has no recourse",
+"B": "Fee dispute resolution mechanisms exist and the LLP should handle disputed funds appropriately in trust",
+"C": "The LLP keeps all funds",
+"D": "Only litigation can resolve it"
+}
+},
+"ETH-047": {
+"correct": "B",
+"q": "Commingling earned and unearned fees in one account is:",
+"opts": {
+"A": "Acceptable",
+"B": "Improper; unearned client funds must be held in trust separate from the LLP's operating funds",
+"C": "Required",
+"D": "A communication issue"
+}
+},
+"ETH-049": {
+"correct": "B",
+"q": "An LLP serving low- and moderate-income clients:",
+"opts": {
+"A": "Must charge the maximum",
+"B": "May serve clients regardless of income, with reasonable fees; there is no income restriction",
+"C": "Cannot serve wealthy clients",
+"D": "Must work for free"
+}
+},
+"ETH-036": {
+"correct": "B",
+"q": "LLP RPC 1.6 prohibits revealing:",
+"opts": {
+"A": "Only privileged communications",
+"B": "Information relating to the representation of a client, absent informed consent or an exception",
+"C": "Only written information",
+"D": "Nothing once filed"
+}
+},
+"ETH-037": {
+"correct": "B",
+"q": "Confidentiality under RPC 1.6 compared to the evidentiary privilege is:",
+"opts": {
+"A": "Narrower",
+"B": "Broader, covering more than just privileged communications",
+"C": "Identical",
+"D": "Inapplicable to LLPs"
+}
+},
+"ETH-038": {
+"correct": "B",
+"q": "An LLP may reveal confidential information to:",
+"opts": {
+"A": "Anyone who asks",
+"B": "Prevent reasonably certain death or substantial bodily harm",
+"C": "Gossip with colleagues",
+"D": "Promote the LLP's business"
+}
+},
+"ETH-039": {
+"correct": "B",
+"q": "Disclosure to comply with a court order is:",
+"opts": {
+"A": "Never permitted",
+"B": "Permitted, generally limited to the extent reasonably necessary",
+"C": "Mandatory in all respects",
+"D": "Only allowed with client consent"
+}
+},
+"ETH-040": {
+"correct": "B",
+"q": "The confidentiality duty continues:",
+"opts": {
+"A": "Only during the case",
+"B": "After the representation ends and even after the client's death",
+"C": "Only until the first hearing",
+"D": "Until the fee is paid"
+}
+},
+"ETH-041": {
+"correct": "B",
+"q": "An LLP must make reasonable efforts to:",
+"opts": {
+"A": "Publicize client matters",
+"B": "Prevent inadvertent or unauthorized disclosure of, and unauthorized access to, client information",
+"C": "Store data publicly",
+"D": "Share files with marketers"
+}
+},
+"ETH-042": {
+"correct": "B",
+"q": "Discussing a client's case in a crowded elevator where others can hear:",
+"opts": {
+"A": "Is fine",
+"B": "Risks an unauthorized disclosure of confidential information",
+"C": "Is required for transparency",
+"D": "Is only a competence issue"
+}
+},
+"ETH-043": {
+"correct": "B",
+"q": "Client consent to disclosure must be:",
+"opts": {
+"A": "Implied from silence always",
+"B": "Informed consent (or impliedly authorized to carry out the representation)",
+"C": "Notarized",
+"D": "Approved by the court"
+}
+},
+"ETH-044": {
+"correct": "B",
+"q": "An LLP learns the client intends to commit perjury at an upcoming hearing. Confidentiality:",
+"opts": {
+"A": "Bars any action",
+"B": "May yield to the duty of candor to the tribunal, which can require remedial measures",
+"C": "Requires the LLP to assist",
+"D": "Is irrelevant"
+}
+},
+"ETH-045": {
+"correct": "B",
+"q": "Using a former client's confidential information to their disadvantage is:",
+"opts": {
+"A": "Allowed after the case",
+"B": "Prohibited absent consent, except as the rules otherwise permit",
+"C": "Encouraged",
+"D": "A fee issue"
+}
+},
+"ETH-046": {
+"correct": "B",
+"q": "Confidentiality applies to information learned:",
+"opts": {
+"A": "Only from the client directly",
+"B": "From any source, as long as it relates to the representation",
+"C": "Only from documents",
+"D": "Only in court"
+}
+},
+"ETH-048": {
+"correct": "B",
+"q": "An LLP may disclose limited confidential information to:",
+"opts": {
+"A": "Win an award",
+"B": "Secure legal advice about the LLP's compliance with the rules",
+"C": "Entertain friends",
+"D": "Build a marketing list"
+}
+},
+"ETH-050": {
+"correct": "B",
+"q": "Before disclosing under an exception, the LLP should disclose:",
+"opts": {
+"A": "As much as possible",
+"B": "Only the information reasonably necessary to accomplish the permitted purpose",
+"C": "Everything to be safe",
+"D": "Nothing ever"
+}
+},
+"ETH-051": {
+"correct": "B",
+"q": "Under LLP RPC 1.7, a concurrent conflict exists when:",
+"opts": {
+"A": "The clients are friends",
+"B": "The representation of one client is directly adverse to another, or there is a significant risk it will be materially limited",
+"C": "Fees are high",
+"D": "The case is complex"
+}
+},
+"ETH-052": {
+"correct": "B",
+"q": "Representing both spouses in their dissolution is:",
+"opts": {
+"A": "Permitted with a flat fee",
+"B": "A non-consentable conflict because the parties are directly adverse in the same litigation",
+"C": "Encouraged for efficiency",
+"D": "Allowed if uncontested"
+}
+},
+"ETH-053": {
+"correct": "B",
+"q": "A concurrent conflict may sometimes be waived if:",
+"opts": {
+"A": "The clients never find out",
+"B": "The LLP reasonably believes it can provide competent and diligent representation, it is lawful, the clients are not directly adverse in the same litigation, and each gives informed written consent",
+"C": "The judge allows it",
+"D": "The fee is reduced"
+}
+},
+"ETH-054": {
+"correct": "B",
+"q": "Some conflicts are non-consentable, meaning:",
+"opts": {
+"A": "Any conflict can be waived",
+"B": "Even with consent, the LLP may not proceed (e.g., suing one current client on behalf of another in the same case)",
+"C": "Consent is implied",
+"D": "The client decides unilaterally"
+}
+},
+"ETH-055": {
+"correct": "B",
+"q": "LLP RPC 1.9 governs conflicts involving:",
+"opts": {
+"A": "Only current clients",
+"B": "Former clients in the same or a substantially related matter",
+"C": "Only co-counsel",
+"D": "Only opposing counsel"
+}
+},
+"ETH-056": {
+"correct": "B",
+"q": "An LLP who represented the wife in a divorce is later asked by the husband to handle a post-decree modification. The LLP should:",
+"opts": {
+"A": "Accept; the case is over",
+"B": "Decline absent the former client's informed written consent, as it is the same/substantially related matter and materially adverse",
+"C": "Accept if a year has passed",
+"D": "Accept if the wife does not object in writing within 10 days"
+}
+},
+"ETH-057": {
+"correct": "B",
+"q": "'Substantially related matters' under RPC 1.9 are those that:",
+"opts": {
+"A": "Share a courthouse",
+"B": "Involve the same transaction or a substantial risk that confidential information from the prior representation would materially advance the new client's position",
+"C": "Have the same judge",
+"D": "Use the same forms"
+}
+},
+"ETH-058": {
+"correct": "B",
+"q": "Under RPC 1.10, when one LLP in a firm has a conflict:",
+"opts": {
+"A": "Only that LLP is affected",
+"B": "The conflict is generally imputed to all LLPs/lawyers in the firm",
+"C": "Imputation never applies",
+"D": "It applies only to staff"
+}
+},
+"ETH-059": {
+"correct": "B",
+"q": "An LLP's own financial or personal interests:",
+"opts": {
+"A": "Are irrelevant to conflicts",
+"B": "Can create a conflict if there is a significant risk they will materially limit the representation",
+"C": "Always override the client's",
+"D": "Only matter in fee disputes"
+}
+},
+"ETH-060": {
+"correct": "B",
+"q": "Business transactions between an LLP and a client are:",
+"opts": {
+"A": "Freely allowed",
+"B": "Permitted only if fair, fully disclosed in writing, the client is advised to seek independent counsel, and the client consents in writing",
+"C": "Always prohibited",
+"D": "Allowed if the client is sophisticated"
+}
+},
+"ETH-061": {
+"correct": "B",
+"q": "Accepting a gift from a client:",
+"opts": {
+"A": "Is always fine",
+"B": "Is restricted; an LLP generally may not solicit a substantial gift or prepare an instrument giving the LLP a substantial gift from a non-relative client",
+"C": "Requires court approval",
+"D": "Is encouraged"
+}
+},
+"ETH-062": {
+"correct": "B",
+"q": "An intimate or sexual relationship with a current client is:",
+"opts": {
+"A": "Permitted",
+"B": "Prohibited unless a consensual relationship predated the representation",
+"C": "Encouraged",
+"D": "A fee matter"
+}
+},
+"ETH-063": {
+"correct": "B",
+"q": "Identifying conflicts requires an LLP to:",
+"opts": {
+"A": "Rely on memory",
+"B": "Maintain a system to check for conflicts when taking on new clients and matters",
+"C": "Ask opposing counsel",
+"D": "Wait for a complaint"
+}
+},
+"ETH-064": {
+"correct": "B",
+"q": "A conflict that develops mid-representation requires the LLP to:",
+"opts": {
+"A": "Continue regardless",
+"B": "Address it\u2014obtain consent if consentable, or withdraw from one or both representations if not",
+"C": "Ignore it",
+"D": "Tell only one client"
+}
+},
+"ETH-065": {
+"correct": "B",
+"q": "Consent to a conflict must be 'confirmed in writing,' which means:",
+"opts": {
+"A": "A verbal nod is enough",
+"B": "A writing that confirms the client's informed consent, signed or made by the client or promptly transmitted by the LLP",
+"C": "Notarization",
+"D": "Court filing"
+}
+},
+"ETH-066": {
+"correct": "B",
+"q": "An LLP asked to represent two parties with potentially aligned but possibly diverging interests (e.g., joint clients) must:",
+"opts": {
+"A": "Assume alignment",
+"B": "Evaluate the risk of material limitation, obtain informed written consent if consentable, and address what happens if interests diverge",
+"C": "Refuse all joint representation",
+"D": "Pick one secretly"
+}
+},
+"ETH-067": {
+"correct": "B",
+"q": "Imputed conflicts under RPC 1.10 may sometimes be avoided by:",
+"opts": {
+"A": "Nothing",
+"B": "Timely screening of the personally disqualified practitioner where the rules permit, plus notice",
+"C": "Ignoring them",
+"D": "Renaming the firm"
+}
+},
+"ETH-068": {
+"correct": "B",
+"q": "Representing a client against a current client in an unrelated matter is:",
+"opts": {
+"A": "Always fine if unrelated",
+"B": "Still a concurrent conflict (direct adversity) requiring informed written consent",
+"C": "Never a conflict",
+"D": "A former-client issue"
+}
+},
+"ETH-069": {
+"correct": "B",
+"q": "An LLP must not allow a person who recommends, employs, or pays the LLP to:",
+"opts": {
+"A": "Pay the fee",
+"B": "Direct or regulate the LLP's professional judgment in rendering services to the client",
+"C": "Refer clients",
+"D": "Exist"
+}
+},
+"ETH-070": {
+"correct": "B",
+"q": "Third-party payment of an LLP's fee is permitted if:",
+"opts": {
+"A": "The client never knows",
+"B": "The client gives informed consent, there is no interference with the LLP's independence, and confidentiality is protected",
+"C": "The payor controls the case",
+"D": "It is secret"
+}
+},
+"ETH-071": {
+"correct": "B",
+"q": "A former-client conflict can be cured by:",
+"opts": {
+"A": "Time alone",
+"B": "The former client's informed consent, confirmed in writing",
+"C": "Nothing",
+"D": "The new client's consent only"
+}
+},
+"ETH-072": {
+"correct": "B",
+"q": "Where two prospective clients consult an LLP about opposing sides of the same dispute, the LLP:",
+"opts": {
+"A": "May represent both",
+"B": "May represent at most one, and must protect the confidences of the prospective client not retained",
+"C": "Must represent neither ever",
+"D": "May share information between them"
+}
+},
+"ETH-073": {
+"correct": "B",
+"q": "An LLP's duty of loyalty primarily protects:",
+"opts": {
+"A": "The opposing party",
+"B": "The client's interests against competing loyalties and the LLP's self-interest",
+"C": "The court",
+"D": "Other LLPs"
+}
+},
+"ETH-074": {
+"correct": "B",
+"q": "If an LLP cannot reasonably believe they can competently and diligently represent each client, the conflict is:",
+"opts": {
+"A": "Consentable",
+"B": "Non-consentable, so the LLP must decline or withdraw even if clients would consent",
+"C": "Waivable by the court",
+"D": "Irrelevant"
+}
+},
+"ETH-075": {
+"correct": "B",
+"q": "The safest practice when a potential conflict is unclear is to:",
+"opts": {
+"A": "Proceed and hope",
+"B": "Analyze under RPC 1.7/1.9, document the analysis, and obtain informed written consent or decline",
+"C": "Ask the client to waive orally",
+"D": "Let the conflict resolve itself"
+}
+},
+"ETH-076": {
+"correct": "B",
+"q": "Client funds an LLP holds must be:",
+"opts": {
+"A": "Mixed with the LLP's funds",
+"B": "Kept in a separate trust account, not commingled with the LLP's own funds",
+"C": "Kept in cash in the office",
+"D": "Given to the court"
+}
+},
+"ETH-077": {
+"correct": "B",
+"q": "Commingling occurs when an LLP:",
+"opts": {
+"A": "Keeps client funds separate",
+"B": "Mixes client trust funds with the LLP's own operating or personal funds",
+"C": "Refunds unearned fees",
+"D": "Issues a receipt"
+}
+},
+"ETH-078": {
+"correct": "B",
+"q": "Unearned advance fees should be:",
+"opts": {
+"A": "Deposited in the operating account",
+"B": "Held in trust until earned, then transferred as earned",
+"C": "Spent immediately",
+"D": "Refunded only at the end"
+}
+},
+"ETH-079": {
+"correct": "B",
+"q": "An LLP must maintain trust-account records and:",
+"opts": {
+"A": "Discard them yearly",
+"B": "Keep complete records and render appropriate accountings to clients",
+"C": "Share them publicly",
+"D": "Avoid reconciliations"
+}
+},
+"ETH-080": {
+"correct": "B",
+"q": "When a client and a third party both claim trust funds the LLP holds, the LLP must:",
+"opts": {
+"A": "Pay the client immediately",
+"B": "Keep the disputed funds separate in trust until the dispute is resolved",
+"C": "Keep the funds as a fee",
+"D": "Send funds to the state"
+}
+},
+"ETH-081": {
+"correct": "B",
+"q": "Prompt delivery of funds the client is entitled to receive is:",
+"opts": {
+"A": "Optional",
+"B": "Required; the LLP must promptly deliver funds or property the client is entitled to and account for them",
+"C": "Delayed until year-end",
+"D": "The bank's job"
+}
+},
+"ETH-082": {
+"correct": "B",
+"q": "An LLP's own funds may be placed in the trust account only:",
+"opts": {
+"A": "Freely",
+"B": "In a limited amount necessary to pay bank service charges or fees, as permitted",
+"C": "Never for any reason",
+"D": "To hide income"
+}
+},
+"ETH-083": {
+"correct": "B",
+"q": "Misappropriating client trust funds, even temporarily, is:",
+"opts": {
+"A": "A minor recordkeeping issue",
+"B": "Among the most serious violations, often resulting in significant discipline up to disbarment",
+"C": "Permitted if repaid",
+"D": "Only a civil matter"
+}
+},
+"ETH-084": {
+"correct": "B",
+"q": "COLTAF (interest-bearing pooled trust) accounts are used for:",
+"opts": {
+"A": "The LLP's profits",
+"B": "Nominal or short-term client funds, with interest directed to the foundation supporting legal services",
+"C": "Court fees",
+"D": "Marketing"
+}
+},
+"ETH-098": {
+"correct": "B",
+"q": "Failing to reconcile the trust account regularly:",
+"opts": {
+"A": "Is acceptable",
+"B": "Violates recordkeeping duties and can mask shortages or commingling",
+"C": "Is the bank's responsibility",
+"D": "Only matters at audit"
+}
+},
+"ETH-085": {
+"correct": "B",
+"q": "Under LLP RPC 3.3, an LLP must not:",
+"opts": {
+"A": "Make any argument",
+"B": "Knowingly make a false statement of fact or law to a tribunal or fail to correct one",
+"C": "Cite authority",
+"D": "Object"
+}
+},
+"ETH-086": {
+"correct": "B",
+"q": "An LLP must disclose to the tribunal:",
+"opts": {
+"A": "Nothing adverse",
+"B": "Legal authority in the controlling jurisdiction known to be directly adverse and not disclosed by opposing counsel",
+"C": "Only favorable authority",
+"D": "Opposing strategy"
+}
+},
+"ETH-087": {
+"correct": "B",
+"q": "If an LLP comes to know a client or witness offered material false evidence, the LLP must:",
+"opts": {
+"A": "Do nothing",
+"B": "Take reasonable remedial measures, including, if necessary, disclosure to the tribunal",
+"C": "Withdraw silently",
+"D": "Coach the witness"
+}
+},
+"ETH-088": {
+"correct": "B",
+"q": "In an ex parte proceeding, the LLP must:",
+"opts": {
+"A": "Present only the client's side",
+"B": "Inform the tribunal of all material facts known, even adverse ones, to enable an informed decision",
+"C": "Hide adverse facts",
+"D": "Argue aggressively only"
+}
+},
+"ETH-093": {
+"correct": "B",
+"q": "The duty of candor under RPC 3.3 continues:",
+"opts": {
+"A": "Only until a ruling",
+"B": "Until the conclusion of the proceeding, and applies even if compliance requires disclosing otherwise confidential information",
+"C": "Indefinitely after appeal",
+"D": "Only during opening statements"
+}
+},
+"ETH-100": {
+"correct": "B",
+"q": "If correcting false evidence would reveal client confidences, the LLP:",
+"opts": {
+"A": "Must stay silent",
+"B": "Must still take reasonable remedial measures, as candor to the tribunal can override confidentiality",
+"C": "Must withdraw and say nothing",
+"D": "May ignore the falsity"
+}
+},
+"ETH-089": {
+"correct": "B",
+"q": "Under LLP RPC 3.4, an LLP must not:",
+"opts": {
+"A": "Object to evidence",
+"B": "Unlawfully obstruct access to or alter, destroy, or conceal evidence",
+"C": "Prepare witnesses lawfully",
+"D": "Make lawful discovery requests"
+}
+},
+"ETH-090": {
+"correct": "B",
+"q": "Falsifying evidence or assisting a witness to testify falsely:",
+"opts": {
+"A": "Is zealous advocacy",
+"B": "Violates the fairness and candor rules",
+"C": "Is permitted if it helps the client",
+"D": "Is a fee issue"
+}
+},
+"ETH-091": {
+"correct": "B",
+"q": "Knowingly disobeying an obligation under the rules of a tribunal:",
+"opts": {
+"A": "Is allowed if strategic",
+"B": "Violates RPC 3.4 unless based on an open, good-faith assertion that no valid obligation exists",
+"C": "Is encouraged",
+"D": "Is only a contempt issue"
+}
+},
+"ETH-095": {
+"correct": "B",
+"q": "In pretrial discovery, an LLP must not:",
+"opts": {
+"A": "Respond to requests",
+"B": "Make a frivolous discovery request or fail to make a reasonably diligent effort to comply with a proper request",
+"C": "Object on valid grounds",
+"D": "Seek a protective order"
+}
+},
+"ETH-099": {
+"correct": "B",
+"q": "Requesting a third party (other than a client's relative or agent) to refrain from voluntarily giving relevant information to another party is:",
+"opts": {
+"A": "Always allowed",
+"B": "Generally prohibited unless the person is a relative/employee/agent and their interests won't be harmed",
+"C": "Required",
+"D": "A confidentiality duty"
+}
+},
+"ETH-092": {
+"correct": "B",
+"q": "During trial, an LLP must not:",
+"opts": {
+"A": "Make objections",
+"B": "Allude to irrelevant or unsupported matters or assert personal knowledge of facts in issue (except when testifying)",
+"C": "Cross-examine",
+"D": "Argue inferences from evidence"
+}
+},
+"ETH-094": {
+"correct": "B",
+"q": "Improperly influencing a judge, juror, or court official is:",
+"opts": {
+"A": "Acceptable networking",
+"B": "Prohibited; an LLP must not seek to influence them by means prohibited by law",
+"C": "Required advocacy",
+"D": "A fee matter"
+}
+},
+"ETH-096": {
+"correct": "B",
+"q": "Meritorious claims and contentions (RPC 3.1) require that:",
+"opts": {
+"A": "Any claim may be filed",
+"B": "There be a non-frivolous basis in law and fact for the positions asserted",
+"C": "Claims always succeed",
+"D": "Only the client decides merit"
+}
+},
+"ETH-097": {
+"correct": "B",
+"q": "Expediting litigation (RPC 3.2) requires the LLP to:",
+"opts": {
+"A": "Delay for advantage",
+"B": "Make reasonable efforts to expedite litigation consistent with the client's interests",
+"C": "File endless motions",
+"D": "Never seek continuances"
+}
+},
+"ETH-101": {
+"correct": "B",
+"q": "Under LLP RPC 7.1, an LLP must not:",
+"opts": {
+"A": "Advertise at all",
+"B": "Make a false or misleading communication about the LLP or the LLP's services",
+"C": "Use a website",
+"D": "List practice areas"
+}
+},
+"ETH-102": {
+"correct": "B",
+"q": "An LLP's advertising must:",
+"opts": {
+"A": "Imply attorney status",
+"B": "Identify that the LLP holds a limited license",
+"C": "Hide the LLP designation",
+"D": "Promise outcomes"
+}
+},
+"ETH-109": {
+"correct": "B",
+"q": "Claiming to be a specialist or 'certified' when not:",
+"opts": {
+"A": "Is fine",
+"B": "May be misleading unless the certification is from an approved organization and disclosed properly",
+"C": "Is required",
+"D": "Is a fee issue"
+}
+},
+"ETH-103": {
+"correct": "B",
+"q": "An LLP-only firm (no lawyers) must:",
+"opts": {
+"A": "Use any name it likes",
+"B": "Include the words 'Licensed Legal Paraprofessional(s)' in the firm name",
+"C": "Use 'and Associates'",
+"D": "Use 'Law Offices of'"
+}
+},
+"ETH-104": {
+"correct": "B",
+"q": "A solo LLP whose firm name suggests multiple practitioners:",
+"opts": {
+"A": "Is always fine",
+"B": "May need to clarify, to avoid misleading the public about the number of practitioners",
+"C": "Must add 'Inc.'",
+"D": "Cannot practice solo"
+}
+},
+"ETH-105": {
+"correct": "B",
+"q": "The exact words 'Licensed Legal Paraprofessional(s)' must appear:",
+"opts": {
+"A": "In the firm's URL and email",
+"B": "In the business/firm name, though not necessarily within the URL or email address",
+"C": "Nowhere",
+"D": "Only on business cards"
+}
+},
+"ETH-106": {
+"correct": "B",
+"q": "In all court filings, an LLP must:",
+"opts": {
+"A": "Omit their status",
+"B": "Use the LLP designation to identify themselves as a licensed legal paraprofessional",
+"C": "Sign as an attorney",
+"D": "Use only initials"
+}
+},
+"ETH-107": {
+"correct": "B",
+"q": "How can the public distinguish an LLP's registration number from an attorney's?",
+"opts": {
+"A": "They are identical",
+"B": "LLPs have six-digit numbers beginning with 6; attorneys have five-digit numbers",
+"C": "LLPs have no number",
+"D": "Color coding"
+}
+},
+"ETH-108": {
+"correct": "B",
+"q": "Live, in-person solicitation of a prospective client for pecuniary gain is:",
+"opts": {
+"A": "Always permitted",
+"B": "Generally restricted, similar to the attorney solicitation rules",
+"C": "Required",
+"D": "Unregulated"
+}
+},
+"ETH-110": {
+"correct": "B",
+"q": "For an LLP, practicing beyond the authorized scope constitutes:",
+"opts": {
+"A": "Zealous advocacy",
+"B": "Unauthorized practice and professional misconduct",
+"C": "A billing error",
+"D": "Nothing"
+}
+},
+"ETH-111": {
+"correct": "B",
+"q": "An LLP may assist on an out-of-scope matter only:",
+"opts": {
+"A": "Never",
+"B": "Under the supervision of a licensed attorney",
+"C": "If the client insists",
+"D": "If no one objects"
+}
+},
+"ETH-112": {
+"correct": "B",
+"q": "An LLP who employs non-licensed assistants must:",
+"opts": {
+"A": "Let them practice law",
+"B": "Make reasonable efforts to ensure their conduct is compatible with the LLP's professional obligations",
+"C": "Ignore their conduct",
+"D": "Delegate legal judgment to them"
+}
+},
+"ETH-113": {
+"correct": "B",
+"q": "LLPs are subject to discipline through:",
+"opts": {
+"A": "A separate, lenient system",
+"B": "The Office of Attorney Regulation Counsel using the attorney discipline and disability procedures",
+"C": "No oversight",
+"D": "Only client lawsuits"
+}
+},
+"ETH-114": {
+"correct": "B",
+"q": "Sanctions for LLP misconduct can include:",
+"opts": {
+"A": "Only a warning",
+"B": "A range up to suspension or disbarment/revocation, depending on severity",
+"C": "A fine paid to the client only",
+"D": "Nothing"
+}
+},
+"ETH-115": {
+"correct": "B",
+"q": "Under RPC 8.4, professional misconduct includes:",
+"opts": {
+"A": "Winning cases",
+"B": "Engaging in dishonesty, fraud, deceit, or misrepresentation",
+"C": "Filing motions",
+"D": "Charging fees"
+}
+},
+"ETH-117": {
+"correct": "B",
+"q": "Committing a crime involving dishonesty (e.g., theft, fraud):",
+"opts": {
+"A": "Has no professional effect",
+"B": "Can be a basis for discipline as reflecting adversely on fitness",
+"C": "Is only a personal matter",
+"D": "Requires no reporting"
+}
+},
+"ETH-116": {
+"correct": "B",
+"q": "If an LLP knows another practitioner committed a serious rules violation raising a substantial question about honesty or fitness, the LLP:",
+"opts": {
+"A": "Must stay silent",
+"B": "May have a duty to report to the appropriate authority",
+"C": "Must confront them only",
+"D": "Should ignore it"
+}
+},
+"ETH-118": {
+"correct": "B",
+"q": "Making a false statement on an LLP application or registration is:",
+"opts": {
+"A": "Harmless",
+"B": "Misconduct and grounds for denial or discipline",
+"C": "Encouraged",
+"D": "A fee issue"
+}
+},
+"ETH-119": {
+"correct": "B",
+"q": "To maintain licensure, an LLP must:",
+"opts": {
+"A": "Do nothing",
+"B": "Complete annual registration and applicable continuing legal education, or face administrative suspension",
+"C": "Renew every 5 years only",
+"D": "Pass the exam again"
+}
+},
+"ETH-120": {
+"correct": "B",
+"q": "An LLP must not share legal fees with a nonlicensed person or let a nonlicensed person:",
+"opts": {
+"A": "Pay rent",
+"B": "Own or control the LLP practice or direct professional judgment, except as the rules permit",
+"C": "Answer phones",
+"D": "Schedule clients"
+}
+},
+"ETH-121": {
+"correct": "B",
+"q": "Regarding malpractice insurance, LLPs must:",
+"opts": {
+"A": "Carry it always",
+"B": "Publicly disclose whether they carry it, as part of annual registration (it is not currently mandated)",
+"C": "Never disclose it",
+"D": "Carry $1 million minimum"
+}
+},
+"ETH-122": {
+"correct": "B",
+"q": "An LLP must withdraw from a representation when:",
+"opts": {
+"A": "The client is difficult",
+"B": "Continuing would violate the rules or law, or the LLP's condition materially impairs the representation",
+"C": "Fees are unpaid for a day",
+"D": "The case is hard"
+}
+},
+"ETH-123": {
+"correct": "B",
+"q": "On withdrawal, the LLP must:",
+"opts": {
+"A": "Keep the file as leverage",
+"B": "Take steps to protect the client, including notice, returning the file/property, and refunding unearned fees",
+"C": "Destroy records",
+"D": "Disclose confidences"
+}
+},
+"ETH-124": {
+"correct": "B",
+"q": "Holding oneself out as able to handle a matter clearly outside LLP scope (e.g., a criminal defense) is:",
+"opts": {
+"A": "Permissible marketing",
+"B": "A misleading communication and potential unauthorized practice",
+"C": "Required disclosure",
+"D": "A trust issue"
+}
+},
+"ETH-125": {
+"correct": "B",
+"q": "The recurring ethical theme unique to LLP practice is:",
+"opts": {
+"A": "Maximizing fees",
+"B": "Accurately disclosing the limited license and advising clients of scope limits",
+"C": "Avoiding court",
+"D": "Never communicating"
+}
+},
+"ETH-126": {
+"correct": "B",
+"q": "An LLP discovers mid-hearing that a discrete trust-valuation issue (a carve-out) has become central. The LLP should:",
+"opts": {
+"A": "Argue the trust issue anyway",
+"B": "Advise the client to obtain an attorney for that issue and continue on in-scope matters",
+"C": "Withdraw entirely and keep the fee",
+"D": "Ask the judge to ignore it"
+}
+},
+"ETH-127": {
+"correct": "B",
+"q": "Both spouses, who are amicable, ask one LLP to prepare and file their uncontested divorce and split the fee. The LLP should:",
+"opts": {
+"A": "Represent both to save them money",
+"B": "Represent at most one (with disclosure) or neither, because joint representation of opposing parties in the same litigation is barred",
+"C": "Represent both with a written waiver",
+"D": "Have them flip a coin"
+}
+},
+"ETH-128": {
+"correct": "B",
+"q": "An LLP receives a $3,000 advance fee. The proper handling is to:",
+"opts": {
+"A": "Deposit it in the operating account and spend it",
+"B": "Deposit it in the trust account and withdraw amounts only as earned",
+"C": "Treat it as a nonrefundable gift",
+"D": "Give it to the court"
+}
+},
+"ETH-129": {
+"correct": "B",
+"q": "During a hearing, the LLP's client testifies to something the LLP knows is false and material. The LLP must:",
+"opts": {
+"A": "Say nothing to preserve confidentiality",
+"B": "Take reasonable remedial measures, including disclosure to the court if necessary",
+"C": "Withdraw silently and keep the secret",
+"D": "Encourage more such testimony"
+}
+},
+"ETH-130": {
+"correct": "B",
+"q": "An LLP's website states 'Smith Family Law' with no indication of license type. This is:",
+"opts": {
+"A": "Compliant",
+"B": "Potentially misleading; an LLP-only firm must include 'Licensed Legal Paraprofessional(s)' in the name and disclose the limited license",
+"C": "Required wording",
+"D": "A trust issue"
+}
+},
+"ETH-131": {
+"correct": "B",
+"q": "A client asks the LLP to register an out-of-state custody order and pursue punitive contempt. Both requests are:",
+"opts": {
+"A": "Within scope",
+"B": "Outside scope (carve-outs); the LLP should refer them to an attorney while assisting with in-scope matters",
+"C": "Required",
+"D": "Trust-accounting issues"
+}
+},
+"ETH-132": {
+"correct": "B",
+"q": "An LLP wants to enter a business deal buying property from a client. The LLP must:",
+"opts": {
+"A": "Proceed freely",
+"B": "Ensure fair terms fully disclosed in writing, advise the client in writing to seek independent counsel, and obtain informed written consent",
+"C": "Avoid telling the client",
+"D": "Use trust funds"
+}
+},
+"ETH-133": {
+"correct": "B",
+"q": "An LLP suspects a paralegal in the office is signing the LLP's name to pleadings without review. The LLP must:",
+"opts": {
+"A": "Ignore it",
+"B": "Supervise to ensure the assistant's conduct complies with the rules and stop the unauthorized conduct",
+"C": "Let it continue if efficient",
+"D": "Blame the client"
+}
+},
+"ETH-134": {
+"correct": "B",
+"q": "A client demands the LLP pursue a frivolous motion to harass the other parent. The LLP should:",
+"opts": {
+"A": "Comply with the client",
+"B": "Decline, because RPC 3.1 prohibits frivolous filings and the good-faith requirement applies to LLPs",
+"C": "File it under protest",
+"D": "Charge extra and file it"
+}
+},
+"ETH-135": {
+"correct": "B",
+"q": "The unifying duty an LLP owes when any out-of-scope or competence limit appears is to:",
+"opts": {
+"A": "Maximize billable hours",
+"B": "Advise the client of the limitation and the need for an attorney, and act within authorized scope",
+"C": "Conceal the limitation",
+"D": "Refer the entire case out always"
+}
+}
+}

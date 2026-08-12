@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';">
     <title>Colorado LLP Exam - All 405 Questions + 12-Question Quiz</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -145,8 +146,8 @@
         </div>
         
         <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('quiz')">📝 12-Question Quiz</button>
-            <button class="tab-btn" onclick="switchTab('bank')">📚 All 405 Questions</button>
+            <button class="tab-btn active" data-tab="quiz">📝 12-Question Quiz</button>
+            <button class="tab-btn" data-tab="bank">📚 All 405 Questions</button>
         </div>
         
         <!-- Quiz Tab -->
@@ -156,12 +157,12 @@
                 <div id="quiz-content" class="hidden">
                     <div id="quiz-display"></div>
                     <div id="quiz-status" style="margin-top: 20px; text-align: center; font-weight: 600;"></div>
-                    <button id="submit-btn" class="btn-primary hidden" onclick="submitQuiz()" style="margin-top: 20px; width: 100%;">Submit Quiz & Reveal Answers</button>
+                    <button id="submit-btn" class="btn-primary hidden" style="margin-top: 20px; width: 100%;">Submit Quiz & Reveal Answers</button>
                 </div>
                 <div id="quiz-results" class="results hidden">
                     <div class="score-big" id="final-score"></div>
                     <div class="result-message" id="result-msg"></div>
-                    <button class="btn-primary" onclick="retakeQuiz()">Take Another Quiz</button>
+                    <button id="retake-btn" class="btn-primary">Take Another Quiz</button>
                 </div>
             </div>
         </div>
@@ -213,8 +214,7 @@
                         <div class="quiz-q-text">${idx + 1}. ${q.q}</div>
                         <div class="quiz-options">
                             ${['A', 'B', 'C', 'D'].map((letter, oi) => `
-                                <button class="quiz-option" data-qid="${id}" data-opt="${letter}" 
-                                        onclick="selectAnswer('${id}', '${letter}', this)">
+                                <button class="quiz-option" data-qid="${id}" data-opt="${letter}">
                                     <strong>${letter}.</strong> ${q.opts[letter]}
                                 </button>
                             `).join('')}
@@ -309,7 +309,7 @@
             let html = '';
             Object.entries(ALL_QUESTIONS).forEach(([id, q]) => {
                 html += `
-                    <div class="question-card" onclick="showQuestionDetail('${id}')">
+                    <div class="question-card" data-qid="${id}">
                         <div class="question-card-id">${id}</div>
                         <div class="question-card-text">${q.q}</div>
                         <div class="question-card-meta">A. ${q.opts.A.substring(0, 40)}...</div>
@@ -330,7 +330,40 @@
             event.target.classList.add('active');
             document.getElementById(tab).classList.add('active');
         }
-        
+
+        // Event listener initialization (removes inline onclick handlers)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const tab = e.target.closest('[data-tab]')?.dataset.tab;
+                    if (tab) switchTab(tab);
+                });
+            });
+
+            // Submit button
+            const submitBtn = document.getElementById('submit-btn');
+            if (submitBtn) {
+                submitBtn.addEventListener('click', submitQuiz);
+            }
+
+            // Retake button
+            const retakeBtn = document.getElementById('retake-btn');
+            if (retakeBtn) {
+                retakeBtn.addEventListener('click', retakeQuiz);
+            }
+
+            // Quiz options (event delegation for dynamic content)
+            document.getElementById('quiz-display').addEventListener('click', function(e) {
+                const btn = e.target.closest('.quiz-option');
+                if (btn && QUIZ_ACTIVE) {
+                    const qid = btn.dataset.qid;
+                    const letter = btn.dataset.opt;
+                    selectAnswer(qid, letter, btn);
+                }
+            });
+        });
+
         // Search functionality
         document.getElementById('search-box')?.addEventListener('keyup', function(e) {
             const query = e.target.value.toLowerCase();

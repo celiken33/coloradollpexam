@@ -841,22 +841,22 @@
 },
 "FL-081": {
 "correct": "B",
-"q": "The worksheet shifts from sole physical care (Worksheet A) to shared physical care (Worksheet B) when each parent has at least:",
+"q": "Since March 1, 2026, a parent's overnights earn the shared parenting time credit once that parent has at least:",
 "opts": {
-"A": "52 overnights",
-"B": "93 overnights",
+"A": "92 overnights",
+"B": "1 overnight per year",
 "C": "182 overnights",
-"D": "120 overnights"
+"D": "93 overnights"
 }
 },
 "FL-082": {
 "correct": "B",
-"q": "Worksheet B (shared physical care) accounts for duplicated household costs by:",
+"q": "Under the March 1, 2026 guidelines, shared overnight parenting time is handled by:",
 "opts": {
-"A": "Halving the obligation",
-"B": "Multiplying the basic obligation by a factor (commonly 1.5) before allocation",
-"C": "Eliminating support",
-"D": "Doubling each parent's income"
+"A": "Multiplying the basic obligation by 1.5 before allocation",
+"B": "Deducting a credit: total basic obligation \u00d7 that parent's Parenting Time Table percentage",
+"C": "Multiplying the basic obligation by zero when overnights are equal",
+"D": "Multiplying each parent's income by two before the calculation"
 }
 },
 "FL-083": {
@@ -1011,12 +1011,12 @@
 },
 "FL-098": {
 "correct": "B",
-"q": "A father with 70 overnights per year and the mother with 295:",
+"q": "Father has 70 overnights a year; mother has 295. Under the March 1, 2026 guidelines, the father:",
 "opts": {
-"A": "Uses Worksheet B",
-"B": "Uses Worksheet A because the father is below 93 overnights",
+"A": "Gets no credit because he is below 93 overnights",
+"B": "Gets a parenting time credit of 8.28% of the total basic obligation",
 "C": "Pays no support",
-"D": "Uses neither worksheet"
+"D": "Uses neither the schedule nor the Parenting Time Table"
 }
 },
 "FL-099": {
@@ -1814,7 +1814,7 @@
 "q": "A temporary protection order may issue when the petitioner shows:",
 "opts": {
 "A": "Mere dislike",
-"B": "Imminent danger to the life or health of the petitioner or others",
+"B": "A risk or threat of physical harm, or a threat of psychological or emotional harm",
 "C": "A prior breakup",
 "D": "A property dispute"
 }
@@ -2541,11 +2541,11 @@
 },
 "FL-255": {
 "correct": "B",
-"q": "The shared-care worksheet (B) applies when each parent has at least how many overnights?",
+"q": "Since March 1, 2026, how many overnights a year earn a parenting time credit?",
 "opts": {
-"A": "52",
-"B": "93",
-"C": "120",
+"A": "90",
+"B": "1",
+"C": "93",
 "D": "182"
 }
 },
